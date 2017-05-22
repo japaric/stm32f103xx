@@ -1,0 +1,931 @@
+1648,1659d1647
+<               <enumeratedValues>
+<                 <enumeratedValue>
+<                   <name>Disabled</name>
+<                   <description>HSE disabled</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Enabled</name>
+<                   <description>HSE enabled</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+1668,1679d1655
+<               <enumeratedValues>
+<                 <enumeratedValue>
+<                   <name>Notready</name>
+<                   <description>HSE Not Ready</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Ready</name>
+<                   <description>HSE Ready</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+1688,1699d1663
+<               <enumeratedValues>
+<                 <enumeratedValue>
+<                   <name>Disabled</name>
+<                   <description>external 4-16 MHz oscillator not bypassed</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Enabled</name>
+<                   <description>external 4-16 MHz oscillator bypassed with external clock</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+1715,1726d1678
+<               <enumeratedValues>
+<                 <enumeratedValue>
+<                   <name>Disabled</name>
+<                   <description>PLL disabled</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Enabled</name>
+<                   <description>Pll enabled</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+1734,1745d1685
+<               <enumeratedValues>
+<                 <enumeratedValue>
+<                   <name>Unlocked</name>
+<                   <description>PLL Unlocked</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Locked</name>
+<                   <description>PLL Locked</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+1764,1780d1703
+<               <enumeratedValues>
+<                 <enumeratedValue>
+<                   <name>Hsi</name>
+<                   <description> HSI selected as system clock</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Hse</name>
+<                   <description> HSE selected as system clock</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Pll</name>
+<                   <description>PLL selected as system clock</description>
+<                   <value>2</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+1788,1804d1710
+<               <enumeratedValues>
+<                 <enumeratedValue>
+<                   <name>Hsi</name>
+<                   <description> HSI selected as system clock</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Hse</name>
+<                   <description> HSE selected as system clock</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Pll</name>
+<                   <description>PLL selected as system clock</description>
+<                   <value>2</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+1812,1858d1717
+<               <enumeratedValues>
+<               <enumeratedValue>
+<                   <name>Div1</name>
+<                   <description>SYSCLK not divided</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div2</name>
+<                   <description>SYSCLK divided by 2</description>
+<                   <value>8</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div4</name>
+<                   <description>SYSCLK divided by 4</description>
+<                   <value>9</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div8</name>
+<                   <description>SYSCLK divided by 8</description>
+<                   <value>10</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div16</name>
+<                   <description>SYSCLK divided by 16</description>
+<                   <value>11</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div64</name>
+<                   <description>SYSCLK divided by 64</description>
+<                   <value>12</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div128</name>
+<                   <description>SYSCLK divided by 128</description>
+<                   <value>13</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div256</name>
+<                   <description>SYSCLK divided by 256</description>
+<                   <value>14</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div512</name>
+<                   <description>SYSCLK divided by 512</description>
+<                   <value>15</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+1867,1893d1725
+<               <enumeratedValues>
+<               <enumeratedValue>
+<                   <name>Div1</name>
+<                   <description>HCLK not divided</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div2</name>
+<                   <description>HCLK divided by 2</description>
+<                   <value>4</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div4</name>
+<                   <description>HCLK divided by 4</description>
+<                   <value>5</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div8</name>
+<                   <description>HCLK divided by 8</description>
+<                   <value>6</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div16</name>
+<                   <description>HCLK divided by 16</description>
+<                   <value>7</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+1902,1928d1733
+<               <enumeratedValues>
+<               <enumeratedValue>
+<                   <name>Div1</name>
+<                   <description>HCLK not divided</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div2</name>
+<                   <description>HCLK divided by 2</description>
+<                   <value>4</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div4</name>
+<                   <description>HCLK divided by 4</description>
+<                   <value>5</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div8</name>
+<                   <description>HCLK divided by 8</description>
+<                   <value>6</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div16</name>
+<                   <description>HCLK divided by 16</description>
+<                   <value>7</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+1943,1954d1747
+<               <enumeratedValues>
+<                 <enumeratedValue>
+<                   <name>Internal</name>
+<                   <description> HSI oscillator clock / 2 </description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>External</name>
+<                   <description>HSE oscillator clock </description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+1962,1973d1754
+<               <enumeratedValues>
+<               <enumeratedValue>
+<                   <name>Div1</name>
+<                   <description>HSE not divided</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Div2</name>
+<                   <description>HSE divided by 2</description>
+<                   <value>8</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+1981,2057d1761
+<               <enumeratedValues>
+<               <enumeratedValue>
+<                   <name>Mul2</name>
+<                   <description>PLL input clock x 2</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Mul3</name>
+<                   <description>PLL input clock x 3</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Mul4</name>
+<                   <description>PLL input clock x 4</description>
+<                   <value>2</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Mul5</name>
+<                   <description>PLL input clock x 5</description>
+<                   <value>3</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Mul6</name>
+<                   <description>PLL input clock x 6</description>
+<                   <value>4</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Mul7</name>
+<                   <description>PLL input clock x 7</description>
+<                   <value>5</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Mul8</name>
+<                   <description>PLL input clock x 8</description>
+<                   <value>6</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Mul9</name>
+<                   <description>PLL input clock x 9</description>
+<                   <value>7</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Mul10</name>
+<                   <description>PLL input clock x 10</description>
+<                   <value>8</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Mul11</name>
+<                   <description>PLL input clock x 11</description>
+<                   <value>9</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Mul12</name>
+<                   <description>PLL input clock x 12</description>
+<                   <value>10</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Mul13</name>
+<                   <description>PLL input clock x 13</description>
+<                   <value>11</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Mul14</name>
+<                   <description>PLL input clock x 14</description>
+<                   <value>12</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Mul15</name>
+<                   <description>PLL input clock x 15</description>
+<                   <value>13</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Mul16</name>
+<                   <description>PLL input clock x 16</description>
+<                   <value>14</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+2494,2506d2197
+<               <enumeratedValues>
+<                 <name>ENABLED</name>
+<                 <enumeratedValue>
+<                   <name>Disabled</name>
+<                   <description>Disabled.</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Enabled</name>
+<                   <description>Enabled.</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+2513,2514d2203
+<               <enumeratedValues derivedFrom="ENABLED">
+<               </enumeratedValues>
+2522,2523d2210
+<               <enumeratedValues derivedFrom="ENABLED">
+<               </enumeratedValues>
+2530,2531d2216
+<               <enumeratedValues derivedFrom="ENABLED">
+<               </enumeratedValues>
+2538,2539d2222
+<               <enumeratedValues derivedFrom="ENABLED">
+<               </enumeratedValues>
+2546,2547d2228
+<               <enumeratedValues derivedFrom="ENABLED">
+<               </enumeratedValues>
+2554,2555d2234
+<               <enumeratedValues derivedFrom="ENABLED">
+<               </enumeratedValues>
+2575,2576d2253
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2583,2584d2259
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2591,2592d2265
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2599,2600d2271
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2607,2608d2277
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2615,2616d2283
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2623,2624d2289
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2631,2632d2295
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2640,2641d2302
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2649,2650d2309
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2657,2658d2315
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2665,2666d2321
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2673,2674d2327
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2681,2682d2333
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2690,2691d2340
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2698,2699d2346
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2706,2707d2352
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2714,2715d2358
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2734,2735d2376
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2742,2743d2382
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2750,2751d2388
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2758,2759d2394
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2766,2767d2400
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2774,2775d2406
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2782,2783d2412
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2790,2791d2418
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2798,2799d2424
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2807,2808d2431
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2815,2816d2437
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2823,2824d2443
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2831,2832d2449
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2839,2840d2455
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2847,2848d2461
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2855,2856d2467
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2863,2864d2473
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2871,2872d2479
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2879,2880d2485
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2887,2888d2491
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2896,2897d2498
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2905,2906d2505
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+2913,2914d2511
+<               <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
+<               </enumeratedValues>
+3080,3102d2676
+<               <enumeratedValues>
+<                 <name>MODE</name>
+<                 <enumeratedValue>
+<                   <name>Input</name>
+<                   <description>Input mode</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Output</name>
+<                   <description>Output mode 10 MHz</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Output2</name>
+<                   <description>Output mode 2 MHz</description>
+<                   <value>2</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Output50</name>
+<                   <description>Output mode 50 MHz</description>
+<                   <value>3</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+3110,3132d2683
+<               <enumeratedValues>
+<                 <name>CONFIG</name>
+<                 <enumeratedValue>
+<                   <name>Push</name>
+<                   <description>Push-Pull mode</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Open</name>
+<                   <description>Open Drain-Mode</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>AltPush</name>
+<                   <description>Alternate Function Push-Pull Mode</description>
+<                   <value>2</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>AltOpen</name>
+<                   <description>Alternate Function Open-Drain Mode</description>
+<                   <value>3</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+3139,3140d2689
+<               <enumeratedValues derivedFrom="MODE">
+<               </enumeratedValues>
+3148,3149d2696
+<               <enumeratedValues derivedFrom="CONFIG">
+<               </enumeratedValues>
+3156,3157d2702
+<               <enumeratedValues derivedFrom="MODE">
+<               </enumeratedValues>
+3165,3166d2709
+<               <enumeratedValues derivedFrom="CONFIG">
+<               </enumeratedValues>
+3173,3174d2715
+<               <enumeratedValues derivedFrom="MODE">
+<               </enumeratedValues>
+3182,3183d2722
+<               <enumeratedValues derivedFrom="CONFIG">
+<               </enumeratedValues>
+3190,3191d2728
+<               <enumeratedValues derivedFrom="MODE">
+<               </enumeratedValues>
+3199,3200d2735
+<               <enumeratedValues derivedFrom="CONFIG">
+<               </enumeratedValues>
+3207,3208d2741
+<               <enumeratedValues derivedFrom="MODE">
+<               </enumeratedValues>
+3216,3217d2748
+<               <enumeratedValues derivedFrom="CONFIG">
+<               </enumeratedValues>
+3224,3225d2754
+<               <enumeratedValues derivedFrom="MODE">
+<               </enumeratedValues>
+3233,3234d2761
+<               <enumeratedValues derivedFrom="CONFIG">
+<               </enumeratedValues>
+3241,3242d2767
+<               <enumeratedValues derivedFrom="MODE">
+<               </enumeratedValues>
+3250,3251d2774
+<               <enumeratedValues derivedFrom="CONFIG">
+<               </enumeratedValues>
+3270,3271d2792
+<               <enumeratedValues derivedFrom="CRL.MODE0.MODE">
+<               </enumeratedValues>
+3279,3280d2799
+<               <enumeratedValues derivedFrom="CRL.CNF0.CONFIG">
+<               </enumeratedValues>
+3287,3288d2805
+<               <enumeratedValues derivedFrom="CRL.MODE0.MODE">
+<               </enumeratedValues>
+3296,3297d2812
+<               <enumeratedValues derivedFrom="CRL.CNF0.CONFIG">
+<               </enumeratedValues>
+3304,3305d2818
+<               <enumeratedValues derivedFrom="CRL.MODE0.MODE">
+<               </enumeratedValues>
+3313,3314d2825
+<               <enumeratedValues derivedFrom="CRL.CNF0.CONFIG">
+<               </enumeratedValues>
+3321,3322d2831
+<               <enumeratedValues derivedFrom="CRL.MODE0.MODE">
+<               </enumeratedValues>
+3330,3331d2838
+<               <enumeratedValues derivedFrom="CRL.CNF0.CONFIG">
+<               </enumeratedValues>
+3338,3339d2844
+<               <enumeratedValues derivedFrom="CRL.MODE0.MODE">
+<               </enumeratedValues>
+3347,3348d2851
+<               <enumeratedValues derivedFrom="CRL.CNF0.CONFIG">
+<               </enumeratedValues>
+3355,3356d2857
+<               <enumeratedValues derivedFrom="CRL.MODE0.MODE">
+<               </enumeratedValues>
+3364,3365d2864
+<               <enumeratedValues derivedFrom="CRL.CNF0.CONFIG">
+<               </enumeratedValues>
+3372,3373d2870
+<               <enumeratedValues derivedFrom="CRL.MODE0.MODE">
+<               </enumeratedValues>
+3381,3382d2877
+<               <enumeratedValues derivedFrom="CRL.CNF0.CONFIG">
+<               </enumeratedValues>
+3389,3390d2883
+<               <enumeratedValues derivedFrom="CRL.MODE0.MODE">
+<               </enumeratedValues>
+3398,3399d2890
+<               <enumeratedValues derivedFrom="CRL.CNF0.CONFIG">
+<               </enumeratedValues>
+3634,3642d3124
+<               <enumeratedValues>
+<                 <name>SET</name>
+<                 <usage>write</usage>
+<                 <enumeratedValue>
+<                   <name>Set</name>
+<                   <description>Sets the corresponding ODRx bit</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+3649,3650d3130
+<               <enumeratedValues derivedFrom="SET">
+<               </enumeratedValues>
+3657,3658d3136
+<               <enumeratedValues derivedFrom="SET">
+<               </enumeratedValues>
+3665,3666d3142
+<               <enumeratedValues derivedFrom="SET">
+<               </enumeratedValues>
+3673,3674d3148
+<               <enumeratedValues derivedFrom="SET">
+<               </enumeratedValues>
+3681,3682d3154
+<               <enumeratedValues derivedFrom="SET">
+<               </enumeratedValues>
+3689,3690d3160
+<               <enumeratedValues derivedFrom="SET">
+<               </enumeratedValues>
+3697,3698d3166
+<               <enumeratedValues derivedFrom="SET">
+<               </enumeratedValues>
+3705,3706d3172
+<               <enumeratedValues derivedFrom="SET">
+<               </enumeratedValues>
+3713,3714d3178
+<               <enumeratedValues derivedFrom="SET">
+<               </enumeratedValues>
+3721,3722d3184
+<               <enumeratedValues derivedFrom="SET">
+<               </enumeratedValues>
+3729,3730d3190
+<               <enumeratedValues derivedFrom="SET">
+<               </enumeratedValues>
+3737,3738d3196
+<               <enumeratedValues derivedFrom="SET">
+<               </enumeratedValues>
+3745,3746d3202
+<               <enumeratedValues derivedFrom="SET">
+<               </enumeratedValues>
+3753,3754d3208
+<               <enumeratedValues derivedFrom="SET">
+<               </enumeratedValues>
+3761,3762d3214
+<               <enumeratedValues derivedFrom="SET">
+<               </enumeratedValues>
+3769,3777d3220
+<               <enumeratedValues>
+<                 <name>RESET</name>
+<                 <usage>write</usage>
+<                 <enumeratedValue>
+<                   <name>Reset</name>
+<                   <description>Resets the corresponding ODRx bit</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+3784,3785d3226
+<               <enumeratedValues derivedFrom="RESET">
+<               </enumeratedValues>
+3792,3793d3232
+<               <enumeratedValues derivedFrom="RESET">
+<               </enumeratedValues>
+3800,3801d3238
+<               <enumeratedValues derivedFrom="RESET">
+<               </enumeratedValues>
+3808,3809d3244
+<               <enumeratedValues derivedFrom="RESET">
+<               </enumeratedValues>
+3816,3817d3250
+<               <enumeratedValues derivedFrom="RESET">
+<               </enumeratedValues>
+3824,3825d3256
+<               <enumeratedValues derivedFrom="RESET">
+<               </enumeratedValues>
+3832,3833d3262
+<               <enumeratedValues derivedFrom="RESET">
+<               </enumeratedValues>
+3840,3841d3268
+<               <enumeratedValues derivedFrom="RESET">
+<               </enumeratedValues>
+3848,3849d3274
+<               <enumeratedValues derivedFrom="RESET">
+<               </enumeratedValues>
+3856,3857d3280
+<               <enumeratedValues derivedFrom="RESET">
+<               </enumeratedValues>
+3864,3865d3286
+<               <enumeratedValues derivedFrom="RESET">
+<               </enumeratedValues>
+3872,3873d3292
+<               <enumeratedValues derivedFrom="RESET">
+<               </enumeratedValues>
+3880,3881d3298
+<               <enumeratedValues derivedFrom="RESET">
+<               </enumeratedValues>
+3888,3889d3304
+<               <enumeratedValues derivedFrom="RESET">
+<               </enumeratedValues>
+3896,3897d3310
+<               <enumeratedValues derivedFrom="RESET">
+<               </enumeratedValues>
+10136,10147d9548
+<               <enumeratedValues>
+<                 <enumeratedValue>
+<                   <name>Continuous</name>
+<                   <description>Counter is not stopped at update event</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>OnePulse</name>
+<                   <description>Counter stops counting at the next update event (clearing the CEN bit)</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+10166,10177d9566
+<               <enumeratedValues>
+<                 <enumeratedValue>
+<                   <name>Disabled</name>
+<                   <description>Counter disabled</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Enabled</name>
+<                   <description>Counter enabled</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+10431,10451d9819
+<               <enumeratedValues>
+<                 <usage>read</usage>
+<                 <enumeratedValue>
+<                   <name>NoUpdate</name>
+<                   <description>No update occurred</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Pending</name>
+<                   <description>Update interrupt pending</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+<               <enumeratedValues>
+<                 <usage>write</usage>
+<                 <enumeratedValue>
+<                   <name>Clear</name>
+<                   <description>Clears the update interrupt flag</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+10867,10872d10234
+<               <writeConstraint>
+<                 <range>
+<                   <minimum>0</minimum>
+<                   <maximum>65535</maximum>
+<                 </range>
+<               </writeConstraint>
+10890,10895d10251
+<               <writeConstraint>
+<                 <range>
+<                   <minimum>0</minimum>
+<                   <maximum>65535</maximum>
+<                 </range>
+<               </writeConstraint>
+11080,11091d10435
+<               <enumeratedValues>
+<                 <enumeratedValue>
+<                   <name>Continuous</name>
+<                   <description>Counter is not stopped at update event</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>OnePulse</name>
+<                   <description>Counter stops counting at the next update event (clearing the CEN bit)</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+11110,11121d10453
+<               <enumeratedValues>
+<                 <enumeratedValue>
+<                   <name>Disabled</name>
+<                   <description>Counter disabled</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Enabled</name>
+<                   <description>Counter enabled</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+11256,11276d10587
+<               <enumeratedValues>
+<                 <usage>read</usage>
+<                 <enumeratedValue>
+<                   <name>NoUpdate</name>
+<                   <description>No update occurred</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Pending</name>
+<                   <description>Update interrupt pending</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+<               <enumeratedValues>
+<                 <usage>write</usage>
+<                 <enumeratedValue>
+<                   <name>Clear</name>
+<                   <description>Clears the update interrupt flag</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+11519,11524d10829
+<               <writeConstraint>
+<                 <range>
+<                   <minimum>0</minimum>
+<                   <maximum>65535</maximum>
+<                 </range>
+<               </writeConstraint>
+11542,11547d10846
+<               <writeConstraint>
+<                 <range>
+<                   <minimum>0</minimum>
+<                   <maximum>65535</maximum>
+<                 </range>
+<               </writeConstraint>
+11984,11995d11282
+<               <enumeratedValues>
+<                 <enumeratedValue>
+<                   <name>Continuous</name>
+<                   <description>Counter is not stopped at update event</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>OnePulse</name>
+<                   <description>Counter stops counting at the next update event (clearing the CEN bit)</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+12014,12025d11300
+<               <enumeratedValues>
+<                 <enumeratedValue>
+<                   <name>Disabled</name>
+<                   <description>Counter disabled</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Enabled</name>
+<                   <description>Counter enabled</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+12083,12103d11357
+<               <enumeratedValues>
+<                 <usage>read</usage>
+<                 <enumeratedValue>
+<                   <name>NoUpdate</name>
+<                   <description>No update occurred</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Pending</name>
+<                   <description>Update interrupt pending</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+<               <enumeratedValues>
+<                 <usage>write</usage>
+<                 <enumeratedValue>
+<                   <name>Clear</name>
+<                   <description>Clears the update interrupt flag</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+12155,12160d11408
+<               <writeConstraint>
+<                 <range>
+<                   <minimum>0</minimum>
+<                   <maximum>65535</maximum>
+<                 </range>
+<               </writeConstraint>
+12178,12183d11425
+<               <writeConstraint>
+<                 <range>
+<                   <minimum>0</minimum>
+<                   <maximum>65535</maximum>
+<                 </range>
+<               </writeConstraint>
+23781,23798d23022
+<               <enumeratedValues>
+<                 <name>LATENCY</name>
+<                 <enumeratedValue>
+<                   <name>Zero</name>
+<                   <description>Zero wait state, if 0hz  SYSCLK to 24 MHz</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>One</name>
+<                   <description>One wait state, if 24 MHz SYSCLK to 48 MHz</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Two</name>
+<                   <description>Two wait states, if 48 MHz SYSCLK to 72 MHz</description>
+<                   <value>2</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
+23814,23826d23037
+<               <enumeratedValues>
+<                 <name>ENABLED</name>
+<                 <enumeratedValue>
+<                   <name>Disabled</name>
+<                   <description>Disabled.</description>
+<                   <value>0</value>
+<                 </enumeratedValue>
+<                 <enumeratedValue>
+<                   <name>Enabled</name>
+<                   <description>Enabled.</description>
+<                   <value>1</value>
+<                 </enumeratedValue>
+<               </enumeratedValues>
