@@ -4,6 +4,10 @@ matrix:
   include:
     - env: TARGET=x86_64-unknown-linux-gnu
       rust: nightly
+      addons:
+        apt:
+          packages:
+            - dos2unix
     - env: TARGET=thumbv7m-none-eabi
       rust: nightly
 
