@@ -1,5 +1,5 @@
---- a/STM32F103xx.svd	2017-05-20 11:38:24.615094558 -0500
-+++ b/STM32F103xx.svd	2017-05-20 11:38:26.871753254 -0500
+--- STM32F103xx.svd	2017-05-22 23:52:27.000000000 -0700
++++ STM32F103xx.patched.svd	2017-05-22 23:58:40.000000000 -0700
 @@ -1645,6 +1645,18 @@
                <bitOffset>16</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1379,7 +1379,7 @@
              </field>
            </fields>
          </register>
-@@ -9546,6 +10133,18 @@
+@@ -8428,6 +9015,18 @@
                <description>One-pulse mode</description>
                <bitOffset>3</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1398,7 +1398,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -9564,6 +10163,18 @@
+@@ -8446,6 +9045,18 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1417,7 +1417,7 @@
              </field>
            </fields>
          </register>
-@@ -9817,6 +10428,27 @@
+@@ -8785,6 +9396,27 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1445,7 +1445,7 @@
              </field>
            </fields>
          </register>
-@@ -10232,6 +10864,12 @@
+@@ -9255,6 +9887,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1458,7 +1458,7 @@
              </field>
            </fields>
          </register>
-@@ -10249,6 +10887,12 @@
+@@ -9272,6 +9910,12 @@
                <description>Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1471,7 +1471,7 @@
              </field>
            </fields>
          </register>
-@@ -10433,6 +11077,18 @@
+@@ -9546,6 +10190,18 @@
                <description>One-pulse mode</description>
                <bitOffset>3</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1490,7 +1490,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -10451,6 +11107,18 @@
+@@ -9564,6 +10220,18 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1509,7 +1509,7 @@
              </field>
            </fields>
          </register>
-@@ -10585,6 +11253,27 @@
+@@ -9817,6 +10485,27 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1537,7 +1537,7 @@
              </field>
            </fields>
          </register>
-@@ -10827,6 +11516,12 @@
+@@ -10232,6 +10921,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1550,7 +1550,7 @@
              </field>
            </fields>
          </register>
-@@ -10844,6 +11539,12 @@
+@@ -10249,6 +10944,12 @@
                <description>Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1563,7 +1563,7 @@
              </field>
            </fields>
          </register>
-@@ -11280,6 +11981,18 @@
+@@ -10433,6 +11134,18 @@
                <description>One-pulse mode</description>
                <bitOffset>3</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1582,7 +1582,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -11298,6 +12011,18 @@
+@@ -10451,6 +11164,18 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1601,7 +1601,7 @@
              </field>
            </fields>
          </register>
-@@ -11355,6 +12080,27 @@
+@@ -10585,6 +11310,27 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1629,7 +1629,7 @@
              </field>
            </fields>
          </register>
-@@ -11406,6 +12152,12 @@
+@@ -10827,6 +11573,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1642,7 +1642,99 @@
              </field>
            </fields>
          </register>
-@@ -11423,6 +12175,12 @@
+@@ -10844,6 +11596,12 @@
+               <description>Auto-reload value</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>65535</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+           </fields>
+         </register>
+@@ -11280,6 +12038,18 @@
+               <description>One-pulse mode</description>
+               <bitOffset>3</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>Continuous</name>
++                  <description>Counter is not stopped at update event</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>OnePulse</name>
++                  <description>Counter stops counting at the next update event (clearing the CEN bit)</description>
++                  <value>1</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>URS</name>
+@@ -11298,6 +12068,18 @@
+               <description>Counter enable</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>Disabled</name>
++                  <description>Counter disabled</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Enabled</name>
++                  <description>Counter enabled</description>
++                  <value>1</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -11355,6 +12137,27 @@
+               <description>Update interrupt flag</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues>
++                <usage>read</usage>
++                <enumeratedValue>
++                  <name>NoUpdate</name>
++                  <description>No update occurred</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Pending</name>
++                  <description>Update interrupt pending</description>
++                  <value>1</value>
++                </enumeratedValue>
++              </enumeratedValues>
++              <enumeratedValues>
++                <usage>write</usage>
++                <enumeratedValue>
++                  <name>Clear</name>
++                  <description>Clears the update interrupt flag</description>
++                  <value>0</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -11406,6 +12209,12 @@
+               <description>Prescaler value</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>65535</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+           </fields>
+         </register>
+@@ -11423,6 +12232,12 @@
                <description>Low Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1655,7 +1747,7 @@
              </field>
            </fields>
          </register>
-@@ -23020,6 +23778,24 @@
+@@ -23020,6 +23835,24 @@
                <bitOffset>0</bitOffset>
                <bitWidth>3</bitWidth>
                <access>read-write</access>
@@ -1680,7 +1772,7 @@
              </field>
              <field>
                <name>HLFCYA</name>
-@@ -23035,6 +23811,19 @@
+@@ -23035,6 +23868,19 @@
                <bitOffset>4</bitOffset>
                <bitWidth>1</bitWidth>
                <access>read-write</access>
