@@ -1,5 +1,5 @@
---- a/STM32F103xx.svd	2017-05-20 11:38:24.615094558 -0500
-+++ b/STM32F103xx.svd	2017-05-20 11:38:26.871753254 -0500
+--- STM32F103xx.svd	2017-05-27 00:25:51.000000000 -0700
++++ STM32F103xx.patched.svd	2017-05-28 23:27:16.000000000 -0700
 @@ -1645,6 +1645,18 @@
                <bitOffset>16</bitOffset>
                <bitWidth>1</bitWidth>
@@ -148,7 +148,7 @@
                <bitWidth>4</bitWidth>
                <access>read-write</access>
 +              <enumeratedValues>
-+              <enumeratedValue>
++                <enumeratedValue>
 +                  <name>Div1</name>
 +                  <description>SYSCLK not divided</description>
 +                  <value>0</value>
@@ -202,7 +202,7 @@
                <bitWidth>3</bitWidth>
                <access>read-write</access>
 +              <enumeratedValues>
-+              <enumeratedValue>
++                <enumeratedValue>
 +                  <name>Div1</name>
 +                  <description>HCLK not divided</description>
 +                  <value>0</value>
@@ -236,7 +236,7 @@
                <bitWidth>3</bitWidth>
                <access>read-write</access>
 +              <enumeratedValues>
-+              <enumeratedValue>
++                <enumeratedValue>
 +                  <name>Div1</name>
 +                  <description>HCLK not divided</description>
 +                  <value>0</value>
@@ -289,7 +289,7 @@
                <bitWidth>1</bitWidth>
                <access>read-write</access>
 +              <enumeratedValues>
-+              <enumeratedValue>
++                <enumeratedValue>
 +                  <name>Div1</name>
 +                  <description>HSE not divided</description>
 +                  <value>0</value>
@@ -308,7 +308,7 @@
                <bitWidth>4</bitWidth>
                <access>read-write</access>
 +              <enumeratedValues>
-+              <enumeratedValue>
++                <enumeratedValue>
 +                  <name>Mul2</name>
 +                  <description>PLL input clock x 2</description>
 +                  <value>0</value>
@@ -1379,11 +1379,60 @@
              </field>
            </fields>
          </register>
-@@ -9546,6 +10133,18 @@
+@@ -8400,9 +8987,27 @@
+           <fields>
+             <field>
+               <name>CKD</name>
+-              <description>Clock division</description>
++              <description>Division ratio between the timer clock (CK_INT) frequency and sampling clock</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>CKD</name>
++                <enumeratedValue>
++                  <name>Div1</name>
++                  <description>Clock is not divided</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Div2</name>
++                  <description>Clock is divided by 2</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Div4</name>
++                  <description>Clock is divided by 4</description>
++                  <value>2</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>ARPE</name>
+@@ -8422,12 +9027,38 @@
+               <description>Direction</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues>
++                <name>DIR</name>
++                <enumeratedValue>
++                  <name>Up</name>
++                  <description>Up</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Down</name>
++                  <description>Down</description>
++                  <value>1</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OPM</name>
                <description>One-pulse mode</description>
                <bitOffset>3</bitOffset>
                <bitWidth>1</bitWidth>
 +              <enumeratedValues>
++                <name>OPM</name>
 +                <enumeratedValue>
 +                  <name>Continuous</name>
 +                  <description>Counter is not stopped at update event</description>
@@ -1398,11 +1447,12 @@
              </field>
              <field>
                <name>URS</name>
-@@ -9564,6 +10163,18 @@
+@@ -8446,6 +9077,19 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
 +              <enumeratedValues>
++                <name>CEN</name>
 +                <enumeratedValue>
 +                  <name>Disabled</name>
 +                  <description>Counter disabled</description>
@@ -1417,11 +1467,62 @@
              </field>
            </fields>
          </register>
-@@ -9817,6 +10428,27 @@
+@@ -8585,6 +9229,49 @@
+               <description>Slave mode selection</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues>
++                <name>SMS</name>
++                <enumeratedValue>
++                  <name>Disabled</name>
++                  <description>Counter disabled</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>EncoderTI2</name>
++                  <description>Encoder mode, count up/down on TI2FP1</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>EncoderTI1</name>
++                  <description>Encoder mode, count up/down on TI1FP2</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>EncoderTI1TI2</name>
++                  <description>Encoder mode, count up/down on both TI1FP1 and TI2FP2</description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Reset</name>
++                  <description>Rising edge of the selected trigger input (TRGI) reinitializes the counter</description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Gated</name>
++                  <description> The counter clock is enabled when the trigger input (TRGI) is high</description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Trigger</name>
++                  <description>The counter starts at a rising edge of the trigger TRGI </description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>External</name>
++                  <description> Rising edges of the selected trigger (TRGI) clock the counter</description>
++                  <value>7</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -8785,6 +9472,29 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
 +              <enumeratedValues>
++                <name>UIFR</name>
 +                <usage>read</usage>
 +                <enumeratedValue>
 +                  <name>NoUpdate</name>
@@ -1435,6 +1536,7 @@
 +                </enumeratedValue>
 +              </enumeratedValues>
 +              <enumeratedValues>
++                <name>UIFW</name>
 +                <usage>write</usage>
 +                <enumeratedValue>
 +                  <name>Clear</name>
@@ -1445,7 +1547,91 @@
              </field>
            </fields>
          </register>
-@@ -10232,6 +10864,12 @@
+@@ -8874,6 +9584,8 @@
+               <description>Output Compare 2 mode</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues derivedFrom="CCMR1_Output.OC1M.OC1M">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OC2PE</name>
+@@ -8908,6 +9620,56 @@
+               <description>Output Compare 1 mode</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues>
++                <name>OC1M</name>
++                <enumeratedValue>
++                  <name>Frozen</name>
++                  <description>The comparison between the output compare register TIMx_CCRy and the
++                    counter TIMx_CNT has no effect on the outputs(</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>SetActive</name>
++                  <description>Set channel y to active level on match. OCyREF signal is forced high when the counter
++                    TIMx_CNT matches the capture/compare register y (TIMx_CCRy).</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>SetInactive</name>
++                  <description>Set channel y to inactive level on match. OCyREF signal is forced low when the
++                    counter TIMx_CNT matches the capture/compare register y (TIMx_CCRy).</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Toggle</name>
++                  <description>OCyREF toggles when TIMx_CNT=TIMx_CCRy.</description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ForceInactive</name>
++                  <description>OCyREF is forced low.</description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ForceActive</name>
++                  <description>OCyREF is forced high.</description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PWM1</name>
++                  <description>In upcounting, channel 1 is active as long as TIMx_CNT&lt;TIMx_CCRy
++                    else inactive. In downcounting, channel 1 is inactive (OCyREF=‘0) as long as
++                    TIMx_CNT>TIMx_CCRy else active (OCyREF=1).</description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PWM2</name>
++                  <description>In upcounting, channel y is inactive as long as TIMx_CNT&lt;TIMx_CCRy
++                    else active. In downcounting, channel y is active as long as TIMx_CNT>TIMx_CCRy else
++                    inactive.</description>
++                  <value>7</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OC1PE</name>
+@@ -9005,6 +9767,8 @@
+               <description>Output compare 4 mode</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues derivedFrom="CCMR1_Output.OC1M.OC1M">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OC4PE</name>
+@@ -9039,6 +9803,8 @@
+               <description>Output compare 3 mode</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues derivedFrom="CCMR1_Output.OC1M.OC1M">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OC3PE</name>
+@@ -9255,6 +10021,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1458,7 +1644,7 @@
              </field>
            </fields>
          </register>
-@@ -10249,6 +10887,12 @@
+@@ -9272,6 +10044,12 @@
                <description>Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1471,73 +1657,114 @@
              </field>
            </fields>
          </register>
-@@ -10433,6 +11077,18 @@
+@@ -9289,6 +10067,12 @@
+               <description>Capture/Compare 1 value</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>65535</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+           </fields>
+         </register>
+@@ -9306,6 +10090,12 @@
+               <description>Capture/Compare 2 value</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>65535</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+           </fields>
+         </register>
+@@ -9323,6 +10113,12 @@
+               <description>Capture/Compare value</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>65535</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+           </fields>
+         </register>
+@@ -9340,6 +10136,12 @@
+               <description>Capture/Compare value</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>65535</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+           </fields>
+         </register>
+@@ -9521,6 +10323,8 @@
+               <description>Clock division</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.CR1.CKD.CKD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>ARPE</name>
+@@ -9540,12 +10344,16 @@
+               <description>Direction</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.CR1.DIR.DIR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OPM</name>
                <description>One-pulse mode</description>
                <bitOffset>3</bitOffset>
                <bitWidth>1</bitWidth>
-+              <enumeratedValues>
-+                <enumeratedValue>
-+                  <name>Continuous</name>
-+                  <description>Counter is not stopped at update event</description>
-+                  <value>0</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>OnePulse</name>
-+                  <description>Counter stops counting at the next update event (clearing the CEN bit)</description>
-+                  <value>1</value>
-+                </enumeratedValue>
++              <enumeratedValues derivedFrom="TIM1.CR1.OPM.OPM">
 +              </enumeratedValues>
              </field>
              <field>
                <name>URS</name>
-@@ -10451,6 +11107,18 @@
+@@ -9564,6 +10372,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
-+              <enumeratedValues>
-+                <enumeratedValue>
-+                  <name>Disabled</name>
-+                  <description>Counter disabled</description>
-+                  <value>0</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>Enabled</name>
-+                  <description>Counter enabled</description>
-+                  <value>1</value>
-+                </enumeratedValue>
++              <enumeratedValues derivedFrom="TIM1.CR1.CEN.CEN">
 +              </enumeratedValues>
              </field>
            </fields>
          </register>
-@@ -10585,6 +11253,27 @@
+@@ -9647,6 +10457,8 @@
+               <description>Slave mode selection</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.SMCR.SMS.SMS">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -9817,6 +10629,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
-+              <enumeratedValues>
-+                <usage>read</usage>
-+                <enumeratedValue>
-+                  <name>NoUpdate</name>
-+                  <description>No update occurred</description>
-+                  <value>0</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>Pending</name>
-+                  <description>Update interrupt pending</description>
-+                  <value>1</value>
-+                </enumeratedValue>
++              <enumeratedValues derivedFrom="TIM1.SR.UIF.UIFR">
 +              </enumeratedValues>
-+              <enumeratedValues>
-+                <usage>write</usage>
-+                <enumeratedValue>
-+                  <name>Clear</name>
-+                  <description>Clears the update interrupt flag</description>
-+                  <value>0</value>
-+                </enumeratedValue>
++              <enumeratedValues derivedFrom="TIM1.SR.UIF.UIFW">
 +              </enumeratedValues>
              </field>
            </fields>
          </register>
-@@ -10827,6 +11516,12 @@
+@@ -10232,6 +11048,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1550,7 +1777,7 @@
              </field>
            </fields>
          </register>
-@@ -10844,6 +11539,12 @@
+@@ -10249,6 +11071,12 @@
                <description>Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1563,73 +1790,132 @@
              </field>
            </fields>
          </register>
-@@ -11280,6 +11981,18 @@
+@@ -10266,6 +11094,12 @@
+               <description>Capture/Compare 1 value</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>65535</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+           </fields>
+         </register>
+@@ -10283,6 +11117,12 @@
+               <description>Capture/Compare 2 value</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>65535</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+           </fields>
+         </register>
+@@ -10300,6 +11140,12 @@
+               <description>Capture/Compare value</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>65535</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+           </fields>
+         </register>
+@@ -10317,6 +11163,12 @@
+               <description>Capture/Compare value</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>65535</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+           </fields>
+         </register>
+@@ -10421,6 +11273,8 @@
+               <description>Clock division</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.CR1.CKD.CKD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>ARPE</name>
+@@ -10433,6 +11287,8 @@
                <description>One-pulse mode</description>
                <bitOffset>3</bitOffset>
                <bitWidth>1</bitWidth>
-+              <enumeratedValues>
-+                <enumeratedValue>
-+                  <name>Continuous</name>
-+                  <description>Counter is not stopped at update event</description>
-+                  <value>0</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>OnePulse</name>
-+                  <description>Counter stops counting at the next update event (clearing the CEN bit)</description>
-+                  <value>1</value>
-+                </enumeratedValue>
++              <enumeratedValues derivedFrom="TIM1.CR1.OPM.OPM">
 +              </enumeratedValues>
              </field>
              <field>
                <name>URS</name>
-@@ -11298,6 +12011,18 @@
+@@ -10451,6 +11307,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.CR1.CEN.CEN">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -10497,6 +11355,34 @@
+               <description>Slave mode selection</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>3</bitWidth>
 +              <enumeratedValues>
++                <name>SMS</name>
 +                <enumeratedValue>
 +                  <name>Disabled</name>
 +                  <description>Counter disabled</description>
 +                  <value>0</value>
 +                </enumeratedValue>
 +                <enumeratedValue>
-+                  <name>Enabled</name>
-+                  <description>Counter enabled</description>
-+                  <value>1</value>
++                  <name>Reset</name>
++                  <description>Rising edge of the selected trigger input (TRGI) reinitializes the counter</description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Gated</name>
++                  <description> The counter clock is enabled when the trigger input (TRGI) is high</description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Trigger</name>
++                  <description>The counter starts at a rising edge of the trigger TRGI </description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>External</name>
++                  <description> Rising edges of the selected trigger (TRGI) clock the counter</description>
++                  <value>7</value>
 +                </enumeratedValue>
 +              </enumeratedValues>
              </field>
            </fields>
          </register>
-@@ -11355,6 +12080,27 @@
+@@ -10585,6 +11471,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
-+              <enumeratedValues>
-+                <usage>read</usage>
-+                <enumeratedValue>
-+                  <name>NoUpdate</name>
-+                  <description>No update occurred</description>
-+                  <value>0</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>Pending</name>
-+                  <description>Update interrupt pending</description>
-+                  <value>1</value>
-+                </enumeratedValue>
++              <enumeratedValues derivedFrom="TIM1.SR.UIF.UIFR">
 +              </enumeratedValues>
-+              <enumeratedValues>
-+                <usage>write</usage>
-+                <enumeratedValue>
-+                  <name>Clear</name>
-+                  <description>Clears the update interrupt flag</description>
-+                  <value>0</value>
-+                </enumeratedValue>
++              <enumeratedValues derivedFrom="TIM1.SR.UIF.UIFW">
 +              </enumeratedValues>
              </field>
            </fields>
          </register>
-@@ -11406,6 +12152,12 @@
+@@ -10827,6 +11717,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1642,7 +1928,117 @@
              </field>
            </fields>
          </register>
-@@ -11423,6 +12175,12 @@
+@@ -10844,6 +11740,12 @@
+               <description>Auto-reload value</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>65535</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+           </fields>
+         </register>
+@@ -10861,6 +11763,12 @@
+               <description>Capture/Compare 1 value</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>65535</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+           </fields>
+         </register>
+@@ -10878,6 +11786,12 @@
+               <description>Capture/Compare 2 value</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>65535</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+           </fields>
+         </register>
+@@ -10924,6 +11838,8 @@
+               <description>Clock division</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.CR1.CKD.CKD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>ARPE</name>
+@@ -10948,6 +11864,8 @@
+               <description>Counter enable</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.CR1.CEN.CEN">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -11020,6 +11938,10 @@
+               <description>Update interrupt flag</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.SR.UIF.UIFR">
++              </enumeratedValues>
++              <enumeratedValues derivedFrom="TIM1.SR.UIF.UIFW">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -11280,6 +12202,8 @@
+               <description>One-pulse mode</description>
+               <bitOffset>3</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.CR1.OPM.OPM">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>URS</name>
+@@ -11298,6 +12222,8 @@
+               <description>Counter enable</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.CR1.CEN.CEN">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -11355,6 +12281,10 @@
+               <description>Update interrupt flag</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.SR.UIF.UIFR">
++              </enumeratedValues>
++              <enumeratedValues derivedFrom="TIM1.SR.UIF.UIFW">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -11406,6 +12336,12 @@
+               <description>Prescaler value</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>65535</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+           </fields>
+         </register>
+@@ -11423,6 +12359,12 @@
                <description>Low Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1655,7 +2051,7 @@
              </field>
            </fields>
          </register>
-@@ -23020,6 +23778,24 @@
+@@ -23020,6 +23962,24 @@
                <bitOffset>0</bitOffset>
                <bitWidth>3</bitWidth>
                <access>read-write</access>
@@ -1680,7 +2076,7 @@
              </field>
              <field>
                <name>HLFCYA</name>
-@@ -23035,6 +23811,19 @@
+@@ -23035,6 +23995,19 @@
                <bitOffset>4</bitOffset>
                <bitWidth>1</bitWidth>
                <access>read-write</access>
