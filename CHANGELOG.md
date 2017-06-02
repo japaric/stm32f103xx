@@ -5,6 +5,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [v0.5.0] - 2017-06-02
+
+### Added
+
+- enumeratedValues information to timers.
+
+### Changed
+
+- [breaking-change] Re-generated using svd2rust v0.8.1. The API of 1-bit fields
+  changed.
+
 ## [v0.4.1] - 2017-05-10
 
 ### Changed
@@ -44,7 +55,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Initial release
 
-[Unreleased]: https://github.com/japaric/stm32f103x/compare/v0.4.1...HEAD
+[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.5.0...HEAD
+[v0.5.0]: https://github.com/japaric/stm32f103xx/compare/v0.4.1...v0.5.0
 [v0.4.1]: https://github.com/japaric/stm32f103xx/compare/v0.4.0...v0.4.1
 [v0.4.0]: https://github.com/japaric/stm32f103xx/compare/v0.3.1...v0.4.0
 [v0.3.1]: https://github.com/japaric/stm32f103xx/compare/v0.3.0...v0.3.1
