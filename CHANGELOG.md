@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [v0.6.0] - 2017-06-05
+
+### Changed
+
+- [breaking-change] Re-generated using svd2rust v0.9.0. The types of
+  peripherals, registers and bitfields are now normalized to uppercase.
+
 ## [v0.5.0] - 2017-06-02
 
 ### Added
@@ -55,7 +62,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Initial release
 
-[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.6.0...HEAD
+[v0.6.0]: https://github.com/japaric/stm32f103xx/compare/v0.5.0...v0.6.0
 [v0.5.0]: https://github.com/japaric/stm32f103xx/compare/v0.4.1...v0.5.0
 [v0.4.1]: https://github.com/japaric/stm32f103xx/compare/v0.4.0...v0.4.1
 [v0.4.0]: https://github.com/japaric/stm32f103xx/compare/v0.3.1...v0.4.0
