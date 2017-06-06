@@ -5,7 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-## [v0.6.0] - 2017-06-05
+## [v0.6.1] - 2017-06-05
+
+### Fixed
+
+- Re-generated using svd2rust v0.9.1. The types of core peripheral register
+  blocks are now uppercase as well.
+
+## [v0.6.0] - 2017-06-05 - YANKED
 
 ### Changed
 
@@ -62,7 +69,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Initial release
 
-[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.6.1...HEAD
+[v0.6.1]: https://github.com/japaric/stm32f103xx/compare/v0.6.0...v0.6.1
 [v0.6.0]: https://github.com/japaric/stm32f103xx/compare/v0.5.0...v0.6.0
 [v0.5.0]: https://github.com/japaric/stm32f103xx/compare/v0.4.1...v0.5.0
 [v0.4.1]: https://github.com/japaric/stm32f103xx/compare/v0.4.0...v0.4.1
