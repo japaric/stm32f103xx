@@ -6,8 +6,16 @@ keywords = ["no-std", "arm", "cortex-m", "stm32"]
 license = "MIT OR Apache-2.0"
 name = "stm32f103xx"
 repository = "https://github.com/japaric/stm32f103xx"
-version = "0.6.1"
+version = "0.7.0"
 
 [dependencies]
-cortex-m = "0.2.0"
+cortex-m = "0.3.0"
+bare-metal = "0.1.0"
 vcell = "0.1.0"
+
+[dependencies.cortex-m-rt]
+optional = true
+version = "0.3.0"
+
+[features]
+rt = ["cortex-m-rt"]
