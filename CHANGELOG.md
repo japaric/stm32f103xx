@@ -5,11 +5,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [v0.7.1] - 2017-07-07
+
+### Changed
+
+- Re-generated using svd2rust v0.11.1
+
 ## [v0.7.0] - 2017-07-07
 
 ### Changed
 
-- [breaking] Re-generated using svd2rust [v0.11.0][svd2rust-11].
+- [breaking-change] Re-generated using svd2rust [v0.11.0][svd2rust-11].
 
 [svd2rust-11]: https://github.com/japaric/svd2rust/blob/master/CHANGELOG.md#v0110---2017-07-07
 
@@ -77,7 +83,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Initial release
 
-[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.7.0...HEAD
+[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.7.1...HEAD
+[v0.7.1]: https://github.com/japaric/stm32f103xx/compare/v0.7.0...v0.7.1
 [v0.7.0]: https://github.com/japaric/stm32f103xx/compare/v0.6.1...v0.7.0
 [v0.6.1]: https://github.com/japaric/stm32f103xx/compare/v0.6.0...v0.6.1
 [v0.6.0]: https://github.com/japaric/stm32f103xx/compare/v0.5.0...v0.6.0
