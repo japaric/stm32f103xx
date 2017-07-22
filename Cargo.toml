@@ -6,7 +6,7 @@ keywords = ["no-std", "arm", "cortex-m", "stm32"]
 license = "MIT OR Apache-2.0"
 name = "stm32f103xx"
 repository = "https://github.com/japaric/stm32f103xx"
-version = "0.7.1"
+version = "0.7.2"
 
 [dependencies]
 cortex-m = "0.3.0"
