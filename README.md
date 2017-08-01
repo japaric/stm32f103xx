@@ -2,10 +2,7 @@
 
 > Peripheral access API for STM32F103XX microcontrollers
 
-Generated using [svd2rust] v0.4.0 from [STM32F103xx.svd].
-
-[STM32F103xx.svd]: https://github.com/posborne/cmsis-svd/blob/aa4721af946a253d18c8737b01d23e9c88a42e84/data/STMicro/STM32F103xx.svd
-[svd2rust]: https://github.com/japaric/svd2rust
+# [Documentation](https://docs.rs/stm32f103xx)
 
 # License
 
