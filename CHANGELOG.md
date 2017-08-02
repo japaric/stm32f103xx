@@ -5,7 +5,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-## [v0.7.2] - 2017-07-21
+## [v0.7.3] - 2017-08-01
+
+### Changed
+
+- Re-generated using svd2rust v0.11.3
+
+### Fixed
+
+- Overrides of interrupt handles were being ignored if LTO was not enabled.
+
+## [v0.7.2] - 2017-07-21 - YANKED
 
 ### Changed
 
@@ -89,7 +99,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Initial release
 
-[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.7.2...HEAD
+[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.7.3...HEAD
+[v0.7.3]: https://github.com/japaric/stm32f103xx/compare/v0.7.2...v0.7.3
 [v0.7.2]: https://github.com/japaric/stm32f103xx/compare/v0.7.1...v0.7.2
 [v0.7.1]: https://github.com/japaric/stm32f103xx/compare/v0.7.0...v0.7.1
 [v0.7.0]: https://github.com/japaric/stm32f103xx/compare/v0.6.1...v0.7.0
