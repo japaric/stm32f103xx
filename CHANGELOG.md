@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [v0.7.4] - 2017-08-24
+
+### Added
+
+- Some `<enumeratedValues>` information to RCC.
+
 ## [v0.7.3] - 2017-08-01
 
 ### Changed
@@ -99,7 +105,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Initial release
 
-[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.7.3...HEAD
+[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.7.4...HEAD
+[v0.7.4]: https://github.com/japaric/stm32f103xx/compare/v0.7.3...v0.7.4
 [v0.7.3]: https://github.com/japaric/stm32f103xx/compare/v0.7.2...v0.7.3
 [v0.7.2]: https://github.com/japaric/stm32f103xx/compare/v0.7.1...v0.7.2
 [v0.7.1]: https://github.com/japaric/stm32f103xx/compare/v0.7.0...v0.7.1
