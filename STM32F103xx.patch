@@ -1,5 +1,5 @@
---- STM32F103xx.svd.raw	2017-08-07 08:44:59.950366570 -0400
-+++ STM32F103xx.svd	2017-08-07 10:34:20.972563179 -0400
+--- STM32F103xx.svd.raw	2017-08-23 10:28:51.363304641 +0100
++++ STM32F103xx.svd	2017-09-06 15:36:38.056911839 +0100
 @@ -3,6 +3,16 @@
  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
  xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
@@ -2338,3 +2338,107 @@
              </field>
              <field>
                <name>PRFTBS</name>
+@@ -24060,6 +25190,12 @@
+               <description>Endpoint address</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>STAT_TX</name>
+@@ -24138,6 +25274,12 @@
+               <description>Endpoint address</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>STAT_TX</name>
+@@ -24216,6 +25358,12 @@
+               <description>Endpoint address</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>STAT_TX</name>
+@@ -24294,6 +25442,12 @@
+               <description>Endpoint address</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>STAT_TX</name>
+@@ -24372,6 +25526,12 @@
+               <description>Endpoint address</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>STAT_TX</name>
+@@ -24450,6 +25610,12 @@
+               <description>Endpoint address</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>STAT_TX</name>
+@@ -24528,6 +25694,12 @@
+               <description>Endpoint address</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>STAT_TX</name>
+@@ -24606,6 +25778,12 @@
+               <description>Endpoint address</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>STAT_TX</name>
