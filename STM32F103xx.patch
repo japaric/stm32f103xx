@@ -1,5 +1,5 @@
 --- STM32F103xx.svd.raw	2017-08-23 10:28:51.363304641 +0100
-+++ STM32F103xx.svd	2017-09-06 15:36:38.056911839 +0100
++++ STM32F103xx.svd	2017-09-06 15:49:56.087777022 +0100
 @@ -3,6 +3,16 @@
  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
  xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
@@ -2351,7 +2351,36 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24138,6 +25274,12 @@
+@@ -24093,6 +25229,28 @@
+               <description>Endpoint type</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>BULK</name>
++                  <description>This endpoint is a bulk endpoint</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CONTROL</name>
++                  <description>This endpoint is a control endpoint</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ISO</name>
++                  <description>This endpoint is an isochronous endpoint</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>INTERRUPT</name>
++                  <description>This endpoint is an interrupt endpoint</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SETUP</name>
+@@ -24138,6 +25296,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -2364,7 +2393,36 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24216,6 +25358,12 @@
+@@ -24171,6 +25335,28 @@
+               <description>Endpoint type</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>BULK</name>
++                  <description>This endpoint is a bulk endpoint</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CONTROL</name>
++                  <description>This endpoint is a control endpoint</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ISO</name>
++                  <description>This endpoint is an isochronous endpoint</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>INTERRUPT</name>
++                  <description>This endpoint is an interrupt endpoint</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SETUP</name>
+@@ -24216,6 +25402,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -2377,7 +2435,36 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24294,6 +25442,12 @@
+@@ -24249,6 +25441,28 @@
+               <description>Endpoint type</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>BULK</name>
++                  <description>This endpoint is a bulk endpoint</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CONTROL</name>
++                  <description>This endpoint is a control endpoint</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ISO</name>
++                  <description>This endpoint is an isochronous endpoint</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>INTERRUPT</name>
++                  <description>This endpoint is an interrupt endpoint</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SETUP</name>
+@@ -24294,6 +25508,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -2390,7 +2477,36 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24372,6 +25526,12 @@
+@@ -24327,6 +25547,28 @@
+               <description>Endpoint type</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>BULK</name>
++                  <description>This endpoint is a bulk endpoint</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CONTROL</name>
++                  <description>This endpoint is a control endpoint</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ISO</name>
++                  <description>This endpoint is an isochronous endpoint</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>INTERRUPT</name>
++                  <description>This endpoint is an interrupt endpoint</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SETUP</name>
+@@ -24372,6 +25614,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -2403,7 +2519,36 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24450,6 +25610,12 @@
+@@ -24405,6 +25653,28 @@
+               <description>Endpoint type</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>BULK</name>
++                  <description>This endpoint is a bulk endpoint</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CONTROL</name>
++                  <description>This endpoint is a control endpoint</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ISO</name>
++                  <description>This endpoint is an isochronous endpoint</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>INTERRUPT</name>
++                  <description>This endpoint is an interrupt endpoint</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SETUP</name>
+@@ -24450,6 +25720,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -2416,7 +2561,36 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24528,6 +25694,12 @@
+@@ -24483,6 +25759,28 @@
+               <description>Endpoint type</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>BULK</name>
++                  <description>This endpoint is a bulk endpoint</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CONTROL</name>
++                  <description>This endpoint is a control endpoint</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ISO</name>
++                  <description>This endpoint is an isochronous endpoint</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>INTERRUPT</name>
++                  <description>This endpoint is an interrupt endpoint</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SETUP</name>
+@@ -24528,6 +25826,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -2429,7 +2603,36 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24606,6 +25778,12 @@
+@@ -24561,6 +25865,28 @@
+               <description>Endpoint type</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>BULK</name>
++                  <description>This endpoint is a bulk endpoint</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CONTROL</name>
++                  <description>This endpoint is a control endpoint</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ISO</name>
++                  <description>This endpoint is an isochronous endpoint</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>INTERRUPT</name>
++                  <description>This endpoint is an interrupt endpoint</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SETUP</name>
+@@ -24606,6 +25932,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -2442,3 +2645,32 @@
              </field>
              <field>
                <name>STAT_TX</name>
+@@ -24639,6 +25971,28 @@
+               <description>Endpoint type</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>BULK</name>
++                  <description>This endpoint is a bulk endpoint</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CONTROL</name>
++                  <description>This endpoint is a control endpoint</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ISO</name>
++                  <description>This endpoint is an isochronous endpoint</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>INTERRUPT</name>
++                  <description>This endpoint is an interrupt endpoint</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SETUP</name>
