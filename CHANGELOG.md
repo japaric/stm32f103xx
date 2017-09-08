@@ -5,6 +5,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [v0.7.4] - 2017-09-08
+
+### Added
+
+- Some `<enumeratedValues>` information to USB.
+
+### Changed
+
+- Re-generated using svd2rust v0.11.4
+
 ## [v0.7.4] - 2017-08-24
 
 ### Added
