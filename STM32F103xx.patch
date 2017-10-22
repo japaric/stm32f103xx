@@ -1,5 +1,5 @@
 --- STM32F103xx.svd.raw	2017-10-22 10:46:47.419016630 +0300
-+++ STM32F103xx.svd	2017-10-22 13:55:47.837567220 +0300
++++ STM32F103xx.svd	2017-10-22 15:28:13.301087596 +0300
 @@ -3,6 +3,16 @@
  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
  xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
@@ -166,7 +166,7 @@
                <access>read-write</access>
 +              <enumeratedValues>
 +                <enumeratedValue>
-+                  <name>Div1</name>
++                  <name>NoDiv</name>
 +                  <description>SYSCLK not divided</description>
 +                  <value>0</value>
 +                </enumeratedValue>
@@ -220,7 +220,7 @@
                <access>read-write</access>
 +              <enumeratedValues>
 +                <enumeratedValue>
-+                  <name>Div1</name>
++                  <name>NoDiv</name>
 +                  <description>HCLK not divided</description>
 +                  <value>0</value>
 +                </enumeratedValue>
@@ -254,7 +254,7 @@
                <access>read-write</access>
 +              <enumeratedValues>
 +                <enumeratedValue>
-+                  <name>Div1</name>
++                  <name>NoDiv</name>
 +                  <description>HCLK not divided</description>
 +                  <value>0</value>
 +                </enumeratedValue>
@@ -336,7 +336,7 @@
                <access>read-write</access>
 +              <enumeratedValues>
 +                <enumeratedValue>
-+                  <name>Div1</name>
++                  <name>NoDiv</name>
 +                  <description>HSE not divided</description>
 +                  <value>0</value>
 +                </enumeratedValue>
@@ -446,7 +446,7 @@
 +                  <value>0</value>
 +                </enumeratedValue>
 +                <enumeratedValue>
-+                  <name>Div0</name>
++                  <name>NoDiv</name>
 +                  <description>PLL clock is not divided</description>
 +                  <value>1</value>
 +                </enumeratedValue>
@@ -1457,7 +1457,7 @@
 +              <enumeratedValues>
 +                <name>CKD</name>
 +                <enumeratedValue>
-+                  <name>Div1</name>
++                  <name>NoDiv</name>
 +                  <description>Clock is not divided</description>
 +                  <value>0</value>
 +                </enumeratedValue>
