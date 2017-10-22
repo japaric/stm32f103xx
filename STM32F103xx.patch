@@ -1,5 +1,5 @@
---- STM32F103xx.svd.raw	2017-08-23 10:28:51.363304641 +0100
-+++ STM32F103xx.svd	2017-09-06 15:49:56.087777022 +0100
+--- STM32F103xx.svd.raw	2017-10-22 10:46:47.419016630 +0300
++++ STM32F103xx.svd	2017-10-22 13:55:47.837567220 +0300
 @@ -3,6 +3,16 @@
  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
  xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
@@ -1729,6 +1729,24 @@
              </field>
              <field>
                <name>OC1PE</name>
+@@ -8950,7 +9799,7 @@
+               <bitWidth>4</bitWidth>
+             </field>
+             <field>
+-              <name>IC2PCS</name>
++              <name>IC2PSC</name>
+               <description>Input capture 2 prescaler</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>2</bitWidth>
+@@ -8969,7 +9818,7 @@
+               <bitWidth>4</bitWidth>
+             </field>
+             <field>
+-              <name>ICPCS</name>
++              <name>IC1PSC</name>
+               <description>Input capture 1 prescaler</description>
+               <bitOffset>2</bitOffset>
+               <bitWidth>2</bitWidth>
 @@ -9005,6 +9854,8 @@
                <description>Output compare 4 mode</description>
                <bitOffset>12</bitOffset>
@@ -1901,6 +1919,15 @@
              </field>
            </fields>
          </register>
+@@ -10013,7 +10924,7 @@
+           <resetValue>0x00000000</resetValue>
+           <fields>
+             <field>
+-              <name>O24CE</name>
++              <name>OC4CE</name>
+               <description>Output compare 4 clear
+               enable</description>
+               <bitOffset>15</bitOffset>
 @@ -10215,6 +11126,12 @@
                <description>counter value</description>
                <bitOffset>0</bitOffset>
