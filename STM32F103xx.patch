@@ -1,5 +1,5 @@
---- a/STM32F103xx.svd	2017-07-03 23:33:31.519241540 -0500
-+++ b/STM32F103xx.svd	2017-07-03 23:33:42.352562702 -0500
+--- STM32F103xx.svd.raw	2017-08-23 10:28:51.363304641 +0100
++++ STM32F103xx.svd	2017-09-06 15:49:56.087777022 +0100
 @@ -3,6 +3,16 @@
  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
  xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
@@ -282,7 +282,36 @@
              </field>
              <field>
                <name>ADCPRE</name>
-@@ -1745,6 +1950,18 @@
+@@ -1738,6 +1943,28 @@
+               <bitOffset>14</bitOffset>
+               <bitWidth>2</bitWidth>
+               <access>read-write</access>
++	      <enumeratedValues>
++		<enumeratedValue>
++		  <name>Div2</name>
++		  <description>PCLK2 divided by 2</description>
++		  <value>0</value>
++		</enumeratedValue>
++		<enumeratedValue>
++		  <name>Div4</name>
++		  <description>PCLK2 divided by 4</description>
++		  <value>1</value>
++		</enumeratedValue>
++		<enumeratedValue>
++		  <name>Div6</name>
++		  <description>PCLK2 divided by 6</description>
++		  <value>2</value>
++		</enumeratedValue>
++		<enumeratedValue>
++		  <name>Div8</name>
++		  <description>PCLK2 divided by 8</description>
++		  <value>3</value>
++		</enumeratedValue>
++	      </enumeratedValues>
+             </field>
+             <field>
+               <name>PLLSRC</name>
+@@ -1745,6 +1972,18 @@
                <bitOffset>16</bitOffset>
                <bitWidth>1</bitWidth>
                <access>read-write</access>
@@ -301,7 +330,7 @@
              </field>
              <field>
                <name>PLLXTPRE</name>
-@@ -1752,6 +1969,18 @@
+@@ -1752,6 +1991,18 @@
                <bitOffset>17</bitOffset>
                <bitWidth>1</bitWidth>
                <access>read-write</access>
@@ -320,7 +349,7 @@
              </field>
              <field>
                <name>PLLMUL</name>
-@@ -1759,6 +1988,83 @@
+@@ -1759,13 +2010,102 @@
                <bitOffset>18</bitOffset>
                <bitWidth>4</bitWidth>
                <access>read-write</access>
@@ -403,8 +432,29 @@
 +              </enumeratedValues>
              </field>
              <field>
-               <name>OTGFSPRE</name>
-@@ -2195,12 +2501,27 @@
+-              <name>OTGFSPRE</name>
+-              <description>USB OTG FS prescaler</description>
++              <name>USBPRE</name>
++              <description>USB prescaler</description>
+               <bitOffset>22</bitOffset>
+               <bitWidth>1</bitWidth>
+               <access>read-write</access>
++	      <enumeratedValues>
++                <enumeratedValue>
++                  <name>Div15</name>
++                  <description>PLL clock is divided by 1.5</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Div0</name>
++                  <description>PLL clock is not divided</description>
++                  <value>1</value>
++                </enumeratedValue>
++	      </enumeratedValues>
+             </field>
+             <field>
+               <name>MCO</name>
+@@ -2195,12 +2535,27 @@
                <description>DMA1 clock enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -432,7 +482,7 @@
              </field>
              <field>
                <name>SRAMEN</name>
-@@ -2208,30 +2529,40 @@
+@@ -2208,30 +2563,40 @@
                enable</description>
                <bitOffset>2</bitOffset>
                <bitWidth>1</bitWidth>
@@ -473,7 +523,7 @@
              </field>
            </fields>
          </register>
-@@ -2251,48 +2582,64 @@
+@@ -2251,48 +2616,64 @@
                enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -538,7 +588,7 @@
              </field>
              <field>
                <name>ADC1EN</name>
-@@ -2300,6 +2647,8 @@
+@@ -2300,6 +2681,8 @@
                enable</description>
                <bitOffset>9</bitOffset>
                <bitWidth>1</bitWidth>
@@ -547,7 +597,7 @@
              </field>
              <field>
                <name>ADC2EN</name>
-@@ -2307,30 +2656,40 @@
+@@ -2307,30 +2690,40 @@
                enable</description>
                <bitOffset>10</bitOffset>
                <bitWidth>1</bitWidth>
@@ -588,7 +638,7 @@
              </field>
              <field>
                <name>ADC3EN</name>
-@@ -2338,24 +2697,32 @@
+@@ -2338,24 +2731,32 @@
                enable</description>
                <bitOffset>15</bitOffset>
                <bitWidth>1</bitWidth>
@@ -621,7 +671,7 @@
              </field>
            </fields>
          </register>
-@@ -2374,54 +2741,72 @@
+@@ -2374,54 +2775,72 @@
                <description>Timer 2 clock enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -694,7 +744,7 @@
              </field>
              <field>
                <name>WWDGEN</name>
-@@ -2429,66 +2814,88 @@
+@@ -2429,66 +2848,88 @@
                enable</description>
                <bitOffset>11</bitOffset>
                <bitWidth>1</bitWidth>
@@ -783,7 +833,7 @@
              </field>
              <field>
                <name>BKPEN</name>
-@@ -2496,6 +2903,8 @@
+@@ -2496,6 +2937,8 @@
                enable</description>
                <bitOffset>27</bitOffset>
                <bitWidth>1</bitWidth>
@@ -792,7 +842,7 @@
              </field>
              <field>
                <name>PWREN</name>
-@@ -2503,12 +2912,16 @@
+@@ -2503,12 +2946,16 @@
                enable</description>
                <bitOffset>28</bitOffset>
                <bitWidth>1</bitWidth>
@@ -809,7 +859,7 @@
              </field>
            </fields>
          </register>
-@@ -2674,6 +3087,29 @@
+@@ -2674,6 +3121,29 @@
                <description>Port n.0 mode bits</description>
                <bitOffset>0</bitOffset>
                <bitWidth>2</bitWidth>
@@ -839,7 +889,7 @@
              </field>
              <field>
                <name>CNF0</name>
-@@ -2681,12 +3117,37 @@
+@@ -2681,12 +3151,37 @@
                bits</description>
                <bitOffset>2</bitOffset>
                <bitWidth>2</bitWidth>
@@ -877,7 +927,7 @@
              </field>
              <field>
                <name>CNF1</name>
-@@ -2694,12 +3155,16 @@
+@@ -2694,12 +3189,16 @@
                bits</description>
                <bitOffset>6</bitOffset>
                <bitWidth>2</bitWidth>
@@ -894,7 +944,7 @@
              </field>
              <field>
                <name>CNF2</name>
-@@ -2707,12 +3172,16 @@
+@@ -2707,12 +3206,16 @@
                bits</description>
                <bitOffset>10</bitOffset>
                <bitWidth>2</bitWidth>
@@ -911,7 +961,7 @@
              </field>
              <field>
                <name>CNF3</name>
-@@ -2720,12 +3189,16 @@
+@@ -2720,12 +3223,16 @@
                bits</description>
                <bitOffset>14</bitOffset>
                <bitWidth>2</bitWidth>
@@ -928,7 +978,7 @@
              </field>
              <field>
                <name>CNF4</name>
-@@ -2733,12 +3206,16 @@
+@@ -2733,12 +3240,16 @@
                bits</description>
                <bitOffset>18</bitOffset>
                <bitWidth>2</bitWidth>
@@ -945,7 +995,7 @@
              </field>
              <field>
                <name>CNF5</name>
-@@ -2746,12 +3223,16 @@
+@@ -2746,12 +3257,16 @@
                bits</description>
                <bitOffset>22</bitOffset>
                <bitWidth>2</bitWidth>
@@ -962,7 +1012,7 @@
              </field>
              <field>
                <name>CNF6</name>
-@@ -2759,12 +3240,16 @@
+@@ -2759,12 +3274,16 @@
                bits</description>
                <bitOffset>26</bitOffset>
                <bitWidth>2</bitWidth>
@@ -979,7 +1029,7 @@
              </field>
              <field>
                <name>CNF7</name>
-@@ -2772,6 +3257,8 @@
+@@ -2772,6 +3291,8 @@
                bits</description>
                <bitOffset>30</bitOffset>
                <bitWidth>2</bitWidth>
@@ -988,7 +1038,7 @@
              </field>
            </fields>
          </register>
-@@ -2790,6 +3277,8 @@
+@@ -2790,6 +3311,8 @@
                <description>Port n.8 mode bits</description>
                <bitOffset>0</bitOffset>
                <bitWidth>2</bitWidth>
@@ -997,7 +1047,7 @@
              </field>
              <field>
                <name>CNF8</name>
-@@ -2797,12 +3286,16 @@
+@@ -2797,12 +3320,16 @@
                bits</description>
                <bitOffset>2</bitOffset>
                <bitWidth>2</bitWidth>
@@ -1014,7 +1064,7 @@
              </field>
              <field>
                <name>CNF9</name>
-@@ -2810,12 +3303,16 @@
+@@ -2810,12 +3337,16 @@
                bits</description>
                <bitOffset>6</bitOffset>
                <bitWidth>2</bitWidth>
@@ -1031,7 +1081,7 @@
              </field>
              <field>
                <name>CNF10</name>
-@@ -2823,12 +3320,16 @@
+@@ -2823,12 +3354,16 @@
                bits</description>
                <bitOffset>10</bitOffset>
                <bitWidth>2</bitWidth>
@@ -1048,7 +1098,7 @@
              </field>
              <field>
                <name>CNF11</name>
-@@ -2836,12 +3337,16 @@
+@@ -2836,12 +3371,16 @@
                bits</description>
                <bitOffset>14</bitOffset>
                <bitWidth>2</bitWidth>
@@ -1065,7 +1115,7 @@
              </field>
              <field>
                <name>CNF12</name>
-@@ -2849,12 +3354,16 @@
+@@ -2849,12 +3388,16 @@
                bits</description>
                <bitOffset>18</bitOffset>
                <bitWidth>2</bitWidth>
@@ -1082,7 +1132,7 @@
              </field>
              <field>
                <name>CNF13</name>
-@@ -2862,12 +3371,16 @@
+@@ -2862,12 +3405,16 @@
                bits</description>
                <bitOffset>22</bitOffset>
                <bitWidth>2</bitWidth>
@@ -1099,7 +1149,7 @@
              </field>
              <field>
                <name>CNF14</name>
-@@ -2875,12 +3388,16 @@
+@@ -2875,12 +3422,16 @@
                bits</description>
                <bitOffset>26</bitOffset>
                <bitWidth>2</bitWidth>
@@ -1116,7 +1166,7 @@
              </field>
              <field>
                <name>CNF15</name>
-@@ -2888,6 +3405,8 @@
+@@ -2888,6 +3439,8 @@
                bits</description>
                <bitOffset>30</bitOffset>
                <bitWidth>2</bitWidth>
@@ -1125,7 +1175,7 @@
              </field>
            </fields>
          </register>
-@@ -3122,192 +3641,270 @@
+@@ -3122,192 +3675,270 @@
                <description>Set bit 0</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1396,7 +1446,7 @@
              </field>
            </fields>
          </register>
-@@ -8400,9 +8997,27 @@
+@@ -8400,9 +9031,27 @@
            <fields>
              <field>
                <name>CKD</name>
@@ -1425,7 +1475,7 @@
              </field>
              <field>
                <name>ARPE</name>
-@@ -8422,12 +9037,38 @@
+@@ -8422,12 +9071,38 @@
                <description>Direction</description>
                <bitOffset>4</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1464,7 +1514,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -8446,6 +9087,19 @@
+@@ -8446,6 +9121,19 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1484,7 +1534,7 @@
              </field>
            </fields>
          </register>
-@@ -8579,12 +9233,98 @@
+@@ -8579,12 +9267,98 @@
                <description>Trigger selection</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -1583,7 +1633,7 @@
              </field>
            </fields>
          </register>
-@@ -8785,6 +9525,29 @@
+@@ -8785,6 +9559,29 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1613,7 +1663,7 @@
              </field>
            </fields>
          </register>
-@@ -8874,6 +9637,8 @@
+@@ -8874,6 +9671,8 @@
                <description>Output Compare 2 mode</description>
                <bitOffset>12</bitOffset>
                <bitWidth>3</bitWidth>
@@ -1622,7 +1672,7 @@
              </field>
              <field>
                <name>OC2PE</name>
-@@ -8908,6 +9673,56 @@
+@@ -8908,6 +9707,56 @@
                <description>Output Compare 1 mode</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -1679,7 +1729,7 @@
              </field>
              <field>
                <name>OC1PE</name>
-@@ -9005,6 +9820,8 @@
+@@ -9005,6 +9854,8 @@
                <description>Output compare 4 mode</description>
                <bitOffset>12</bitOffset>
                <bitWidth>3</bitWidth>
@@ -1688,7 +1738,7 @@
              </field>
              <field>
                <name>OC4PE</name>
-@@ -9039,6 +9856,8 @@
+@@ -9039,6 +9890,8 @@
                <description>Output compare 3 mode</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -1697,7 +1747,7 @@
              </field>
              <field>
                <name>OC3PE</name>
-@@ -9238,6 +10057,12 @@
+@@ -9238,6 +10091,12 @@
                <description>counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1710,7 +1760,7 @@
              </field>
            </fields>
          </register>
-@@ -9255,6 +10080,12 @@
+@@ -9255,6 +10114,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1723,7 +1773,7 @@
              </field>
            </fields>
          </register>
-@@ -9272,6 +10103,12 @@
+@@ -9272,6 +10137,12 @@
                <description>Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1736,7 +1786,7 @@
              </field>
            </fields>
          </register>
-@@ -9289,6 +10126,12 @@
+@@ -9289,6 +10160,12 @@
                <description>Capture/Compare 1 value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1749,7 +1799,7 @@
              </field>
            </fields>
          </register>
-@@ -9306,6 +10149,12 @@
+@@ -9306,6 +10183,12 @@
                <description>Capture/Compare 2 value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1762,7 +1812,7 @@
              </field>
            </fields>
          </register>
-@@ -9323,6 +10172,12 @@
+@@ -9323,6 +10206,12 @@
                <description>Capture/Compare value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1775,7 +1825,7 @@
              </field>
            </fields>
          </register>
-@@ -9340,6 +10195,12 @@
+@@ -9340,6 +10229,12 @@
                <description>Capture/Compare value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1788,7 +1838,7 @@
              </field>
            </fields>
          </register>
-@@ -9521,6 +10382,8 @@
+@@ -9521,6 +10416,8 @@
                <description>Clock division</description>
                <bitOffset>8</bitOffset>
                <bitWidth>2</bitWidth>
@@ -1797,7 +1847,7 @@
              </field>
              <field>
                <name>ARPE</name>
-@@ -9540,12 +10403,16 @@
+@@ -9540,12 +10437,16 @@
                <description>Direction</description>
                <bitOffset>4</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1814,7 +1864,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -9564,6 +10431,8 @@
+@@ -9564,6 +10465,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1823,7 +1873,7 @@
              </field>
            </fields>
          </register>
-@@ -9641,12 +10510,16 @@
+@@ -9641,12 +10544,16 @@
                <description>Trigger selection</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -1840,7 +1890,7 @@
              </field>
            </fields>
          </register>
-@@ -9817,6 +10690,10 @@
+@@ -9817,6 +10724,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1851,7 +1901,7 @@
              </field>
            </fields>
          </register>
-@@ -10215,6 +11092,12 @@
+@@ -10215,6 +11126,12 @@
                <description>counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1864,7 +1914,7 @@
              </field>
            </fields>
          </register>
-@@ -10232,6 +11115,12 @@
+@@ -10232,6 +11149,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1877,7 +1927,7 @@
              </field>
            </fields>
          </register>
-@@ -10249,6 +11138,12 @@
+@@ -10249,6 +11172,12 @@
                <description>Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1890,7 +1940,7 @@
              </field>
            </fields>
          </register>
-@@ -10266,6 +11161,12 @@
+@@ -10266,6 +11195,12 @@
                <description>Capture/Compare 1 value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1903,7 +1953,7 @@
              </field>
            </fields>
          </register>
-@@ -10283,6 +11184,12 @@
+@@ -10283,6 +11218,12 @@
                <description>Capture/Compare 2 value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1916,7 +1966,7 @@
              </field>
            </fields>
          </register>
-@@ -10300,6 +11207,12 @@
+@@ -10300,6 +11241,12 @@
                <description>Capture/Compare value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1929,7 +1979,7 @@
              </field>
            </fields>
          </register>
-@@ -10317,6 +11230,12 @@
+@@ -10317,6 +11264,12 @@
                <description>Capture/Compare value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -1942,7 +1992,7 @@
              </field>
            </fields>
          </register>
-@@ -10421,6 +11340,8 @@
+@@ -10421,6 +11374,8 @@
                <description>Clock division</description>
                <bitOffset>8</bitOffset>
                <bitWidth>2</bitWidth>
@@ -1951,7 +2001,7 @@
              </field>
              <field>
                <name>ARPE</name>
-@@ -10433,6 +11354,8 @@
+@@ -10433,6 +11388,8 @@
                <description>One-pulse mode</description>
                <bitOffset>3</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1960,7 +2010,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -10451,6 +11374,8 @@
+@@ -10451,6 +11408,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1969,7 +2019,7 @@
              </field>
            </fields>
          </register>
-@@ -10491,12 +11416,78 @@
+@@ -10491,12 +11450,78 @@
                <description>Trigger selection</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -2048,7 +2098,7 @@
              </field>
            </fields>
          </register>
-@@ -10585,6 +11576,10 @@
+@@ -10585,6 +11610,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2059,7 +2109,7 @@
              </field>
            </fields>
          </register>
-@@ -10810,6 +11805,12 @@
+@@ -10810,6 +11839,12 @@
                <description>counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2072,7 +2122,7 @@
              </field>
            </fields>
          </register>
-@@ -10827,6 +11828,12 @@
+@@ -10827,6 +11862,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2085,7 +2135,7 @@
              </field>
            </fields>
          </register>
-@@ -10844,6 +11851,12 @@
+@@ -10844,6 +11885,12 @@
                <description>Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2098,7 +2148,7 @@
              </field>
            </fields>
          </register>
-@@ -10861,6 +11874,12 @@
+@@ -10861,6 +11908,12 @@
                <description>Capture/Compare 1 value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2111,7 +2161,7 @@
              </field>
            </fields>
          </register>
-@@ -10878,6 +11897,12 @@
+@@ -10878,6 +11931,12 @@
                <description>Capture/Compare 2 value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2124,7 +2174,7 @@
              </field>
            </fields>
          </register>
-@@ -10924,6 +11949,8 @@
+@@ -10924,6 +11983,8 @@
                <description>Clock division</description>
                <bitOffset>8</bitOffset>
                <bitWidth>2</bitWidth>
@@ -2133,7 +2183,7 @@
              </field>
              <field>
                <name>ARPE</name>
-@@ -10948,6 +11975,8 @@
+@@ -10948,6 +12009,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2142,7 +2192,7 @@
              </field>
            </fields>
          </register>
-@@ -11020,6 +12049,10 @@
+@@ -11020,6 +12083,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2153,7 +2203,7 @@
              </field>
            </fields>
          </register>
-@@ -11158,6 +12191,12 @@
+@@ -11158,6 +12225,12 @@
                <description>counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2166,7 +2216,7 @@
              </field>
            </fields>
          </register>
-@@ -11280,6 +12319,8 @@
+@@ -11280,6 +12353,8 @@
                <description>One-pulse mode</description>
                <bitOffset>3</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2175,7 +2225,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -11298,6 +12339,8 @@
+@@ -11298,6 +12373,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2184,7 +2234,7 @@
              </field>
            </fields>
          </register>
-@@ -11355,6 +12398,10 @@
+@@ -11355,6 +12432,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2195,7 +2245,7 @@
              </field>
            </fields>
          </register>
-@@ -11389,6 +12436,12 @@
+@@ -11389,6 +12470,12 @@
                <description>Low counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2208,7 +2258,7 @@
              </field>
            </fields>
          </register>
-@@ -11406,6 +12459,12 @@
+@@ -11406,6 +12493,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2221,7 +2271,7 @@
              </field>
            </fields>
          </register>
-@@ -11423,6 +12482,12 @@
+@@ -11423,6 +12516,12 @@
                <description>Low Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2234,7 +2284,7 @@
              </field>
            </fields>
          </register>
-@@ -18918,7 +19983,7 @@
+@@ -18918,7 +20017,7 @@
              </field>
            </fields>
  		</register>
@@ -2243,7 +2293,7 @@
  		<register>
            <name>F7R1</name>
            <displayName>F7R1</displayName>
-@@ -23020,6 +24085,24 @@
+@@ -23020,6 +24119,24 @@
                <bitOffset>0</bitOffset>
                <bitWidth>3</bitWidth>
                <access>read-write</access>
@@ -2268,7 +2318,7 @@
              </field>
              <field>
                <name>HLFCYA</name>
-@@ -23035,6 +24118,19 @@
+@@ -23035,6 +24152,19 @@
                <bitOffset>4</bitOffset>
                <bitWidth>1</bitWidth>
                <access>read-write</access>
@@ -2288,3 +2338,339 @@
              </field>
              <field>
                <name>PRFTBS</name>
+@@ -24060,6 +25190,12 @@
+               <description>Endpoint address</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>STAT_TX</name>
+@@ -24093,6 +25229,28 @@
+               <description>Endpoint type</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>BULK</name>
++                  <description>This endpoint is a bulk endpoint</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CONTROL</name>
++                  <description>This endpoint is a control endpoint</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ISO</name>
++                  <description>This endpoint is an isochronous endpoint</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>INTERRUPT</name>
++                  <description>This endpoint is an interrupt endpoint</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SETUP</name>
+@@ -24138,6 +25296,12 @@
+               <description>Endpoint address</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>STAT_TX</name>
+@@ -24171,6 +25335,28 @@
+               <description>Endpoint type</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>BULK</name>
++                  <description>This endpoint is a bulk endpoint</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CONTROL</name>
++                  <description>This endpoint is a control endpoint</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ISO</name>
++                  <description>This endpoint is an isochronous endpoint</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>INTERRUPT</name>
++                  <description>This endpoint is an interrupt endpoint</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SETUP</name>
+@@ -24216,6 +25402,12 @@
+               <description>Endpoint address</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>STAT_TX</name>
+@@ -24249,6 +25441,28 @@
+               <description>Endpoint type</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>BULK</name>
++                  <description>This endpoint is a bulk endpoint</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CONTROL</name>
++                  <description>This endpoint is a control endpoint</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ISO</name>
++                  <description>This endpoint is an isochronous endpoint</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>INTERRUPT</name>
++                  <description>This endpoint is an interrupt endpoint</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SETUP</name>
+@@ -24294,6 +25508,12 @@
+               <description>Endpoint address</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>STAT_TX</name>
+@@ -24327,6 +25547,28 @@
+               <description>Endpoint type</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>BULK</name>
++                  <description>This endpoint is a bulk endpoint</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CONTROL</name>
++                  <description>This endpoint is a control endpoint</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ISO</name>
++                  <description>This endpoint is an isochronous endpoint</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>INTERRUPT</name>
++                  <description>This endpoint is an interrupt endpoint</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SETUP</name>
+@@ -24372,6 +25614,12 @@
+               <description>Endpoint address</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>STAT_TX</name>
+@@ -24405,6 +25653,28 @@
+               <description>Endpoint type</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>BULK</name>
++                  <description>This endpoint is a bulk endpoint</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CONTROL</name>
++                  <description>This endpoint is a control endpoint</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ISO</name>
++                  <description>This endpoint is an isochronous endpoint</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>INTERRUPT</name>
++                  <description>This endpoint is an interrupt endpoint</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SETUP</name>
+@@ -24450,6 +25720,12 @@
+               <description>Endpoint address</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>STAT_TX</name>
+@@ -24483,6 +25759,28 @@
+               <description>Endpoint type</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>BULK</name>
++                  <description>This endpoint is a bulk endpoint</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CONTROL</name>
++                  <description>This endpoint is a control endpoint</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ISO</name>
++                  <description>This endpoint is an isochronous endpoint</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>INTERRUPT</name>
++                  <description>This endpoint is an interrupt endpoint</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SETUP</name>
+@@ -24528,6 +25826,12 @@
+               <description>Endpoint address</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>STAT_TX</name>
+@@ -24561,6 +25865,28 @@
+               <description>Endpoint type</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>BULK</name>
++                  <description>This endpoint is a bulk endpoint</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CONTROL</name>
++                  <description>This endpoint is a control endpoint</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ISO</name>
++                  <description>This endpoint is an isochronous endpoint</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>INTERRUPT</name>
++                  <description>This endpoint is an interrupt endpoint</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SETUP</name>
+@@ -24606,6 +25932,12 @@
+               <description>Endpoint address</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>STAT_TX</name>
+@@ -24639,6 +25971,28 @@
+               <description>Endpoint type</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>BULK</name>
++                  <description>This endpoint is a bulk endpoint</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CONTROL</name>
++                  <description>This endpoint is a control endpoint</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ISO</name>
++                  <description>This endpoint is an isochronous endpoint</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>INTERRUPT</name>
++                  <description>This endpoint is an interrupt endpoint</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SETUP</name>
