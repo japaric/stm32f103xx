@@ -1,5 +1,5 @@
 --- STM32F103xx.svd.raw	2017-10-22 10:46:47.419016630 +0300
-+++ STM32F103xx.svd	2017-10-24 06:13:31.742624326 +0300
++++ STM32F103xx.svd	2017-10-24 16:58:11.333306273 +0300
 @@ -3,6 +3,16 @@
  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
  xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
@@ -2232,7 +2232,25 @@
              </field>
            </fields>
          </register>
-@@ -10013,7 +11041,7 @@
+@@ -9893,6 +10921,8 @@
+               <description>Output compare 2 mode</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.CCMR1_Output.OC1M.OC1M">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OC2PE</name>
+@@ -9927,6 +10957,8 @@
+               <description>Output compare 1 mode</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.CCMR1_Output.OC1M.OC1M">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OC1PE</name>
+@@ -10013,7 +11045,7 @@
            <resetValue>0x00000000</resetValue>
            <fields>
              <field>
@@ -2241,7 +2259,25 @@
                <description>Output compare 4 clear
                enable</description>
                <bitOffset>15</bitOffset>
-@@ -10215,6 +11243,12 @@
+@@ -10024,6 +11056,8 @@
+               <description>Output compare 4 mode</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.CCMR1_Output.OC1M.OC1M">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OC4PE</name>
+@@ -10058,6 +11092,8 @@
+               <description>Output compare 3 mode</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.CCMR1_Output.OC1M.OC1M">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OC3PE</name>
+@@ -10215,6 +11251,12 @@
                <description>counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2254,7 +2290,7 @@
              </field>
            </fields>
          </register>
-@@ -10232,6 +11266,12 @@
+@@ -10232,6 +11274,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2267,7 +2303,7 @@
              </field>
            </fields>
          </register>
-@@ -10249,6 +11289,12 @@
+@@ -10249,6 +11297,12 @@
                <description>Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2280,7 +2316,7 @@
              </field>
            </fields>
          </register>
-@@ -10266,6 +11312,12 @@
+@@ -10266,6 +11320,12 @@
                <description>Capture/Compare 1 value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2293,7 +2329,7 @@
              </field>
            </fields>
          </register>
-@@ -10283,6 +11335,12 @@
+@@ -10283,6 +11343,12 @@
                <description>Capture/Compare 2 value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2306,7 +2342,7 @@
              </field>
            </fields>
          </register>
-@@ -10300,6 +11358,12 @@
+@@ -10300,6 +11366,12 @@
                <description>Capture/Compare value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2319,7 +2355,7 @@
              </field>
            </fields>
          </register>
-@@ -10317,6 +11381,12 @@
+@@ -10317,6 +11389,12 @@
                <description>Capture/Compare value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2332,7 +2368,7 @@
              </field>
            </fields>
          </register>
-@@ -10421,6 +11491,8 @@
+@@ -10421,6 +11499,8 @@
                <description>Clock division</description>
                <bitOffset>8</bitOffset>
                <bitWidth>2</bitWidth>
@@ -2341,7 +2377,7 @@
              </field>
              <field>
                <name>ARPE</name>
-@@ -10433,6 +11505,8 @@
+@@ -10433,6 +11513,8 @@
                <description>One-pulse mode</description>
                <bitOffset>3</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2350,7 +2386,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -10451,6 +11525,8 @@
+@@ -10451,6 +11533,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2359,7 +2395,7 @@
              </field>
            </fields>
          </register>
-@@ -10491,12 +11567,78 @@
+@@ -10491,12 +11575,78 @@
                <description>Trigger selection</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -2438,7 +2474,7 @@
              </field>
            </fields>
          </register>
-@@ -10585,6 +11727,10 @@
+@@ -10585,6 +11735,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2449,7 +2485,25 @@
              </field>
            </fields>
          </register>
-@@ -10810,6 +11956,12 @@
+@@ -10640,6 +11794,8 @@
+               <description>Output Compare 2 mode</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.CCMR1_Output.OC1M.OC1M">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OC2PE</name>
+@@ -10667,6 +11823,8 @@
+               <description>Output Compare 1 mode</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.CCMR1_Output.OC1M.OC1M">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OC1PE</name>
+@@ -10810,6 +11968,12 @@
                <description>counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2462,7 +2516,7 @@
              </field>
            </fields>
          </register>
-@@ -10827,6 +11979,12 @@
+@@ -10827,6 +11991,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2475,7 +2529,7 @@
              </field>
            </fields>
          </register>
-@@ -10844,6 +12002,12 @@
+@@ -10844,6 +12014,12 @@
                <description>Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2488,7 +2542,7 @@
              </field>
            </fields>
          </register>
-@@ -10861,6 +12025,12 @@
+@@ -10861,6 +12037,12 @@
                <description>Capture/Compare 1 value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2501,7 +2555,7 @@
              </field>
            </fields>
          </register>
-@@ -10878,6 +12048,12 @@
+@@ -10878,6 +12060,12 @@
                <description>Capture/Compare 2 value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2514,7 +2568,7 @@
              </field>
            </fields>
          </register>
-@@ -10924,6 +12100,8 @@
+@@ -10924,6 +12112,8 @@
                <description>Clock division</description>
                <bitOffset>8</bitOffset>
                <bitWidth>2</bitWidth>
@@ -2523,7 +2577,7 @@
              </field>
              <field>
                <name>ARPE</name>
-@@ -10948,6 +12126,8 @@
+@@ -10948,6 +12138,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2532,7 +2586,7 @@
              </field>
            </fields>
          </register>
-@@ -11020,6 +12200,10 @@
+@@ -11020,6 +12212,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2543,7 +2597,16 @@
              </field>
            </fields>
          </register>
-@@ -11158,6 +12342,12 @@
+@@ -11062,6 +12258,8 @@
+               <description>Output Compare 1 mode</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues derivedFrom="TIM1.CCMR1_Output.OC1M.OC1M">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OC1PE</name>
+@@ -11158,6 +12356,12 @@
                <description>counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2556,7 +2619,7 @@
              </field>
            </fields>
          </register>
-@@ -11280,6 +12470,8 @@
+@@ -11280,6 +12484,8 @@
                <description>One-pulse mode</description>
                <bitOffset>3</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2565,7 +2628,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -11298,6 +12490,8 @@
+@@ -11298,6 +12504,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2574,7 +2637,7 @@
              </field>
            </fields>
          </register>
-@@ -11355,6 +12549,10 @@
+@@ -11355,6 +12563,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2585,7 +2648,7 @@
              </field>
            </fields>
          </register>
-@@ -11389,6 +12587,12 @@
+@@ -11389,6 +12601,12 @@
                <description>Low counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2598,7 +2661,7 @@
              </field>
            </fields>
          </register>
-@@ -11406,6 +12610,12 @@
+@@ -11406,6 +12624,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2611,7 +2674,7 @@
              </field>
            </fields>
          </register>
-@@ -11423,6 +12633,12 @@
+@@ -11423,6 +12647,12 @@
                <description>Low Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2624,7 +2687,7 @@
              </field>
            </fields>
          </register>
-@@ -11853,6 +13069,18 @@
+@@ -11853,6 +13083,18 @@
                <description>Master/slave</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2643,7 +2706,7 @@
              </field>
            </fields>
          </register>
-@@ -11977,6 +13205,18 @@
+@@ -11977,6 +13219,18 @@
                <description>Data frame format</description>
                <bitOffset>11</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2662,7 +2725,7 @@
              </field>
              <field>
                <name>RXONLY</name>
-@@ -12007,18 +13247,74 @@
+@@ -12007,18 +13261,74 @@
                <description>SPI enable</description>
                <bitOffset>6</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2737,7 +2800,7 @@
              </field>
              <field>
                <name>CPOL</name>
-@@ -18918,7 +20214,7 @@
+@@ -18918,7 +20228,7 @@
              </field>
            </fields>
  		</register>
@@ -2746,7 +2809,7 @@
  		<register>
            <name>F7R1</name>
            <displayName>F7R1</displayName>
-@@ -23020,6 +24316,24 @@
+@@ -23020,6 +24330,24 @@
                <bitOffset>0</bitOffset>
                <bitWidth>3</bitWidth>
                <access>read-write</access>
@@ -2771,7 +2834,7 @@
              </field>
              <field>
                <name>HLFCYA</name>
-@@ -23035,6 +24349,19 @@
+@@ -23035,6 +24363,19 @@
                <bitOffset>4</bitOffset>
                <bitWidth>1</bitWidth>
                <access>read-write</access>
@@ -2791,7 +2854,7 @@
              </field>
              <field>
                <name>PRFTBS</name>
-@@ -24060,6 +25387,12 @@
+@@ -24060,6 +25401,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -2804,7 +2867,7 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24093,6 +25426,28 @@
+@@ -24093,6 +25440,28 @@
                <description>Endpoint type</description>
                <bitOffset>9</bitOffset>
                <bitWidth>2</bitWidth>
@@ -2833,7 +2896,7 @@
              </field>
              <field>
                <name>SETUP</name>
-@@ -24138,6 +25493,12 @@
+@@ -24138,6 +25507,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -2846,7 +2909,7 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24171,6 +25532,28 @@
+@@ -24171,6 +25546,28 @@
                <description>Endpoint type</description>
                <bitOffset>9</bitOffset>
                <bitWidth>2</bitWidth>
@@ -2875,7 +2938,7 @@
              </field>
              <field>
                <name>SETUP</name>
-@@ -24216,6 +25599,12 @@
+@@ -24216,6 +25613,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -2888,7 +2951,7 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24249,6 +25638,28 @@
+@@ -24249,6 +25652,28 @@
                <description>Endpoint type</description>
                <bitOffset>9</bitOffset>
                <bitWidth>2</bitWidth>
@@ -2917,7 +2980,7 @@
              </field>
              <field>
                <name>SETUP</name>
-@@ -24294,6 +25705,12 @@
+@@ -24294,6 +25719,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -2930,7 +2993,7 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24327,6 +25744,28 @@
+@@ -24327,6 +25758,28 @@
                <description>Endpoint type</description>
                <bitOffset>9</bitOffset>
                <bitWidth>2</bitWidth>
@@ -2959,7 +3022,7 @@
              </field>
              <field>
                <name>SETUP</name>
-@@ -24372,6 +25811,12 @@
+@@ -24372,6 +25825,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -2972,7 +3035,7 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24405,6 +25850,28 @@
+@@ -24405,6 +25864,28 @@
                <description>Endpoint type</description>
                <bitOffset>9</bitOffset>
                <bitWidth>2</bitWidth>
@@ -3001,7 +3064,7 @@
              </field>
              <field>
                <name>SETUP</name>
-@@ -24450,6 +25917,12 @@
+@@ -24450,6 +25931,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -3014,7 +3077,7 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24483,6 +25956,28 @@
+@@ -24483,6 +25970,28 @@
                <description>Endpoint type</description>
                <bitOffset>9</bitOffset>
                <bitWidth>2</bitWidth>
@@ -3043,7 +3106,7 @@
              </field>
              <field>
                <name>SETUP</name>
-@@ -24528,6 +26023,12 @@
+@@ -24528,6 +26037,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -3056,7 +3119,7 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24561,6 +26062,28 @@
+@@ -24561,6 +26076,28 @@
                <description>Endpoint type</description>
                <bitOffset>9</bitOffset>
                <bitWidth>2</bitWidth>
@@ -3085,7 +3148,7 @@
              </field>
              <field>
                <name>SETUP</name>
-@@ -24606,6 +26129,12 @@
+@@ -24606,6 +26143,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -3098,7 +3161,7 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24639,6 +26168,28 @@
+@@ -24639,6 +26182,28 @@
                <description>Endpoint type</description>
                <bitOffset>9</bitOffset>
                <bitWidth>2</bitWidth>
