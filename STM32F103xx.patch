@@ -1,5 +1,5 @@
 --- STM32F103xx.svd.raw	2017-10-22 10:46:47.419016630 +0300
-+++ STM32F103xx.svd	2017-10-22 19:00:20.970263057 +0300
++++ STM32F103xx.svd	2017-10-24 06:13:31.742624326 +0300
 @@ -3,6 +3,16 @@
  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
  xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
@@ -892,7 +892,7 @@
                <bitOffset>15</bitOffset>
                <bitWidth>1</bitWidth>
                <access>read-write</access>
-+              <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
++              <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
 +              </enumeratedValues>
              </field>
              <field>
@@ -1488,7 +1488,7 @@
                <description>Channel enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
-+              <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
++              <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
 +              </enumeratedValues>
              </field>
              <field>
@@ -1559,7 +1559,7 @@
                <description>Channel enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
-+              <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
++              <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
 +              </enumeratedValues>
              </field>
              <field>
@@ -1593,7 +1593,7 @@
                <description>Channel enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
-+              <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
++              <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
 +              </enumeratedValues>
              </field>
              <field>
@@ -1627,7 +1627,7 @@
                <description>Channel enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
-+              <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
++              <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
 +              </enumeratedValues>
              </field>
              <field>
@@ -1661,7 +1661,7 @@
                <description>Channel enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
-+              <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
++              <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
 +              </enumeratedValues>
              </field>
              <field>
@@ -1695,7 +1695,7 @@
                <description>Channel enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
-+              <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
++              <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
 +              </enumeratedValues>
              </field>
              <field>
@@ -1729,7 +1729,7 @@
                <description>Channel enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
-+              <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
++              <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
 +              </enumeratedValues>
              </field>
              <field>
@@ -2666,7 +2666,7 @@
                <description>SPI enable</description>
                <bitOffset>6</bitOffset>
                <bitWidth>1</bitWidth>
-+              <enumeratedValues derivedFrom="AHBENR.DMA1EN.ENABLED">
++              <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
 +              </enumeratedValues>
              </field>
              <field>
