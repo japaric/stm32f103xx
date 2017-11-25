@@ -9,7 +9,7 @@ repository = "https://github.com/japaric/stm32f103xx"
 version = "0.7.5"
 
 [dependencies]
-cortex-m = "0.3.0"
+cortex-m = { "git" = "https://github.com/japaric/cortex-m", branch = "singletons" }
 bare-metal = "0.1.1"
 vcell = "0.1.0"
 
