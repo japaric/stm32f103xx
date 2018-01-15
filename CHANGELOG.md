@@ -5,7 +5,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-## [v0.7.4] - 2017-09-08
+## [v0.8.0] - 2018-01-15
+
+### Added
+
+- enumeratedValues information to some DMA, SPI, I2C and RCC registers
+
+### Changed
+
+- [breaking-change] Re-generated using svd2rust v0.12.0
+- bumped the version of the bare-metal dependency to v0.1.1
+
+### Fixed
+
+- Typo in some TIM1 registers
+
+## [v0.7.5] - 2017-09-08
 
 ### Added
 
@@ -115,7 +130,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Initial release
 
-[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.7.4...HEAD
+[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.8.0...HEAD
+[v0.8.0]: https://github.com/japaric/stm32f103xx/compare/v0.7.5...v0.8.0
+[v0.7.4]: https://github.com/japaric/stm32f103xx/compare/v0.7.4...v0.7.5
 [v0.7.4]: https://github.com/japaric/stm32f103xx/compare/v0.7.3...v0.7.4
 [v0.7.3]: https://github.com/japaric/stm32f103xx/compare/v0.7.2...v0.7.3
 [v0.7.2]: https://github.com/japaric/stm32f103xx/compare/v0.7.1...v0.7.2
