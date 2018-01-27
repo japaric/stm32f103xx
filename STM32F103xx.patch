@@ -1,5 +1,5 @@
---- STM32F103xx.svd.raw	2017-10-22 10:46:47.419016630 +0300
-+++ STM32F103xx.svd	2017-10-24 16:58:11.333306273 +0300
+--- STM32F103xx.svd.raw	2018-01-27 16:49:54.160000001 +0100
++++ STM32F103xx.svd	2018-01-27 16:52:09.116666668 +0100
 @@ -3,6 +3,16 @@
  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
  xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
@@ -2854,7 +2854,23 @@
              </field>
              <field>
                <name>PRFTBS</name>
-@@ -24060,6 +25401,12 @@
+@@ -24047,9 +25388,12 @@
+       </interrupt>
+       <registers>
+         <register>
+-          <name>EP0R</name>
+-          <displayName>EP0R</displayName>
+-          <description>endpoint 0 register</description>
++          <name>EP%sR</name>
++          <displayName>EPnR</displayName>
++          <dim>8</dim>
++          <dimIndex>0-7</dimIndex>
++          <dimIncrement>0x4</dimIncrement>
++          <description>endpoint register array</description>
+           <addressOffset>0x0</addressOffset>
+           <size>0x20</size>
+           <access>read-write</access>
+@@ -24060,6 +25404,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -2867,304 +2883,556 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24093,6 +25440,28 @@
+@@ -24093,552 +25443,28 @@
                <description>Endpoint type</description>
                <bitOffset>9</bitOffset>
                <bitWidth>2</bitWidth>
-+              <enumeratedValues>
-+                <enumeratedValue>
-+                  <name>BULK</name>
-+                  <description>This endpoint is a bulk endpoint</description>
-+                  <value>0</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>CONTROL</name>
-+                  <description>This endpoint is a control endpoint</description>
-+                  <value>1</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>ISO</name>
-+                  <description>This endpoint is an isochronous endpoint</description>
-+                  <value>2</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>INTERRUPT</name>
-+                  <description>This endpoint is an interrupt endpoint</description>
-+                  <value>3</value>
-+                </enumeratedValue>
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>SETUP</name>
-@@ -24138,6 +25507,12 @@
-               <description>Endpoint address</description>
-               <bitOffset>0</bitOffset>
-               <bitWidth>4</bitWidth>
-+              <writeConstraint>
-+                <range>
-+                  <minimum>0</minimum>
-+                  <maximum>15</maximum>
-+                </range>
-+              </writeConstraint>
-             </field>
-             <field>
-               <name>STAT_TX</name>
-@@ -24171,6 +25546,28 @@
-               <description>Endpoint type</description>
-               <bitOffset>9</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues>
-+                <enumeratedValue>
-+                  <name>BULK</name>
-+                  <description>This endpoint is a bulk endpoint</description>
-+                  <value>0</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>CONTROL</name>
-+                  <description>This endpoint is a control endpoint</description>
-+                  <value>1</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>ISO</name>
-+                  <description>This endpoint is an isochronous endpoint</description>
-+                  <value>2</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>INTERRUPT</name>
-+                  <description>This endpoint is an interrupt endpoint</description>
-+                  <value>3</value>
-+                </enumeratedValue>
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>SETUP</name>
-@@ -24216,6 +25613,12 @@
-               <description>Endpoint address</description>
-               <bitOffset>0</bitOffset>
-               <bitWidth>4</bitWidth>
-+              <writeConstraint>
-+                <range>
-+                  <minimum>0</minimum>
-+                  <maximum>15</maximum>
-+                </range>
-+              </writeConstraint>
-             </field>
-             <field>
-               <name>STAT_TX</name>
-@@ -24249,6 +25652,28 @@
-               <description>Endpoint type</description>
-               <bitOffset>9</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues>
-+                <enumeratedValue>
-+                  <name>BULK</name>
-+                  <description>This endpoint is a bulk endpoint</description>
-+                  <value>0</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>CONTROL</name>
-+                  <description>This endpoint is a control endpoint</description>
-+                  <value>1</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>ISO</name>
-+                  <description>This endpoint is an isochronous endpoint</description>
-+                  <value>2</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>INTERRUPT</name>
-+                  <description>This endpoint is an interrupt endpoint</description>
-+                  <value>3</value>
-+                </enumeratedValue>
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>SETUP</name>
-@@ -24294,6 +25719,12 @@
-               <description>Endpoint address</description>
-               <bitOffset>0</bitOffset>
-               <bitWidth>4</bitWidth>
-+              <writeConstraint>
-+                <range>
-+                  <minimum>0</minimum>
-+                  <maximum>15</maximum>
-+                </range>
-+              </writeConstraint>
-             </field>
-             <field>
-               <name>STAT_TX</name>
-@@ -24327,6 +25758,28 @@
-               <description>Endpoint type</description>
-               <bitOffset>9</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues>
-+                <enumeratedValue>
-+                  <name>BULK</name>
-+                  <description>This endpoint is a bulk endpoint</description>
-+                  <value>0</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>CONTROL</name>
-+                  <description>This endpoint is a control endpoint</description>
-+                  <value>1</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>ISO</name>
-+                  <description>This endpoint is an isochronous endpoint</description>
-+                  <value>2</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>INTERRUPT</name>
-+                  <description>This endpoint is an interrupt endpoint</description>
-+                  <value>3</value>
-+                </enumeratedValue>
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>SETUP</name>
-@@ -24372,6 +25825,12 @@
-               <description>Endpoint address</description>
-               <bitOffset>0</bitOffset>
-               <bitWidth>4</bitWidth>
-+              <writeConstraint>
-+                <range>
-+                  <minimum>0</minimum>
-+                  <maximum>15</maximum>
-+                </range>
-+              </writeConstraint>
-             </field>
-             <field>
-               <name>STAT_TX</name>
-@@ -24405,6 +25864,28 @@
-               <description>Endpoint type</description>
-               <bitOffset>9</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues>
-+                <enumeratedValue>
-+                  <name>BULK</name>
-+                  <description>This endpoint is a bulk endpoint</description>
-+                  <value>0</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>CONTROL</name>
-+                  <description>This endpoint is a control endpoint</description>
-+                  <value>1</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>ISO</name>
-+                  <description>This endpoint is an isochronous endpoint</description>
-+                  <value>2</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>INTERRUPT</name>
-+                  <description>This endpoint is an interrupt endpoint</description>
-+                  <value>3</value>
-+                </enumeratedValue>
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>SETUP</name>
-@@ -24450,6 +25931,12 @@
-               <description>Endpoint address</description>
-               <bitOffset>0</bitOffset>
-               <bitWidth>4</bitWidth>
-+              <writeConstraint>
-+                <range>
-+                  <minimum>0</minimum>
-+                  <maximum>15</maximum>
-+                </range>
-+              </writeConstraint>
-             </field>
-             <field>
-               <name>STAT_TX</name>
-@@ -24483,6 +25970,28 @@
-               <description>Endpoint type</description>
-               <bitOffset>9</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues>
-+                <enumeratedValue>
-+                  <name>BULK</name>
-+                  <description>This endpoint is a bulk endpoint</description>
-+                  <value>0</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>CONTROL</name>
-+                  <description>This endpoint is a control endpoint</description>
-+                  <value>1</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>ISO</name>
-+                  <description>This endpoint is an isochronous endpoint</description>
-+                  <value>2</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>INTERRUPT</name>
-+                  <description>This endpoint is an interrupt endpoint</description>
-+                  <value>3</value>
-+                </enumeratedValue>
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>SETUP</name>
-@@ -24528,6 +26037,12 @@
-               <description>Endpoint address</description>
-               <bitOffset>0</bitOffset>
-               <bitWidth>4</bitWidth>
-+              <writeConstraint>
-+                <range>
-+                  <minimum>0</minimum>
-+                  <maximum>15</maximum>
-+                </range>
-+              </writeConstraint>
-             </field>
-             <field>
-               <name>STAT_TX</name>
-@@ -24561,6 +26076,28 @@
-               <description>Endpoint type</description>
-               <bitOffset>9</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues>
-+                <enumeratedValue>
-+                  <name>BULK</name>
-+                  <description>This endpoint is a bulk endpoint</description>
-+                  <value>0</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>CONTROL</name>
-+                  <description>This endpoint is a control endpoint</description>
-+                  <value>1</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>ISO</name>
-+                  <description>This endpoint is an isochronous endpoint</description>
-+                  <value>2</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>INTERRUPT</name>
-+                  <description>This endpoint is an interrupt endpoint</description>
-+                  <value>3</value>
-+                </enumeratedValue>
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>SETUP</name>
-@@ -24606,6 +26143,12 @@
-               <description>Endpoint address</description>
-               <bitOffset>0</bitOffset>
-               <bitWidth>4</bitWidth>
-+              <writeConstraint>
-+                <range>
-+                  <minimum>0</minimum>
-+                  <maximum>15</maximum>
-+                </range>
-+              </writeConstraint>
-             </field>
-             <field>
-               <name>STAT_TX</name>
-@@ -24639,6 +26182,28 @@
-               <description>Endpoint type</description>
-               <bitOffset>9</bitOffset>
-               <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>SETUP</name>
+-              <description>Setup transaction
+-              completed</description>
+-              <bitOffset>11</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>STAT_RX</name>
+-              <description>Status bits, for reception
+-              transfers</description>
+-              <bitOffset>12</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>DTOG_RX</name>
+-              <description>Data Toggle, for reception
+-              transfers</description>
+-              <bitOffset>14</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CTR_RX</name>
+-              <description>Correct transfer for
+-              reception</description>
+-              <bitOffset>15</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>EP1R</name>
+-          <displayName>EP1R</displayName>
+-          <description>endpoint 1 register</description>
+-          <addressOffset>0x4</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>EA</name>
+-              <description>Endpoint address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>4</bitWidth>
+-            </field>
+-            <field>
+-              <name>STAT_TX</name>
+-              <description>Status bits, for transmission
+-              transfers</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>DTOG_TX</name>
+-              <description>Data Toggle, for transmission
+-              transfers</description>
+-              <bitOffset>6</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CTR_TX</name>
+-              <description>Correct Transfer for
+-              transmission</description>
+-              <bitOffset>7</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>EP_KIND</name>
+-              <description>Endpoint kind</description>
+-              <bitOffset>8</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>EP_TYPE</name>
+-              <description>Endpoint type</description>
+-              <bitOffset>9</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>SETUP</name>
+-              <description>Setup transaction
+-              completed</description>
+-              <bitOffset>11</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>STAT_RX</name>
+-              <description>Status bits, for reception
+-              transfers</description>
+-              <bitOffset>12</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>DTOG_RX</name>
+-              <description>Data Toggle, for reception
+-              transfers</description>
+-              <bitOffset>14</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CTR_RX</name>
+-              <description>Correct transfer for
+-              reception</description>
+-              <bitOffset>15</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>EP2R</name>
+-          <displayName>EP2R</displayName>
+-          <description>endpoint 2 register</description>
+-          <addressOffset>0x8</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>EA</name>
+-              <description>Endpoint address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>4</bitWidth>
+-            </field>
+-            <field>
+-              <name>STAT_TX</name>
+-              <description>Status bits, for transmission
+-              transfers</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>DTOG_TX</name>
+-              <description>Data Toggle, for transmission
+-              transfers</description>
+-              <bitOffset>6</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CTR_TX</name>
+-              <description>Correct Transfer for
+-              transmission</description>
+-              <bitOffset>7</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>EP_KIND</name>
+-              <description>Endpoint kind</description>
+-              <bitOffset>8</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>EP_TYPE</name>
+-              <description>Endpoint type</description>
+-              <bitOffset>9</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>SETUP</name>
+-              <description>Setup transaction
+-              completed</description>
+-              <bitOffset>11</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>STAT_RX</name>
+-              <description>Status bits, for reception
+-              transfers</description>
+-              <bitOffset>12</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>DTOG_RX</name>
+-              <description>Data Toggle, for reception
+-              transfers</description>
+-              <bitOffset>14</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CTR_RX</name>
+-              <description>Correct transfer for
+-              reception</description>
+-              <bitOffset>15</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>EP3R</name>
+-          <displayName>EP3R</displayName>
+-          <description>endpoint 3 register</description>
+-          <addressOffset>0xC</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>EA</name>
+-              <description>Endpoint address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>4</bitWidth>
+-            </field>
+-            <field>
+-              <name>STAT_TX</name>
+-              <description>Status bits, for transmission
+-              transfers</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>DTOG_TX</name>
+-              <description>Data Toggle, for transmission
+-              transfers</description>
+-              <bitOffset>6</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CTR_TX</name>
+-              <description>Correct Transfer for
+-              transmission</description>
+-              <bitOffset>7</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>EP_KIND</name>
+-              <description>Endpoint kind</description>
+-              <bitOffset>8</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>EP_TYPE</name>
+-              <description>Endpoint type</description>
+-              <bitOffset>9</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>SETUP</name>
+-              <description>Setup transaction
+-              completed</description>
+-              <bitOffset>11</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>STAT_RX</name>
+-              <description>Status bits, for reception
+-              transfers</description>
+-              <bitOffset>12</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>DTOG_RX</name>
+-              <description>Data Toggle, for reception
+-              transfers</description>
+-              <bitOffset>14</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CTR_RX</name>
+-              <description>Correct transfer for
+-              reception</description>
+-              <bitOffset>15</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>EP4R</name>
+-          <displayName>EP4R</displayName>
+-          <description>endpoint 4 register</description>
+-          <addressOffset>0x10</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>EA</name>
+-              <description>Endpoint address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>4</bitWidth>
+-            </field>
+-            <field>
+-              <name>STAT_TX</name>
+-              <description>Status bits, for transmission
+-              transfers</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>DTOG_TX</name>
+-              <description>Data Toggle, for transmission
+-              transfers</description>
+-              <bitOffset>6</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CTR_TX</name>
+-              <description>Correct Transfer for
+-              transmission</description>
+-              <bitOffset>7</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>EP_KIND</name>
+-              <description>Endpoint kind</description>
+-              <bitOffset>8</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>EP_TYPE</name>
+-              <description>Endpoint type</description>
+-              <bitOffset>9</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>SETUP</name>
+-              <description>Setup transaction
+-              completed</description>
+-              <bitOffset>11</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>STAT_RX</name>
+-              <description>Status bits, for reception
+-              transfers</description>
+-              <bitOffset>12</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>DTOG_RX</name>
+-              <description>Data Toggle, for reception
+-              transfers</description>
+-              <bitOffset>14</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CTR_RX</name>
+-              <description>Correct transfer for
+-              reception</description>
+-              <bitOffset>15</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>EP5R</name>
+-          <displayName>EP5R</displayName>
+-          <description>endpoint 5 register</description>
+-          <addressOffset>0x14</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>EA</name>
+-              <description>Endpoint address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>4</bitWidth>
+-            </field>
+-            <field>
+-              <name>STAT_TX</name>
+-              <description>Status bits, for transmission
+-              transfers</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>DTOG_TX</name>
+-              <description>Data Toggle, for transmission
+-              transfers</description>
+-              <bitOffset>6</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CTR_TX</name>
+-              <description>Correct Transfer for
+-              transmission</description>
+-              <bitOffset>7</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>EP_KIND</name>
+-              <description>Endpoint kind</description>
+-              <bitOffset>8</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>EP_TYPE</name>
+-              <description>Endpoint type</description>
+-              <bitOffset>9</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>SETUP</name>
+-              <description>Setup transaction
+-              completed</description>
+-              <bitOffset>11</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>STAT_RX</name>
+-              <description>Status bits, for reception
+-              transfers</description>
+-              <bitOffset>12</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>DTOG_RX</name>
+-              <description>Data Toggle, for reception
+-              transfers</description>
+-              <bitOffset>14</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CTR_RX</name>
+-              <description>Correct transfer for
+-              reception</description>
+-              <bitOffset>15</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>EP6R</name>
+-          <displayName>EP6R</displayName>
+-          <description>endpoint 6 register</description>
+-          <addressOffset>0x18</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>EA</name>
+-              <description>Endpoint address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>4</bitWidth>
+-            </field>
+-            <field>
+-              <name>STAT_TX</name>
+-              <description>Status bits, for transmission
+-              transfers</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>DTOG_TX</name>
+-              <description>Data Toggle, for transmission
+-              transfers</description>
+-              <bitOffset>6</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CTR_TX</name>
+-              <description>Correct Transfer for
+-              transmission</description>
+-              <bitOffset>7</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>EP_KIND</name>
+-              <description>Endpoint kind</description>
+-              <bitOffset>8</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>EP_TYPE</name>
+-              <description>Endpoint type</description>
+-              <bitOffset>9</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>SETUP</name>
+-              <description>Setup transaction
+-              completed</description>
+-              <bitOffset>11</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>STAT_RX</name>
+-              <description>Status bits, for reception
+-              transfers</description>
+-              <bitOffset>12</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>DTOG_RX</name>
+-              <description>Data Toggle, for reception
+-              transfers</description>
+-              <bitOffset>14</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CTR_RX</name>
+-              <description>Correct transfer for
+-              reception</description>
+-              <bitOffset>15</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>EP7R</name>
+-          <displayName>EP7R</displayName>
+-          <description>endpoint 7 register</description>
+-          <addressOffset>0x1C</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>EA</name>
+-              <description>Endpoint address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>4</bitWidth>
+-            </field>
+-            <field>
+-              <name>STAT_TX</name>
+-              <description>Status bits, for transmission
+-              transfers</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>DTOG_TX</name>
+-              <description>Data Toggle, for transmission
+-              transfers</description>
+-              <bitOffset>6</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CTR_TX</name>
+-              <description>Correct Transfer for
+-              transmission</description>
+-              <bitOffset>7</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>EP_KIND</name>
+-              <description>Endpoint kind</description>
+-              <bitOffset>8</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>EP_TYPE</name>
+-              <description>Endpoint type</description>
+-              <bitOffset>9</bitOffset>
+-              <bitWidth>2</bitWidth>
 +              <enumeratedValues>
 +                <enumeratedValue>
 +                  <name>BULK</name>
