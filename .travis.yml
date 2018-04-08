@@ -8,6 +8,7 @@ matrix:
         apt:
           packages:
             - dos2unix
+
     - env: TARGET=thumbv7m-none-eabi
       rust: nightly
 
