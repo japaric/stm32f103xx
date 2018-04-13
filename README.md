@@ -2,6 +2,9 @@
 
 > Peripheral access API for STM32F103XX microcontrollers
 
+You may also be interested in the [`stm32f103xx-hal` crate](https://github.com/japaric/stm32f103xx-hal),
+which re-exports this crate and adds [`embedded-hal` support](https://crates.io/crates/embedded-hal).
+
 # [Documentation](https://docs.rs/stm32f103xx)
 
 # License
