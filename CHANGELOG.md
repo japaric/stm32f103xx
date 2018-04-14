@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [v0.9.0] - 2018-04-14
+
+### Changed
+
+- Bumped the `cortex-m-rt` dependency to v0.4.0
+
 ## [v0.8.0] - 2018-01-15
 
 ### Added
@@ -130,7 +136,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Initial release
 
-[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.8.0...HEAD
+[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.9.0...HEAD
+[v0.9.0]: https://github.com/japaric/stm32f103xx/compare/v0.8.0...v0.9.0
 [v0.8.0]: https://github.com/japaric/stm32f103xx/compare/v0.7.5...v0.8.0
 [v0.7.4]: https://github.com/japaric/stm32f103xx/compare/v0.7.4...v0.7.5
 [v0.7.4]: https://github.com/japaric/stm32f103xx/compare/v0.7.3...v0.7.4
