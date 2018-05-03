@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [v0.9.1] - 2018-05-03
+
+### Changed
+
+- Re-generate using svd2rust HEAD
+
 ## [v0.9.0] - 2018-04-14
 
 ### Changed
