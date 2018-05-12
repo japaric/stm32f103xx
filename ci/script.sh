@@ -4,6 +4,7 @@ main() {
     local svd=STMicro/STM32F103xx.svd
 
     cargo check --target $TARGET
+    cargo check --target $TARGET --features rt
 
     if [ $TARGET = x86_64-unknown-linux-gnu ]; then
         # check than the patch can be applied to the original SVD

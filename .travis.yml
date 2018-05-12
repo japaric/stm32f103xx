@@ -10,7 +10,11 @@ matrix:
             - dos2unix
 
     - env: TARGET=thumbv7m-none-eabi
-      rust: nightly
+      rust: beta
+      addons:
+        apt:
+          packages:
+            - gcc-arm-none-eabi
 
 before_install: set -e
 
