@@ -19,3 +19,6 @@ version = "0.5.0"
 
 [features]
 rt = ["cortex-m-rt/device"]
+
+[package.metadata.docs.rs]
+features = ["rt"]
