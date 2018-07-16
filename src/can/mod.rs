@@ -7,10 +7,8 @@ pub struct RegisterBlock {
     pub msr: MSR,
     #[doc = "0x08 - TSR"]
     pub tsr: TSR,
-    #[doc = "0x0c - RF0R"]
-    pub rf0r: RF0R,
-    #[doc = "0x10 - RF1R"]
-    pub rf1r: RF1R,
+    #[doc = "0x0c - RFxR"]
+    pub rfr: [RFR; 2],
     #[doc = "0x14 - IER"]
     pub ier: IER,
     #[doc = "0x18 - ESR"]
@@ -19,9 +17,9 @@ pub struct RegisterBlock {
     pub btr: BTR,
     _reserved0: [u8; 352usize],
     #[doc = "0x180 - TIxR, TDTxR, TDLxR, TDHxR"]
-    pub tr: [TR; 3],
+    pub tx: [TX; 3],
     #[doc = "0x1b0 - RIxR, RDTxR, RDLxR, TDHxR"]
-    pub rr: [RR; 2],
+    pub rx: [RX; 2],
     _reserved1: [u8; 48usize],
     #[doc = "0x200 - FMR"]
     pub fmr: FMR,
@@ -38,49 +36,49 @@ pub struct RegisterBlock {
     pub fa1r: FA1R,
     _reserved5: [u8; 32usize],
     #[doc = "0x240 - FxR1, FxR2"]
-    pub fr: [FR; 14],
+    pub fb: [FB; 14],
 }
 #[doc = r" Register block"]
 #[repr(C)]
-pub struct TR {
+pub struct TX {
     #[doc = "0x00 - TIxR"]
-    pub tir: self::tr::TIR,
+    pub tir: self::tx::TIR,
     #[doc = "0x04 - TDTxR"]
-    pub tdtr: self::tr::TDTR,
+    pub tdtr: self::tx::TDTR,
     #[doc = "0x08 - TDLxR"]
-    pub tdlr: self::tr::TDLR,
+    pub tdlr: self::tx::TDLR,
     #[doc = "0x0c - TDHxR"]
-    pub tdhr: self::tr::TDHR,
+    pub tdhr: self::tx::TDHR,
 }
 #[doc = r" Register block"]
 #[doc = "TIxR, TDTxR, TDLxR, TDHxR"]
-pub mod tr;
+pub mod tx;
 #[doc = r" Register block"]
 #[repr(C)]
-pub struct RR {
+pub struct RX {
     #[doc = "0x00 - RIxR"]
-    pub rir: self::rr::RIR,
+    pub rir: self::rx::RIR,
     #[doc = "0x04 - RDTxR"]
-    pub rdtr: self::rr::RDTR,
+    pub rdtr: self::rx::RDTR,
     #[doc = "0x08 - RDLxR"]
-    pub rdlr: self::rr::RDLR,
+    pub rdlr: self::rx::RDLR,
     #[doc = "0x0c - RDHxR"]
-    pub rdhr: self::rr::RDHR,
+    pub rdhr: self::rx::RDHR,
 }
 #[doc = r" Register block"]
 #[doc = "RIxR, RDTxR, RDLxR, TDHxR"]
-pub mod rr;
+pub mod rx;
 #[doc = r" Register block"]
 #[repr(C)]
-pub struct FR {
+pub struct FB {
     #[doc = "0x00 - Filter bank x register 1"]
-    pub fr1: self::fr::FR1,
+    pub fr1: self::fb::FR1,
     #[doc = "0x04 - Filter bank x register 2"]
-    pub fr2: self::fr::FR2,
+    pub fr2: self::fb::FR2,
 }
 #[doc = r" Register block"]
 #[doc = "FxR1, FxR2"]
-pub mod fr;
+pub mod fb;
 #[doc = "MCR"]
 pub struct MCR {
     register: ::vcell::VolatileCell<u32>,
@@ -99,18 +97,12 @@ pub struct TSR {
 }
 #[doc = "TSR"]
 pub mod tsr;
-#[doc = "RF0R"]
-pub struct RF0R {
+#[doc = "RFxR"]
+pub struct RFR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "RF0R"]
-pub mod rf0r;
-#[doc = "RF1R"]
-pub struct RF1R {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "RF1R"]
-pub mod rf1r;
+#[doc = "RFxR"]
+pub mod rfr;
 #[doc = "IER"]
 pub struct IER {
     register: ::vcell::VolatileCell<u32>,

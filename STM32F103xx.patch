@@ -1,5 +1,5 @@
 --- STM32F103xx.svd.orig	2018-07-15 11:46:47.216493263 +0300
-+++ STM32F103xx.svd	2018-07-16 21:08:46.172331347 +0300
++++ STM32F103xx.svd	2018-07-16 21:43:53.098164322 +0300
 @@ -3,6 +3,16 @@
  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
  xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
@@ -3816,7 +3816,84 @@
        </registers>
      </peripheral>
      <peripheral derivedFrom="DMA1">
-@@ -8400,9 +7292,27 @@
+@@ -6464,68 +5356,20 @@
+           </fields>
+         </register>
+         <register>
+-          <name>RESPI1</name>
+-          <displayName>RESPI1</displayName>
+-          <description>Bits 31:0 = CARDSTATUS1</description>
++          <name>RESP%s</name>
++          <displayName>RESPx</displayName>
++          <dim>4</dim>
++          <dimIndex>1-4</dimIndex>
++          <dimIncrement>0x4</dimIncrement>
++          <description>Bits 31:0 = CARDSTATUS</description>
+           <addressOffset>0x14</addressOffset>
+           <size>0x20</size>
+           <access>read-only</access>
+           <resetValue>0x00000000</resetValue>
+           <fields>
+             <field>
+-              <name>CARDSTATUS1</name>
+-              <description>CARDSTATUS1</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>RESP2</name>
+-          <displayName>RESP2</displayName>
+-          <description>Bits 31:0 = CARDSTATUS2</description>
+-          <addressOffset>0x18</addressOffset>
+-          <size>0x20</size>
+-          <access>read-only</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>CARDSTATUS2</name>
+-              <description>CARDSTATUS2</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>RESP3</name>
+-          <displayName>RESP3</displayName>
+-          <description>Bits 31:0 = CARDSTATUS3</description>
+-          <addressOffset>0x1C</addressOffset>
+-          <size>0x20</size>
+-          <access>read-only</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>CARDSTATUS3</name>
+-              <description>CARDSTATUS3</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>RESP4</name>
+-          <displayName>RESP4</displayName>
+-          <description>Bits 31:0 = CARDSTATUS4</description>
+-          <addressOffset>0x20</addressOffset>
+-          <size>0x20</size>
+-          <access>read-only</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>CARDSTATUS4</name>
+-              <description>CARDSTATUS4</description>
++              <name>CARDSTATUS</name>
++              <description>CARDSTATUS</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>32</bitWidth>
+             </field>
+@@ -8400,9 +7244,27 @@
            <fields>
              <field>
                <name>CKD</name>
@@ -3845,7 +3922,7 @@
              </field>
              <field>
                <name>ARPE</name>
-@@ -8422,12 +7332,38 @@
+@@ -8422,12 +7284,38 @@
                <description>Direction</description>
                <bitOffset>4</bitOffset>
                <bitWidth>1</bitWidth>
@@ -3884,7 +3961,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -8446,6 +7382,19 @@
+@@ -8446,6 +7334,19 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -3904,7 +3981,7 @@
              </field>
            </fields>
          </register>
-@@ -8579,12 +7528,98 @@
+@@ -8579,12 +7480,98 @@
                <description>Trigger selection</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -4003,7 +4080,7 @@
              </field>
            </fields>
          </register>
-@@ -8785,6 +7820,29 @@
+@@ -8785,6 +7772,29 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -4033,7 +4110,7 @@
              </field>
            </fields>
          </register>
-@@ -8874,6 +7932,8 @@
+@@ -8874,6 +7884,8 @@
                <description>Output Compare 2 mode</description>
                <bitOffset>12</bitOffset>
                <bitWidth>3</bitWidth>
@@ -4042,7 +4119,7 @@
              </field>
              <field>
                <name>OC2PE</name>
-@@ -8908,6 +7968,56 @@
+@@ -8908,6 +7920,56 @@
                <description>Output Compare 1 mode</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -4099,7 +4176,7 @@
              </field>
              <field>
                <name>OC1PE</name>
-@@ -8950,7 +8060,7 @@
+@@ -8950,7 +8012,7 @@
                <bitWidth>4</bitWidth>
              </field>
              <field>
@@ -4108,7 +4185,7 @@
                <description>Input capture 2 prescaler</description>
                <bitOffset>10</bitOffset>
                <bitWidth>2</bitWidth>
-@@ -8969,7 +8079,7 @@
+@@ -8969,7 +8031,7 @@
                <bitWidth>4</bitWidth>
              </field>
              <field>
@@ -4117,7 +4194,7 @@
                <description>Input capture 1 prescaler</description>
                <bitOffset>2</bitOffset>
                <bitWidth>2</bitWidth>
-@@ -9005,6 +8115,8 @@
+@@ -9005,6 +8067,8 @@
                <description>Output compare 4 mode</description>
                <bitOffset>12</bitOffset>
                <bitWidth>3</bitWidth>
@@ -4126,7 +4203,7 @@
              </field>
              <field>
                <name>OC4PE</name>
-@@ -9039,6 +8151,8 @@
+@@ -9039,6 +8103,8 @@
                <description>Output compare 3 mode</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -4135,7 +4212,7 @@
              </field>
              <field>
                <name>OC3PE</name>
-@@ -9238,6 +8352,12 @@
+@@ -9238,6 +8304,12 @@
                <description>counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -4148,7 +4225,7 @@
              </field>
            </fields>
          </register>
-@@ -9255,6 +8375,12 @@
+@@ -9255,6 +8327,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -4161,7 +4238,7 @@
              </field>
            </fields>
          </register>
-@@ -9272,74 +8398,38 @@
+@@ -9272,74 +8350,38 @@
                <description>Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -4256,7 +4333,7 @@
              </field>
            </fields>
          </register>
-@@ -9521,6 +8611,8 @@
+@@ -9521,6 +8563,8 @@
                <description>Clock division</description>
                <bitOffset>8</bitOffset>
                <bitWidth>2</bitWidth>
@@ -4265,7 +4342,7 @@
              </field>
              <field>
                <name>ARPE</name>
-@@ -9540,12 +8632,16 @@
+@@ -9540,12 +8584,16 @@
                <description>Direction</description>
                <bitOffset>4</bitOffset>
                <bitWidth>1</bitWidth>
@@ -4282,7 +4359,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -9564,6 +8660,8 @@
+@@ -9564,6 +8612,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -4291,7 +4368,7 @@
              </field>
            </fields>
          </register>
-@@ -9641,12 +8739,16 @@
+@@ -9641,12 +8691,16 @@
                <description>Trigger selection</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -4308,7 +4385,7 @@
              </field>
            </fields>
          </register>
-@@ -9817,6 +8919,10 @@
+@@ -9817,6 +8871,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -4319,7 +4396,7 @@
              </field>
            </fields>
          </register>
-@@ -9893,6 +8999,8 @@
+@@ -9893,6 +8951,8 @@
                <description>Output compare 2 mode</description>
                <bitOffset>12</bitOffset>
                <bitWidth>3</bitWidth>
@@ -4328,7 +4405,7 @@
              </field>
              <field>
                <name>OC2PE</name>
-@@ -9927,6 +9035,8 @@
+@@ -9927,6 +8987,8 @@
                <description>Output compare 1 mode</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -4337,7 +4414,7 @@
              </field>
              <field>
                <name>OC1PE</name>
-@@ -10013,7 +9123,7 @@
+@@ -10013,7 +9075,7 @@
            <resetValue>0x00000000</resetValue>
            <fields>
              <field>
@@ -4346,7 +4423,7 @@
                <description>Output compare 4 clear
                enable</description>
                <bitOffset>15</bitOffset>
-@@ -10024,6 +9134,8 @@
+@@ -10024,6 +9086,8 @@
                <description>Output compare 4 mode</description>
                <bitOffset>12</bitOffset>
                <bitWidth>3</bitWidth>
@@ -4355,7 +4432,7 @@
              </field>
              <field>
                <name>OC4PE</name>
-@@ -10058,6 +9170,8 @@
+@@ -10058,6 +9122,8 @@
                <description>Output compare 3 mode</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -4364,7 +4441,7 @@
              </field>
              <field>
                <name>OC3PE</name>
-@@ -10215,6 +9329,12 @@
+@@ -10215,6 +9281,12 @@
                <description>counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -4377,7 +4454,7 @@
              </field>
            </fields>
          </register>
-@@ -10232,6 +9352,12 @@
+@@ -10232,6 +9304,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -4390,7 +4467,7 @@
              </field>
            </fields>
          </register>
-@@ -10249,74 +9375,38 @@
+@@ -10249,74 +9327,38 @@
                <description>Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -4485,7 +4562,7 @@
              </field>
            </fields>
          </register>
-@@ -10421,6 +9511,8 @@
+@@ -10421,6 +9463,8 @@
                <description>Clock division</description>
                <bitOffset>8</bitOffset>
                <bitWidth>2</bitWidth>
@@ -4494,7 +4571,7 @@
              </field>
              <field>
                <name>ARPE</name>
-@@ -10433,6 +9525,8 @@
+@@ -10433,6 +9477,8 @@
                <description>One-pulse mode</description>
                <bitOffset>3</bitOffset>
                <bitWidth>1</bitWidth>
@@ -4503,7 +4580,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -10451,6 +9545,8 @@
+@@ -10451,6 +9497,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -4512,7 +4589,7 @@
              </field>
            </fields>
          </register>
-@@ -10491,12 +9587,78 @@
+@@ -10491,12 +9539,78 @@
                <description>Trigger selection</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -4591,7 +4668,7 @@
              </field>
            </fields>
          </register>
-@@ -10585,6 +9747,10 @@
+@@ -10585,6 +9699,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -4602,7 +4679,7 @@
              </field>
            </fields>
          </register>
-@@ -10640,6 +9806,8 @@
+@@ -10640,6 +9758,8 @@
                <description>Output Compare 2 mode</description>
                <bitOffset>12</bitOffset>
                <bitWidth>3</bitWidth>
@@ -4611,7 +4688,7 @@
              </field>
              <field>
                <name>OC2PE</name>
-@@ -10667,6 +9835,8 @@
+@@ -10667,6 +9787,8 @@
                <description>Output Compare 1 mode</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -4620,7 +4697,7 @@
              </field>
              <field>
                <name>OC1PE</name>
-@@ -10810,6 +9980,12 @@
+@@ -10810,6 +9932,12 @@
                <description>counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -4633,7 +4710,7 @@
              </field>
            </fields>
          </register>
-@@ -10827,6 +10003,12 @@
+@@ -10827,6 +9955,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -4646,7 +4723,7 @@
              </field>
            </fields>
          </register>
-@@ -10844,40 +10026,38 @@
+@@ -10844,40 +9978,38 @@
                <description>Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -4707,7 +4784,7 @@
              </field>
            </fields>
          </register>
-@@ -10924,6 +10104,8 @@
+@@ -10924,6 +10056,8 @@
                <description>Clock division</description>
                <bitOffset>8</bitOffset>
                <bitWidth>2</bitWidth>
@@ -4716,7 +4793,7 @@
              </field>
              <field>
                <name>ARPE</name>
-@@ -10948,6 +10130,8 @@
+@@ -10948,6 +10082,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -4725,7 +4802,7 @@
              </field>
            </fields>
          </register>
-@@ -11020,6 +10204,10 @@
+@@ -11020,6 +10156,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -4736,7 +4813,7 @@
              </field>
            </fields>
          </register>
-@@ -11062,6 +10250,8 @@
+@@ -11062,6 +10202,8 @@
                <description>Output Compare 1 mode</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -4745,7 +4822,7 @@
              </field>
              <field>
                <name>OC1PE</name>
-@@ -11158,6 +10348,12 @@
+@@ -11158,6 +10300,12 @@
                <description>counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -4758,7 +4835,7 @@
              </field>
            </fields>
          </register>
-@@ -11196,17 +10392,20 @@
+@@ -11196,17 +10344,20 @@
            </fields>
          </register>
          <register>
@@ -4784,7 +4861,7 @@
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
              </field>
-@@ -11280,6 +10479,8 @@
+@@ -11280,6 +10431,8 @@
                <description>One-pulse mode</description>
                <bitOffset>3</bitOffset>
                <bitWidth>1</bitWidth>
@@ -4793,7 +4870,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -11298,6 +10499,8 @@
+@@ -11298,6 +10451,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -4802,7 +4879,7 @@
              </field>
            </fields>
          </register>
-@@ -11355,6 +10558,10 @@
+@@ -11355,6 +10510,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -4813,7 +4890,7 @@
              </field>
            </fields>
          </register>
-@@ -11389,6 +10596,12 @@
+@@ -11389,6 +10548,12 @@
                <description>Low counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -4826,7 +4903,7 @@
              </field>
            </fields>
          </register>
-@@ -11406,6 +10619,12 @@
+@@ -11406,6 +10571,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -4839,7 +4916,7 @@
              </field>
            </fields>
          </register>
-@@ -11423,6 +10642,12 @@
+@@ -11423,6 +10594,12 @@
                <description>Low Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -4852,7 +4929,7 @@
              </field>
            </fields>
          </register>
-@@ -11853,6 +11078,18 @@
+@@ -11853,6 +11030,18 @@
                <description>Master/slave</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -4871,7 +4948,7 @@
              </field>
            </fields>
          </register>
-@@ -11977,6 +11214,18 @@
+@@ -11977,6 +11166,18 @@
                <description>Data frame format</description>
                <bitOffset>11</bitOffset>
                <bitWidth>1</bitWidth>
@@ -4890,7 +4967,7 @@
              </field>
              <field>
                <name>RXONLY</name>
-@@ -12007,18 +11256,74 @@
+@@ -12007,18 +11208,74 @@
                <description>SPI enable</description>
                <bitOffset>6</bitOffset>
                <bitWidth>1</bitWidth>
@@ -4965,7 +5042,7 @@
              </field>
              <field>
                <name>CPOL</name>
-@@ -13155,8 +12460,11 @@
+@@ -13155,8 +12412,11 @@
            </fields>
          </register>
          <register>
@@ -4979,7 +5056,7 @@
            <description>injected channel data offset register
            x</description>
            <addressOffset>0x14</addressOffset>
-@@ -13165,64 +12473,7 @@
+@@ -13165,64 +12425,7 @@
            <resetValue>0x00000000</resetValue>
            <fields>
              <field>
@@ -5045,7 +5122,7 @@
                <description>Data offset for injected channel
                x</description>
                <bitOffset>0</bitOffset>
-@@ -13466,8 +12717,11 @@
+@@ -13466,8 +12669,11 @@
            </fields>
          </register>
          <register>
@@ -5059,7 +5136,7 @@
            <description>injected data register x</description>
            <addressOffset>0x3C</addressOffset>
            <size>0x20</size>
-@@ -13483,57 +12737,6 @@
+@@ -13483,57 +12689,6 @@
            </fields>
          </register>
          <register>
@@ -5117,7 +5194,7 @@
            <name>DR</name>
            <displayName>DR</displayName>
            <description>regular data register</description>
-@@ -13956,8 +13159,11 @@
+@@ -13956,8 +13111,11 @@
            </fields>
          </register>
          <register>
@@ -5131,7 +5208,7 @@
            <description>injected channel data offset register
            x</description>
            <addressOffset>0x14</addressOffset>
-@@ -13966,64 +13172,7 @@
+@@ -13966,64 +13124,7 @@
            <resetValue>0x00000000</resetValue>
            <fields>
              <field>
@@ -5197,7 +5274,7 @@
                <description>Data offset for injected channel
                x</description>
                <bitOffset>0</bitOffset>
-@@ -14267,8 +13416,11 @@
+@@ -14267,8 +13368,11 @@
            </fields>
          </register>
          <register>
@@ -5211,7 +5288,7 @@
            <description>injected data register x</description>
            <addressOffset>0x3C</addressOffset>
            <size>0x20</size>
-@@ -14284,57 +13436,6 @@
+@@ -14284,57 +13388,6 @@
            </fields>
          </register>
          <register>
@@ -5269,7 +5346,7 @@
            <name>DR</name>
            <displayName>DR</displayName>
            <description>regular data register</description>
-@@ -14394,9 +13495,9 @@
+@@ -14394,9 +13447,9 @@
        </interrupt>
        <registers>
          <register>
@@ -5282,7 +5359,7 @@
            <addressOffset>0x0</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -14465,9 +13566,9 @@
+@@ -14465,9 +13518,9 @@
            </fields>
          </register>
          <register>
@@ -5295,7 +5372,7 @@
            <addressOffset>0x4</addressOffset>
            <size>0x20</size>
            <resetValue>0x00000000</resetValue>
-@@ -14538,9 +13639,9 @@
+@@ -14538,9 +13591,9 @@
            </fields>
          </register>
          <register>
@@ -5308,33 +5385,97 @@
            <addressOffset>0x8</addressOffset>
            <size>0x20</size>
            <resetValue>0x00000000</resetValue>
-@@ -14708,9 +13809,9 @@
+@@ -14708,75 +13761,40 @@
            </fields>
          </register>
          <register>
 -          <name>CAN_RF0R</name>
 -          <displayName>CAN_RF0R</displayName>
 -          <description>CAN_RF0R</description>
-+          <name>RF0R</name>
-+          <displayName>RF0R</displayName>
-+          <description>RF0R</description>
++          <name>RF%sR</name>
++          <displayName>RFxR</displayName>
++          <description>RFxR</description>
++          <dim>2</dim>
++          <dimIndex>0-1</dimIndex>
++          <dimIncrement>0x4</dimIncrement>
            <addressOffset>0xC</addressOffset>
            <size>0x20</size>
            <resetValue>0x00000000</resetValue>
-@@ -14746,9 +13847,9 @@
-           </fields>
-         </register>
-         <register>
+           <fields>
+             <field>
+-              <name>RFOM0</name>
+-              <description>RFOM0</description>
+-              <bitOffset>5</bitOffset>
+-              <bitWidth>1</bitWidth>
+-              <access>read-write</access>
+-            </field>
+-            <field>
+-              <name>FOVR0</name>
+-              <description>FOVR0</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>1</bitWidth>
+-              <access>read-write</access>
+-            </field>
+-            <field>
+-              <name>FULL0</name>
+-              <description>FULL0</description>
+-              <bitOffset>3</bitOffset>
+-              <bitWidth>1</bitWidth>
+-              <access>read-write</access>
+-            </field>
+-            <field>
+-              <name>FMP0</name>
+-              <description>FMP0</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>2</bitWidth>
+-              <access>read-only</access>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
 -          <name>CAN_RF1R</name>
 -          <displayName>CAN_RF1R</displayName>
 -          <description>CAN_RF1R</description>
-+          <name>RF1R</name>
-+          <displayName>RF1R</displayName>
-+          <description>RF1R</description>
-           <addressOffset>0x10</addressOffset>
-           <size>0x20</size>
-           <resetValue>0x00000000</resetValue>
-@@ -14784,9 +13885,9 @@
+-          <addressOffset>0x10</addressOffset>
+-          <size>0x20</size>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>RFOM1</name>
+-              <description>RFOM1</description>
++              <name>RFOM</name>
++              <description>RFOMx</description>
+               <bitOffset>5</bitOffset>
+               <bitWidth>1</bitWidth>
+               <access>read-write</access>
+             </field>
+             <field>
+-              <name>FOVR1</name>
+-              <description>FOVR1</description>
++              <name>FOVR</name>
++              <description>FOVRx</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>1</bitWidth>
+               <access>read-write</access>
+             </field>
+             <field>
+-              <name>FULL1</name>
+-              <description>FULL1</description>
++              <name>FULL</name>
++              <description>FULLx</description>
+               <bitOffset>3</bitOffset>
+               <bitWidth>1</bitWidth>
+               <access>read-write</access>
+             </field>
+             <field>
+-              <name>FMP1</name>
+-              <description>FMP1</description>
++              <name>FMP</name>
++              <description>FMPx</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>2</bitWidth>
+               <access>read-only</access>
+@@ -14784,9 +13802,9 @@
            </fields>
          </register>
          <register>
@@ -5347,7 +5488,7 @@
            <addressOffset>0x14</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -14879,9 +13980,9 @@
+@@ -14879,9 +13897,9 @@
            </fields>
          </register>
          <register>
@@ -5360,7 +5501,7 @@
            <addressOffset>0x18</addressOffset>
            <size>0x20</size>
            <resetValue>0x00000000</resetValue>
-@@ -14931,9 +14032,9 @@
+@@ -14931,9 +13949,9 @@
            </fields>
          </register>
          <register>
@@ -5373,7 +5514,7 @@
            <addressOffset>0x1C</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -14977,698 +14078,302 @@
+@@ -14977,698 +13995,302 @@
              </field>
            </fields>
          </register>
@@ -5382,7 +5523,7 @@
 -          <displayName>CAN_TI0R</displayName>
 -          <description>CAN_TI0R</description>
 +        <cluster>
-+          <name>T%sR</name>
++          <name>TX%s</name>
 +          <displayName>TxR</displayName>
 +          <dim>3</dim>
 +          <dimIndex>0-2</dimIndex>
@@ -5950,7 +6091,7 @@
 +          </register>
 +        </cluster>
 +        <cluster>
-+          <name>R%sR</name>
++          <name>RX%s</name>
 +          <displayName>RxR</displayName>
 +          <dim>2</dim>
 +          <dimIndex>0-1</dimIndex>
@@ -6366,7 +6507,7 @@
            <addressOffset>0x200</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -15683,9 +14388,9 @@
+@@ -15683,9 +14305,9 @@
            </fields>
          </register>
          <register>
@@ -6379,7 +6520,7 @@
            <addressOffset>0x204</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -15778,9 +14483,9 @@
+@@ -15778,9 +14400,9 @@
            </fields>
          </register>
          <register>
@@ -6392,7 +6533,7 @@
            <addressOffset>0x20C</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -15873,9 +14578,9 @@
+@@ -15873,9 +14495,9 @@
            </fields>
          </register>
          <register>
@@ -6405,7 +6546,7 @@
            <addressOffset>0x214</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -15982,9 +14687,9 @@
+@@ -15982,9 +14604,9 @@
            </fields>
          </register>
          <register>
@@ -6418,7 +6559,7 @@
            <addressOffset>0x21C</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -16076,5691 +14781,421 @@
+@@ -16076,5691 +14698,421 @@
              </field>
            </fields>
          </register>
@@ -6427,7 +6568,7 @@
 -          <displayName>F0R1</displayName>
 -          <description>Filter bank 0 register 1</description>
 +        <cluster>
-+          <name>F%sR</name>
++          <name>FB%s</name>
 +          <displayName>FxR</displayName>
 +          <dim>14</dim>
 +          <dimIndex>0-13</dimIndex>
@@ -12524,7 +12665,7 @@
        </registers>
      </peripheral>
      <peripheral>
-@@ -23020,6 +16455,24 @@
+@@ -23020,6 +16372,24 @@
                <bitOffset>0</bitOffset>
                <bitWidth>3</bitWidth>
                <access>read-write</access>
@@ -12549,7 +12690,7 @@
              </field>
              <field>
                <name>HLFCYA</name>
-@@ -23035,6 +16488,19 @@
+@@ -23035,6 +16405,19 @@
                <bitOffset>4</bitOffset>
                <bitWidth>1</bitWidth>
                <access>read-write</access>
@@ -12569,7 +12710,7 @@
              </field>
              <field>
                <name>PRFTBS</name>
-@@ -24047,9 +17513,12 @@
+@@ -24047,9 +17430,12 @@
        </interrupt>
        <registers>
          <register>
@@ -12585,7 +12726,7 @@
            <addressOffset>0x0</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -24060,6 +17529,12 @@
+@@ -24060,6 +17446,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -12598,7 +12739,7 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24093,552 +17568,28 @@
+@@ -24093,552 +17485,28 @@
                <description>Endpoint type</description>
                <bitOffset>9</bitOffset>
                <bitWidth>2</bitWidth>

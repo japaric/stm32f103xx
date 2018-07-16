@@ -11,14 +11,14 @@ pub struct RegisterBlock {
     pub cmd: CMD,
     #[doc = "0x10 - SDIO command register"]
     pub respcmd: RESPCMD,
-    #[doc = "0x14 - Bits 31:0 = CARDSTATUS1"]
-    pub respi1: RESPI1,
-    #[doc = "0x18 - Bits 31:0 = CARDSTATUS2"]
-    pub resp2: RESP2,
-    #[doc = "0x1c - Bits 31:0 = CARDSTATUS3"]
-    pub resp3: RESP3,
-    #[doc = "0x20 - Bits 31:0 = CARDSTATUS4"]
-    pub resp4: RESP4,
+    #[doc = "0x14 - Bits 31:0 = CARDSTATUS"]
+    pub resp1: RESP,
+    #[doc = "0x18 - Bits 31:0 = CARDSTATUS"]
+    pub resp2: RESP,
+    #[doc = "0x1c - Bits 31:0 = CARDSTATUS"]
+    pub resp3: RESP,
+    #[doc = "0x20 - Bits 31:0 = CARDSTATUS"]
+    pub resp4: RESP,
     #[doc = "0x24 - Bits 31:0 = DATATIME: Data timeout period"]
     pub dtimer: DTIMER,
     #[doc = "0x28 - Bits 24:0 = DATALENGTH: Data length value"]
@@ -70,30 +70,12 @@ pub struct RESPCMD {
 }
 #[doc = "SDIO command register"]
 pub mod respcmd;
-#[doc = "Bits 31:0 = CARDSTATUS1"]
-pub struct RESPI1 {
+#[doc = "Bits 31:0 = CARDSTATUS"]
+pub struct RESP {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "Bits 31:0 = CARDSTATUS1"]
-pub mod respi1;
-#[doc = "Bits 31:0 = CARDSTATUS2"]
-pub struct RESP2 {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "Bits 31:0 = CARDSTATUS2"]
-pub mod resp2;
-#[doc = "Bits 31:0 = CARDSTATUS3"]
-pub struct RESP3 {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "Bits 31:0 = CARDSTATUS3"]
-pub mod resp3;
-#[doc = "Bits 31:0 = CARDSTATUS4"]
-pub struct RESP4 {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "Bits 31:0 = CARDSTATUS4"]
-pub mod resp4;
+#[doc = "Bits 31:0 = CARDSTATUS"]
+pub mod resp;
 #[doc = "Bits 31:0 = DATATIME: Data timeout period"]
 pub struct DTIMER {
     register: ::vcell::VolatileCell<u32>,

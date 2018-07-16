@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::RF1R {
+impl super::RFR {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,10 +43,10 @@ impl super::RF1R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct RFOM1R {
+pub struct RFOMR {
     bits: bool,
 }
-impl RFOM1R {
+impl RFOMR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -64,10 +64,10 @@ impl RFOM1R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct FOVR1R {
+pub struct FOVRR {
     bits: bool,
 }
-impl FOVR1R {
+impl FOVRR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -85,10 +85,10 @@ impl FOVR1R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct FULL1R {
+pub struct FULLR {
     bits: bool,
 }
-impl FULL1R {
+impl FULLR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,10 +106,10 @@ impl FULL1R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct FMP1R {
+pub struct FMPR {
     bits: u8,
 }
-impl FMP1R {
+impl FMPR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u8 {
@@ -117,10 +117,10 @@ impl FMP1R {
     }
 }
 #[doc = r" Proxy"]
-pub struct _RFOM1W<'a> {
+pub struct _RFOMW<'a> {
     w: &'a mut W,
 }
-impl<'a> _RFOM1W<'a> {
+impl<'a> _RFOMW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -140,10 +140,10 @@ impl<'a> _RFOM1W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _FOVR1W<'a> {
+pub struct _FOVRW<'a> {
     w: &'a mut W,
 }
-impl<'a> _FOVR1W<'a> {
+impl<'a> _FOVRW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -163,10 +163,10 @@ impl<'a> _FOVR1W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _FULL1W<'a> {
+pub struct _FULLW<'a> {
     w: &'a mut W,
 }
-impl<'a> _FULL1W<'a> {
+impl<'a> _FULLW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -191,45 +191,45 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 5 - RFOM1"]
+    #[doc = "Bit 5 - RFOMx"]
     #[inline]
-    pub fn rfom1(&self) -> RFOM1R {
+    pub fn rfom(&self) -> RFOMR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 5;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        RFOM1R { bits }
+        RFOMR { bits }
     }
-    #[doc = "Bit 4 - FOVR1"]
+    #[doc = "Bit 4 - FOVRx"]
     #[inline]
-    pub fn fovr1(&self) -> FOVR1R {
+    pub fn fovr(&self) -> FOVRR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 4;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        FOVR1R { bits }
+        FOVRR { bits }
     }
-    #[doc = "Bit 3 - FULL1"]
+    #[doc = "Bit 3 - FULLx"]
     #[inline]
-    pub fn full1(&self) -> FULL1R {
+    pub fn full(&self) -> FULLR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 3;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        FULL1R { bits }
+        FULLR { bits }
     }
-    #[doc = "Bits 0:1 - FMP1"]
+    #[doc = "Bits 0:1 - FMPx"]
     #[inline]
-    pub fn fmp1(&self) -> FMP1R {
+    pub fn fmp(&self) -> FMPR {
         let bits = {
             const MASK: u8 = 3;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        FMP1R { bits }
+        FMPR { bits }
     }
 }
 impl W {
@@ -244,19 +244,19 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 5 - RFOM1"]
+    #[doc = "Bit 5 - RFOMx"]
     #[inline]
-    pub fn rfom1(&mut self) -> _RFOM1W {
-        _RFOM1W { w: self }
+    pub fn rfom(&mut self) -> _RFOMW {
+        _RFOMW { w: self }
     }
-    #[doc = "Bit 4 - FOVR1"]
+    #[doc = "Bit 4 - FOVRx"]
     #[inline]
-    pub fn fovr1(&mut self) -> _FOVR1W {
-        _FOVR1W { w: self }
+    pub fn fovr(&mut self) -> _FOVRW {
+        _FOVRW { w: self }
     }
-    #[doc = "Bit 3 - FULL1"]
+    #[doc = "Bit 3 - FULLx"]
     #[inline]
-    pub fn full1(&mut self) -> _FULL1W {
-        _FULL1W { w: self }
+    pub fn full(&mut self) -> _FULLW {
+        _FULLW { w: self }
     }
 }

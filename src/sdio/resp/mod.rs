@@ -2,7 +2,7 @@
 pub struct R {
     bits: u32,
 }
-impl super::RESP3 {
+impl super::RESP {
     #[doc = r" Reads the contents of the register"]
     #[inline]
     pub fn read(&self) -> R {
@@ -12,10 +12,10 @@ impl super::RESP3 {
     }
 }
 #[doc = r" Value of the field"]
-pub struct CARDSTATUS3R {
+pub struct CARDSTATUSR {
     bits: u32,
 }
-impl CARDSTATUS3R {
+impl CARDSTATUSR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u32 {
@@ -28,14 +28,14 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:31 - CARDSTATUS3"]
+    #[doc = "Bits 0:31 - CARDSTATUS"]
     #[inline]
-    pub fn cardstatus3(&self) -> CARDSTATUS3R {
+    pub fn cardstatus(&self) -> CARDSTATUSR {
         let bits = {
             const MASK: u32 = 4294967295;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) as u32
         };
-        CARDSTATUS3R { bits }
+        CARDSTATUSR { bits }
     }
 }
