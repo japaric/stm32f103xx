@@ -24,8 +24,8 @@ pub struct RegisterBlock {
     #[doc = "0x2c - auto-reload register"]
     pub arr: ARR,
     _reserved2: [u8; 4usize],
-    #[doc = "0x34 - capture/compare register 1"]
-    pub ccr1: CCR1,
+    #[doc = "0x34 - capture/compare register x"]
+    pub ccr1: CCR,
 }
 #[doc = "control register 1"]
 pub struct CR1 {
@@ -93,9 +93,9 @@ pub struct ARR {
 }
 #[doc = "auto-reload register"]
 pub mod arr;
-#[doc = "capture/compare register 1"]
-pub struct CCR1 {
+#[doc = "capture/compare register x"]
+pub struct CCR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "capture/compare register 1"]
-pub mod ccr1;
+#[doc = "capture/compare register x"]
+pub mod ccr;

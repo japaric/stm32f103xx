@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::CCR1 {
+impl super::CCR {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,10 +43,10 @@ impl super::CCR1 {
     }
 }
 #[doc = r" Value of the field"]
-pub struct CCR1R {
+pub struct CCRR {
     bits: u16,
 }
-impl CCR1R {
+impl CCRR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u16 {
@@ -54,13 +54,13 @@ impl CCR1R {
     }
 }
 #[doc = r" Proxy"]
-pub struct _CCR1W<'a> {
+pub struct _CCRW<'a> {
     w: &'a mut W,
 }
-impl<'a> _CCR1W<'a> {
+impl<'a> _CCRW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
+    pub fn bits(self, value: u16) -> &'a mut W {
         const MASK: u16 = 65535;
         const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
@@ -74,15 +74,15 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:15 - Capture/Compare 1 value"]
+    #[doc = "Bits 0:15 - Capture/Compare x value"]
     #[inline]
-    pub fn ccr1(&self) -> CCR1R {
+    pub fn ccr(&self) -> CCRR {
         let bits = {
             const MASK: u16 = 65535;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) as u16
         };
-        CCR1R { bits }
+        CCRR { bits }
     }
 }
 impl W {
@@ -97,9 +97,9 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:15 - Capture/Compare 1 value"]
+    #[doc = "Bits 0:15 - Capture/Compare x value"]
     #[inline]
-    pub fn ccr1(&mut self) -> _CCR1W {
-        _CCR1W { w: self }
+    pub fn ccr(&mut self) -> _CCRW {
+        _CCRW { w: self }
     }
 }
