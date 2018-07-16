@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::JOFR1 {
+impl super::JOFR {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,10 +43,10 @@ impl super::JOFR1 {
     }
 }
 #[doc = r" Value of the field"]
-pub struct JOFFSET1R {
+pub struct JOFFSETR {
     bits: u16,
 }
-impl JOFFSET1R {
+impl JOFFSETR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u16 {
@@ -54,10 +54,10 @@ impl JOFFSET1R {
     }
 }
 #[doc = r" Proxy"]
-pub struct _JOFFSET1W<'a> {
+pub struct _JOFFSETW<'a> {
     w: &'a mut W,
 }
-impl<'a> _JOFFSET1W<'a> {
+impl<'a> _JOFFSETW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
@@ -76,13 +76,13 @@ impl R {
     }
     #[doc = "Bits 0:11 - Data offset for injected channel x"]
     #[inline]
-    pub fn joffset1(&self) -> JOFFSET1R {
+    pub fn joffset(&self) -> JOFFSETR {
         let bits = {
             const MASK: u16 = 4095;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) as u16
         };
-        JOFFSET1R { bits }
+        JOFFSETR { bits }
     }
 }
 impl W {
@@ -99,7 +99,7 @@ impl W {
     }
     #[doc = "Bits 0:11 - Data offset for injected channel x"]
     #[inline]
-    pub fn joffset1(&mut self) -> _JOFFSET1W {
-        _JOFFSET1W { w: self }
+    pub fn joffset(&mut self) -> _JOFFSETW {
+        _JOFFSETW { w: self }
     }
 }

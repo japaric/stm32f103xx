@@ -1,5 +1,5 @@
 --- STM32F103xx.svd.orig	2018-07-15 11:46:47.216493263 +0300
-+++ STM32F103xx.svd	2018-07-15 19:22:52.958771906 +0300
++++ STM32F103xx.svd	2018-07-16 09:43:15.792674520 +0300
 @@ -3,6 +3,16 @@
  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
  xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
@@ -2574,7 +2574,7 @@
 +                <description>Memory size</description>
 +                <bitOffset>10</bitOffset>
 +                <bitWidth>2</bitWidth>
-+                <enumeratedValues derivedFrom="DMA1.CCR1.PSIZE.PSIZE">
++                <enumeratedValues derivedFrom="PSIZE.PSIZE">
 +                </enumeratedValues>
 +              </field>
 +              <field>
@@ -3713,7 +3713,311 @@
              </field>
              <field>
                <name>CPOL</name>
-@@ -14394,9 +14819,9 @@
+@@ -13155,8 +13580,11 @@
+           </fields>
+         </register>
+         <register>
+-          <name>JOFR1</name>
+-          <displayName>JOFR1</displayName>
++          <name>JOFR%s</name>
++          <displayName>JOFRx</displayName>
++          <dim>4</dim>
++          <dimIndex>1-4</dimIndex>
++          <dimIncrement>0x4</dimIncrement>
+           <description>injected channel data offset register
+           x</description>
+           <addressOffset>0x14</addressOffset>
+@@ -13165,64 +13593,7 @@
+           <resetValue>0x00000000</resetValue>
+           <fields>
+             <field>
+-              <name>JOFFSET1</name>
+-              <description>Data offset for injected channel
+-              x</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>12</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>JOFR2</name>
+-          <displayName>JOFR2</displayName>
+-          <description>injected channel data offset register
+-          x</description>
+-          <addressOffset>0x18</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>JOFFSET2</name>
+-              <description>Data offset for injected channel
+-              x</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>12</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>JOFR3</name>
+-          <displayName>JOFR3</displayName>
+-          <description>injected channel data offset register
+-          x</description>
+-          <addressOffset>0x1C</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>JOFFSET3</name>
+-              <description>Data offset for injected channel
+-              x</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>12</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>JOFR4</name>
+-          <displayName>JOFR4</displayName>
+-          <description>injected channel data offset register
+-          x</description>
+-          <addressOffset>0x20</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>JOFFSET4</name>
++              <name>JOFFSET</name>
+               <description>Data offset for injected channel
+               x</description>
+               <bitOffset>0</bitOffset>
+@@ -13466,8 +13837,11 @@
+           </fields>
+         </register>
+         <register>
+-          <name>JDR1</name>
+-          <displayName>JDR1</displayName>
++          <name>JDR%s</name>
++          <displayName>JDRx</displayName>
++          <dim>4</dim>
++          <dimIndex>1-4</dimIndex>
++          <dimIncrement>0x4</dimIncrement>
+           <description>injected data register x</description>
+           <addressOffset>0x3C</addressOffset>
+           <size>0x20</size>
+@@ -13483,57 +13857,6 @@
+           </fields>
+         </register>
+         <register>
+-          <name>JDR2</name>
+-          <displayName>JDR2</displayName>
+-          <description>injected data register x</description>
+-          <addressOffset>0x40</addressOffset>
+-          <size>0x20</size>
+-          <access>read-only</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>JDATA</name>
+-              <description>Injected data</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>16</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>JDR3</name>
+-          <displayName>JDR3</displayName>
+-          <description>injected data register x</description>
+-          <addressOffset>0x44</addressOffset>
+-          <size>0x20</size>
+-          <access>read-only</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>JDATA</name>
+-              <description>Injected data</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>16</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>JDR4</name>
+-          <displayName>JDR4</displayName>
+-          <description>injected data register x</description>
+-          <addressOffset>0x48</addressOffset>
+-          <size>0x20</size>
+-          <access>read-only</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>JDATA</name>
+-              <description>Injected data</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>16</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+           <name>DR</name>
+           <displayName>DR</displayName>
+           <description>regular data register</description>
+@@ -13956,8 +14279,11 @@
+           </fields>
+         </register>
+         <register>
+-          <name>JOFR1</name>
+-          <displayName>JOFR1</displayName>
++          <name>JOFR%s</name>
++          <displayName>JOFRx</displayName>
++          <dim>4</dim>
++          <dimIndex>1-4</dimIndex>
++          <dimIncrement>0x4</dimIncrement>
+           <description>injected channel data offset register
+           x</description>
+           <addressOffset>0x14</addressOffset>
+@@ -13966,64 +14292,7 @@
+           <resetValue>0x00000000</resetValue>
+           <fields>
+             <field>
+-              <name>JOFFSET1</name>
+-              <description>Data offset for injected channel
+-              x</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>12</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>JOFR2</name>
+-          <displayName>JOFR2</displayName>
+-          <description>injected channel data offset register
+-          x</description>
+-          <addressOffset>0x18</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>JOFFSET2</name>
+-              <description>Data offset for injected channel
+-              x</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>12</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>JOFR3</name>
+-          <displayName>JOFR3</displayName>
+-          <description>injected channel data offset register
+-          x</description>
+-          <addressOffset>0x1C</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>JOFFSET3</name>
+-              <description>Data offset for injected channel
+-              x</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>12</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>JOFR4</name>
+-          <displayName>JOFR4</displayName>
+-          <description>injected channel data offset register
+-          x</description>
+-          <addressOffset>0x20</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>JOFFSET4</name>
++              <name>JOFFSET</name>
+               <description>Data offset for injected channel
+               x</description>
+               <bitOffset>0</bitOffset>
+@@ -14267,8 +14536,11 @@
+           </fields>
+         </register>
+         <register>
+-          <name>JDR1</name>
+-          <displayName>JDR1</displayName>
++          <name>JDR%s</name>
++          <displayName>JDRx</displayName>
++          <dim>4</dim>
++          <dimIndex>1-4</dimIndex>
++          <dimIncrement>0x4</dimIncrement>
+           <description>injected data register x</description>
+           <addressOffset>0x3C</addressOffset>
+           <size>0x20</size>
+@@ -14284,57 +14556,6 @@
+           </fields>
+         </register>
+         <register>
+-          <name>JDR2</name>
+-          <displayName>JDR2</displayName>
+-          <description>injected data register x</description>
+-          <addressOffset>0x40</addressOffset>
+-          <size>0x20</size>
+-          <access>read-only</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>JDATA</name>
+-              <description>Injected data</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>16</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>JDR3</name>
+-          <displayName>JDR3</displayName>
+-          <description>injected data register x</description>
+-          <addressOffset>0x44</addressOffset>
+-          <size>0x20</size>
+-          <access>read-only</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>JDATA</name>
+-              <description>Injected data</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>16</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>JDR4</name>
+-          <displayName>JDR4</displayName>
+-          <description>injected data register x</description>
+-          <addressOffset>0x48</addressOffset>
+-          <size>0x20</size>
+-          <access>read-only</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>JDATA</name>
+-              <description>Injected data</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>16</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+           <name>DR</name>
+           <displayName>DR</displayName>
+           <description>regular data register</description>
+@@ -14394,9 +14615,9 @@
        </interrupt>
        <registers>
          <register>
@@ -3726,7 +4030,7 @@
            <addressOffset>0x0</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -14465,9 +14890,9 @@
+@@ -14465,9 +14686,9 @@
            </fields>
          </register>
          <register>
@@ -3739,7 +4043,7 @@
            <addressOffset>0x4</addressOffset>
            <size>0x20</size>
            <resetValue>0x00000000</resetValue>
-@@ -14538,9 +14963,9 @@
+@@ -14538,9 +14759,9 @@
            </fields>
          </register>
          <register>
@@ -3752,7 +4056,7 @@
            <addressOffset>0x8</addressOffset>
            <size>0x20</size>
            <resetValue>0x00000000</resetValue>
-@@ -14708,9 +15133,9 @@
+@@ -14708,9 +14929,9 @@
            </fields>
          </register>
          <register>
@@ -3765,7 +4069,7 @@
            <addressOffset>0xC</addressOffset>
            <size>0x20</size>
            <resetValue>0x00000000</resetValue>
-@@ -14746,9 +15171,9 @@
+@@ -14746,9 +14967,9 @@
            </fields>
          </register>
          <register>
@@ -3778,7 +4082,7 @@
            <addressOffset>0x10</addressOffset>
            <size>0x20</size>
            <resetValue>0x00000000</resetValue>
-@@ -14784,9 +15209,9 @@
+@@ -14784,9 +15005,9 @@
            </fields>
          </register>
          <register>
@@ -3791,7 +4095,7 @@
            <addressOffset>0x14</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -14879,9 +15304,9 @@
+@@ -14879,9 +15100,9 @@
            </fields>
          </register>
          <register>
@@ -3804,7 +4108,7 @@
            <addressOffset>0x18</addressOffset>
            <size>0x20</size>
            <resetValue>0x00000000</resetValue>
-@@ -14931,9 +15356,9 @@
+@@ -14931,9 +15152,9 @@
            </fields>
          </register>
          <register>
@@ -3817,7 +4121,7 @@
            <addressOffset>0x1C</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -14977,698 +15402,302 @@
+@@ -14977,698 +15198,302 @@
              </field>
            </fields>
          </register>
@@ -4810,7 +5114,7 @@
            <addressOffset>0x200</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -15683,9 +15712,9 @@
+@@ -15683,9 +15508,9 @@
            </fields>
          </register>
          <register>
@@ -4823,7 +5127,7 @@
            <addressOffset>0x204</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -15778,9 +15807,9 @@
+@@ -15778,9 +15603,9 @@
            </fields>
          </register>
          <register>
@@ -4836,7 +5140,7 @@
            <addressOffset>0x20C</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -15873,9 +15902,9 @@
+@@ -15873,9 +15698,9 @@
            </fields>
          </register>
          <register>
@@ -4849,7 +5153,7 @@
            <addressOffset>0x214</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -15982,9 +16011,9 @@
+@@ -15982,9 +15807,9 @@
            </fields>
          </register>
          <register>
@@ -4862,7 +5166,7 @@
            <addressOffset>0x21C</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -16076,5691 +16105,421 @@
+@@ -16076,5691 +15901,421 @@
              </field>
            </fields>
          </register>
@@ -10968,7 +11272,7 @@
        </registers>
      </peripheral>
      <peripheral>
-@@ -23020,6 +17779,24 @@
+@@ -23020,6 +17575,24 @@
                <bitOffset>0</bitOffset>
                <bitWidth>3</bitWidth>
                <access>read-write</access>
@@ -10993,7 +11297,7 @@
              </field>
              <field>
                <name>HLFCYA</name>
-@@ -23035,6 +17812,19 @@
+@@ -23035,6 +17608,19 @@
                <bitOffset>4</bitOffset>
                <bitWidth>1</bitWidth>
                <access>read-write</access>
@@ -11013,7 +11317,7 @@
              </field>
              <field>
                <name>PRFTBS</name>
-@@ -24047,9 +18837,12 @@
+@@ -24047,9 +18633,12 @@
        </interrupt>
        <registers>
          <register>
@@ -11029,7 +11333,7 @@
            <addressOffset>0x0</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -24060,6 +18853,12 @@
+@@ -24060,6 +18649,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -11042,7 +11346,7 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24093,552 +18892,28 @@
+@@ -24093,552 +18688,28 @@
                <description>Endpoint type</description>
                <bitOffset>9</bitOffset>
                <bitWidth>2</bitWidth>

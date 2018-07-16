@@ -2,7 +2,7 @@
 pub struct R {
     bits: u32,
 }
-impl super::JDR1 {
+impl super::JDR {
     #[doc = r" Reads the contents of the register"]
     #[inline]
     pub fn read(&self) -> R {

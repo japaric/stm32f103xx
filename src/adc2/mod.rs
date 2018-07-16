@@ -12,13 +12,13 @@ pub struct RegisterBlock {
     #[doc = "0x10 - sample time register 2"]
     pub smpr2: SMPR2,
     #[doc = "0x14 - injected channel data offset register x"]
-    pub jofr1: JOFR1,
+    pub jofr1: JOFR,
     #[doc = "0x18 - injected channel data offset register x"]
-    pub jofr2: JOFR2,
+    pub jofr2: JOFR,
     #[doc = "0x1c - injected channel data offset register x"]
-    pub jofr3: JOFR3,
+    pub jofr3: JOFR,
     #[doc = "0x20 - injected channel data offset register x"]
-    pub jofr4: JOFR4,
+    pub jofr4: JOFR,
     #[doc = "0x24 - watchdog higher threshold register"]
     pub htr: HTR,
     #[doc = "0x28 - watchdog lower threshold register"]
@@ -32,13 +32,13 @@ pub struct RegisterBlock {
     #[doc = "0x38 - injected sequence register"]
     pub jsqr: JSQR,
     #[doc = "0x3c - injected data register x"]
-    pub jdr1: JDR1,
+    pub jdr1: JDR,
     #[doc = "0x40 - injected data register x"]
-    pub jdr2: JDR2,
+    pub jdr2: JDR,
     #[doc = "0x44 - injected data register x"]
-    pub jdr3: JDR3,
+    pub jdr3: JDR,
     #[doc = "0x48 - injected data register x"]
-    pub jdr4: JDR4,
+    pub jdr4: JDR,
     #[doc = "0x4c - regular data register"]
     pub dr: DR,
 }
@@ -73,29 +73,11 @@ pub struct SMPR2 {
 #[doc = "sample time register 2"]
 pub mod smpr2;
 #[doc = "injected channel data offset register x"]
-pub struct JOFR1 {
+pub struct JOFR {
     register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "injected channel data offset register x"]
-pub mod jofr1;
-#[doc = "injected channel data offset register x"]
-pub struct JOFR2 {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "injected channel data offset register x"]
-pub mod jofr2;
-#[doc = "injected channel data offset register x"]
-pub struct JOFR3 {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "injected channel data offset register x"]
-pub mod jofr3;
-#[doc = "injected channel data offset register x"]
-pub struct JOFR4 {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "injected channel data offset register x"]
-pub mod jofr4;
+pub mod jofr;
 #[doc = "watchdog higher threshold register"]
 pub struct HTR {
     register: ::vcell::VolatileCell<u32>,
@@ -133,29 +115,11 @@ pub struct JSQR {
 #[doc = "injected sequence register"]
 pub mod jsqr;
 #[doc = "injected data register x"]
-pub struct JDR1 {
+pub struct JDR {
     register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "injected data register x"]
-pub mod jdr1;
-#[doc = "injected data register x"]
-pub struct JDR2 {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "injected data register x"]
-pub mod jdr2;
-#[doc = "injected data register x"]
-pub struct JDR3 {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "injected data register x"]
-pub mod jdr3;
-#[doc = "injected data register x"]
-pub struct JDR4 {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "injected data register x"]
-pub mod jdr4;
+pub mod jdr;
 #[doc = "regular data register"]
 pub struct DR {
     register: ::vcell::VolatileCell<u32>,
