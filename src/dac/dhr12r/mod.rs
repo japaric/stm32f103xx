@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::DHR12R2 {
+impl super::DHR12R {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,10 +43,10 @@ impl super::DHR12R2 {
     }
 }
 #[doc = r" Value of the field"]
-pub struct DACC2DHRR {
+pub struct DHRR {
     bits: u16,
 }
-impl DACC2DHRR {
+impl DHRR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u16 {
@@ -54,10 +54,10 @@ impl DACC2DHRR {
     }
 }
 #[doc = r" Proxy"]
-pub struct _DACC2DHRW<'a> {
+pub struct _DHRW<'a> {
     w: &'a mut W,
 }
-impl<'a> _DACC2DHRW<'a> {
+impl<'a> _DHRW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
@@ -74,15 +74,15 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:11 - DAC channel2 12-bit right-aligned data"]
+    #[doc = "Bits 0:11 - DAC channelX 12-bit right-aligned data"]
     #[inline]
-    pub fn dacc2dhr(&self) -> DACC2DHRR {
+    pub fn dhr(&self) -> DHRR {
         let bits = {
             const MASK: u16 = 4095;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) as u16
         };
-        DACC2DHRR { bits }
+        DHRR { bits }
     }
 }
 impl W {
@@ -97,9 +97,9 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:11 - DAC channel2 12-bit right-aligned data"]
+    #[doc = "Bits 0:11 - DAC channelX 12-bit right-aligned data"]
     #[inline]
-    pub fn dacc2dhr(&mut self) -> _DACC2DHRW {
-        _DACC2DHRW { w: self }
+    pub fn dhr(&mut self) -> _DHRW {
+        _DHRW { w: self }
     }
 }

@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::DHR8R1 {
+impl super::DHR12L {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,26 +43,26 @@ impl super::DHR8R1 {
     }
 }
 #[doc = r" Value of the field"]
-pub struct DACC1DHRR {
-    bits: u8,
+pub struct DHRR {
+    bits: u16,
 }
-impl DACC1DHRR {
+impl DHRR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub fn bits(&self) -> u8 {
+    pub fn bits(&self) -> u16 {
         self.bits
     }
 }
 #[doc = r" Proxy"]
-pub struct _DACC1DHRW<'a> {
+pub struct _DHRW<'a> {
     w: &'a mut W,
 }
-impl<'a> _DACC1DHRW<'a> {
+impl<'a> _DHRW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 255;
-        const OFFSET: u8 = 0;
+    pub unsafe fn bits(self, value: u16) -> &'a mut W {
+        const MASK: u16 = 4095;
+        const OFFSET: u8 = 4;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -74,15 +74,15 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:7 - DAC channel1 8-bit right-aligned data"]
+    #[doc = "Bits 4:15 - DAC channelX 12-bit left-aligned data"]
     #[inline]
-    pub fn dacc1dhr(&self) -> DACC1DHRR {
+    pub fn dhr(&self) -> DHRR {
         let bits = {
-            const MASK: u8 = 255;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
+            const MASK: u16 = 4095;
+            const OFFSET: u8 = 4;
+            ((self.bits >> OFFSET) & MASK as u32) as u16
         };
-        DACC1DHRR { bits }
+        DHRR { bits }
     }
 }
 impl W {
@@ -97,9 +97,9 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:7 - DAC channel1 8-bit right-aligned data"]
+    #[doc = "Bits 4:15 - DAC channelX 12-bit left-aligned data"]
     #[inline]
-    pub fn dacc1dhr(&mut self) -> _DACC1DHRW {
-        _DACC1DHRW { w: self }
+    pub fn dhr(&mut self) -> _DHRW {
+        _DHRW { w: self }
     }
 }

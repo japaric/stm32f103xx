@@ -1,5 +1,5 @@
 --- STM32F103xx.svd.orig	2018-07-15 11:46:47.216493263 +0300
-+++ STM32F103xx.svd	2018-07-16 21:43:53.098164322 +0300
++++ STM32F103xx.svd	2018-07-16 22:38:52.193350745 +0300
 @@ -3,6 +3,16 @@
  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
  xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
@@ -12665,7 +12665,190 @@
        </registers>
      </peripheral>
      <peripheral>
-@@ -23020,6 +16372,24 @@
+@@ -21906,9 +15258,12 @@
+           </fields>
+         </register>
+         <register>
+-          <name>DHR12R1</name>
+-          <displayName>DHR12R1</displayName>
+-          <description>DAC channel1 12-bit right-aligned data
++          <name>DHR12R%s</name>
++          <displayName>DHR12Rx</displayName>
++          <dim>2</dim>
++          <dimIndex>1-2</dimIndex>
++          <dimIncrement>0xC</dimIncrement>
++          <description>DAC channelX 12-bit right-aligned data
+           holding register(DAC_DHR12R1)</description>
+           <addressOffset>0x8</addressOffset>
+           <size>0x20</size>
+@@ -21916,8 +15271,8 @@
+           <resetValue>0x00000000</resetValue>
+           <fields>
+             <field>
+-              <name>DACC1DHR</name>
+-              <description>DAC channel1 12-bit right-aligned
++              <name>DHR</name>
++              <description>DAC channelX 12-bit right-aligned
+               data</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>12</bitWidth>
+@@ -21925,9 +15280,12 @@
+           </fields>
+         </register>
+         <register>
+-          <name>DHR12L1</name>
+-          <displayName>DHR12L1</displayName>
+-          <description>DAC channel1 12-bit left aligned data
++          <name>DHR12L%s</name>
++          <displayName>DHR12Lx</displayName>
++          <dim>2</dim>
++          <dimIndex>1-2</dimIndex>
++          <dimIncrement>0xC</dimIncrement>
++          <description>DAC channelX 12-bit left aligned data
+           holding register (DAC_DHR12L1)</description>
+           <addressOffset>0xC</addressOffset>
+           <size>0x20</size>
+@@ -21935,8 +15293,8 @@
+           <resetValue>0x00000000</resetValue>
+           <fields>
+             <field>
+-              <name>DACC1DHR</name>
+-              <description>DAC channel1 12-bit left-aligned
++              <name>DHR</name>
++              <description>DAC channelX 12-bit left-aligned
+               data</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>12</bitWidth>
+@@ -21944,9 +15302,12 @@
+           </fields>
+         </register>
+         <register>
+-          <name>DHR8R1</name>
+-          <displayName>DHR8R1</displayName>
+-          <description>DAC channel1 8-bit right aligned data
++          <name>DHR8R%s</name>
++          <displayName>DHR8Rx</displayName>
++          <dim>2</dim>
++          <dimIndex>1-2</dimIndex>
++          <dimIncrement>0xC</dimIncrement>
++          <description>DAC channelX 8-bit right aligned data
+           holding register (DAC_DHR8R1)</description>
+           <addressOffset>0x10</addressOffset>
+           <size>0x20</size>
+@@ -21954,65 +15315,8 @@
+           <resetValue>0x00000000</resetValue>
+           <fields>
+             <field>
+-              <name>DACC1DHR</name>
+-              <description>DAC channel1 8-bit right-aligned
+-              data</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>8</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>DHR12R2</name>
+-          <displayName>DHR12R2</displayName>
+-          <description>DAC channel2 12-bit right aligned data
+-          holding register (DAC_DHR12R2)</description>
+-          <addressOffset>0x14</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>DACC2DHR</name>
+-              <description>DAC channel2 12-bit right-aligned
+-              data</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>12</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>DHR12L2</name>
+-          <displayName>DHR12L2</displayName>
+-          <description>DAC channel2 12-bit left aligned data
+-          holding register (DAC_DHR12L2)</description>
+-          <addressOffset>0x18</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>DACC2DHR</name>
+-              <description>DAC channel2 12-bit left-aligned
+-              data</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>12</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>DHR8R2</name>
+-          <displayName>DHR8R2</displayName>
+-          <description>DAC channel2 8-bit right-aligned data
+-          holding register (DAC_DHR8R2)</description>
+-          <addressOffset>0x1C</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>DACC2DHR</name>
+-              <description>DAC channel2 8-bit right-aligned
++              <name>DHR</name>
++              <description>DAC channelX 8-bit right-aligned
+               data</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>8</bitWidth>
+@@ -22100,9 +15404,12 @@
+           </fields>
+         </register>
+         <register>
+-          <name>DOR1</name>
+-          <displayName>DOR1</displayName>
+-          <description>DAC channel1 data output register
++          <name>DOR%s</name>
++          <displayName>DORx</displayName>
++          <dim>2</dim>
++          <dimIndex>1-2</dimIndex>
++          <dimIncrement>0x4</dimIncrement>
++          <description>DAC channelX data output register
+           (DAC_DOR1)</description>
+           <addressOffset>0x2C</addressOffset>
+           <size>0x20</size>
+@@ -22110,26 +15417,8 @@
+           <resetValue>0x00000000</resetValue>
+           <fields>
+             <field>
+-              <name>DACC1DOR</name>
+-              <description>DAC channel1 data output</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>12</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>DOR2</name>
+-          <displayName>DOR2</displayName>
+-          <description>DAC channel2 data output register
+-          (DAC_DOR2)</description>
+-          <addressOffset>0x30</addressOffset>
+-          <size>0x20</size>
+-          <access>read-only</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>DACC2DOR</name>
+-              <description>DAC channel2 data output</description>
++              <name>DOR</name>
++              <description>DAC channelX data output</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>12</bitWidth>
+             </field>
+@@ -23020,6 +16309,24 @@
                <bitOffset>0</bitOffset>
                <bitWidth>3</bitWidth>
                <access>read-write</access>
@@ -12690,7 +12873,7 @@
              </field>
              <field>
                <name>HLFCYA</name>
-@@ -23035,6 +16405,19 @@
+@@ -23035,6 +16342,19 @@
                <bitOffset>4</bitOffset>
                <bitWidth>1</bitWidth>
                <access>read-write</access>
@@ -12710,7 +12893,7 @@
              </field>
              <field>
                <name>PRFTBS</name>
-@@ -24047,9 +17430,12 @@
+@@ -24047,9 +17367,12 @@
        </interrupt>
        <registers>
          <register>
@@ -12726,7 +12909,7 @@
            <addressOffset>0x0</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -24060,6 +17446,12 @@
+@@ -24060,6 +17383,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -12739,7 +12922,7 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24093,552 +17485,28 @@
+@@ -24093,552 +17422,28 @@
                <description>Endpoint type</description>
                <bitOffset>9</bitOffset>
                <bitWidth>2</bitWidth>
