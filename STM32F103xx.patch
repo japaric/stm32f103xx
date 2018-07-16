@@ -1,5 +1,5 @@
 --- STM32F103xx.svd.orig	2018-07-15 11:46:47.216493263 +0300
-+++ STM32F103xx.svd	2018-07-15 17:14:11.437752275 +0300
++++ STM32F103xx.svd	2018-07-15 19:22:52.958771906 +0300
 @@ -3,6 +3,16 @@
  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
  xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
@@ -1484,282 +1484,1195 @@
              </field>
            </fields>
          </register>
-@@ -5272,6 +5927,8 @@
-               <description>Channel enable</description>
-               <bitOffset>0</bitOffset>
-               <bitWidth>1</bitWidth>
-+              <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
-+              </enumeratedValues>
+@@ -5257,993 +5912,201 @@
              </field>
-             <field>
-               <name>TCIE</name>
-@@ -5323,18 +5980,61 @@
-               <description>Peripheral size</description>
-               <bitOffset>8</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues>
+           </fields>
+         </register>
+-        <register>
+-          <name>CCR1</name>
+-          <displayName>CCR1</displayName>
+-          <description>DMA channel configuration register
+-          (DMA_CCR)</description>
++        <cluster>
++          <name>CH%s</name>
++          <displayName>CHx</displayName>
++          <dim>7</dim>
++          <dimIndex>1-7</dimIndex>
++          <dimIncrement>0x14</dimIncrement>
++          <description>DMA channel x: CCRx, CNDTRx, CPARx, CMARx</description>
+           <addressOffset>0x8</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>EN</name>
+-              <description>Channel enable</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>TCIE</name>
+-              <description>Transfer complete interrupt
+-              enable</description>
+-              <bitOffset>1</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>HTIE</name>
+-              <description>Half Transfer interrupt
+-              enable</description>
+-              <bitOffset>2</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>TEIE</name>
+-              <description>Transfer error interrupt
+-              enable</description>
+-              <bitOffset>3</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>DIR</name>
+-              <description>Data transfer direction</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CIRC</name>
+-              <description>Circular mode</description>
+-              <bitOffset>5</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PINC</name>
+-              <description>Peripheral increment mode</description>
+-              <bitOffset>6</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>MINC</name>
+-              <description>Memory increment mode</description>
+-              <bitOffset>7</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PSIZE</name>
+-              <description>Peripheral size</description>
+-              <bitOffset>8</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>MSIZE</name>
+-              <description>Memory size</description>
+-              <bitOffset>10</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>PL</name>
+-              <description>Channel Priority level</description>
+-              <bitOffset>12</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>MEM2MEM</name>
+-              <description>Memory to memory mode</description>
+-              <bitOffset>14</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CNDTR1</name>
+-          <displayName>CNDTR1</displayName>
+-          <description>DMA channel 1 number of data
+-          register</description>
+-          <addressOffset>0xC</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>NDT</name>
+-              <description>Number of data to transfer</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>16</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CPAR1</name>
+-          <displayName>CPAR1</displayName>
+-          <description>DMA channel 1 peripheral address
+-          register</description>
+-          <addressOffset>0x10</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>PA</name>
+-              <description>Peripheral address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CMAR1</name>
+-          <displayName>CMAR1</displayName>
+-          <description>DMA channel 1 memory address
+-          register</description>
+-          <addressOffset>0x14</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>MA</name>
+-              <description>Memory address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CCR2</name>
+-          <displayName>CCR2</displayName>
+-          <description>DMA channel configuration register
+-          (DMA_CCR)</description>
+-          <addressOffset>0x1C</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>EN</name>
+-              <description>Channel enable</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>TCIE</name>
+-              <description>Transfer complete interrupt
+-              enable</description>
+-              <bitOffset>1</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>HTIE</name>
+-              <description>Half Transfer interrupt
+-              enable</description>
+-              <bitOffset>2</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>TEIE</name>
+-              <description>Transfer error interrupt
+-              enable</description>
+-              <bitOffset>3</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>DIR</name>
+-              <description>Data transfer direction</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CIRC</name>
+-              <description>Circular mode</description>
+-              <bitOffset>5</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PINC</name>
+-              <description>Peripheral increment mode</description>
+-              <bitOffset>6</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>MINC</name>
+-              <description>Memory increment mode</description>
+-              <bitOffset>7</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PSIZE</name>
+-              <description>Peripheral size</description>
+-              <bitOffset>8</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>MSIZE</name>
+-              <description>Memory size</description>
+-              <bitOffset>10</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>PL</name>
+-              <description>Channel Priority level</description>
+-              <bitOffset>12</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>MEM2MEM</name>
+-              <description>Memory to memory mode</description>
+-              <bitOffset>14</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CNDTR2</name>
+-          <displayName>CNDTR2</displayName>
+-          <description>DMA channel 2 number of data
+-          register</description>
+-          <addressOffset>0x20</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>NDT</name>
+-              <description>Number of data to transfer</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>16</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CPAR2</name>
+-          <displayName>CPAR2</displayName>
+-          <description>DMA channel 2 peripheral address
+-          register</description>
+-          <addressOffset>0x24</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>PA</name>
+-              <description>Peripheral address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CMAR2</name>
+-          <displayName>CMAR2</displayName>
+-          <description>DMA channel 2 memory address
+-          register</description>
+-          <addressOffset>0x28</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>MA</name>
+-              <description>Memory address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CCR3</name>
+-          <displayName>CCR3</displayName>
+-          <description>DMA channel configuration register
+-          (DMA_CCR)</description>
+-          <addressOffset>0x30</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>EN</name>
+-              <description>Channel enable</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>TCIE</name>
+-              <description>Transfer complete interrupt
+-              enable</description>
+-              <bitOffset>1</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>HTIE</name>
+-              <description>Half Transfer interrupt
+-              enable</description>
+-              <bitOffset>2</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>TEIE</name>
+-              <description>Transfer error interrupt
+-              enable</description>
+-              <bitOffset>3</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>DIR</name>
+-              <description>Data transfer direction</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CIRC</name>
+-              <description>Circular mode</description>
+-              <bitOffset>5</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PINC</name>
+-              <description>Peripheral increment mode</description>
+-              <bitOffset>6</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>MINC</name>
+-              <description>Memory increment mode</description>
+-              <bitOffset>7</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PSIZE</name>
+-              <description>Peripheral size</description>
+-              <bitOffset>8</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>MSIZE</name>
+-              <description>Memory size</description>
+-              <bitOffset>10</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>PL</name>
+-              <description>Channel Priority level</description>
+-              <bitOffset>12</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>MEM2MEM</name>
+-              <description>Memory to memory mode</description>
+-              <bitOffset>14</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CNDTR3</name>
+-          <displayName>CNDTR3</displayName>
+-          <description>DMA channel 3 number of data
+-          register</description>
+-          <addressOffset>0x34</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>NDT</name>
+-              <description>Number of data to transfer</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>16</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CPAR3</name>
+-          <displayName>CPAR3</displayName>
+-          <description>DMA channel 3 peripheral address
+-          register</description>
+-          <addressOffset>0x38</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>PA</name>
+-              <description>Peripheral address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CMAR3</name>
+-          <displayName>CMAR3</displayName>
+-          <description>DMA channel 3 memory address
+-          register</description>
+-          <addressOffset>0x3C</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>MA</name>
+-              <description>Memory address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CCR4</name>
+-          <displayName>CCR4</displayName>
+-          <description>DMA channel configuration register
+-          (DMA_CCR)</description>
+-          <addressOffset>0x44</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>EN</name>
+-              <description>Channel enable</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>TCIE</name>
+-              <description>Transfer complete interrupt
+-              enable</description>
+-              <bitOffset>1</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>HTIE</name>
+-              <description>Half Transfer interrupt
+-              enable</description>
+-              <bitOffset>2</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>TEIE</name>
+-              <description>Transfer error interrupt
+-              enable</description>
+-              <bitOffset>3</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>DIR</name>
+-              <description>Data transfer direction</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CIRC</name>
+-              <description>Circular mode</description>
+-              <bitOffset>5</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PINC</name>
+-              <description>Peripheral increment mode</description>
+-              <bitOffset>6</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>MINC</name>
+-              <description>Memory increment mode</description>
+-              <bitOffset>7</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PSIZE</name>
+-              <description>Peripheral size</description>
+-              <bitOffset>8</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>MSIZE</name>
+-              <description>Memory size</description>
+-              <bitOffset>10</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>PL</name>
+-              <description>Channel Priority level</description>
+-              <bitOffset>12</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>MEM2MEM</name>
+-              <description>Memory to memory mode</description>
+-              <bitOffset>14</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CNDTR4</name>
+-          <displayName>CNDTR4</displayName>
+-          <description>DMA channel 4 number of data
+-          register</description>
+-          <addressOffset>0x48</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>NDT</name>
+-              <description>Number of data to transfer</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>16</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CPAR4</name>
+-          <displayName>CPAR4</displayName>
+-          <description>DMA channel 4 peripheral address
+-          register</description>
+-          <addressOffset>0x4C</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>PA</name>
+-              <description>Peripheral address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CMAR4</name>
+-          <displayName>CMAR4</displayName>
+-          <description>DMA channel 4 memory address
+-          register</description>
+-          <addressOffset>0x50</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>MA</name>
+-              <description>Memory address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CCR5</name>
+-          <displayName>CCR5</displayName>
+-          <description>DMA channel configuration register
+-          (DMA_CCR)</description>
+-          <addressOffset>0x58</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>EN</name>
+-              <description>Channel enable</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>TCIE</name>
+-              <description>Transfer complete interrupt
+-              enable</description>
+-              <bitOffset>1</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>HTIE</name>
+-              <description>Half Transfer interrupt
+-              enable</description>
+-              <bitOffset>2</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>TEIE</name>
+-              <description>Transfer error interrupt
+-              enable</description>
+-              <bitOffset>3</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>DIR</name>
+-              <description>Data transfer direction</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CIRC</name>
+-              <description>Circular mode</description>
+-              <bitOffset>5</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PINC</name>
+-              <description>Peripheral increment mode</description>
+-              <bitOffset>6</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>MINC</name>
+-              <description>Memory increment mode</description>
+-              <bitOffset>7</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PSIZE</name>
+-              <description>Peripheral size</description>
+-              <bitOffset>8</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>MSIZE</name>
+-              <description>Memory size</description>
+-              <bitOffset>10</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>PL</name>
+-              <description>Channel Priority level</description>
+-              <bitOffset>12</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>MEM2MEM</name>
+-              <description>Memory to memory mode</description>
+-              <bitOffset>14</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CNDTR5</name>
+-          <displayName>CNDTR5</displayName>
+-          <description>DMA channel 5 number of data
+-          register</description>
+-          <addressOffset>0x5C</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>NDT</name>
+-              <description>Number of data to transfer</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>16</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CPAR5</name>
+-          <displayName>CPAR5</displayName>
+-          <description>DMA channel 5 peripheral address
+-          register</description>
+-          <addressOffset>0x60</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>PA</name>
+-              <description>Peripheral address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CMAR5</name>
+-          <displayName>CMAR5</displayName>
+-          <description>DMA channel 5 memory address
+-          register</description>
+-          <addressOffset>0x64</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>MA</name>
+-              <description>Memory address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CCR6</name>
+-          <displayName>CCR6</displayName>
+-          <description>DMA channel configuration register
+-          (DMA_CCR)</description>
+-          <addressOffset>0x6C</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>EN</name>
+-              <description>Channel enable</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>TCIE</name>
+-              <description>Transfer complete interrupt
+-              enable</description>
+-              <bitOffset>1</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>HTIE</name>
+-              <description>Half Transfer interrupt
+-              enable</description>
+-              <bitOffset>2</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>TEIE</name>
+-              <description>Transfer error interrupt
+-              enable</description>
+-              <bitOffset>3</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>DIR</name>
+-              <description>Data transfer direction</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CIRC</name>
+-              <description>Circular mode</description>
+-              <bitOffset>5</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PINC</name>
+-              <description>Peripheral increment mode</description>
+-              <bitOffset>6</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>MINC</name>
+-              <description>Memory increment mode</description>
+-              <bitOffset>7</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PSIZE</name>
+-              <description>Peripheral size</description>
+-              <bitOffset>8</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>MSIZE</name>
+-              <description>Memory size</description>
+-              <bitOffset>10</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>PL</name>
+-              <description>Channel Priority level</description>
+-              <bitOffset>12</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>MEM2MEM</name>
+-              <description>Memory to memory mode</description>
+-              <bitOffset>14</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CNDTR6</name>
+-          <displayName>CNDTR6</displayName>
+-          <description>DMA channel 6 number of data
+-          register</description>
+-          <addressOffset>0x70</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>NDT</name>
+-              <description>Number of data to transfer</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>16</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CPAR6</name>
+-          <displayName>CPAR6</displayName>
+-          <description>DMA channel 6 peripheral address
+-          register</description>
+-          <addressOffset>0x74</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>PA</name>
+-              <description>Peripheral address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CMAR6</name>
+-          <displayName>CMAR6</displayName>
+-          <description>DMA channel 6 memory address
+-          register</description>
+-          <addressOffset>0x78</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>MA</name>
+-              <description>Memory address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CCR7</name>
+-          <displayName>CCR7</displayName>
+-          <description>DMA channel configuration register
+-          (DMA_CCR)</description>
+-          <addressOffset>0x80</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>EN</name>
+-              <description>Channel enable</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>TCIE</name>
+-              <description>Transfer complete interrupt
+-              enable</description>
+-              <bitOffset>1</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>HTIE</name>
+-              <description>Half Transfer interrupt
+-              enable</description>
+-              <bitOffset>2</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>TEIE</name>
+-              <description>Transfer error interrupt
+-              enable</description>
+-              <bitOffset>3</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>DIR</name>
+-              <description>Data transfer direction</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>CIRC</name>
+-              <description>Circular mode</description>
+-              <bitOffset>5</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PINC</name>
+-              <description>Peripheral increment mode</description>
+-              <bitOffset>6</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>MINC</name>
+-              <description>Memory increment mode</description>
+-              <bitOffset>7</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PSIZE</name>
+-              <description>Peripheral size</description>
+-              <bitOffset>8</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>MSIZE</name>
+-              <description>Memory size</description>
+-              <bitOffset>10</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>PL</name>
+-              <description>Channel Priority level</description>
+-              <bitOffset>12</bitOffset>
+-              <bitWidth>2</bitWidth>
+-            </field>
+-            <field>
+-              <name>MEM2MEM</name>
+-              <description>Memory to memory mode</description>
+-              <bitOffset>14</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CNDTR7</name>
+-          <displayName>CNDTR7</displayName>
+-          <description>DMA channel 7 number of data
+-          register</description>
+-          <addressOffset>0x84</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>NDT</name>
+-              <description>Number of data to transfer</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>16</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CPAR7</name>
+-          <displayName>CPAR7</displayName>
+-          <description>DMA channel 7 peripheral address
+-          register</description>
+-          <addressOffset>0x88</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>PA</name>
+-              <description>Peripheral address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
+-        <register>
+-          <name>CMAR7</name>
+-          <displayName>CMAR7</displayName>
+-          <description>DMA channel 7 memory address
+-          register</description>
+-          <addressOffset>0x8C</addressOffset>
+-          <size>0x20</size>
+-          <access>read-write</access>
+-          <resetValue>0x00000000</resetValue>
+-          <fields>
+-            <field>
+-              <name>MA</name>
+-              <description>Memory address</description>
+-              <bitOffset>0</bitOffset>
+-              <bitWidth>32</bitWidth>
+-            </field>
+-          </fields>
+-        </register>
++          <register>
++            <name>CCR</name>
++            <displayName>CCRx</displayName>
++            <description>DMA channel x configuration register
++            (DMA_CCR)</description>
++            <addressOffset>0x0</addressOffset>
++            <size>0x20</size>
++            <access>read-write</access>
++            <resetValue>0x00000000</resetValue>
++            <fields>
++              <field>
++                <name>EN</name>
++                <description>Channel enable</description>
++                <bitOffset>0</bitOffset>
++                <bitWidth>1</bitWidth>
++                <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
++                </enumeratedValues>
++              </field>
++              <field>
++                <name>TCIE</name>
++                <description>Transfer complete interrupt
++                enable</description>
++                <bitOffset>1</bitOffset>
++                <bitWidth>1</bitWidth>
++              </field>
++              <field>
++                <name>HTIE</name>
++                <description>Half Transfer interrupt
++                enable</description>
++                <bitOffset>2</bitOffset>
++                <bitWidth>1</bitWidth>
++              </field>
++              <field>
++                <name>TEIE</name>
++                <description>Transfer error interrupt
++                enable</description>
++                <bitOffset>3</bitOffset>
++                <bitWidth>1</bitWidth>
++              </field>
++              <field>
++                <name>DIR</name>
++                <description>Data transfer direction</description>
++                <bitOffset>4</bitOffset>
++                <bitWidth>1</bitWidth>
++              </field>
++              <field>
++                <name>CIRC</name>
++                <description>Circular mode</description>
++                <bitOffset>5</bitOffset>
++                <bitWidth>1</bitWidth>
++              </field>
++              <field>
++                <name>PINC</name>
++                <description>Peripheral increment mode</description>
++                <bitOffset>6</bitOffset>
++                <bitWidth>1</bitWidth>
++              </field>
++              <field>
++                <name>MINC</name>
++                <description>Memory increment mode</description>
++                <bitOffset>7</bitOffset>
++                <bitWidth>1</bitWidth>
++              </field>
++              <field>
 +                <name>PSIZE</name>
-+                <enumeratedValue>
-+                  <name>Bit8</name>
-+                  <description>8-bits</description>
-+                  <value>0</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>Bit16</name>
-+                  <description>16-bits</description>
-+                  <value>1</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>Bit32</name>
-+                  <description>32-bits</description>
-+                  <value>2</value>
-+                </enumeratedValue>
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>MSIZE</name>
-               <description>Memory size</description>
-               <bitOffset>10</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PSIZE.PSIZE">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>PL</name>
-               <description>Channel Priority level</description>
-               <bitOffset>12</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues>
++                <description>Peripheral size</description>
++                <bitOffset>8</bitOffset>
++                <bitWidth>2</bitWidth>
++                <enumeratedValues>
++                  <name>PSIZE</name>
++                  <enumeratedValue>
++                    <name>Bit8</name>
++                    <description>8-bits</description>
++                    <value>0</value>
++                  </enumeratedValue>
++                  <enumeratedValue>
++                    <name>Bit16</name>
++                    <description>16-bits</description>
++                    <value>1</value>
++                  </enumeratedValue>
++                  <enumeratedValue>
++                    <name>Bit32</name>
++                    <description>32-bits</description>
++                    <value>2</value>
++                  </enumeratedValue>
++                </enumeratedValues>
++              </field>
++              <field>
++                <name>MSIZE</name>
++                <description>Memory size</description>
++                <bitOffset>10</bitOffset>
++                <bitWidth>2</bitWidth>
++                <enumeratedValues derivedFrom="DMA1.CCR1.PSIZE.PSIZE">
++                </enumeratedValues>
++              </field>
++              <field>
 +                <name>PL</name>
-+                <enumeratedValue>
-+                  <name>Low</name>
-+                  <description>Low</description>
-+                  <value>0</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>Medium</name>
-+                  <description>Medium</description>
-+                  <value>1</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>High</name>
-+                  <description>High</description>
-+                  <value>2</value>
-+                </enumeratedValue>
-+                <enumeratedValue>
-+                  <name>VeryHigh</name>
-+                  <description>Very High</description>
-+                  <value>3</value>
-+                </enumeratedValue>
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>MEM2MEM</name>
-@@ -5413,6 +6113,8 @@
-               <description>Channel enable</description>
-               <bitOffset>0</bitOffset>
-               <bitWidth>1</bitWidth>
-+              <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>TCIE</name>
-@@ -5464,18 +6166,24 @@
-               <description>Peripheral size</description>
-               <bitOffset>8</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PSIZE.PSIZE">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>MSIZE</name>
-               <description>Memory size</description>
-               <bitOffset>10</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PSIZE.PSIZE">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>PL</name>
-               <description>Channel Priority level</description>
-               <bitOffset>12</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PL.PL">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>MEM2MEM</name>
-@@ -5554,6 +6262,8 @@
-               <description>Channel enable</description>
-               <bitOffset>0</bitOffset>
-               <bitWidth>1</bitWidth>
-+              <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>TCIE</name>
-@@ -5605,18 +6315,24 @@
-               <description>Peripheral size</description>
-               <bitOffset>8</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PSIZE.PSIZE">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>MSIZE</name>
-               <description>Memory size</description>
-               <bitOffset>10</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PSIZE.PSIZE">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>PL</name>
-               <description>Channel Priority level</description>
-               <bitOffset>12</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PL.PL">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>MEM2MEM</name>
-@@ -5695,6 +6411,8 @@
-               <description>Channel enable</description>
-               <bitOffset>0</bitOffset>
-               <bitWidth>1</bitWidth>
-+              <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>TCIE</name>
-@@ -5746,18 +6464,24 @@
-               <description>Peripheral size</description>
-               <bitOffset>8</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PSIZE.PSIZE">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>MSIZE</name>
-               <description>Memory size</description>
-               <bitOffset>10</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PSIZE.PSIZE">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>PL</name>
-               <description>Channel Priority level</description>
-               <bitOffset>12</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PL.PL">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>MEM2MEM</name>
-@@ -5836,6 +6560,8 @@
-               <description>Channel enable</description>
-               <bitOffset>0</bitOffset>
-               <bitWidth>1</bitWidth>
-+              <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>TCIE</name>
-@@ -5887,18 +6613,24 @@
-               <description>Peripheral size</description>
-               <bitOffset>8</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PSIZE.PSIZE">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>MSIZE</name>
-               <description>Memory size</description>
-               <bitOffset>10</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PSIZE.PSIZE">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>PL</name>
-               <description>Channel Priority level</description>
-               <bitOffset>12</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PL.PL">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>MEM2MEM</name>
-@@ -5977,6 +6709,8 @@
-               <description>Channel enable</description>
-               <bitOffset>0</bitOffset>
-               <bitWidth>1</bitWidth>
-+              <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>TCIE</name>
-@@ -6028,18 +6762,24 @@
-               <description>Peripheral size</description>
-               <bitOffset>8</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PSIZE.PSIZE">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>MSIZE</name>
-               <description>Memory size</description>
-               <bitOffset>10</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PSIZE.PSIZE">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>PL</name>
-               <description>Channel Priority level</description>
-               <bitOffset>12</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PL.PL">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>MEM2MEM</name>
-@@ -6118,6 +6858,8 @@
-               <description>Channel enable</description>
-               <bitOffset>0</bitOffset>
-               <bitWidth>1</bitWidth>
-+              <enumeratedValues derivedFrom="RCC.AHBENR.DMA1EN.ENABLED">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>TCIE</name>
-@@ -6169,18 +6911,24 @@
-               <description>Peripheral size</description>
-               <bitOffset>8</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PSIZE.PSIZE">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>MSIZE</name>
-               <description>Memory size</description>
-               <bitOffset>10</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PSIZE.PSIZE">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>PL</name>
-               <description>Channel Priority level</description>
-               <bitOffset>12</bitOffset>
-               <bitWidth>2</bitWidth>
-+              <enumeratedValues derivedFrom="DMA1.CCR1.PL.PL">
-+              </enumeratedValues>
-             </field>
-             <field>
-               <name>MEM2MEM</name>
-@@ -8400,9 +9148,27 @@
++                <description>Channel Priority level</description>
++                <bitOffset>12</bitOffset>
++                <bitWidth>2</bitWidth>
++                <enumeratedValues>
++                  <name>PL</name>
++                  <enumeratedValue>
++                    <name>Low</name>
++                    <description>Low</description>
++                    <value>0</value>
++                  </enumeratedValue>
++                  <enumeratedValue>
++                    <name>Medium</name>
++                    <description>Medium</description>
++                    <value>1</value>
++                  </enumeratedValue>
++                  <enumeratedValue>
++                    <name>High</name>
++                    <description>High</description>
++                    <value>2</value>
++                  </enumeratedValue>
++                  <enumeratedValue>
++                    <name>VeryHigh</name>
++                    <description>Very High</description>
++                    <value>3</value>
++                  </enumeratedValue>
++                </enumeratedValues>
++              </field>
++              <field>
++                <name>MEM2MEM</name>
++                <description>Memory to memory mode</description>
++                <bitOffset>14</bitOffset>
++                <bitWidth>1</bitWidth>
++              </field>
++            </fields>
++          </register>
++          <register>
++            <name>CNDTR</name>
++            <displayName>CNDTRx</displayName>
++            <description>DMA channel x number of data
++            register</description>
++            <addressOffset>0x4</addressOffset>
++            <size>0x20</size>
++            <access>read-write</access>
++            <resetValue>0x00000000</resetValue>
++            <fields>
++              <field>
++                <name>NDT</name>
++                <description>Number of data to transfer</description>
++                <bitOffset>0</bitOffset>
++                <bitWidth>16</bitWidth>
++              </field>
++            </fields>
++          </register>
++          <register>
++            <name>CPAR</name>
++            <displayName>CPARx</displayName>
++            <description>DMA channel x peripheral address
++            register</description>
++            <addressOffset>0x8</addressOffset>
++            <size>0x20</size>
++            <access>read-write</access>
++            <resetValue>0x00000000</resetValue>
++            <fields>
++              <field>
++                <name>PA</name>
++                <description>Peripheral address</description>
++                <bitOffset>0</bitOffset>
++                <bitWidth>32</bitWidth>
++              </field>
++            </fields>
++          </register>
++          <register>
++            <name>CMAR</name>
++            <displayName>CMARx</displayName>
++            <description>DMA channel x memory address
++            register</description>
++            <addressOffset>0xC</addressOffset>
++            <size>0x20</size>
++            <access>read-write</access>
++            <resetValue>0x00000000</resetValue>
++            <fields>
++              <field>
++                <name>MA</name>
++                <description>Memory address</description>
++                <bitOffset>0</bitOffset>
++                <bitWidth>32</bitWidth>
++              </field>
++            </fields>
++          </register>
++        </cluster>
+       </registers>
+     </peripheral>
+     <peripheral derivedFrom="DMA1">
+@@ -8400,9 +8263,27 @@
            <fields>
              <field>
                <name>CKD</name>
@@ -1788,7 +2701,7 @@
              </field>
              <field>
                <name>ARPE</name>
-@@ -8422,12 +9188,38 @@
+@@ -8422,12 +8303,38 @@
                <description>Direction</description>
                <bitOffset>4</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1827,7 +2740,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -8446,6 +9238,19 @@
+@@ -8446,6 +8353,19 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1847,7 +2760,7 @@
              </field>
            </fields>
          </register>
-@@ -8579,12 +9384,98 @@
+@@ -8579,12 +8499,98 @@
                <description>Trigger selection</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -1946,7 +2859,7 @@
              </field>
            </fields>
          </register>
-@@ -8785,6 +9676,29 @@
+@@ -8785,6 +8791,29 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -1976,7 +2889,7 @@
              </field>
            </fields>
          </register>
-@@ -8874,6 +9788,8 @@
+@@ -8874,6 +8903,8 @@
                <description>Output Compare 2 mode</description>
                <bitOffset>12</bitOffset>
                <bitWidth>3</bitWidth>
@@ -1985,7 +2898,7 @@
              </field>
              <field>
                <name>OC2PE</name>
-@@ -8908,6 +9824,56 @@
+@@ -8908,6 +8939,56 @@
                <description>Output Compare 1 mode</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -2042,7 +2955,7 @@
              </field>
              <field>
                <name>OC1PE</name>
-@@ -8950,7 +9916,7 @@
+@@ -8950,7 +9031,7 @@
                <bitWidth>4</bitWidth>
              </field>
              <field>
@@ -2051,7 +2964,7 @@
                <description>Input capture 2 prescaler</description>
                <bitOffset>10</bitOffset>
                <bitWidth>2</bitWidth>
-@@ -8969,7 +9935,7 @@
+@@ -8969,7 +9050,7 @@
                <bitWidth>4</bitWidth>
              </field>
              <field>
@@ -2060,7 +2973,7 @@
                <description>Input capture 1 prescaler</description>
                <bitOffset>2</bitOffset>
                <bitWidth>2</bitWidth>
-@@ -9005,6 +9971,8 @@
+@@ -9005,6 +9086,8 @@
                <description>Output compare 4 mode</description>
                <bitOffset>12</bitOffset>
                <bitWidth>3</bitWidth>
@@ -2069,7 +2982,7 @@
              </field>
              <field>
                <name>OC4PE</name>
-@@ -9039,6 +10007,8 @@
+@@ -9039,6 +9122,8 @@
                <description>Output compare 3 mode</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -2078,7 +2991,7 @@
              </field>
              <field>
                <name>OC3PE</name>
-@@ -9238,6 +10208,12 @@
+@@ -9238,6 +9323,12 @@
                <description>counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2091,7 +3004,7 @@
              </field>
            </fields>
          </register>
-@@ -9255,6 +10231,12 @@
+@@ -9255,6 +9346,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2104,7 +3017,7 @@
              </field>
            </fields>
          </register>
-@@ -9272,6 +10254,12 @@
+@@ -9272,6 +9369,12 @@
                <description>Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2117,7 +3030,7 @@
              </field>
            </fields>
          </register>
-@@ -9289,6 +10277,12 @@
+@@ -9289,6 +9392,12 @@
                <description>Capture/Compare 1 value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2130,7 +3043,7 @@
              </field>
            </fields>
          </register>
-@@ -9306,6 +10300,12 @@
+@@ -9306,6 +9415,12 @@
                <description>Capture/Compare 2 value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2143,7 +3056,7 @@
              </field>
            </fields>
          </register>
-@@ -9323,6 +10323,12 @@
+@@ -9323,6 +9438,12 @@
                <description>Capture/Compare value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2156,7 +3069,7 @@
              </field>
            </fields>
          </register>
-@@ -9340,6 +10346,12 @@
+@@ -9340,6 +9461,12 @@
                <description>Capture/Compare value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2169,7 +3082,7 @@
              </field>
            </fields>
          </register>
-@@ -9521,6 +10533,8 @@
+@@ -9521,6 +9648,8 @@
                <description>Clock division</description>
                <bitOffset>8</bitOffset>
                <bitWidth>2</bitWidth>
@@ -2178,7 +3091,7 @@
              </field>
              <field>
                <name>ARPE</name>
-@@ -9540,12 +10554,16 @@
+@@ -9540,12 +9669,16 @@
                <description>Direction</description>
                <bitOffset>4</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2195,7 +3108,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -9564,6 +10582,8 @@
+@@ -9564,6 +9697,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2204,7 +3117,7 @@
              </field>
            </fields>
          </register>
-@@ -9641,12 +10661,16 @@
+@@ -9641,12 +9776,16 @@
                <description>Trigger selection</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -2221,7 +3134,7 @@
              </field>
            </fields>
          </register>
-@@ -9817,6 +10841,10 @@
+@@ -9817,6 +9956,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2232,7 +3145,7 @@
              </field>
            </fields>
          </register>
-@@ -9893,6 +10921,8 @@
+@@ -9893,6 +10036,8 @@
                <description>Output compare 2 mode</description>
                <bitOffset>12</bitOffset>
                <bitWidth>3</bitWidth>
@@ -2241,7 +3154,7 @@
              </field>
              <field>
                <name>OC2PE</name>
-@@ -9927,6 +10957,8 @@
+@@ -9927,6 +10072,8 @@
                <description>Output compare 1 mode</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -2250,7 +3163,7 @@
              </field>
              <field>
                <name>OC1PE</name>
-@@ -10013,7 +11045,7 @@
+@@ -10013,7 +10160,7 @@
            <resetValue>0x00000000</resetValue>
            <fields>
              <field>
@@ -2259,7 +3172,7 @@
                <description>Output compare 4 clear
                enable</description>
                <bitOffset>15</bitOffset>
-@@ -10024,6 +11056,8 @@
+@@ -10024,6 +10171,8 @@
                <description>Output compare 4 mode</description>
                <bitOffset>12</bitOffset>
                <bitWidth>3</bitWidth>
@@ -2268,7 +3181,7 @@
              </field>
              <field>
                <name>OC4PE</name>
-@@ -10058,6 +11092,8 @@
+@@ -10058,6 +10207,8 @@
                <description>Output compare 3 mode</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -2277,7 +3190,7 @@
              </field>
              <field>
                <name>OC3PE</name>
-@@ -10215,6 +11251,12 @@
+@@ -10215,6 +10366,12 @@
                <description>counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2290,7 +3203,7 @@
              </field>
            </fields>
          </register>
-@@ -10232,6 +11274,12 @@
+@@ -10232,6 +10389,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2303,7 +3216,7 @@
              </field>
            </fields>
          </register>
-@@ -10249,6 +11297,12 @@
+@@ -10249,6 +10412,12 @@
                <description>Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2316,7 +3229,7 @@
              </field>
            </fields>
          </register>
-@@ -10266,6 +11320,12 @@
+@@ -10266,6 +10435,12 @@
                <description>Capture/Compare 1 value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2329,7 +3242,7 @@
              </field>
            </fields>
          </register>
-@@ -10283,6 +11343,12 @@
+@@ -10283,6 +10458,12 @@
                <description>Capture/Compare 2 value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2342,7 +3255,7 @@
              </field>
            </fields>
          </register>
-@@ -10300,6 +11366,12 @@
+@@ -10300,6 +10481,12 @@
                <description>Capture/Compare value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2355,7 +3268,7 @@
              </field>
            </fields>
          </register>
-@@ -10317,6 +11389,12 @@
+@@ -10317,6 +10504,12 @@
                <description>Capture/Compare value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2368,7 +3281,7 @@
              </field>
            </fields>
          </register>
-@@ -10421,6 +11499,8 @@
+@@ -10421,6 +10614,8 @@
                <description>Clock division</description>
                <bitOffset>8</bitOffset>
                <bitWidth>2</bitWidth>
@@ -2377,7 +3290,7 @@
              </field>
              <field>
                <name>ARPE</name>
-@@ -10433,6 +11513,8 @@
+@@ -10433,6 +10628,8 @@
                <description>One-pulse mode</description>
                <bitOffset>3</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2386,7 +3299,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -10451,6 +11533,8 @@
+@@ -10451,6 +10648,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2395,7 +3308,7 @@
              </field>
            </fields>
          </register>
-@@ -10491,12 +11575,78 @@
+@@ -10491,12 +10690,78 @@
                <description>Trigger selection</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -2474,7 +3387,7 @@
              </field>
            </fields>
          </register>
-@@ -10585,6 +11735,10 @@
+@@ -10585,6 +10850,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2485,7 +3398,7 @@
              </field>
            </fields>
          </register>
-@@ -10640,6 +11794,8 @@
+@@ -10640,6 +10909,8 @@
                <description>Output Compare 2 mode</description>
                <bitOffset>12</bitOffset>
                <bitWidth>3</bitWidth>
@@ -2494,7 +3407,7 @@
              </field>
              <field>
                <name>OC2PE</name>
-@@ -10667,6 +11823,8 @@
+@@ -10667,6 +10938,8 @@
                <description>Output Compare 1 mode</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -2503,7 +3416,7 @@
              </field>
              <field>
                <name>OC1PE</name>
-@@ -10810,6 +11968,12 @@
+@@ -10810,6 +11083,12 @@
                <description>counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2516,7 +3429,7 @@
              </field>
            </fields>
          </register>
-@@ -10827,6 +11991,12 @@
+@@ -10827,6 +11106,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2529,7 +3442,7 @@
              </field>
            </fields>
          </register>
-@@ -10844,6 +12014,12 @@
+@@ -10844,6 +11129,12 @@
                <description>Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2542,7 +3455,7 @@
              </field>
            </fields>
          </register>
-@@ -10861,6 +12037,12 @@
+@@ -10861,6 +11152,12 @@
                <description>Capture/Compare 1 value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2555,7 +3468,7 @@
              </field>
            </fields>
          </register>
-@@ -10878,6 +12060,12 @@
+@@ -10878,6 +11175,12 @@
                <description>Capture/Compare 2 value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2568,7 +3481,7 @@
              </field>
            </fields>
          </register>
-@@ -10924,6 +12112,8 @@
+@@ -10924,6 +11227,8 @@
                <description>Clock division</description>
                <bitOffset>8</bitOffset>
                <bitWidth>2</bitWidth>
@@ -2577,7 +3490,7 @@
              </field>
              <field>
                <name>ARPE</name>
-@@ -10948,6 +12138,8 @@
+@@ -10948,6 +11253,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2586,7 +3499,7 @@
              </field>
            </fields>
          </register>
-@@ -11020,6 +12212,10 @@
+@@ -11020,6 +11327,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2597,7 +3510,7 @@
              </field>
            </fields>
          </register>
-@@ -11062,6 +12258,8 @@
+@@ -11062,6 +11373,8 @@
                <description>Output Compare 1 mode</description>
                <bitOffset>4</bitOffset>
                <bitWidth>3</bitWidth>
@@ -2606,7 +3519,7 @@
              </field>
              <field>
                <name>OC1PE</name>
-@@ -11158,6 +12356,12 @@
+@@ -11158,6 +11471,12 @@
                <description>counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2619,7 +3532,7 @@
              </field>
            </fields>
          </register>
-@@ -11280,6 +12484,8 @@
+@@ -11280,6 +11599,8 @@
                <description>One-pulse mode</description>
                <bitOffset>3</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2628,7 +3541,7 @@
              </field>
              <field>
                <name>URS</name>
-@@ -11298,6 +12504,8 @@
+@@ -11298,6 +11619,8 @@
                <description>Counter enable</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2637,7 +3550,7 @@
              </field>
            </fields>
          </register>
-@@ -11355,6 +12563,10 @@
+@@ -11355,6 +11678,10 @@
                <description>Update interrupt flag</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2648,7 +3561,7 @@
              </field>
            </fields>
          </register>
-@@ -11389,6 +12601,12 @@
+@@ -11389,6 +11716,12 @@
                <description>Low counter value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2661,7 +3574,7 @@
              </field>
            </fields>
          </register>
-@@ -11406,6 +12624,12 @@
+@@ -11406,6 +11739,12 @@
                <description>Prescaler value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2674,7 +3587,7 @@
              </field>
            </fields>
          </register>
-@@ -11423,6 +12647,12 @@
+@@ -11423,6 +11762,12 @@
                <description>Low Auto-reload value</description>
                <bitOffset>0</bitOffset>
                <bitWidth>16</bitWidth>
@@ -2687,7 +3600,7 @@
              </field>
            </fields>
          </register>
-@@ -11853,6 +13083,18 @@
+@@ -11853,6 +12198,18 @@
                <description>Master/slave</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2706,7 +3619,7 @@
              </field>
            </fields>
          </register>
-@@ -11977,6 +13219,18 @@
+@@ -11977,6 +12334,18 @@
                <description>Data frame format</description>
                <bitOffset>11</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2725,7 +3638,7 @@
              </field>
              <field>
                <name>RXONLY</name>
-@@ -12007,18 +13261,74 @@
+@@ -12007,18 +12376,74 @@
                <description>SPI enable</description>
                <bitOffset>6</bitOffset>
                <bitWidth>1</bitWidth>
@@ -2800,7 +3713,7 @@
              </field>
              <field>
                <name>CPOL</name>
-@@ -14394,9 +15704,9 @@
+@@ -14394,9 +14819,9 @@
        </interrupt>
        <registers>
          <register>
@@ -2813,7 +3726,7 @@
            <addressOffset>0x0</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -14465,9 +15775,9 @@
+@@ -14465,9 +14890,9 @@
            </fields>
          </register>
          <register>
@@ -2826,7 +3739,7 @@
            <addressOffset>0x4</addressOffset>
            <size>0x20</size>
            <resetValue>0x00000000</resetValue>
-@@ -14538,9 +15848,9 @@
+@@ -14538,9 +14963,9 @@
            </fields>
          </register>
          <register>
@@ -2839,7 +3752,7 @@
            <addressOffset>0x8</addressOffset>
            <size>0x20</size>
            <resetValue>0x00000000</resetValue>
-@@ -14708,9 +16018,9 @@
+@@ -14708,9 +15133,9 @@
            </fields>
          </register>
          <register>
@@ -2852,7 +3765,7 @@
            <addressOffset>0xC</addressOffset>
            <size>0x20</size>
            <resetValue>0x00000000</resetValue>
-@@ -14746,9 +16056,9 @@
+@@ -14746,9 +15171,9 @@
            </fields>
          </register>
          <register>
@@ -2865,7 +3778,7 @@
            <addressOffset>0x10</addressOffset>
            <size>0x20</size>
            <resetValue>0x00000000</resetValue>
-@@ -14784,9 +16094,9 @@
+@@ -14784,9 +15209,9 @@
            </fields>
          </register>
          <register>
@@ -2878,7 +3791,7 @@
            <addressOffset>0x14</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -14879,9 +16189,9 @@
+@@ -14879,9 +15304,9 @@
            </fields>
          </register>
          <register>
@@ -2891,7 +3804,7 @@
            <addressOffset>0x18</addressOffset>
            <size>0x20</size>
            <resetValue>0x00000000</resetValue>
-@@ -14931,9 +16241,9 @@
+@@ -14931,9 +15356,9 @@
            </fields>
          </register>
          <register>
@@ -2904,7 +3817,7 @@
            <addressOffset>0x1C</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -14977,698 +16287,302 @@
+@@ -14977,698 +15402,302 @@
              </field>
            </fields>
          </register>
@@ -3897,7 +4810,7 @@
            <addressOffset>0x200</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -15683,9 +16597,9 @@
+@@ -15683,9 +15712,9 @@
            </fields>
          </register>
          <register>
@@ -3910,7 +4823,7 @@
            <addressOffset>0x204</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -15778,9 +16692,9 @@
+@@ -15778,9 +15807,9 @@
            </fields>
          </register>
          <register>
@@ -3923,7 +4836,7 @@
            <addressOffset>0x20C</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -15873,9 +16787,9 @@
+@@ -15873,9 +15902,9 @@
            </fields>
          </register>
          <register>
@@ -3936,7 +4849,7 @@
            <addressOffset>0x214</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -15982,9 +16896,9 @@
+@@ -15982,9 +16011,9 @@
            </fields>
          </register>
          <register>
@@ -3949,7 +4862,7 @@
            <addressOffset>0x21C</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -16076,5691 +16990,422 @@
+@@ -16076,5691 +16105,421 @@
              </field>
            </fields>
          </register>
@@ -3957,7 +4870,6 @@
 -          <name>F0R1</name>
 -          <displayName>F0R1</displayName>
 -          <description>Filter bank 0 register 1</description>
-+        
 +        <cluster>
 +          <name>F%sR</name>
 +          <displayName>RxR</displayName>
@@ -10056,7 +10968,7 @@
        </registers>
      </peripheral>
      <peripheral>
-@@ -23020,6 +18665,24 @@
+@@ -23020,6 +17779,24 @@
                <bitOffset>0</bitOffset>
                <bitWidth>3</bitWidth>
                <access>read-write</access>
@@ -10081,7 +10993,7 @@
              </field>
              <field>
                <name>HLFCYA</name>
-@@ -23035,6 +18698,19 @@
+@@ -23035,6 +17812,19 @@
                <bitOffset>4</bitOffset>
                <bitWidth>1</bitWidth>
                <access>read-write</access>
@@ -10101,7 +11013,7 @@
              </field>
              <field>
                <name>PRFTBS</name>
-@@ -24047,9 +19723,12 @@
+@@ -24047,9 +18837,12 @@
        </interrupt>
        <registers>
          <register>
@@ -10117,7 +11029,7 @@
            <addressOffset>0x0</addressOffset>
            <size>0x20</size>
            <access>read-write</access>
-@@ -24060,6 +19739,12 @@
+@@ -24060,6 +18853,12 @@
                <description>Endpoint address</description>
                <bitOffset>0</bitOffset>
                <bitWidth>4</bitWidth>
@@ -10130,7 +11042,7 @@
              </field>
              <field>
                <name>STAT_TX</name>
-@@ -24093,552 +19778,28 @@
+@@ -24093,552 +18892,28 @@
                <description>Endpoint type</description>
                <bitOffset>9</bitOffset>
                <bitWidth>2</bitWidth>

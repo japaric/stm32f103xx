@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::CMAR4 {
+impl super::CPAR {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,10 +43,10 @@ impl super::CMAR4 {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MAR {
+pub struct PAR {
     bits: u32,
 }
-impl MAR {
+impl PAR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u32 {
@@ -54,10 +54,10 @@ impl MAR {
     }
 }
 #[doc = r" Proxy"]
-pub struct _MAW<'a> {
+pub struct _PAW<'a> {
     w: &'a mut W,
 }
-impl<'a> _MAW<'a> {
+impl<'a> _PAW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
@@ -74,15 +74,15 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:31 - Memory address"]
+    #[doc = "Bits 0:31 - Peripheral address"]
     #[inline]
-    pub fn ma(&self) -> MAR {
+    pub fn pa(&self) -> PAR {
         let bits = {
             const MASK: u32 = 4294967295;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) as u32
         };
-        MAR { bits }
+        PAR { bits }
     }
 }
 impl W {
@@ -97,9 +97,9 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:31 - Memory address"]
+    #[doc = "Bits 0:31 - Peripheral address"]
     #[inline]
-    pub fn ma(&mut self) -> _MAW {
-        _MAW { w: self }
+    pub fn pa(&mut self) -> _PAW {
+        _PAW { w: self }
     }
 }

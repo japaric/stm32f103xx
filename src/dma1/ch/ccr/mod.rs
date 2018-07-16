@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::CCR5 {
+impl super::CCR {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -192,11 +192,113 @@ impl MINCR {
     }
 }
 #[doc = "Possible values of the field `PSIZE`"]
-pub type PSIZER = ::dma1::ccr1::PSIZER;
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum PSIZER {
+    #[doc = "8-bits"]
+    BIT8,
+    #[doc = "16-bits"]
+    BIT16,
+    #[doc = "32-bits"]
+    BIT32,
+    #[doc = r" Reserved"]
+    _Reserved(u8),
+}
+impl PSIZER {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        match *self {
+            PSIZER::BIT8 => 0,
+            PSIZER::BIT16 => 1,
+            PSIZER::BIT32 => 2,
+            PSIZER::_Reserved(bits) => bits,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: u8) -> PSIZER {
+        match value {
+            0 => PSIZER::BIT8,
+            1 => PSIZER::BIT16,
+            2 => PSIZER::BIT32,
+            i => PSIZER::_Reserved(i),
+        }
+    }
+    #[doc = "Checks if the value of the field is `BIT8`"]
+    #[inline]
+    pub fn is_bit8(&self) -> bool {
+        *self == PSIZER::BIT8
+    }
+    #[doc = "Checks if the value of the field is `BIT16`"]
+    #[inline]
+    pub fn is_bit16(&self) -> bool {
+        *self == PSIZER::BIT16
+    }
+    #[doc = "Checks if the value of the field is `BIT32`"]
+    #[inline]
+    pub fn is_bit32(&self) -> bool {
+        *self == PSIZER::BIT32
+    }
+}
 #[doc = "Possible values of the field `MSIZE`"]
-pub type MSIZER = ::dma1::ccr1::PSIZER;
+pub type MSIZER = PSIZER;
 #[doc = "Possible values of the field `PL`"]
-pub type PLR = ::dma1::ccr1::PLR;
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum PLR {
+    #[doc = "Low"]
+    LOW,
+    #[doc = "Medium"]
+    MEDIUM,
+    #[doc = "High"]
+    HIGH,
+    #[doc = "Very High"]
+    VERYHIGH,
+}
+impl PLR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        match *self {
+            PLR::LOW => 0,
+            PLR::MEDIUM => 1,
+            PLR::HIGH => 2,
+            PLR::VERYHIGH => 3,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: u8) -> PLR {
+        match value {
+            0 => PLR::LOW,
+            1 => PLR::MEDIUM,
+            2 => PLR::HIGH,
+            3 => PLR::VERYHIGH,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Checks if the value of the field is `LOW`"]
+    #[inline]
+    pub fn is_low(&self) -> bool {
+        *self == PLR::LOW
+    }
+    #[doc = "Checks if the value of the field is `MEDIUM`"]
+    #[inline]
+    pub fn is_medium(&self) -> bool {
+        *self == PLR::MEDIUM
+    }
+    #[doc = "Checks if the value of the field is `HIGH`"]
+    #[inline]
+    pub fn is_high(&self) -> bool {
+        *self == PLR::HIGH
+    }
+    #[doc = "Checks if the value of the field is `VERYHIGH`"]
+    #[inline]
+    pub fn is_very_high(&self) -> bool {
+        *self == PLR::VERYHIGH
+    }
+}
 #[doc = r" Value of the field"]
 pub struct MEM2MEMR {
     bits: bool,
@@ -422,7 +524,26 @@ impl<'a> _MINCW<'a> {
     }
 }
 #[doc = "Values that can be written to the field `PSIZE`"]
-pub type PSIZEW = ::dma1::ccr1::PSIZEW;
+pub enum PSIZEW {
+    #[doc = "8-bits"]
+    BIT8,
+    #[doc = "16-bits"]
+    BIT16,
+    #[doc = "32-bits"]
+    BIT32,
+}
+impl PSIZEW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> u8 {
+        match *self {
+            PSIZEW::BIT8 => 0,
+            PSIZEW::BIT16 => 1,
+            PSIZEW::BIT32 => 2,
+        }
+    }
+}
 #[doc = r" Proxy"]
 pub struct _PSIZEW<'a> {
     w: &'a mut W,
@@ -436,17 +557,17 @@ impl<'a> _PSIZEW<'a> {
     #[doc = "8-bits"]
     #[inline]
     pub fn bit8(self) -> &'a mut W {
-        self.variant(::dma1::ccr1::PSIZEW::BIT8)
+        self.variant(PSIZEW::BIT8)
     }
     #[doc = "16-bits"]
     #[inline]
     pub fn bit16(self) -> &'a mut W {
-        self.variant(::dma1::ccr1::PSIZEW::BIT16)
+        self.variant(PSIZEW::BIT16)
     }
     #[doc = "32-bits"]
     #[inline]
     pub fn bit32(self) -> &'a mut W {
-        self.variant(::dma1::ccr1::PSIZEW::BIT32)
+        self.variant(PSIZEW::BIT32)
     }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
@@ -459,7 +580,7 @@ impl<'a> _PSIZEW<'a> {
     }
 }
 #[doc = "Values that can be written to the field `MSIZE`"]
-pub type MSIZEW = ::dma1::ccr1::PSIZEW;
+pub type MSIZEW = PSIZEW;
 #[doc = r" Proxy"]
 pub struct _MSIZEW<'a> {
     w: &'a mut W,
@@ -473,17 +594,17 @@ impl<'a> _MSIZEW<'a> {
     #[doc = "8-bits"]
     #[inline]
     pub fn bit8(self) -> &'a mut W {
-        self.variant(::dma1::ccr1::PSIZEW::BIT8)
+        self.variant(PSIZEW::BIT8)
     }
     #[doc = "16-bits"]
     #[inline]
     pub fn bit16(self) -> &'a mut W {
-        self.variant(::dma1::ccr1::PSIZEW::BIT16)
+        self.variant(PSIZEW::BIT16)
     }
     #[doc = "32-bits"]
     #[inline]
     pub fn bit32(self) -> &'a mut W {
-        self.variant(::dma1::ccr1::PSIZEW::BIT32)
+        self.variant(PSIZEW::BIT32)
     }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
@@ -496,7 +617,29 @@ impl<'a> _MSIZEW<'a> {
     }
 }
 #[doc = "Values that can be written to the field `PL`"]
-pub type PLW = ::dma1::ccr1::PLW;
+pub enum PLW {
+    #[doc = "Low"]
+    LOW,
+    #[doc = "Medium"]
+    MEDIUM,
+    #[doc = "High"]
+    HIGH,
+    #[doc = "Very High"]
+    VERYHIGH,
+}
+impl PLW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> u8 {
+        match *self {
+            PLW::LOW => 0,
+            PLW::MEDIUM => 1,
+            PLW::HIGH => 2,
+            PLW::VERYHIGH => 3,
+        }
+    }
+}
 #[doc = r" Proxy"]
 pub struct _PLW<'a> {
     w: &'a mut W,
@@ -512,22 +655,22 @@ impl<'a> _PLW<'a> {
     #[doc = "Low"]
     #[inline]
     pub fn low(self) -> &'a mut W {
-        self.variant(::dma1::ccr1::PLW::LOW)
+        self.variant(PLW::LOW)
     }
     #[doc = "Medium"]
     #[inline]
     pub fn medium(self) -> &'a mut W {
-        self.variant(::dma1::ccr1::PLW::MEDIUM)
+        self.variant(PLW::MEDIUM)
     }
     #[doc = "High"]
     #[inline]
     pub fn high(self) -> &'a mut W {
-        self.variant(::dma1::ccr1::PLW::HIGH)
+        self.variant(PLW::HIGH)
     }
     #[doc = "Very High"]
     #[inline]
     pub fn very_high(self) -> &'a mut W {
-        self.variant(::dma1::ccr1::PLW::VERYHIGH)
+        self.variant(PLW::VERYHIGH)
     }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
