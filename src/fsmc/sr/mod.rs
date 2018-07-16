@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::PCR4 {
+impl super::SR {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,43 +43,10 @@ impl super::PCR4 {
     }
 }
 #[doc = r" Value of the field"]
-pub struct ECCPSR {
-    bits: u8,
-}
-impl ECCPSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct TARR {
-    bits: u8,
-}
-impl TARR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct TCLRR {
-    bits: u8,
-}
-impl TCLRR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ECCENR {
+pub struct FEMPTR {
     bits: bool,
 }
-impl ECCENR {
+impl FEMPTR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -97,21 +64,10 @@ impl ECCENR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PWIDR {
-    bits: u8,
-}
-impl PWIDR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PTYPR {
+pub struct IFENR {
     bits: bool,
 }
-impl PTYPR {
+impl IFENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -129,10 +85,10 @@ impl PTYPR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PBKENR {
+pub struct ILENR {
     bits: bool,
 }
-impl PBKENR {
+impl ILENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -150,10 +106,73 @@ impl PBKENR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PWAITENR {
+pub struct IRENR {
     bits: bool,
 }
-impl PWAITENR {
+impl IRENR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+}
+#[doc = r" Value of the field"]
+pub struct IFSR {
+    bits: bool,
+}
+impl IFSR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+}
+#[doc = r" Value of the field"]
+pub struct ILSR {
+    bits: bool,
+}
+impl ILSR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+}
+#[doc = r" Value of the field"]
+pub struct IRSR {
+    bits: bool,
+}
+impl IRSR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -171,55 +190,10 @@ impl PWAITENR {
     }
 }
 #[doc = r" Proxy"]
-pub struct _ECCPSW<'a> {
+pub struct _IFENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _ECCPSW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 17;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _TARW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _TARW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 13;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _TCLRW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _TCLRW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 9;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _ECCENW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _ECCENW<'a> {
+impl<'a> _IFENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -232,21 +206,29 @@ impl<'a> _ECCENW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 6;
+        const OFFSET: u8 = 5;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _PWIDW<'a> {
+pub struct _ILENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PWIDW<'a> {
+impl<'a> _ILENW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
         const OFFSET: u8 = 4;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
@@ -254,10 +236,10 @@ impl<'a> _PWIDW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _PTYPW<'a> {
+pub struct _IRENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PTYPW<'a> {
+impl<'a> _IRENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -277,10 +259,10 @@ impl<'a> _PTYPW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _PBKENW<'a> {
+pub struct _IFSW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PBKENW<'a> {
+impl<'a> _IFSW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -300,10 +282,10 @@ impl<'a> _PBKENW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _PWAITENW<'a> {
+pub struct _ILSW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PWAITENW<'a> {
+impl<'a> _ILSW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -322,98 +304,111 @@ impl<'a> _PWAITENW<'a> {
         self.w
     }
 }
+#[doc = r" Proxy"]
+pub struct _IRSW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _IRSW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 0;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 17:19 - ECCPS"]
+    #[doc = "Bit 6 - FEMPT"]
     #[inline]
-    pub fn eccps(&self) -> ECCPSR {
-        let bits = {
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 17;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        ECCPSR { bits }
-    }
-    #[doc = "Bits 13:16 - TAR"]
-    #[inline]
-    pub fn tar(&self) -> TARR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 13;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        TARR { bits }
-    }
-    #[doc = "Bits 9:12 - TCLR"]
-    #[inline]
-    pub fn tclr(&self) -> TCLRR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        TCLRR { bits }
-    }
-    #[doc = "Bit 6 - ECCEN"]
-    #[inline]
-    pub fn eccen(&self) -> ECCENR {
+    pub fn fempt(&self) -> FEMPTR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 6;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        ECCENR { bits }
+        FEMPTR { bits }
     }
-    #[doc = "Bits 4:5 - PWID"]
+    #[doc = "Bit 5 - IFEN"]
     #[inline]
-    pub fn pwid(&self) -> PWIDR {
+    pub fn ifen(&self) -> IFENR {
         let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
+            const MASK: bool = true;
+            const OFFSET: u8 = 5;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PWIDR { bits }
+        IFENR { bits }
     }
-    #[doc = "Bit 3 - PTYP"]
+    #[doc = "Bit 4 - ILEN"]
     #[inline]
-    pub fn ptyp(&self) -> PTYPR {
+    pub fn ilen(&self) -> ILENR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 4;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        ILENR { bits }
+    }
+    #[doc = "Bit 3 - IREN"]
+    #[inline]
+    pub fn iren(&self) -> IRENR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 3;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PTYPR { bits }
+        IRENR { bits }
     }
-    #[doc = "Bit 2 - PBKEN"]
+    #[doc = "Bit 2 - IFS"]
     #[inline]
-    pub fn pbken(&self) -> PBKENR {
+    pub fn ifs(&self) -> IFSR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 2;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PBKENR { bits }
+        IFSR { bits }
     }
-    #[doc = "Bit 1 - PWAITEN"]
+    #[doc = "Bit 1 - ILS"]
     #[inline]
-    pub fn pwaiten(&self) -> PWAITENR {
+    pub fn ils(&self) -> ILSR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 1;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PWAITENR { bits }
+        ILSR { bits }
+    }
+    #[doc = "Bit 0 - IRS"]
+    #[inline]
+    pub fn irs(&self) -> IRSR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 0;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        IRSR { bits }
     }
 }
 impl W {
     #[doc = r" Reset value of the register"]
     #[inline]
     pub fn reset_value() -> W {
-        W { bits: 24 }
+        W { bits: 64 }
     }
     #[doc = r" Writes raw bits to the register"]
     #[inline]
@@ -421,44 +416,34 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 17:19 - ECCPS"]
+    #[doc = "Bit 5 - IFEN"]
     #[inline]
-    pub fn eccps(&mut self) -> _ECCPSW {
-        _ECCPSW { w: self }
+    pub fn ifen(&mut self) -> _IFENW {
+        _IFENW { w: self }
     }
-    #[doc = "Bits 13:16 - TAR"]
+    #[doc = "Bit 4 - ILEN"]
     #[inline]
-    pub fn tar(&mut self) -> _TARW {
-        _TARW { w: self }
+    pub fn ilen(&mut self) -> _ILENW {
+        _ILENW { w: self }
     }
-    #[doc = "Bits 9:12 - TCLR"]
+    #[doc = "Bit 3 - IREN"]
     #[inline]
-    pub fn tclr(&mut self) -> _TCLRW {
-        _TCLRW { w: self }
+    pub fn iren(&mut self) -> _IRENW {
+        _IRENW { w: self }
     }
-    #[doc = "Bit 6 - ECCEN"]
+    #[doc = "Bit 2 - IFS"]
     #[inline]
-    pub fn eccen(&mut self) -> _ECCENW {
-        _ECCENW { w: self }
+    pub fn ifs(&mut self) -> _IFSW {
+        _IFSW { w: self }
     }
-    #[doc = "Bits 4:5 - PWID"]
+    #[doc = "Bit 1 - ILS"]
     #[inline]
-    pub fn pwid(&mut self) -> _PWIDW {
-        _PWIDW { w: self }
+    pub fn ils(&mut self) -> _ILSW {
+        _ILSW { w: self }
     }
-    #[doc = "Bit 3 - PTYP"]
+    #[doc = "Bit 0 - IRS"]
     #[inline]
-    pub fn ptyp(&mut self) -> _PTYPW {
-        _PTYPW { w: self }
-    }
-    #[doc = "Bit 2 - PBKEN"]
-    #[inline]
-    pub fn pbken(&mut self) -> _PBKENW {
-        _PBKENW { w: self }
-    }
-    #[doc = "Bit 1 - PWAITEN"]
-    #[inline]
-    pub fn pwaiten(&mut self) -> _PWAITENW {
-        _PWAITENW { w: self }
+    pub fn irs(&mut self) -> _IRSW {
+        _IRSW { w: self }
     }
 }

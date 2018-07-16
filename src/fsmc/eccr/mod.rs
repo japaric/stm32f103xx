@@ -2,7 +2,7 @@
 pub struct R {
     bits: u32,
 }
-impl super::ECCR3 {
+impl super::ECCR {
     #[doc = r" Reads the contents of the register"]
     #[inline]
     pub fn read(&self) -> R {
@@ -28,7 +28,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:31 - ECCx"]
+    #[doc = "Bits 0:31 - ECC result"]
     #[inline]
     pub fn eccx(&self) -> ECCXR {
         let bits = {

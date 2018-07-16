@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::BWTR1 {
+impl super::PMEM {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,10 +43,10 @@ impl super::BWTR1 {
     }
 }
 #[doc = r" Value of the field"]
-pub struct ACCMODR {
+pub struct MEMHIZXR {
     bits: u8,
 }
-impl ACCMODR {
+impl MEMHIZXR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u8 {
@@ -54,10 +54,10 @@ impl ACCMODR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct DATLATR {
+pub struct MEMHOLDXR {
     bits: u8,
 }
-impl DATLATR {
+impl MEMHOLDXR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u8 {
@@ -65,10 +65,10 @@ impl DATLATR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct CLKDIVR {
+pub struct MEMWAITXR {
     bits: u8,
 }
-impl CLKDIVR {
+impl MEMWAITXR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u8 {
@@ -76,32 +76,10 @@ impl CLKDIVR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct DATASTR {
+pub struct MEMSETXR {
     bits: u8,
 }
-impl DATASTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ADDHLDR {
-    bits: u8,
-}
-impl ADDHLDR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ADDSETR {
-    bits: u8,
-}
-impl ADDSETR {
+impl MEMSETXR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u8 {
@@ -109,29 +87,14 @@ impl ADDSETR {
     }
 }
 #[doc = r" Proxy"]
-pub struct _ACCMODW<'a> {
+pub struct _MEMHIZXW<'a> {
     w: &'a mut W,
 }
-impl<'a> _ACCMODW<'a> {
+impl<'a> _MEMHIZXW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 28;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _DATLATW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _DATLATW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
+        const MASK: u8 = 255;
         const OFFSET: u8 = 24;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
@@ -139,25 +102,25 @@ impl<'a> _DATLATW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _CLKDIVW<'a> {
+pub struct _MEMHOLDXW<'a> {
     w: &'a mut W,
 }
-impl<'a> _CLKDIVW<'a> {
+impl<'a> _MEMHOLDXW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 20;
+        const MASK: u8 = 255;
+        const OFFSET: u8 = 16;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _DATASTW<'a> {
+pub struct _MEMWAITXW<'a> {
     w: &'a mut W,
 }
-impl<'a> _DATASTW<'a> {
+impl<'a> _MEMWAITXW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -169,29 +132,14 @@ impl<'a> _DATASTW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _ADDHLDW<'a> {
+pub struct _MEMSETXW<'a> {
     w: &'a mut W,
 }
-impl<'a> _ADDHLDW<'a> {
+impl<'a> _MEMSETXW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _ADDSETW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _ADDSETW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
+        const MASK: u8 = 255;
         const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
@@ -204,72 +152,52 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 28:29 - ACCMOD"]
+    #[doc = "Bits 24:31 - MEMHIZx"]
     #[inline]
-    pub fn accmod(&self) -> ACCMODR {
+    pub fn memhizx(&self) -> MEMHIZXR {
         let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 28;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        ACCMODR { bits }
-    }
-    #[doc = "Bits 24:27 - DATLAT"]
-    #[inline]
-    pub fn datlat(&self) -> DATLATR {
-        let bits = {
-            const MASK: u8 = 15;
+            const MASK: u8 = 255;
             const OFFSET: u8 = 24;
             ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        DATLATR { bits }
+        MEMHIZXR { bits }
     }
-    #[doc = "Bits 20:23 - CLKDIV"]
+    #[doc = "Bits 16:23 - MEMHOLDx"]
     #[inline]
-    pub fn clkdiv(&self) -> CLKDIVR {
+    pub fn memholdx(&self) -> MEMHOLDXR {
         let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 20;
+            const MASK: u8 = 255;
+            const OFFSET: u8 = 16;
             ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        CLKDIVR { bits }
+        MEMHOLDXR { bits }
     }
-    #[doc = "Bits 8:15 - DATAST"]
+    #[doc = "Bits 8:15 - MEMWAITx"]
     #[inline]
-    pub fn datast(&self) -> DATASTR {
+    pub fn memwaitx(&self) -> MEMWAITXR {
         let bits = {
             const MASK: u8 = 255;
             const OFFSET: u8 = 8;
             ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        DATASTR { bits }
+        MEMWAITXR { bits }
     }
-    #[doc = "Bits 4:7 - ADDHLD"]
+    #[doc = "Bits 0:7 - MEMSETx"]
     #[inline]
-    pub fn addhld(&self) -> ADDHLDR {
+    pub fn memsetx(&self) -> MEMSETXR {
         let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        ADDHLDR { bits }
-    }
-    #[doc = "Bits 0:3 - ADDSET"]
-    #[inline]
-    pub fn addset(&self) -> ADDSETR {
-        let bits = {
-            const MASK: u8 = 15;
+            const MASK: u8 = 255;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        ADDSETR { bits }
+        MEMSETXR { bits }
     }
 }
 impl W {
     #[doc = r" Reset value of the register"]
     #[inline]
     pub fn reset_value() -> W {
-        W { bits: 268435455 }
+        W { bits: 4244438268 }
     }
     #[doc = r" Writes raw bits to the register"]
     #[inline]
@@ -277,34 +205,24 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 28:29 - ACCMOD"]
+    #[doc = "Bits 24:31 - MEMHIZx"]
     #[inline]
-    pub fn accmod(&mut self) -> _ACCMODW {
-        _ACCMODW { w: self }
+    pub fn memhizx(&mut self) -> _MEMHIZXW {
+        _MEMHIZXW { w: self }
     }
-    #[doc = "Bits 24:27 - DATLAT"]
+    #[doc = "Bits 16:23 - MEMHOLDx"]
     #[inline]
-    pub fn datlat(&mut self) -> _DATLATW {
-        _DATLATW { w: self }
+    pub fn memholdx(&mut self) -> _MEMHOLDXW {
+        _MEMHOLDXW { w: self }
     }
-    #[doc = "Bits 20:23 - CLKDIV"]
+    #[doc = "Bits 8:15 - MEMWAITx"]
     #[inline]
-    pub fn clkdiv(&mut self) -> _CLKDIVW {
-        _CLKDIVW { w: self }
+    pub fn memwaitx(&mut self) -> _MEMWAITXW {
+        _MEMWAITXW { w: self }
     }
-    #[doc = "Bits 8:15 - DATAST"]
+    #[doc = "Bits 0:7 - MEMSETx"]
     #[inline]
-    pub fn datast(&mut self) -> _DATASTW {
-        _DATASTW { w: self }
-    }
-    #[doc = "Bits 4:7 - ADDHLD"]
-    #[inline]
-    pub fn addhld(&mut self) -> _ADDHLDW {
-        _ADDHLDW { w: self }
-    }
-    #[doc = "Bits 0:3 - ADDSET"]
-    #[inline]
-    pub fn addset(&mut self) -> _ADDSETW {
-        _ADDSETW { w: self }
+    pub fn memsetx(&mut self) -> _MEMSETXW {
+        _MEMSETXW { w: self }
     }
 }

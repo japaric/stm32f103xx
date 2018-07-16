@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::BCR3 {
+impl super::BCR {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -152,27 +152,6 @@ pub struct WAITCFGR {
     bits: bool,
 }
 impl WAITCFGR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct WRAPMODR {
-    bits: bool,
-}
-impl WRAPMODR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -455,29 +434,6 @@ impl<'a> _WAITCFGW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _WRAPMODW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _WRAPMODW<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 10;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
 pub struct _WAITPOLW<'a> {
     w: &'a mut W,
 }
@@ -688,16 +644,6 @@ impl R {
         };
         WAITCFGR { bits }
     }
-    #[doc = "Bit 10 - WRAPMOD"]
-    #[inline]
-    pub fn wrapmod(&self) -> WRAPMODR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        WRAPMODR { bits }
-    }
     #[doc = "Bit 9 - WAITPOL"]
     #[inline]
     pub fn waitpol(&self) -> WAITPOLR {
@@ -810,11 +756,6 @@ impl W {
     #[inline]
     pub fn waitcfg(&mut self) -> _WAITCFGW {
         _WAITCFGW { w: self }
-    }
-    #[doc = "Bit 10 - WRAPMOD"]
-    #[inline]
-    pub fn wrapmod(&mut self) -> _WRAPMODW {
-        _WRAPMODW { w: self }
     }
     #[doc = "Bit 9 - WAITPOL"]
     #[inline]

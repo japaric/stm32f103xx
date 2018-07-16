@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::PMEM4 {
+impl super::PATT {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,10 +43,10 @@ impl super::PMEM4 {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MEMHIZXR {
+pub struct ATTHIZXR {
     bits: u8,
 }
-impl MEMHIZXR {
+impl ATTHIZXR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u8 {
@@ -54,10 +54,10 @@ impl MEMHIZXR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MEMHOLDXR {
+pub struct ATTHOLDXR {
     bits: u8,
 }
-impl MEMHOLDXR {
+impl ATTHOLDXR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u8 {
@@ -65,10 +65,10 @@ impl MEMHOLDXR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MEMWAITXR {
+pub struct ATTWAITXR {
     bits: u8,
 }
-impl MEMWAITXR {
+impl ATTWAITXR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u8 {
@@ -76,10 +76,10 @@ impl MEMWAITXR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MEMSETXR {
+pub struct ATTSETXR {
     bits: u8,
 }
-impl MEMSETXR {
+impl ATTSETXR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u8 {
@@ -87,10 +87,10 @@ impl MEMSETXR {
     }
 }
 #[doc = r" Proxy"]
-pub struct _MEMHIZXW<'a> {
+pub struct _ATTHIZXW<'a> {
     w: &'a mut W,
 }
-impl<'a> _MEMHIZXW<'a> {
+impl<'a> _ATTHIZXW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -102,10 +102,10 @@ impl<'a> _MEMHIZXW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _MEMHOLDXW<'a> {
+pub struct _ATTHOLDXW<'a> {
     w: &'a mut W,
 }
-impl<'a> _MEMHOLDXW<'a> {
+impl<'a> _ATTHOLDXW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -117,10 +117,10 @@ impl<'a> _MEMHOLDXW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _MEMWAITXW<'a> {
+pub struct _ATTWAITXW<'a> {
     w: &'a mut W,
 }
-impl<'a> _MEMWAITXW<'a> {
+impl<'a> _ATTWAITXW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -132,10 +132,10 @@ impl<'a> _MEMWAITXW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _MEMSETXW<'a> {
+pub struct _ATTSETXW<'a> {
     w: &'a mut W,
 }
-impl<'a> _MEMSETXW<'a> {
+impl<'a> _ATTSETXW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -152,45 +152,45 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 24:31 - MEMHIZx"]
+    #[doc = "Bits 24:31 - Attribute memory x databus HiZ time"]
     #[inline]
-    pub fn memhizx(&self) -> MEMHIZXR {
+    pub fn atthizx(&self) -> ATTHIZXR {
         let bits = {
             const MASK: u8 = 255;
             const OFFSET: u8 = 24;
             ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        MEMHIZXR { bits }
+        ATTHIZXR { bits }
     }
-    #[doc = "Bits 16:23 - MEMHOLDx"]
+    #[doc = "Bits 16:23 - Attribute memory x hold time"]
     #[inline]
-    pub fn memholdx(&self) -> MEMHOLDXR {
+    pub fn attholdx(&self) -> ATTHOLDXR {
         let bits = {
             const MASK: u8 = 255;
             const OFFSET: u8 = 16;
             ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        MEMHOLDXR { bits }
+        ATTHOLDXR { bits }
     }
-    #[doc = "Bits 8:15 - MEMWAITx"]
+    #[doc = "Bits 8:15 - Attribute memory x wait time"]
     #[inline]
-    pub fn memwaitx(&self) -> MEMWAITXR {
+    pub fn attwaitx(&self) -> ATTWAITXR {
         let bits = {
             const MASK: u8 = 255;
             const OFFSET: u8 = 8;
             ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        MEMWAITXR { bits }
+        ATTWAITXR { bits }
     }
-    #[doc = "Bits 0:7 - MEMSETx"]
+    #[doc = "Bits 0:7 - Attribute memory x setup time"]
     #[inline]
-    pub fn memsetx(&self) -> MEMSETXR {
+    pub fn attsetx(&self) -> ATTSETXR {
         let bits = {
             const MASK: u8 = 255;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        MEMSETXR { bits }
+        ATTSETXR { bits }
     }
 }
 impl W {
@@ -205,24 +205,24 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 24:31 - MEMHIZx"]
+    #[doc = "Bits 24:31 - Attribute memory x databus HiZ time"]
     #[inline]
-    pub fn memhizx(&mut self) -> _MEMHIZXW {
-        _MEMHIZXW { w: self }
+    pub fn atthizx(&mut self) -> _ATTHIZXW {
+        _ATTHIZXW { w: self }
     }
-    #[doc = "Bits 16:23 - MEMHOLDx"]
+    #[doc = "Bits 16:23 - Attribute memory x hold time"]
     #[inline]
-    pub fn memholdx(&mut self) -> _MEMHOLDXW {
-        _MEMHOLDXW { w: self }
+    pub fn attholdx(&mut self) -> _ATTHOLDXW {
+        _ATTHOLDXW { w: self }
     }
-    #[doc = "Bits 8:15 - MEMWAITx"]
+    #[doc = "Bits 8:15 - Attribute memory x wait time"]
     #[inline]
-    pub fn memwaitx(&mut self) -> _MEMWAITXW {
-        _MEMWAITXW { w: self }
+    pub fn attwaitx(&mut self) -> _ATTWAITXW {
+        _ATTWAITXW { w: self }
     }
-    #[doc = "Bits 0:7 - MEMSETx"]
+    #[doc = "Bits 0:7 - Attribute memory x setup time"]
     #[inline]
-    pub fn memsetx(&mut self) -> _MEMSETXW {
-        _MEMSETXW { w: self }
+    pub fn attsetx(&mut self) -> _ATTSETXW {
+        _ATTSETXW { w: self }
     }
 }

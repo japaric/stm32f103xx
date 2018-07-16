@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::BTR1 {
+impl super::BWTR {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -69,17 +69,6 @@ pub struct CLKDIVR {
     bits: u8,
 }
 impl CLKDIVR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct BUSTURNR {
-    bits: u8,
-}
-impl BUSTURNR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u8 {
@@ -159,21 +148,6 @@ impl<'a> _CLKDIVW<'a> {
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
         const MASK: u8 = 15;
         const OFFSET: u8 = 20;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _BUSTURNW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _BUSTURNW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 16;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -260,16 +234,6 @@ impl R {
         };
         CLKDIVR { bits }
     }
-    #[doc = "Bits 16:19 - BUSTURN"]
-    #[inline]
-    pub fn busturn(&self) -> BUSTURNR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        BUSTURNR { bits }
-    }
     #[doc = "Bits 8:15 - DATAST"]
     #[inline]
     pub fn datast(&self) -> DATASTR {
@@ -305,7 +269,7 @@ impl W {
     #[doc = r" Reset value of the register"]
     #[inline]
     pub fn reset_value() -> W {
-        W { bits: 4294967295 }
+        W { bits: 268435455 }
     }
     #[doc = r" Writes raw bits to the register"]
     #[inline]
@@ -327,11 +291,6 @@ impl W {
     #[inline]
     pub fn clkdiv(&mut self) -> _CLKDIVW {
         _CLKDIVW { w: self }
-    }
-    #[doc = "Bits 16:19 - BUSTURN"]
-    #[inline]
-    pub fn busturn(&mut self) -> _BUSTURNW {
-        _BUSTURNW { w: self }
     }
     #[doc = "Bits 8:15 - DATAST"]
     #[inline]
