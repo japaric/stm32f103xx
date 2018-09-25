@@ -43,42 +43,10 @@ impl super::CR2 {
     }
 }
 #[doc = r" Value of the field"]
-pub struct ADDR {
-    bits: u8,
-}
-impl ADDR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct LBDLR {
+pub struct LINENR {
     bits: bool,
 }
-impl LBDLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct LBDIER {
-    bits: bool,
-}
-impl LBDIER {
+impl LINENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -107,10 +75,10 @@ impl STOPR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct LINENR {
+pub struct LBDIER {
     bits: bool,
 }
-impl LINENR {
+impl LBDIER {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -127,26 +95,43 @@ impl LINENR {
         self.bit()
     }
 }
-#[doc = r" Proxy"]
-pub struct _ADDW<'a> {
-    w: &'a mut W,
+#[doc = r" Value of the field"]
+pub struct LBDLR {
+    bits: bool,
 }
-impl<'a> _ADDW<'a> {
-    #[doc = r" Writes raw bits to the field"]
+impl LBDLR {
+    #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+}
+#[doc = r" Value of the field"]
+pub struct ADDR {
+    bits: u8,
+}
+impl ADDR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
     }
 }
 #[doc = r" Proxy"]
-pub struct _LBDLW<'a> {
+pub struct _LINENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _LBDLW<'a> {
+impl<'a> _LINENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -159,7 +144,22 @@ impl<'a> _LBDLW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 5;
+        const OFFSET: u8 = 14;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _STOPW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _STOPW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 3;
+        const OFFSET: u8 = 12;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -189,25 +189,10 @@ impl<'a> _LBDIEW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _STOPW<'a> {
+pub struct _LBDLW<'a> {
     w: &'a mut W,
 }
-impl<'a> _STOPW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _LINENW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _LINENW<'a> {
+impl<'a> _LBDLW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -220,7 +205,22 @@ impl<'a> _LINENW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 14;
+        const OFFSET: u8 = 5;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ADDW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ADDW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 15;
+        const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -232,37 +232,17 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:3 - ADD"]
+    #[doc = "Bit 14 - LIN mode enable"]
     #[inline]
-    pub fn add(&self) -> ADDR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        ADDR { bits }
-    }
-    #[doc = "Bit 5 - LBDL"]
-    #[inline]
-    pub fn lbdl(&self) -> LBDLR {
+    pub fn linen(&self) -> LINENR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 5;
+            const OFFSET: u8 = 14;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        LBDLR { bits }
+        LINENR { bits }
     }
-    #[doc = "Bit 6 - LBDIE"]
-    #[inline]
-    pub fn lbdie(&self) -> LBDIER {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        LBDIER { bits }
-    }
-    #[doc = "Bits 12:13 - STOP"]
+    #[doc = "Bits 12:13 - STOP bits"]
     #[inline]
     pub fn stop(&self) -> STOPR {
         let bits = {
@@ -272,15 +252,35 @@ impl R {
         };
         STOPR { bits }
     }
-    #[doc = "Bit 14 - LINEN"]
+    #[doc = "Bit 6 - LIN break detection interrupt enable"]
     #[inline]
-    pub fn linen(&self) -> LINENR {
+    pub fn lbdie(&self) -> LBDIER {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 14;
+            const OFFSET: u8 = 6;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        LINENR { bits }
+        LBDIER { bits }
+    }
+    #[doc = "Bit 5 - LIN break detection length"]
+    #[inline]
+    pub fn lbdl(&self) -> LBDLR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 5;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        LBDLR { bits }
+    }
+    #[doc = "Bits 0:3 - Address of the USART node"]
+    #[inline]
+    pub fn add(&self) -> ADDR {
+        let bits = {
+            const MASK: u8 = 15;
+            const OFFSET: u8 = 0;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        ADDR { bits }
     }
 }
 impl W {
@@ -295,29 +295,29 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:3 - ADD"]
+    #[doc = "Bit 14 - LIN mode enable"]
     #[inline]
-    pub fn add(&mut self) -> _ADDW {
-        _ADDW { w: self }
+    pub fn linen(&mut self) -> _LINENW {
+        _LINENW { w: self }
     }
-    #[doc = "Bit 5 - LBDL"]
-    #[inline]
-    pub fn lbdl(&mut self) -> _LBDLW {
-        _LBDLW { w: self }
-    }
-    #[doc = "Bit 6 - LBDIE"]
-    #[inline]
-    pub fn lbdie(&mut self) -> _LBDIEW {
-        _LBDIEW { w: self }
-    }
-    #[doc = "Bits 12:13 - STOP"]
+    #[doc = "Bits 12:13 - STOP bits"]
     #[inline]
     pub fn stop(&mut self) -> _STOPW {
         _STOPW { w: self }
     }
-    #[doc = "Bit 14 - LINEN"]
+    #[doc = "Bit 6 - LIN break detection interrupt enable"]
     #[inline]
-    pub fn linen(&mut self) -> _LINENW {
-        _LINENW { w: self }
+    pub fn lbdie(&mut self) -> _LBDIEW {
+        _LBDIEW { w: self }
+    }
+    #[doc = "Bit 5 - LIN break detection length"]
+    #[inline]
+    pub fn lbdl(&mut self) -> _LBDLW {
+        _LBDLW { w: self }
+    }
+    #[doc = "Bits 0:3 - Address of the USART node"]
+    #[inline]
+    pub fn add(&mut self) -> _ADDW {
+        _ADDW { w: self }
     }
 }

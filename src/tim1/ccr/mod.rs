@@ -60,7 +60,7 @@ pub struct _CCRW<'a> {
 impl<'a> _CCRW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bits(self, value: u16) -> &'a mut W {
+    pub unsafe fn bits(self, value: u16) -> &'a mut W {
         const MASK: u16 = 65535;
         const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
@@ -74,7 +74,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:15 - Capture/Compare x value"]
+    #[doc = "Bits 0:15 - Capture/Compare X value"]
     #[inline]
     pub fn ccr(&self) -> CCRR {
         let bits = {
@@ -97,7 +97,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:15 - Capture/Compare x value"]
+    #[doc = "Bits 0:15 - Capture/Compare X value"]
     #[inline]
     pub fn ccr(&mut self) -> _CCRW {
         _CCRW { w: self }

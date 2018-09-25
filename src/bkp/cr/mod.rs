@@ -43,27 +43,6 @@ impl super::CR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct TPER {
-    bits: bool,
-}
-impl TPER {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
 pub struct TPALR {
     bits: bool,
 }
@@ -84,27 +63,25 @@ impl TPALR {
         self.bit()
     }
 }
-#[doc = r" Proxy"]
-pub struct _TPEW<'a> {
-    w: &'a mut W,
+#[doc = r" Value of the field"]
+pub struct TPER {
+    bits: bool,
 }
-impl<'a> _TPEW<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
+impl TPER {
+    #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
     }
 }
 #[doc = r" Proxy"]
@@ -130,21 +107,34 @@ impl<'a> _TPALW<'a> {
         self.w
     }
 }
+#[doc = r" Proxy"]
+pub struct _TPEW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _TPEW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 0;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
     pub fn bits(&self) -> u32 {
         self.bits
-    }
-    #[doc = "Bit 0 - Tamper pin enable"]
-    #[inline]
-    pub fn tpe(&self) -> TPER {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        TPER { bits }
     }
     #[doc = "Bit 1 - Tamper pin active level"]
     #[inline]
@@ -155,6 +145,16 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
         TPALR { bits }
+    }
+    #[doc = "Bit 0 - Tamper pin enable"]
+    #[inline]
+    pub fn tpe(&self) -> TPER {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 0;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        TPER { bits }
     }
 }
 impl W {
@@ -169,14 +169,14 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 0 - Tamper pin enable"]
-    #[inline]
-    pub fn tpe(&mut self) -> _TPEW {
-        _TPEW { w: self }
-    }
     #[doc = "Bit 1 - Tamper pin active level"]
     #[inline]
     pub fn tpal(&mut self) -> _TPALW {
         _TPALW { w: self }
+    }
+    #[doc = "Bit 0 - Tamper pin enable"]
+    #[inline]
+    pub fn tpe(&mut self) -> _TPEW {
+        _TPEW { w: self }
     }
 }

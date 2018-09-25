@@ -142,11 +142,11 @@ impl OC1CER {
 #[doc = "Possible values of the field `OC1M`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum OC1MR {
-    #[doc = "The comparison between the output compare register TIMx_CCRy and the\n                    counter TIMx_CNT has no effect on the outputs("]
+    #[doc = "The comparison between the output compare register TIMx_CCRy and the\r\n                    counter TIMx_CNT has no effect on the outputs("]
     FROZEN,
-    #[doc = "Set channel y to active level on match. OCyREF signal is forced high when the counter\n                    TIMx_CNT matches the capture/compare register y (TIMx_CCRy)."]
+    #[doc = "Set channel y to active level on match. OCyREF signal is forced high when the counter\r\n                    TIMx_CNT matches the capture/compare register y (TIMx_CCRy)."]
     SETACTIVE,
-    #[doc = "Set channel y to inactive level on match. OCyREF signal is forced low when the\n                    counter TIMx_CNT matches the capture/compare register y (TIMx_CCRy)."]
+    #[doc = "Set channel y to inactive level on match. OCyREF signal is forced low when the\r\n                    counter TIMx_CNT matches the capture/compare register y (TIMx_CCRy)."]
     SETINACTIVE,
     #[doc = "OCyREF toggles when TIMx_CNT=TIMx_CCRy."]
     TOGGLE,
@@ -154,9 +154,9 @@ pub enum OC1MR {
     FORCEINACTIVE,
     #[doc = "OCyREF is forced high."]
     FORCEACTIVE,
-    #[doc = "In upcounting, channel 1 is active as long as TIMx_CNT<TIMx_CCRy\n                    else inactive. In downcounting, channel 1 is inactive (OCyREF=\u{2018}0) as long as\n                    TIMx_CNT>TIMx_CCRy else active (OCyREF=1)."]
+    #[doc = "In upcounting, channel 1 is active as long as TIMx_CNT<TIMx_CCRy\r\n                    else inactive. In downcounting, channel 1 is inactive (OCyREF=\u{2018}0) as long as\r\n                    TIMx_CNT>TIMx_CCRy else active (OCyREF=1)."]
     PWM1,
-    #[doc = "In upcounting, channel y is inactive as long as TIMx_CNT<TIMx_CCRy\n                    else active. In downcounting, channel y is active as long as TIMx_CNT>TIMx_CCRy else\n                    inactive."]
+    #[doc = "In upcounting, channel y is inactive as long as TIMx_CNT<TIMx_CCRy\r\n                    else active. In downcounting, channel y is active as long as TIMx_CNT>TIMx_CCRy else\r\n                    inactive."]
     PWM2,
 }
 impl OC1MR {
@@ -457,11 +457,11 @@ impl<'a> _OC1CEW<'a> {
 }
 #[doc = "Values that can be written to the field `OC1M`"]
 pub enum OC1MW {
-    #[doc = "The comparison between the output compare register TIMx_CCRy and the\n                    counter TIMx_CNT has no effect on the outputs("]
+    #[doc = "The comparison between the output compare register TIMx_CCRy and the\r\n                    counter TIMx_CNT has no effect on the outputs("]
     FROZEN,
-    #[doc = "Set channel y to active level on match. OCyREF signal is forced high when the counter\n                    TIMx_CNT matches the capture/compare register y (TIMx_CCRy)."]
+    #[doc = "Set channel y to active level on match. OCyREF signal is forced high when the counter\r\n                    TIMx_CNT matches the capture/compare register y (TIMx_CCRy)."]
     SETACTIVE,
-    #[doc = "Set channel y to inactive level on match. OCyREF signal is forced low when the\n                    counter TIMx_CNT matches the capture/compare register y (TIMx_CCRy)."]
+    #[doc = "Set channel y to inactive level on match. OCyREF signal is forced low when the\r\n                    counter TIMx_CNT matches the capture/compare register y (TIMx_CCRy)."]
     SETINACTIVE,
     #[doc = "OCyREF toggles when TIMx_CNT=TIMx_CCRy."]
     TOGGLE,
@@ -469,9 +469,9 @@ pub enum OC1MW {
     FORCEINACTIVE,
     #[doc = "OCyREF is forced high."]
     FORCEACTIVE,
-    #[doc = "In upcounting, channel 1 is active as long as TIMx_CNT<TIMx_CCRy\n                    else inactive. In downcounting, channel 1 is inactive (OCyREF=\u{2018}0) as long as\n                    TIMx_CNT>TIMx_CCRy else active (OCyREF=1)."]
+    #[doc = "In upcounting, channel 1 is active as long as TIMx_CNT<TIMx_CCRy\r\n                    else inactive. In downcounting, channel 1 is inactive (OCyREF=\u{2018}0) as long as\r\n                    TIMx_CNT>TIMx_CCRy else active (OCyREF=1)."]
     PWM1,
-    #[doc = "In upcounting, channel y is inactive as long as TIMx_CNT<TIMx_CCRy\n                    else active. In downcounting, channel y is active as long as TIMx_CNT>TIMx_CCRy else\n                    inactive."]
+    #[doc = "In upcounting, channel y is inactive as long as TIMx_CNT<TIMx_CCRy\r\n                    else active. In downcounting, channel y is active as long as TIMx_CNT>TIMx_CCRy else\r\n                    inactive."]
     PWM2,
 }
 impl OC1MW {

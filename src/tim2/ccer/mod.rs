@@ -400,7 +400,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 13 - Capture/Compare 3 output Polarity"]
+    #[doc = "Bit 13 - Capture/Compare 3 complementary output Polarity"]
     #[inline]
     pub fn cc4p(&self) -> CC4PR {
         let bits = {
@@ -493,7 +493,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 13 - Capture/Compare 3 output Polarity"]
+    #[doc = "Bit 13 - Capture/Compare 3 complementary output Polarity"]
     #[inline]
     pub fn cc4p(&mut self) -> _CC4PW {
         _CC4PW { w: self }

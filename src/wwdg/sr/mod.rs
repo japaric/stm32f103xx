@@ -43,10 +43,10 @@ impl super::SR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct EWIR {
+pub struct EWIFR {
     bits: bool,
 }
-impl EWIR {
+impl EWIFR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -64,10 +64,10 @@ impl EWIR {
     }
 }
 #[doc = r" Proxy"]
-pub struct _EWIW<'a> {
+pub struct _EWIFW<'a> {
     w: &'a mut W,
 }
-impl<'a> _EWIW<'a> {
+impl<'a> _EWIFW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -92,15 +92,15 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 0 - Early Wakeup Interrupt"]
+    #[doc = "Bit 0 - Early wakeup interrupt flag"]
     #[inline]
-    pub fn ewi(&self) -> EWIR {
+    pub fn ewif(&self) -> EWIFR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        EWIR { bits }
+        EWIFR { bits }
     }
 }
 impl W {
@@ -115,9 +115,9 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 0 - Early Wakeup Interrupt"]
+    #[doc = "Bit 0 - Early wakeup interrupt flag"]
     #[inline]
-    pub fn ewi(&mut self) -> _EWIW {
-        _EWIW { w: self }
+    pub fn ewif(&mut self) -> _EWIFW {
+        _EWIFW { w: self }
     }
 }

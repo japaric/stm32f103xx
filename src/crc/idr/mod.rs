@@ -74,7 +74,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:7 - Independent Data register"]
+    #[doc = "Bits 0:7 - General-purpose 8-bit data register bits"]
     #[inline]
     pub fn idr(&self) -> IDRR {
         let bits = {
@@ -97,7 +97,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:7 - Independent Data register"]
+    #[doc = "Bits 0:7 - General-purpose 8-bit data register bits"]
     #[inline]
     pub fn idr(&mut self) -> _IDRW {
         _IDRW { w: self }

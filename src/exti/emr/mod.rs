@@ -43,10 +43,10 @@ impl super::EMR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR0R {
+pub struct EM18R {
     bits: bool,
 }
-impl MR0R {
+impl EM18R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -64,10 +64,10 @@ impl MR0R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR1R {
+pub struct EM17R {
     bits: bool,
 }
-impl MR1R {
+impl EM17R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -85,10 +85,10 @@ impl MR1R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR2R {
+pub struct EM16R {
     bits: bool,
 }
-impl MR2R {
+impl EM16R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,10 +106,10 @@ impl MR2R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR3R {
+pub struct EM15R {
     bits: bool,
 }
-impl MR3R {
+impl EM15R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -127,10 +127,10 @@ impl MR3R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR4R {
+pub struct EM14R {
     bits: bool,
 }
-impl MR4R {
+impl EM14R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -148,10 +148,10 @@ impl MR4R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR5R {
+pub struct EM13R {
     bits: bool,
 }
-impl MR5R {
+impl EM13R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -169,10 +169,10 @@ impl MR5R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR6R {
+pub struct EM12R {
     bits: bool,
 }
-impl MR6R {
+impl EM12R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -190,10 +190,10 @@ impl MR6R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR7R {
+pub struct EM11R {
     bits: bool,
 }
-impl MR7R {
+impl EM11R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -211,10 +211,10 @@ impl MR7R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR8R {
+pub struct EM10R {
     bits: bool,
 }
-impl MR8R {
+impl EM10R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -232,10 +232,10 @@ impl MR8R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR9R {
+pub struct EM9R {
     bits: bool,
 }
-impl MR9R {
+impl EM9R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -253,10 +253,10 @@ impl MR9R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR10R {
+pub struct EM8R {
     bits: bool,
 }
-impl MR10R {
+impl EM8R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -274,10 +274,10 @@ impl MR10R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR11R {
+pub struct EM7R {
     bits: bool,
 }
-impl MR11R {
+impl EM7R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -295,10 +295,10 @@ impl MR11R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR12R {
+pub struct EM6R {
     bits: bool,
 }
-impl MR12R {
+impl EM6R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -316,10 +316,10 @@ impl MR12R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR13R {
+pub struct EM5R {
     bits: bool,
 }
-impl MR13R {
+impl EM5R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -337,10 +337,10 @@ impl MR13R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR14R {
+pub struct EM4R {
     bits: bool,
 }
-impl MR14R {
+impl EM4R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -358,10 +358,10 @@ impl MR14R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR15R {
+pub struct EM3R {
     bits: bool,
 }
-impl MR15R {
+impl EM3R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -379,10 +379,10 @@ impl MR15R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR16R {
+pub struct EM2R {
     bits: bool,
 }
-impl MR16R {
+impl EM2R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -400,10 +400,10 @@ impl MR16R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR17R {
+pub struct EM1R {
     bits: bool,
 }
-impl MR17R {
+impl EM1R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -421,10 +421,10 @@ impl MR17R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR18R {
+pub struct EM0R {
     bits: bool,
 }
-impl MR18R {
+impl EM0R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -442,10 +442,10 @@ impl MR18R {
     }
 }
 #[doc = r" Proxy"]
-pub struct _MR0W<'a> {
+pub struct _EM18W<'a> {
     w: &'a mut W,
 }
-impl<'a> _MR0W<'a> {
+impl<'a> _EM18W<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -458,385 +458,17 @@ impl<'a> _MR0W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 0;
+        const OFFSET: u8 = 18;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _MR1W<'a> {
+pub struct _EM17W<'a> {
     w: &'a mut W,
 }
-impl<'a> _MR1W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 1;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MR2W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _MR2W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MR3W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _MR3W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 3;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MR4W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _MR4W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MR5W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _MR5W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 5;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MR6W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _MR6W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 6;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MR7W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _MR7W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 7;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MR8W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _MR8W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MR9W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _MR9W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 9;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MR10W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _MR10W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 10;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MR11W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _MR11W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 11;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MR12W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _MR12W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MR13W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _MR13W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 13;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MR14W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _MR14W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 14;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MR15W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _MR15W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 15;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MR16W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _MR16W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MR17W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _MR17W<'a> {
+impl<'a> _EM17W<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -856,10 +488,10 @@ impl<'a> _MR17W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _MR18W<'a> {
+pub struct _EM16W<'a> {
     w: &'a mut W,
 }
-impl<'a> _MR18W<'a> {
+impl<'a> _EM16W<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -872,7 +504,375 @@ impl<'a> _MR18W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 18;
+        const OFFSET: u8 = 16;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EM15W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EM15W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 15;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EM14W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EM14W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 14;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EM13W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EM13W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 13;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EM12W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EM12W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 12;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EM11W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EM11W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 11;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EM10W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EM10W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 10;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EM9W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EM9W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 9;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EM8W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EM8W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 8;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EM7W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EM7W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 7;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EM6W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EM6W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 6;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EM5W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EM5W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 5;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EM4W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EM4W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 4;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EM3W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EM3W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 3;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EM2W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EM2W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 2;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EM1W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EM1W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 1;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EM0W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EM0W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -884,195 +884,195 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 0 - Event Mask on line 0"]
-    #[inline]
-    pub fn mr0(&self) -> MR0R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR0R { bits }
-    }
-    #[doc = "Bit 1 - Event Mask on line 1"]
-    #[inline]
-    pub fn mr1(&self) -> MR1R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR1R { bits }
-    }
-    #[doc = "Bit 2 - Event Mask on line 2"]
-    #[inline]
-    pub fn mr2(&self) -> MR2R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR2R { bits }
-    }
-    #[doc = "Bit 3 - Event Mask on line 3"]
-    #[inline]
-    pub fn mr3(&self) -> MR3R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR3R { bits }
-    }
-    #[doc = "Bit 4 - Event Mask on line 4"]
-    #[inline]
-    pub fn mr4(&self) -> MR4R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR4R { bits }
-    }
-    #[doc = "Bit 5 - Event Mask on line 5"]
-    #[inline]
-    pub fn mr5(&self) -> MR5R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR5R { bits }
-    }
-    #[doc = "Bit 6 - Event Mask on line 6"]
-    #[inline]
-    pub fn mr6(&self) -> MR6R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR6R { bits }
-    }
-    #[doc = "Bit 7 - Event Mask on line 7"]
-    #[inline]
-    pub fn mr7(&self) -> MR7R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 7;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR7R { bits }
-    }
-    #[doc = "Bit 8 - Event Mask on line 8"]
-    #[inline]
-    pub fn mr8(&self) -> MR8R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR8R { bits }
-    }
-    #[doc = "Bit 9 - Event Mask on line 9"]
-    #[inline]
-    pub fn mr9(&self) -> MR9R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR9R { bits }
-    }
-    #[doc = "Bit 10 - Event Mask on line 10"]
-    #[inline]
-    pub fn mr10(&self) -> MR10R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR10R { bits }
-    }
-    #[doc = "Bit 11 - Event Mask on line 11"]
-    #[inline]
-    pub fn mr11(&self) -> MR11R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 11;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR11R { bits }
-    }
-    #[doc = "Bit 12 - Event Mask on line 12"]
-    #[inline]
-    pub fn mr12(&self) -> MR12R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR12R { bits }
-    }
-    #[doc = "Bit 13 - Event Mask on line 13"]
-    #[inline]
-    pub fn mr13(&self) -> MR13R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 13;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR13R { bits }
-    }
-    #[doc = "Bit 14 - Event Mask on line 14"]
-    #[inline]
-    pub fn mr14(&self) -> MR14R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 14;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR14R { bits }
-    }
-    #[doc = "Bit 15 - Event Mask on line 15"]
-    #[inline]
-    pub fn mr15(&self) -> MR15R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 15;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR15R { bits }
-    }
-    #[doc = "Bit 16 - Event Mask on line 16"]
-    #[inline]
-    pub fn mr16(&self) -> MR16R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR16R { bits }
-    }
-    #[doc = "Bit 17 - Event Mask on line 17"]
-    #[inline]
-    pub fn mr17(&self) -> MR17R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 17;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MR17R { bits }
-    }
     #[doc = "Bit 18 - Event Mask on line 18"]
     #[inline]
-    pub fn mr18(&self) -> MR18R {
+    pub fn em18(&self) -> EM18R {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 18;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        MR18R { bits }
+        EM18R { bits }
+    }
+    #[doc = "Bit 17 - Event Mask on line 17"]
+    #[inline]
+    pub fn em17(&self) -> EM17R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 17;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM17R { bits }
+    }
+    #[doc = "Bit 16 - Event Mask on line 16"]
+    #[inline]
+    pub fn em16(&self) -> EM16R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 16;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM16R { bits }
+    }
+    #[doc = "Bit 15 - Event Mask on line 15"]
+    #[inline]
+    pub fn em15(&self) -> EM15R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 15;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM15R { bits }
+    }
+    #[doc = "Bit 14 - Event Mask on line 14"]
+    #[inline]
+    pub fn em14(&self) -> EM14R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 14;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM14R { bits }
+    }
+    #[doc = "Bit 13 - Event Mask on line 13"]
+    #[inline]
+    pub fn em13(&self) -> EM13R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 13;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM13R { bits }
+    }
+    #[doc = "Bit 12 - Event Mask on line 12"]
+    #[inline]
+    pub fn em12(&self) -> EM12R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 12;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM12R { bits }
+    }
+    #[doc = "Bit 11 - Event Mask on line 11"]
+    #[inline]
+    pub fn em11(&self) -> EM11R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 11;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM11R { bits }
+    }
+    #[doc = "Bit 10 - Event Mask on line 10"]
+    #[inline]
+    pub fn em10(&self) -> EM10R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 10;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM10R { bits }
+    }
+    #[doc = "Bit 9 - Event Mask on line 9"]
+    #[inline]
+    pub fn em9(&self) -> EM9R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 9;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM9R { bits }
+    }
+    #[doc = "Bit 8 - Event Mask on line 8"]
+    #[inline]
+    pub fn em8(&self) -> EM8R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 8;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM8R { bits }
+    }
+    #[doc = "Bit 7 - Event Mask on line 7"]
+    #[inline]
+    pub fn em7(&self) -> EM7R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 7;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM7R { bits }
+    }
+    #[doc = "Bit 6 - Event Mask on line 6"]
+    #[inline]
+    pub fn em6(&self) -> EM6R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 6;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM6R { bits }
+    }
+    #[doc = "Bit 5 - Event Mask on line 5"]
+    #[inline]
+    pub fn em5(&self) -> EM5R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 5;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM5R { bits }
+    }
+    #[doc = "Bit 4 - Event Mask on line 4"]
+    #[inline]
+    pub fn em4(&self) -> EM4R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 4;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM4R { bits }
+    }
+    #[doc = "Bit 3 - Event Mask on line 3"]
+    #[inline]
+    pub fn em3(&self) -> EM3R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 3;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM3R { bits }
+    }
+    #[doc = "Bit 2 - Event Mask on line 2"]
+    #[inline]
+    pub fn em2(&self) -> EM2R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 2;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM2R { bits }
+    }
+    #[doc = "Bit 1 - Event Mask on line 1"]
+    #[inline]
+    pub fn em1(&self) -> EM1R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 1;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM1R { bits }
+    }
+    #[doc = "Bit 0 - Event Mask on line 0"]
+    #[inline]
+    pub fn em0(&self) -> EM0R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 0;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EM0R { bits }
     }
 }
 impl W {
@@ -1087,99 +1087,99 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 0 - Event Mask on line 0"]
+    #[doc = "Bit 18 - Event Mask on line 18"]
     #[inline]
-    pub fn mr0(&mut self) -> _MR0W {
-        _MR0W { w: self }
-    }
-    #[doc = "Bit 1 - Event Mask on line 1"]
-    #[inline]
-    pub fn mr1(&mut self) -> _MR1W {
-        _MR1W { w: self }
-    }
-    #[doc = "Bit 2 - Event Mask on line 2"]
-    #[inline]
-    pub fn mr2(&mut self) -> _MR2W {
-        _MR2W { w: self }
-    }
-    #[doc = "Bit 3 - Event Mask on line 3"]
-    #[inline]
-    pub fn mr3(&mut self) -> _MR3W {
-        _MR3W { w: self }
-    }
-    #[doc = "Bit 4 - Event Mask on line 4"]
-    #[inline]
-    pub fn mr4(&mut self) -> _MR4W {
-        _MR4W { w: self }
-    }
-    #[doc = "Bit 5 - Event Mask on line 5"]
-    #[inline]
-    pub fn mr5(&mut self) -> _MR5W {
-        _MR5W { w: self }
-    }
-    #[doc = "Bit 6 - Event Mask on line 6"]
-    #[inline]
-    pub fn mr6(&mut self) -> _MR6W {
-        _MR6W { w: self }
-    }
-    #[doc = "Bit 7 - Event Mask on line 7"]
-    #[inline]
-    pub fn mr7(&mut self) -> _MR7W {
-        _MR7W { w: self }
-    }
-    #[doc = "Bit 8 - Event Mask on line 8"]
-    #[inline]
-    pub fn mr8(&mut self) -> _MR8W {
-        _MR8W { w: self }
-    }
-    #[doc = "Bit 9 - Event Mask on line 9"]
-    #[inline]
-    pub fn mr9(&mut self) -> _MR9W {
-        _MR9W { w: self }
-    }
-    #[doc = "Bit 10 - Event Mask on line 10"]
-    #[inline]
-    pub fn mr10(&mut self) -> _MR10W {
-        _MR10W { w: self }
-    }
-    #[doc = "Bit 11 - Event Mask on line 11"]
-    #[inline]
-    pub fn mr11(&mut self) -> _MR11W {
-        _MR11W { w: self }
-    }
-    #[doc = "Bit 12 - Event Mask on line 12"]
-    #[inline]
-    pub fn mr12(&mut self) -> _MR12W {
-        _MR12W { w: self }
-    }
-    #[doc = "Bit 13 - Event Mask on line 13"]
-    #[inline]
-    pub fn mr13(&mut self) -> _MR13W {
-        _MR13W { w: self }
-    }
-    #[doc = "Bit 14 - Event Mask on line 14"]
-    #[inline]
-    pub fn mr14(&mut self) -> _MR14W {
-        _MR14W { w: self }
-    }
-    #[doc = "Bit 15 - Event Mask on line 15"]
-    #[inline]
-    pub fn mr15(&mut self) -> _MR15W {
-        _MR15W { w: self }
-    }
-    #[doc = "Bit 16 - Event Mask on line 16"]
-    #[inline]
-    pub fn mr16(&mut self) -> _MR16W {
-        _MR16W { w: self }
+    pub fn em18(&mut self) -> _EM18W {
+        _EM18W { w: self }
     }
     #[doc = "Bit 17 - Event Mask on line 17"]
     #[inline]
-    pub fn mr17(&mut self) -> _MR17W {
-        _MR17W { w: self }
+    pub fn em17(&mut self) -> _EM17W {
+        _EM17W { w: self }
     }
-    #[doc = "Bit 18 - Event Mask on line 18"]
+    #[doc = "Bit 16 - Event Mask on line 16"]
     #[inline]
-    pub fn mr18(&mut self) -> _MR18W {
-        _MR18W { w: self }
+    pub fn em16(&mut self) -> _EM16W {
+        _EM16W { w: self }
+    }
+    #[doc = "Bit 15 - Event Mask on line 15"]
+    #[inline]
+    pub fn em15(&mut self) -> _EM15W {
+        _EM15W { w: self }
+    }
+    #[doc = "Bit 14 - Event Mask on line 14"]
+    #[inline]
+    pub fn em14(&mut self) -> _EM14W {
+        _EM14W { w: self }
+    }
+    #[doc = "Bit 13 - Event Mask on line 13"]
+    #[inline]
+    pub fn em13(&mut self) -> _EM13W {
+        _EM13W { w: self }
+    }
+    #[doc = "Bit 12 - Event Mask on line 12"]
+    #[inline]
+    pub fn em12(&mut self) -> _EM12W {
+        _EM12W { w: self }
+    }
+    #[doc = "Bit 11 - Event Mask on line 11"]
+    #[inline]
+    pub fn em11(&mut self) -> _EM11W {
+        _EM11W { w: self }
+    }
+    #[doc = "Bit 10 - Event Mask on line 10"]
+    #[inline]
+    pub fn em10(&mut self) -> _EM10W {
+        _EM10W { w: self }
+    }
+    #[doc = "Bit 9 - Event Mask on line 9"]
+    #[inline]
+    pub fn em9(&mut self) -> _EM9W {
+        _EM9W { w: self }
+    }
+    #[doc = "Bit 8 - Event Mask on line 8"]
+    #[inline]
+    pub fn em8(&mut self) -> _EM8W {
+        _EM8W { w: self }
+    }
+    #[doc = "Bit 7 - Event Mask on line 7"]
+    #[inline]
+    pub fn em7(&mut self) -> _EM7W {
+        _EM7W { w: self }
+    }
+    #[doc = "Bit 6 - Event Mask on line 6"]
+    #[inline]
+    pub fn em6(&mut self) -> _EM6W {
+        _EM6W { w: self }
+    }
+    #[doc = "Bit 5 - Event Mask on line 5"]
+    #[inline]
+    pub fn em5(&mut self) -> _EM5W {
+        _EM5W { w: self }
+    }
+    #[doc = "Bit 4 - Event Mask on line 4"]
+    #[inline]
+    pub fn em4(&mut self) -> _EM4W {
+        _EM4W { w: self }
+    }
+    #[doc = "Bit 3 - Event Mask on line 3"]
+    #[inline]
+    pub fn em3(&mut self) -> _EM3W {
+        _EM3W { w: self }
+    }
+    #[doc = "Bit 2 - Event Mask on line 2"]
+    #[inline]
+    pub fn em2(&mut self) -> _EM2W {
+        _EM2W { w: self }
+    }
+    #[doc = "Bit 1 - Event Mask on line 1"]
+    #[inline]
+    pub fn em1(&mut self) -> _EM1W {
+        _EM1W { w: self }
+    }
+    #[doc = "Bit 0 - Event Mask on line 0"]
+    #[inline]
+    pub fn em0(&mut self) -> _EM0W {
+        _EM0W { w: self }
     }
 }

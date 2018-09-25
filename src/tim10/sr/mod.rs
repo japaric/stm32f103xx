@@ -185,7 +185,7 @@ impl R {
         };
         CC1OFR { bits }
     }
-    #[doc = "Bit 1 - Capture/compare 1 interrupt flag"]
+    #[doc = "Bit 1 - Capture/Compare 1 interrupt flag"]
     #[inline]
     pub fn cc1if(&self) -> CC1IFR {
         let bits = {
@@ -222,7 +222,7 @@ impl W {
     pub fn cc1of(&mut self) -> _CC1OFW {
         _CC1OFW { w: self }
     }
-    #[doc = "Bit 1 - Capture/compare 1 interrupt flag"]
+    #[doc = "Bit 1 - Capture/Compare 1 interrupt flag"]
     #[inline]
     pub fn cc1if(&mut self) -> _CC1IFW {
         _CC1IFW { w: self }

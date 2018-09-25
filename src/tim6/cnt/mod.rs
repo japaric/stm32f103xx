@@ -60,7 +60,7 @@ pub struct _CNTW<'a> {
 impl<'a> _CNTW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bits(self, value: u16) -> &'a mut W {
+    pub unsafe fn bits(self, value: u16) -> &'a mut W {
         const MASK: u16 = 65535;
         const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
@@ -74,7 +74,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:15 - Low counter value"]
+    #[doc = "Bits 0:15 - counter value"]
     #[inline]
     pub fn cnt(&self) -> CNTR {
         let bits = {
@@ -97,7 +97,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:15 - Low counter value"]
+    #[doc = "Bits 0:15 - counter value"]
     #[inline]
     pub fn cnt(&mut self) -> _CNTW {
         _CNTW { w: self }

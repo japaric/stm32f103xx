@@ -12,10 +12,10 @@ impl super::SR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PVUR {
+pub struct RVUR {
     bits: bool,
 }
-impl PVUR {
+impl RVUR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -33,10 +33,10 @@ impl PVUR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct RVUR {
+pub struct PVUR {
     bits: bool,
 }
-impl RVUR {
+impl PVUR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -59,16 +59,6 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 0 - Watchdog prescaler value update"]
-    #[inline]
-    pub fn pvu(&self) -> PVUR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PVUR { bits }
-    }
     #[doc = "Bit 1 - Watchdog counter reload value update"]
     #[inline]
     pub fn rvu(&self) -> RVUR {
@@ -78,5 +68,15 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
         RVUR { bits }
+    }
+    #[doc = "Bit 0 - Watchdog prescaler value update"]
+    #[inline]
+    pub fn pvu(&self) -> PVUR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 0;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PVUR { bits }
     }
 }

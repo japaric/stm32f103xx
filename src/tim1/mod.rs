@@ -13,9 +13,9 @@ pub struct RegisterBlock {
     pub sr: SR,
     #[doc = "0x14 - event generation register"]
     pub egr: EGR,
-    #[doc = "0x18 - capture/compare mode register (output mode)"]
+    #[doc = "0x18 - capture/compare mode register 1 (output mode)"]
     pub ccmr1_output: CCMR1_OUTPUT,
-    #[doc = "0x1c - capture/compare mode register (output mode)"]
+    #[doc = "0x1c - capture/compare mode register 2 (output mode)"]
     pub ccmr2_output: CCMR2_OUTPUT,
     #[doc = "0x20 - capture/compare enable register"]
     pub ccer: CCER,
@@ -27,13 +27,13 @@ pub struct RegisterBlock {
     pub arr: ARR,
     #[doc = "0x30 - repetition counter register"]
     pub rcr: RCR,
-    #[doc = "0x34 - capture/compare register x"]
+    #[doc = "0x34 - capture/compare register X"]
     pub ccr1: CCR,
-    #[doc = "0x38 - capture/compare register x"]
+    #[doc = "0x38 - capture/compare register X"]
     pub ccr2: CCR,
-    #[doc = "0x3c - capture/compare register x"]
+    #[doc = "0x3c - capture/compare register X"]
     pub ccr3: CCR,
-    #[doc = "0x40 - capture/compare register x"]
+    #[doc = "0x40 - capture/compare register X"]
     pub ccr4: CCR,
     #[doc = "0x44 - break and dead-time register"]
     pub bdtr: BDTR,
@@ -78,11 +78,11 @@ pub struct EGR {
 }
 #[doc = "event generation register"]
 pub mod egr;
-#[doc = "capture/compare mode register (output mode)"]
+#[doc = "capture/compare mode register 1 (output mode)"]
 pub struct CCMR1_OUTPUT {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "capture/compare mode register (output mode)"]
+#[doc = "capture/compare mode register 1 (output mode)"]
 pub mod ccmr1_output;
 #[doc = "capture/compare mode register 1 (input mode)"]
 pub struct CCMR1_INPUT {
@@ -90,11 +90,11 @@ pub struct CCMR1_INPUT {
 }
 #[doc = "capture/compare mode register 1 (input mode)"]
 pub mod ccmr1_input;
-#[doc = "capture/compare mode register (output mode)"]
+#[doc = "capture/compare mode register 2 (output mode)"]
 pub struct CCMR2_OUTPUT {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "capture/compare mode register (output mode)"]
+#[doc = "capture/compare mode register 2 (output mode)"]
 pub mod ccmr2_output;
 #[doc = "capture/compare mode register 2 (input mode)"]
 pub struct CCMR2_INPUT {
@@ -126,12 +126,24 @@ pub struct ARR {
 }
 #[doc = "auto-reload register"]
 pub mod arr;
-#[doc = "capture/compare register x"]
+#[doc = "repetition counter register"]
+pub struct RCR {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "repetition counter register"]
+pub mod rcr;
+#[doc = "capture/compare register X"]
 pub struct CCR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "capture/compare register x"]
+#[doc = "capture/compare register X"]
 pub mod ccr;
+#[doc = "break and dead-time register"]
+pub struct BDTR {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "break and dead-time register"]
+pub mod bdtr;
 #[doc = "DMA control register"]
 pub struct DCR {
     register: ::vcell::VolatileCell<u32>,
@@ -144,15 +156,3 @@ pub struct DMAR {
 }
 #[doc = "DMA address for full transfer"]
 pub mod dmar;
-#[doc = "repetition counter register"]
-pub struct RCR {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "repetition counter register"]
-pub mod rcr;
-#[doc = "break and dead-time register"]
-pub struct BDTR {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "break and dead-time register"]
-pub mod bdtr;

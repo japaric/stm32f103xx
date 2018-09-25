@@ -224,7 +224,7 @@ impl R {
         };
         IC2PSCR { bits }
     }
-    #[doc = "Bits 8:9 - Capture/compare 2 selection"]
+    #[doc = "Bits 8:9 - Capture/Compare 2 selection"]
     #[inline]
     pub fn cc2s(&self) -> CC2SR {
         let bits = {
@@ -287,7 +287,7 @@ impl W {
     pub fn ic2psc(&mut self) -> _IC2PSCW {
         _IC2PSCW { w: self }
     }
-    #[doc = "Bits 8:9 - Capture/compare 2 selection"]
+    #[doc = "Bits 8:9 - Capture/Compare 2 selection"]
     #[inline]
     pub fn cc2s(&mut self) -> _CC2SW {
         _CC2SW { w: self }

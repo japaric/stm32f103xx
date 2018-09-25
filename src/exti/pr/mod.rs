@@ -43,10 +43,10 @@ impl super::PR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR0R {
+pub struct PIF18R {
     bits: bool,
 }
-impl PR0R {
+impl PIF18R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -64,10 +64,10 @@ impl PR0R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR1R {
+pub struct PIF17R {
     bits: bool,
 }
-impl PR1R {
+impl PIF17R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -85,10 +85,10 @@ impl PR1R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR2R {
+pub struct PIF16R {
     bits: bool,
 }
-impl PR2R {
+impl PIF16R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,10 +106,10 @@ impl PR2R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR3R {
+pub struct PIF15R {
     bits: bool,
 }
-impl PR3R {
+impl PIF15R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -127,10 +127,10 @@ impl PR3R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR4R {
+pub struct PIF14R {
     bits: bool,
 }
-impl PR4R {
+impl PIF14R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -148,10 +148,10 @@ impl PR4R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR5R {
+pub struct PIF13R {
     bits: bool,
 }
-impl PR5R {
+impl PIF13R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -169,10 +169,10 @@ impl PR5R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR6R {
+pub struct PIF12R {
     bits: bool,
 }
-impl PR6R {
+impl PIF12R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -190,10 +190,10 @@ impl PR6R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR7R {
+pub struct PIF11R {
     bits: bool,
 }
-impl PR7R {
+impl PIF11R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -211,10 +211,10 @@ impl PR7R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR8R {
+pub struct PIF10R {
     bits: bool,
 }
-impl PR8R {
+impl PIF10R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -232,10 +232,10 @@ impl PR8R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR9R {
+pub struct PIF9R {
     bits: bool,
 }
-impl PR9R {
+impl PIF9R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -253,10 +253,10 @@ impl PR9R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR10R {
+pub struct PIF8R {
     bits: bool,
 }
-impl PR10R {
+impl PIF8R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -274,10 +274,10 @@ impl PR10R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR11R {
+pub struct PIF7R {
     bits: bool,
 }
-impl PR11R {
+impl PIF7R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -295,10 +295,10 @@ impl PR11R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR12R {
+pub struct PIF6R {
     bits: bool,
 }
-impl PR12R {
+impl PIF6R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -316,10 +316,10 @@ impl PR12R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR13R {
+pub struct PIF5R {
     bits: bool,
 }
-impl PR13R {
+impl PIF5R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -337,10 +337,10 @@ impl PR13R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR14R {
+pub struct PIF4R {
     bits: bool,
 }
-impl PR14R {
+impl PIF4R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -358,10 +358,10 @@ impl PR14R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR15R {
+pub struct PIF3R {
     bits: bool,
 }
-impl PR15R {
+impl PIF3R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -379,10 +379,10 @@ impl PR15R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR16R {
+pub struct PIF2R {
     bits: bool,
 }
-impl PR16R {
+impl PIF2R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -400,10 +400,10 @@ impl PR16R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR17R {
+pub struct PIF1R {
     bits: bool,
 }
-impl PR17R {
+impl PIF1R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -421,10 +421,10 @@ impl PR17R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PR18R {
+pub struct PIF0R {
     bits: bool,
 }
-impl PR18R {
+impl PIF0R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -442,10 +442,10 @@ impl PR18R {
     }
 }
 #[doc = r" Proxy"]
-pub struct _PR0W<'a> {
+pub struct _PIF18W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PR0W<'a> {
+impl<'a> _PIF18W<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -458,385 +458,17 @@ impl<'a> _PR0W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 0;
+        const OFFSET: u8 = 18;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _PR1W<'a> {
+pub struct _PIF17W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PR1W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 1;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PR2W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PR2W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PR3W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PR3W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 3;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PR4W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PR4W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PR5W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PR5W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 5;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PR6W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PR6W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 6;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PR7W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PR7W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 7;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PR8W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PR8W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PR9W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PR9W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 9;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PR10W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PR10W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 10;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PR11W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PR11W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 11;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PR12W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PR12W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PR13W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PR13W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 13;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PR14W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PR14W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 14;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PR15W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PR15W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 15;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PR16W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PR16W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PR17W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PR17W<'a> {
+impl<'a> _PIF17W<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -856,10 +488,10 @@ impl<'a> _PR17W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _PR18W<'a> {
+pub struct _PIF16W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PR18W<'a> {
+impl<'a> _PIF16W<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -872,7 +504,375 @@ impl<'a> _PR18W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 18;
+        const OFFSET: u8 = 16;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PIF15W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PIF15W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 15;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PIF14W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PIF14W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 14;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PIF13W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PIF13W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 13;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PIF12W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PIF12W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 12;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PIF11W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PIF11W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 11;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PIF10W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PIF10W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 10;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PIF9W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PIF9W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 9;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PIF8W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PIF8W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 8;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PIF7W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PIF7W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 7;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PIF6W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PIF6W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 6;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PIF5W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PIF5W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 5;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PIF4W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PIF4W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 4;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PIF3W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PIF3W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 3;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PIF2W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PIF2W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 2;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PIF1W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PIF1W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 1;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PIF0W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PIF0W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -884,195 +884,195 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 0 - Pending bit 0"]
+    #[doc = "Bit 18 - Pending interrupt flag on line 18"]
     #[inline]
-    pub fn pr0(&self) -> PR0R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR0R { bits }
-    }
-    #[doc = "Bit 1 - Pending bit 1"]
-    #[inline]
-    pub fn pr1(&self) -> PR1R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR1R { bits }
-    }
-    #[doc = "Bit 2 - Pending bit 2"]
-    #[inline]
-    pub fn pr2(&self) -> PR2R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR2R { bits }
-    }
-    #[doc = "Bit 3 - Pending bit 3"]
-    #[inline]
-    pub fn pr3(&self) -> PR3R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR3R { bits }
-    }
-    #[doc = "Bit 4 - Pending bit 4"]
-    #[inline]
-    pub fn pr4(&self) -> PR4R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR4R { bits }
-    }
-    #[doc = "Bit 5 - Pending bit 5"]
-    #[inline]
-    pub fn pr5(&self) -> PR5R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR5R { bits }
-    }
-    #[doc = "Bit 6 - Pending bit 6"]
-    #[inline]
-    pub fn pr6(&self) -> PR6R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR6R { bits }
-    }
-    #[doc = "Bit 7 - Pending bit 7"]
-    #[inline]
-    pub fn pr7(&self) -> PR7R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 7;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR7R { bits }
-    }
-    #[doc = "Bit 8 - Pending bit 8"]
-    #[inline]
-    pub fn pr8(&self) -> PR8R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR8R { bits }
-    }
-    #[doc = "Bit 9 - Pending bit 9"]
-    #[inline]
-    pub fn pr9(&self) -> PR9R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR9R { bits }
-    }
-    #[doc = "Bit 10 - Pending bit 10"]
-    #[inline]
-    pub fn pr10(&self) -> PR10R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR10R { bits }
-    }
-    #[doc = "Bit 11 - Pending bit 11"]
-    #[inline]
-    pub fn pr11(&self) -> PR11R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 11;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR11R { bits }
-    }
-    #[doc = "Bit 12 - Pending bit 12"]
-    #[inline]
-    pub fn pr12(&self) -> PR12R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR12R { bits }
-    }
-    #[doc = "Bit 13 - Pending bit 13"]
-    #[inline]
-    pub fn pr13(&self) -> PR13R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 13;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR13R { bits }
-    }
-    #[doc = "Bit 14 - Pending bit 14"]
-    #[inline]
-    pub fn pr14(&self) -> PR14R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 14;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR14R { bits }
-    }
-    #[doc = "Bit 15 - Pending bit 15"]
-    #[inline]
-    pub fn pr15(&self) -> PR15R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 15;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR15R { bits }
-    }
-    #[doc = "Bit 16 - Pending bit 16"]
-    #[inline]
-    pub fn pr16(&self) -> PR16R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR16R { bits }
-    }
-    #[doc = "Bit 17 - Pending bit 17"]
-    #[inline]
-    pub fn pr17(&self) -> PR17R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 17;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PR17R { bits }
-    }
-    #[doc = "Bit 18 - Pending bit 18"]
-    #[inline]
-    pub fn pr18(&self) -> PR18R {
+    pub fn pif18(&self) -> PIF18R {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 18;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PR18R { bits }
+        PIF18R { bits }
+    }
+    #[doc = "Bit 17 - Pending interrupt flag on line 17"]
+    #[inline]
+    pub fn pif17(&self) -> PIF17R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 17;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF17R { bits }
+    }
+    #[doc = "Bit 16 - Pending interrupt flag on line 16"]
+    #[inline]
+    pub fn pif16(&self) -> PIF16R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 16;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF16R { bits }
+    }
+    #[doc = "Bit 15 - Pending interrupt flag on line 15"]
+    #[inline]
+    pub fn pif15(&self) -> PIF15R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 15;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF15R { bits }
+    }
+    #[doc = "Bit 14 - Pending interrupt flag on line 14"]
+    #[inline]
+    pub fn pif14(&self) -> PIF14R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 14;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF14R { bits }
+    }
+    #[doc = "Bit 13 - Pending interrupt flag on line 13"]
+    #[inline]
+    pub fn pif13(&self) -> PIF13R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 13;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF13R { bits }
+    }
+    #[doc = "Bit 12 - Pending interrupt flag on line 12"]
+    #[inline]
+    pub fn pif12(&self) -> PIF12R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 12;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF12R { bits }
+    }
+    #[doc = "Bit 11 - Pending interrupt flag on line 11"]
+    #[inline]
+    pub fn pif11(&self) -> PIF11R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 11;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF11R { bits }
+    }
+    #[doc = "Bit 10 - Pending interrupt flag on line 10"]
+    #[inline]
+    pub fn pif10(&self) -> PIF10R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 10;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF10R { bits }
+    }
+    #[doc = "Bit 9 - Pending interrupt flag on line 9"]
+    #[inline]
+    pub fn pif9(&self) -> PIF9R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 9;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF9R { bits }
+    }
+    #[doc = "Bit 8 - Pending interrupt flag on line 8"]
+    #[inline]
+    pub fn pif8(&self) -> PIF8R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 8;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF8R { bits }
+    }
+    #[doc = "Bit 7 - Pending interrupt flag on line 7"]
+    #[inline]
+    pub fn pif7(&self) -> PIF7R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 7;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF7R { bits }
+    }
+    #[doc = "Bit 6 - Pending interrupt flag on line 6"]
+    #[inline]
+    pub fn pif6(&self) -> PIF6R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 6;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF6R { bits }
+    }
+    #[doc = "Bit 5 - Pending interrupt flag on line 5"]
+    #[inline]
+    pub fn pif5(&self) -> PIF5R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 5;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF5R { bits }
+    }
+    #[doc = "Bit 4 - Pending interrupt flag on line 4"]
+    #[inline]
+    pub fn pif4(&self) -> PIF4R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 4;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF4R { bits }
+    }
+    #[doc = "Bit 3 - Pending interrupt flag on line 3"]
+    #[inline]
+    pub fn pif3(&self) -> PIF3R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 3;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF3R { bits }
+    }
+    #[doc = "Bit 2 - Pending interrupt flag on line 2"]
+    #[inline]
+    pub fn pif2(&self) -> PIF2R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 2;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF2R { bits }
+    }
+    #[doc = "Bit 1 - Pending interrupt flag on line 1"]
+    #[inline]
+    pub fn pif1(&self) -> PIF1R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 1;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF1R { bits }
+    }
+    #[doc = "Bit 0 - Pending interrupt flag on line 0"]
+    #[inline]
+    pub fn pif0(&self) -> PIF0R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 0;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PIF0R { bits }
     }
 }
 impl W {
@@ -1087,99 +1087,99 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 0 - Pending bit 0"]
+    #[doc = "Bit 18 - Pending interrupt flag on line 18"]
     #[inline]
-    pub fn pr0(&mut self) -> _PR0W {
-        _PR0W { w: self }
+    pub fn pif18(&mut self) -> _PIF18W {
+        _PIF18W { w: self }
     }
-    #[doc = "Bit 1 - Pending bit 1"]
+    #[doc = "Bit 17 - Pending interrupt flag on line 17"]
     #[inline]
-    pub fn pr1(&mut self) -> _PR1W {
-        _PR1W { w: self }
+    pub fn pif17(&mut self) -> _PIF17W {
+        _PIF17W { w: self }
     }
-    #[doc = "Bit 2 - Pending bit 2"]
+    #[doc = "Bit 16 - Pending interrupt flag on line 16"]
     #[inline]
-    pub fn pr2(&mut self) -> _PR2W {
-        _PR2W { w: self }
+    pub fn pif16(&mut self) -> _PIF16W {
+        _PIF16W { w: self }
     }
-    #[doc = "Bit 3 - Pending bit 3"]
+    #[doc = "Bit 15 - Pending interrupt flag on line 15"]
     #[inline]
-    pub fn pr3(&mut self) -> _PR3W {
-        _PR3W { w: self }
+    pub fn pif15(&mut self) -> _PIF15W {
+        _PIF15W { w: self }
     }
-    #[doc = "Bit 4 - Pending bit 4"]
+    #[doc = "Bit 14 - Pending interrupt flag on line 14"]
     #[inline]
-    pub fn pr4(&mut self) -> _PR4W {
-        _PR4W { w: self }
+    pub fn pif14(&mut self) -> _PIF14W {
+        _PIF14W { w: self }
     }
-    #[doc = "Bit 5 - Pending bit 5"]
+    #[doc = "Bit 13 - Pending interrupt flag on line 13"]
     #[inline]
-    pub fn pr5(&mut self) -> _PR5W {
-        _PR5W { w: self }
+    pub fn pif13(&mut self) -> _PIF13W {
+        _PIF13W { w: self }
     }
-    #[doc = "Bit 6 - Pending bit 6"]
+    #[doc = "Bit 12 - Pending interrupt flag on line 12"]
     #[inline]
-    pub fn pr6(&mut self) -> _PR6W {
-        _PR6W { w: self }
+    pub fn pif12(&mut self) -> _PIF12W {
+        _PIF12W { w: self }
     }
-    #[doc = "Bit 7 - Pending bit 7"]
+    #[doc = "Bit 11 - Pending interrupt flag on line 11"]
     #[inline]
-    pub fn pr7(&mut self) -> _PR7W {
-        _PR7W { w: self }
+    pub fn pif11(&mut self) -> _PIF11W {
+        _PIF11W { w: self }
     }
-    #[doc = "Bit 8 - Pending bit 8"]
+    #[doc = "Bit 10 - Pending interrupt flag on line 10"]
     #[inline]
-    pub fn pr8(&mut self) -> _PR8W {
-        _PR8W { w: self }
+    pub fn pif10(&mut self) -> _PIF10W {
+        _PIF10W { w: self }
     }
-    #[doc = "Bit 9 - Pending bit 9"]
+    #[doc = "Bit 9 - Pending interrupt flag on line 9"]
     #[inline]
-    pub fn pr9(&mut self) -> _PR9W {
-        _PR9W { w: self }
+    pub fn pif9(&mut self) -> _PIF9W {
+        _PIF9W { w: self }
     }
-    #[doc = "Bit 10 - Pending bit 10"]
+    #[doc = "Bit 8 - Pending interrupt flag on line 8"]
     #[inline]
-    pub fn pr10(&mut self) -> _PR10W {
-        _PR10W { w: self }
+    pub fn pif8(&mut self) -> _PIF8W {
+        _PIF8W { w: self }
     }
-    #[doc = "Bit 11 - Pending bit 11"]
+    #[doc = "Bit 7 - Pending interrupt flag on line 7"]
     #[inline]
-    pub fn pr11(&mut self) -> _PR11W {
-        _PR11W { w: self }
+    pub fn pif7(&mut self) -> _PIF7W {
+        _PIF7W { w: self }
     }
-    #[doc = "Bit 12 - Pending bit 12"]
+    #[doc = "Bit 6 - Pending interrupt flag on line 6"]
     #[inline]
-    pub fn pr12(&mut self) -> _PR12W {
-        _PR12W { w: self }
+    pub fn pif6(&mut self) -> _PIF6W {
+        _PIF6W { w: self }
     }
-    #[doc = "Bit 13 - Pending bit 13"]
+    #[doc = "Bit 5 - Pending interrupt flag on line 5"]
     #[inline]
-    pub fn pr13(&mut self) -> _PR13W {
-        _PR13W { w: self }
+    pub fn pif5(&mut self) -> _PIF5W {
+        _PIF5W { w: self }
     }
-    #[doc = "Bit 14 - Pending bit 14"]
+    #[doc = "Bit 4 - Pending interrupt flag on line 4"]
     #[inline]
-    pub fn pr14(&mut self) -> _PR14W {
-        _PR14W { w: self }
+    pub fn pif4(&mut self) -> _PIF4W {
+        _PIF4W { w: self }
     }
-    #[doc = "Bit 15 - Pending bit 15"]
+    #[doc = "Bit 3 - Pending interrupt flag on line 3"]
     #[inline]
-    pub fn pr15(&mut self) -> _PR15W {
-        _PR15W { w: self }
+    pub fn pif3(&mut self) -> _PIF3W {
+        _PIF3W { w: self }
     }
-    #[doc = "Bit 16 - Pending bit 16"]
+    #[doc = "Bit 2 - Pending interrupt flag on line 2"]
     #[inline]
-    pub fn pr16(&mut self) -> _PR16W {
-        _PR16W { w: self }
+    pub fn pif2(&mut self) -> _PIF2W {
+        _PIF2W { w: self }
     }
-    #[doc = "Bit 17 - Pending bit 17"]
+    #[doc = "Bit 1 - Pending interrupt flag on line 1"]
     #[inline]
-    pub fn pr17(&mut self) -> _PR17W {
-        _PR17W { w: self }
+    pub fn pif1(&mut self) -> _PIF1W {
+        _PIF1W { w: self }
     }
-    #[doc = "Bit 18 - Pending bit 18"]
+    #[doc = "Bit 0 - Pending interrupt flag on line 0"]
     #[inline]
-    pub fn pr18(&mut self) -> _PR18W {
-        _PR18W { w: self }
+    pub fn pif0(&mut self) -> _PIF0W {
+        _PIF0W { w: self }
     }
 }

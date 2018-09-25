@@ -478,7 +478,7 @@ impl R {
         };
         LBDIER { bits }
     }
-    #[doc = "Bit 5 - lin break detection length"]
+    #[doc = "Bit 5 - LIN break detection length"]
     #[inline]
     pub fn lbdl(&self) -> LBDLR {
         let bits = {
@@ -546,7 +546,7 @@ impl W {
     pub fn lbdie(&mut self) -> _LBDIEW {
         _LBDIEW { w: self }
     }
-    #[doc = "Bit 5 - lin break detection length"]
+    #[doc = "Bit 5 - LIN break detection length"]
     #[inline]
     pub fn lbdl(&mut self) -> _LBDLW {
         _LBDLW { w: self }

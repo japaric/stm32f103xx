@@ -42,61 +42,11 @@ impl super::ACR {
         self.write(|w| w)
     }
 }
-#[doc = "Possible values of the field `LATENCY`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum LATENCYR {
-    #[doc = "Zero wait state, if 0hz  SYSCLK to 24 MHz"]
-    ZERO,
-    #[doc = "One wait state, if 24 MHz SYSCLK to 48 MHz"]
-    ONE,
-    #[doc = "Two wait states, if 48 MHz SYSCLK to 72 MHz"]
-    TWO,
-    #[doc = r" Reserved"]
-    _Reserved(u8),
-}
-impl LATENCYR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            LATENCYR::ZERO => 0,
-            LATENCYR::ONE => 1,
-            LATENCYR::TWO => 2,
-            LATENCYR::_Reserved(bits) => bits,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> LATENCYR {
-        match value {
-            0 => LATENCYR::ZERO,
-            1 => LATENCYR::ONE,
-            2 => LATENCYR::TWO,
-            i => LATENCYR::_Reserved(i),
-        }
-    }
-    #[doc = "Checks if the value of the field is `ZERO`"]
-    #[inline]
-    pub fn is_zero(&self) -> bool {
-        *self == LATENCYR::ZERO
-    }
-    #[doc = "Checks if the value of the field is `ONE`"]
-    #[inline]
-    pub fn is_one(&self) -> bool {
-        *self == LATENCYR::ONE
-    }
-    #[doc = "Checks if the value of the field is `TWO`"]
-    #[inline]
-    pub fn is_two(&self) -> bool {
-        *self == LATENCYR::TWO
-    }
-}
 #[doc = r" Value of the field"]
-pub struct HLFCYAR {
+pub struct PRFTBSR {
     bits: bool,
 }
-impl HLFCYAR {
+impl PRFTBSR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -161,10 +111,10 @@ impl PRFTBER {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PRFTBSR {
+pub struct HLFCYAR {
     bits: bool,
 }
-impl PRFTBSR {
+impl HLFCYAR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -181,83 +131,54 @@ impl PRFTBSR {
         self.bit()
     }
 }
-#[doc = "Values that can be written to the field `LATENCY`"]
-pub enum LATENCYW {
+#[doc = "Possible values of the field `LATENCY`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum LATENCYR {
     #[doc = "Zero wait state, if 0hz  SYSCLK to 24 MHz"]
     ZERO,
     #[doc = "One wait state, if 24 MHz SYSCLK to 48 MHz"]
     ONE,
     #[doc = "Two wait states, if 48 MHz SYSCLK to 72 MHz"]
     TWO,
+    #[doc = r" Reserved"]
+    _Reserved(u8),
 }
-impl LATENCYW {
+impl LATENCYR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        match *self {
+            LATENCYR::ZERO => 0,
+            LATENCYR::ONE => 1,
+            LATENCYR::TWO => 2,
+            LATENCYR::_Reserved(bits) => bits,
+        }
+    }
     #[allow(missing_docs)]
     #[doc(hidden)]
     #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            LATENCYW::ZERO => 0,
-            LATENCYW::ONE => 1,
-            LATENCYW::TWO => 2,
+    pub fn _from(value: u8) -> LATENCYR {
+        match value {
+            0 => LATENCYR::ZERO,
+            1 => LATENCYR::ONE,
+            2 => LATENCYR::TWO,
+            i => LATENCYR::_Reserved(i),
         }
     }
-}
-#[doc = r" Proxy"]
-pub struct _LATENCYW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _LATENCYW<'a> {
-    #[doc = r" Writes `variant` to the field"]
+    #[doc = "Checks if the value of the field is `ZERO`"]
     #[inline]
-    pub fn variant(self, variant: LATENCYW) -> &'a mut W {
-        unsafe { self.bits(variant._bits()) }
+    pub fn is_zero(&self) -> bool {
+        *self == LATENCYR::ZERO
     }
-    #[doc = "Zero wait state, if 0hz SYSCLK to 24 MHz"]
+    #[doc = "Checks if the value of the field is `ONE`"]
     #[inline]
-    pub fn zero(self) -> &'a mut W {
-        self.variant(LATENCYW::ZERO)
+    pub fn is_one(&self) -> bool {
+        *self == LATENCYR::ONE
     }
-    #[doc = "One wait state, if 24 MHz SYSCLK to 48 MHz"]
+    #[doc = "Checks if the value of the field is `TWO`"]
     #[inline]
-    pub fn one(self) -> &'a mut W {
-        self.variant(LATENCYW::ONE)
-    }
-    #[doc = "Two wait states, if 48 MHz SYSCLK to 72 MHz"]
-    #[inline]
-    pub fn two(self) -> &'a mut W {
-        self.variant(LATENCYW::TWO)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _HLFCYAW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _HLFCYAW<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 3;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
+    pub fn is_two(&self) -> bool {
+        *self == LATENCYR::TWO
     }
 }
 #[doc = "Values that can be written to the field `PRFTBE`"]
@@ -318,19 +239,108 @@ impl<'a> _PRFTBEW<'a> {
         self.w
     }
 }
+#[doc = r" Proxy"]
+pub struct _HLFCYAW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _HLFCYAW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 3;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `LATENCY`"]
+pub enum LATENCYW {
+    #[doc = "Zero wait state, if 0hz  SYSCLK to 24 MHz"]
+    ZERO,
+    #[doc = "One wait state, if 24 MHz SYSCLK to 48 MHz"]
+    ONE,
+    #[doc = "Two wait states, if 48 MHz SYSCLK to 72 MHz"]
+    TWO,
+}
+impl LATENCYW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> u8 {
+        match *self {
+            LATENCYW::ZERO => 0,
+            LATENCYW::ONE => 1,
+            LATENCYW::TWO => 2,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _LATENCYW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _LATENCYW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: LATENCYW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "Zero wait state, if 0hz SYSCLK to 24 MHz"]
+    #[inline]
+    pub fn zero(self) -> &'a mut W {
+        self.variant(LATENCYW::ZERO)
+    }
+    #[doc = "One wait state, if 24 MHz SYSCLK to 48 MHz"]
+    #[inline]
+    pub fn one(self) -> &'a mut W {
+        self.variant(LATENCYW::ONE)
+    }
+    #[doc = "Two wait states, if 48 MHz SYSCLK to 72 MHz"]
+    #[inline]
+    pub fn two(self) -> &'a mut W {
+        self.variant(LATENCYW::TWO)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 7;
+        const OFFSET: u8 = 0;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:2 - Latency"]
+    #[doc = "Bit 5 - Prefetch buffer status"]
     #[inline]
-    pub fn latency(&self) -> LATENCYR {
-        LATENCYR::_from({
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
+    pub fn prftbs(&self) -> PRFTBSR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 5;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PRFTBSR { bits }
+    }
+    #[doc = "Bit 4 - Prefetch buffer enable"]
+    #[inline]
+    pub fn prftbe(&self) -> PRFTBER {
+        PRFTBER::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 4;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
     #[doc = "Bit 3 - Flash half cycle access enable"]
@@ -343,24 +353,14 @@ impl R {
         };
         HLFCYAR { bits }
     }
-    #[doc = "Bit 4 - Prefetch buffer enable"]
+    #[doc = "Bits 0:2 - Latency"]
     #[inline]
-    pub fn prftbe(&self) -> PRFTBER {
-        PRFTBER::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
+    pub fn latency(&self) -> LATENCYR {
+        LATENCYR::_from({
+            const MASK: u8 = 7;
+            const OFFSET: u8 = 0;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
         })
-    }
-    #[doc = "Bit 5 - Prefetch buffer status"]
-    #[inline]
-    pub fn prftbs(&self) -> PRFTBSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PRFTBSR { bits }
     }
 }
 impl W {
@@ -375,19 +375,19 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:2 - Latency"]
+    #[doc = "Bit 4 - Prefetch buffer enable"]
     #[inline]
-    pub fn latency(&mut self) -> _LATENCYW {
-        _LATENCYW { w: self }
+    pub fn prftbe(&mut self) -> _PRFTBEW {
+        _PRFTBEW { w: self }
     }
     #[doc = "Bit 3 - Flash half cycle access enable"]
     #[inline]
     pub fn hlfcya(&mut self) -> _HLFCYAW {
         _HLFCYAW { w: self }
     }
-    #[doc = "Bit 4 - Prefetch buffer enable"]
+    #[doc = "Bits 0:2 - Latency"]
     #[inline]
-    pub fn prftbe(&mut self) -> _PRFTBEW {
-        _PRFTBEW { w: self }
+    pub fn latency(&mut self) -> _LATENCYW {
+        _LATENCYW { w: self }
     }
 }

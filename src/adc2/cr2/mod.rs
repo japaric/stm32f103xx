@@ -664,7 +664,7 @@ impl R {
         };
         ALIGNR { bits }
     }
-    #[doc = "Bit 8 - Direct memory access mode"]
+    #[doc = "Bit 8 - Direct memory access mode (for single ADC mode)"]
     #[inline]
     pub fn dma(&self) -> DMAR {
         let bits = {
@@ -704,7 +704,7 @@ impl R {
         };
         CONTR { bits }
     }
-    #[doc = "Bit 0 - A/D converter ON / OFF"]
+    #[doc = "Bit 0 - A/D Converter ON / OFF"]
     #[inline]
     pub fn adon(&self) -> ADONR {
         let bits = {
@@ -767,7 +767,7 @@ impl W {
     pub fn align(&mut self) -> _ALIGNW {
         _ALIGNW { w: self }
     }
-    #[doc = "Bit 8 - Direct memory access mode"]
+    #[doc = "Bit 8 - Direct memory access mode (for single ADC mode)"]
     #[inline]
     pub fn dma(&mut self) -> _DMAW {
         _DMAW { w: self }
@@ -787,7 +787,7 @@ impl W {
     pub fn cont(&mut self) -> _CONTW {
         _CONTW { w: self }
     }
-    #[doc = "Bit 0 - A/D converter ON / OFF"]
+    #[doc = "Bit 0 - A/D Converter ON / OFF"]
     #[inline]
     pub fn adon(&mut self) -> _ADONW {
         _ADONW { w: self }

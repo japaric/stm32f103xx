@@ -627,7 +627,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 8:9 - Division ratio between the timer clock (CK_INT) frequency and sampling clock"]
+    #[doc = "Bits 8:9 - Clock division"]
     #[inline]
     pub fn ckd(&self) -> CKDR {
         CKDR::_from({
@@ -716,7 +716,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 8:9 - Division ratio between the timer clock (CK_INT) frequency and sampling clock"]
+    #[doc = "Bits 8:9 - Clock division"]
     #[inline]
     pub fn ckd(&mut self) -> _CKDW {
         _CKDW { w: self }

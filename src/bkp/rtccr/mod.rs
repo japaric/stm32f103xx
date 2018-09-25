@@ -43,21 +43,10 @@ impl super::RTCCR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct CALR {
-    bits: u8,
-}
-impl CALR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CCOR {
+pub struct ASOSR {
     bits: bool,
 }
-impl CCOR {
+impl ASOSR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -96,10 +85,10 @@ impl ASOER {
     }
 }
 #[doc = r" Value of the field"]
-pub struct ASOSR {
+pub struct CCOR {
     bits: bool,
 }
-impl ASOSR {
+impl CCOR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -116,26 +105,22 @@ impl ASOSR {
         self.bit()
     }
 }
-#[doc = r" Proxy"]
-pub struct _CALW<'a> {
-    w: &'a mut W,
+#[doc = r" Value of the field"]
+pub struct CALR {
+    bits: u8,
 }
-impl<'a> _CALW<'a> {
-    #[doc = r" Writes raw bits to the field"]
+impl CALR {
+    #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 127;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
+    pub fn bits(&self) -> u8 {
+        self.bits
     }
 }
 #[doc = r" Proxy"]
-pub struct _CCOW<'a> {
+pub struct _ASOSW<'a> {
     w: &'a mut W,
 }
-impl<'a> _CCOW<'a> {
+impl<'a> _ASOSW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -148,7 +133,7 @@ impl<'a> _CCOW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 7;
+        const OFFSET: u8 = 9;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -178,10 +163,10 @@ impl<'a> _ASOEW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _ASOSW<'a> {
+pub struct _CCOW<'a> {
     w: &'a mut W,
 }
-impl<'a> _ASOSW<'a> {
+impl<'a> _CCOW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -194,7 +179,22 @@ impl<'a> _ASOSW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 9;
+        const OFFSET: u8 = 7;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _CALW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _CALW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 127;
+        const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -206,25 +206,15 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:6 - Calibration value"]
+    #[doc = "Bit 9 - Alarm or second output selection"]
     #[inline]
-    pub fn cal(&self) -> CALR {
-        let bits = {
-            const MASK: u8 = 127;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CALR { bits }
-    }
-    #[doc = "Bit 7 - Calibration Clock Output"]
-    #[inline]
-    pub fn cco(&self) -> CCOR {
+    pub fn asos(&self) -> ASOSR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 7;
+            const OFFSET: u8 = 9;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        CCOR { bits }
+        ASOSR { bits }
     }
     #[doc = "Bit 8 - Alarm or second output enable"]
     #[inline]
@@ -236,15 +226,25 @@ impl R {
         };
         ASOER { bits }
     }
-    #[doc = "Bit 9 - Alarm or second output selection"]
+    #[doc = "Bit 7 - Calibration Clock Output"]
     #[inline]
-    pub fn asos(&self) -> ASOSR {
+    pub fn cco(&self) -> CCOR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 9;
+            const OFFSET: u8 = 7;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        ASOSR { bits }
+        CCOR { bits }
+    }
+    #[doc = "Bits 0:6 - Calibration value"]
+    #[inline]
+    pub fn cal(&self) -> CALR {
+        let bits = {
+            const MASK: u8 = 127;
+            const OFFSET: u8 = 0;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        CALR { bits }
     }
 }
 impl W {
@@ -259,24 +259,24 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:6 - Calibration value"]
+    #[doc = "Bit 9 - Alarm or second output selection"]
     #[inline]
-    pub fn cal(&mut self) -> _CALW {
-        _CALW { w: self }
-    }
-    #[doc = "Bit 7 - Calibration Clock Output"]
-    #[inline]
-    pub fn cco(&mut self) -> _CCOW {
-        _CCOW { w: self }
+    pub fn asos(&mut self) -> _ASOSW {
+        _ASOSW { w: self }
     }
     #[doc = "Bit 8 - Alarm or second output enable"]
     #[inline]
     pub fn asoe(&mut self) -> _ASOEW {
         _ASOEW { w: self }
     }
-    #[doc = "Bit 9 - Alarm or second output selection"]
+    #[doc = "Bit 7 - Calibration Clock Output"]
     #[inline]
-    pub fn asos(&mut self) -> _ASOSW {
-        _ASOSW { w: self }
+    pub fn cco(&mut self) -> _CCOW {
+        _CCOW { w: self }
+    }
+    #[doc = "Bits 0:6 - Calibration value"]
+    #[inline]
+    pub fn cal(&mut self) -> _CALW {
+        _CALW { w: self }
     }
 }

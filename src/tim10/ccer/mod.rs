@@ -180,7 +180,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 3 - Capture/Compare 1 output Polarity"]
+    #[doc = "Bit 3 - Capture/Compare 1 complementary output Polarity"]
     #[inline]
     pub fn cc1np(&self) -> CC1NPR {
         let bits = {
@@ -223,7 +223,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 3 - Capture/Compare 1 output Polarity"]
+    #[doc = "Bit 3 - Capture/Compare 1 complementary output Polarity"]
     #[inline]
     pub fn cc1np(&mut self) -> _CC1NPW {
         _CC1NPW { w: self }

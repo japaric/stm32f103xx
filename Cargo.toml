@@ -9,13 +9,15 @@ repository = "https://github.com/japaric/stm32f103xx"
 version = "0.11.0"
 
 [dependencies]
-bare-metal = "0.2.0"
-cortex-m = "0.5.0"
+bare-metal = "0.2.3"
+cortex-m = "0.5.7"
 vcell = "0.1.0"
 
 [dependencies.cortex-m-rt]
 optional = true
-version = "0.5.0"
+#version = "0.6.4"
+git = "https://github.com/rust-embedded/cortex-m-rt"
+branch = "interrupt"
 
 [features]
 rt = ["cortex-m-rt/device"]

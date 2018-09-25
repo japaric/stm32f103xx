@@ -43,10 +43,10 @@ impl super::CR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct LPDSR {
+pub struct DBPR {
     bits: bool,
 }
-impl LPDSR {
+impl DBPR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -64,31 +64,21 @@ impl LPDSR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PDDSR {
-    bits: bool,
+pub struct PLSR {
+    bits: u8,
 }
-impl PDDSR {
+impl PLSR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub fn bit(&self) -> bool {
+    pub fn bits(&self) -> u8 {
         self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
     }
 }
 #[doc = r" Value of the field"]
-pub struct CWUFR {
+pub struct PVDER {
     bits: bool,
 }
-impl CWUFR {
+impl PVDER {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -127,10 +117,10 @@ impl CSBFR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PVDER {
+pub struct CWUFR {
     bits: bool,
 }
-impl PVDER {
+impl CWUFR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -148,21 +138,31 @@ impl PVDER {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PLSR {
-    bits: u8,
+pub struct PDDSR {
+    bits: bool,
 }
-impl PLSR {
+impl PDDSR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub fn bits(&self) -> u8 {
+    pub fn bit(&self) -> bool {
         self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
     }
 }
 #[doc = r" Value of the field"]
-pub struct DBPR {
+pub struct LPDSR {
     bits: bool,
 }
-impl DBPR {
+impl LPDSR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -180,10 +180,10 @@ impl DBPR {
     }
 }
 #[doc = r" Proxy"]
-pub struct _LPDSW<'a> {
+pub struct _DBPW<'a> {
     w: &'a mut W,
 }
-impl<'a> _LPDSW<'a> {
+impl<'a> _DBPW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -196,76 +196,22 @@ impl<'a> _LPDSW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 0;
+        const OFFSET: u8 = 8;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _PDDSW<'a> {
+pub struct _PLSW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PDDSW<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
+impl<'a> _PLSW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 1;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _CWUFW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _CWUFW<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _CSBFW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _CSBFW<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 3;
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 7;
+        const OFFSET: u8 = 5;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -295,25 +241,10 @@ impl<'a> _PVDEW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _PLSW<'a> {
+pub struct _CSBFW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PLSW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 5;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _DBPW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _DBPW<'a> {
+impl<'a> _CSBFW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -326,7 +257,76 @@ impl<'a> _DBPW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 8;
+        const OFFSET: u8 = 3;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _CWUFW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _CWUFW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 2;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PDDSW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PDDSW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 1;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _LPDSW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _LPDSW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -338,55 +338,15 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 0 - Low Power Deep Sleep"]
+    #[doc = "Bit 8 - Disable Backup Domain write protection"]
     #[inline]
-    pub fn lpds(&self) -> LPDSR {
+    pub fn dbp(&self) -> DBPR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 0;
+            const OFFSET: u8 = 8;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        LPDSR { bits }
-    }
-    #[doc = "Bit 1 - Power Down Deep Sleep"]
-    #[inline]
-    pub fn pdds(&self) -> PDDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PDDSR { bits }
-    }
-    #[doc = "Bit 2 - Clear Wake-up Flag"]
-    #[inline]
-    pub fn cwuf(&self) -> CWUFR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        CWUFR { bits }
-    }
-    #[doc = "Bit 3 - Clear STANDBY Flag"]
-    #[inline]
-    pub fn csbf(&self) -> CSBFR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        CSBFR { bits }
-    }
-    #[doc = "Bit 4 - Power Voltage Detector Enable"]
-    #[inline]
-    pub fn pvde(&self) -> PVDER {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PVDER { bits }
+        DBPR { bits }
     }
     #[doc = "Bits 5:7 - PVD Level Selection"]
     #[inline]
@@ -398,15 +358,55 @@ impl R {
         };
         PLSR { bits }
     }
-    #[doc = "Bit 8 - Disable Backup Domain write protection"]
+    #[doc = "Bit 4 - Power Voltage Detector Enable"]
     #[inline]
-    pub fn dbp(&self) -> DBPR {
+    pub fn pvde(&self) -> PVDER {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 8;
+            const OFFSET: u8 = 4;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        DBPR { bits }
+        PVDER { bits }
+    }
+    #[doc = "Bit 3 - Clear STANDBY Flag"]
+    #[inline]
+    pub fn csbf(&self) -> CSBFR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 3;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        CSBFR { bits }
+    }
+    #[doc = "Bit 2 - Clear Wake-up Flag"]
+    #[inline]
+    pub fn cwuf(&self) -> CWUFR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 2;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        CWUFR { bits }
+    }
+    #[doc = "Bit 1 - Power Down Deep Sleep"]
+    #[inline]
+    pub fn pdds(&self) -> PDDSR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 1;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PDDSR { bits }
+    }
+    #[doc = "Bit 0 - Low Power Deep Sleep"]
+    #[inline]
+    pub fn lpds(&self) -> LPDSR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 0;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        LPDSR { bits }
     }
 }
 impl W {
@@ -421,39 +421,39 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 0 - Low Power Deep Sleep"]
+    #[doc = "Bit 8 - Disable Backup Domain write protection"]
     #[inline]
-    pub fn lpds(&mut self) -> _LPDSW {
-        _LPDSW { w: self }
-    }
-    #[doc = "Bit 1 - Power Down Deep Sleep"]
-    #[inline]
-    pub fn pdds(&mut self) -> _PDDSW {
-        _PDDSW { w: self }
-    }
-    #[doc = "Bit 2 - Clear Wake-up Flag"]
-    #[inline]
-    pub fn cwuf(&mut self) -> _CWUFW {
-        _CWUFW { w: self }
-    }
-    #[doc = "Bit 3 - Clear STANDBY Flag"]
-    #[inline]
-    pub fn csbf(&mut self) -> _CSBFW {
-        _CSBFW { w: self }
-    }
-    #[doc = "Bit 4 - Power Voltage Detector Enable"]
-    #[inline]
-    pub fn pvde(&mut self) -> _PVDEW {
-        _PVDEW { w: self }
+    pub fn dbp(&mut self) -> _DBPW {
+        _DBPW { w: self }
     }
     #[doc = "Bits 5:7 - PVD Level Selection"]
     #[inline]
     pub fn pls(&mut self) -> _PLSW {
         _PLSW { w: self }
     }
-    #[doc = "Bit 8 - Disable Backup Domain write protection"]
+    #[doc = "Bit 4 - Power Voltage Detector Enable"]
     #[inline]
-    pub fn dbp(&mut self) -> _DBPW {
-        _DBPW { w: self }
+    pub fn pvde(&mut self) -> _PVDEW {
+        _PVDEW { w: self }
+    }
+    #[doc = "Bit 3 - Clear STANDBY Flag"]
+    #[inline]
+    pub fn csbf(&mut self) -> _CSBFW {
+        _CSBFW { w: self }
+    }
+    #[doc = "Bit 2 - Clear Wake-up Flag"]
+    #[inline]
+    pub fn cwuf(&mut self) -> _CWUFW {
+        _CWUFW { w: self }
+    }
+    #[doc = "Bit 1 - Power Down Deep Sleep"]
+    #[inline]
+    pub fn pdds(&mut self) -> _PDDSW {
+        _PDDSW { w: self }
+    }
+    #[doc = "Bit 0 - Low Power Deep Sleep"]
+    #[inline]
+    pub fn lpds(&mut self) -> _LPDSW {
+        _LPDSW { w: self }
     }
 }

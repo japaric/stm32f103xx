@@ -64,159 +64,9 @@ impl MSMR {
     }
 }
 #[doc = "Possible values of the field `TS`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum TSR {
-    #[doc = "Internal Trigger 0 (ITR0)"]
-    ITR0,
-    #[doc = "Internal Trigger 1 (ITR1)"]
-    ITR1,
-    #[doc = "Internal Trigger 2 (ITR2)"]
-    ITR2,
-    #[doc = "Internal Trigger 3 (ITR3)"]
-    ITR3,
-    #[doc = "TI1 Edge Detector"]
-    TI1F_ED,
-    #[doc = "Filtered Timer Input 1"]
-    TI1FP1,
-    #[doc = "Filtered Timer Input 2"]
-    TI2FP2,
-    #[doc = r" Reserved"]
-    _Reserved(u8),
-}
-impl TSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            TSR::ITR0 => 0,
-            TSR::ITR1 => 1,
-            TSR::ITR2 => 2,
-            TSR::ITR3 => 3,
-            TSR::TI1F_ED => 4,
-            TSR::TI1FP1 => 5,
-            TSR::TI2FP2 => 6,
-            TSR::_Reserved(bits) => bits,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> TSR {
-        match value {
-            0 => TSR::ITR0,
-            1 => TSR::ITR1,
-            2 => TSR::ITR2,
-            3 => TSR::ITR3,
-            4 => TSR::TI1F_ED,
-            5 => TSR::TI1FP1,
-            6 => TSR::TI2FP2,
-            i => TSR::_Reserved(i),
-        }
-    }
-    #[doc = "Checks if the value of the field is `ITR0`"]
-    #[inline]
-    pub fn is_itr0(&self) -> bool {
-        *self == TSR::ITR0
-    }
-    #[doc = "Checks if the value of the field is `ITR1`"]
-    #[inline]
-    pub fn is_itr1(&self) -> bool {
-        *self == TSR::ITR1
-    }
-    #[doc = "Checks if the value of the field is `ITR2`"]
-    #[inline]
-    pub fn is_itr2(&self) -> bool {
-        *self == TSR::ITR2
-    }
-    #[doc = "Checks if the value of the field is `ITR3`"]
-    #[inline]
-    pub fn is_itr3(&self) -> bool {
-        *self == TSR::ITR3
-    }
-    #[doc = "Checks if the value of the field is `TI1F_ED`"]
-    #[inline]
-    pub fn is_ti1f_ed(&self) -> bool {
-        *self == TSR::TI1F_ED
-    }
-    #[doc = "Checks if the value of the field is `TI1FP1`"]
-    #[inline]
-    pub fn is_ti1fp1(&self) -> bool {
-        *self == TSR::TI1FP1
-    }
-    #[doc = "Checks if the value of the field is `TI2FP2`"]
-    #[inline]
-    pub fn is_ti2fp2(&self) -> bool {
-        *self == TSR::TI2FP2
-    }
-}
+pub type TSR = ::tim1::smcr::TSR;
 #[doc = "Possible values of the field `SMS`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum SMSR {
-    #[doc = "Counter disabled"]
-    DISABLED,
-    #[doc = "Rising edge of the selected trigger input (TRGI) reinitializes the counter"]
-    RESET,
-    #[doc = " The counter clock is enabled when the trigger input (TRGI) is high"]
-    GATED,
-    #[doc = "The counter starts at a rising edge of the trigger TRGI "]
-    TRIGGER,
-    #[doc = " Rising edges of the selected trigger (TRGI) clock the counter"]
-    EXTERNAL,
-    #[doc = r" Reserved"]
-    _Reserved(u8),
-}
-impl SMSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            SMSR::DISABLED => 0,
-            SMSR::RESET => 4,
-            SMSR::GATED => 5,
-            SMSR::TRIGGER => 6,
-            SMSR::EXTERNAL => 7,
-            SMSR::_Reserved(bits) => bits,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> SMSR {
-        match value {
-            0 => SMSR::DISABLED,
-            4 => SMSR::RESET,
-            5 => SMSR::GATED,
-            6 => SMSR::TRIGGER,
-            7 => SMSR::EXTERNAL,
-            i => SMSR::_Reserved(i),
-        }
-    }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
-    #[inline]
-    pub fn is_disabled(&self) -> bool {
-        *self == SMSR::DISABLED
-    }
-    #[doc = "Checks if the value of the field is `RESET`"]
-    #[inline]
-    pub fn is_reset(&self) -> bool {
-        *self == SMSR::RESET
-    }
-    #[doc = "Checks if the value of the field is `GATED`"]
-    #[inline]
-    pub fn is_gated(&self) -> bool {
-        *self == SMSR::GATED
-    }
-    #[doc = "Checks if the value of the field is `TRIGGER`"]
-    #[inline]
-    pub fn is_trigger(&self) -> bool {
-        *self == SMSR::TRIGGER
-    }
-    #[doc = "Checks if the value of the field is `EXTERNAL`"]
-    #[inline]
-    pub fn is_external(&self) -> bool {
-        *self == SMSR::EXTERNAL
-    }
-}
+pub type SMSR = ::tim1::smcr::SMSR;
 #[doc = r" Proxy"]
 pub struct _MSMW<'a> {
     w: &'a mut W,
@@ -241,38 +91,7 @@ impl<'a> _MSMW<'a> {
     }
 }
 #[doc = "Values that can be written to the field `TS`"]
-pub enum TSW {
-    #[doc = "Internal Trigger 0 (ITR0)"]
-    ITR0,
-    #[doc = "Internal Trigger 1 (ITR1)"]
-    ITR1,
-    #[doc = "Internal Trigger 2 (ITR2)"]
-    ITR2,
-    #[doc = "Internal Trigger 3 (ITR3)"]
-    ITR3,
-    #[doc = "TI1 Edge Detector"]
-    TI1F_ED,
-    #[doc = "Filtered Timer Input 1"]
-    TI1FP1,
-    #[doc = "Filtered Timer Input 2"]
-    TI2FP2,
-}
-impl TSW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            TSW::ITR0 => 0,
-            TSW::ITR1 => 1,
-            TSW::ITR2 => 2,
-            TSW::ITR3 => 3,
-            TSW::TI1F_ED => 4,
-            TSW::TI1FP1 => 5,
-            TSW::TI2FP2 => 6,
-        }
-    }
-}
+pub type TSW = ::tim1::smcr::TSW;
 #[doc = r" Proxy"]
 pub struct _TSW<'a> {
     w: &'a mut W,
@@ -281,46 +100,53 @@ impl<'a> _TSW<'a> {
     #[doc = r" Writes `variant` to the field"]
     #[inline]
     pub fn variant(self, variant: TSW) -> &'a mut W {
-        unsafe { self.bits(variant._bits()) }
+        {
+            self.bits(variant._bits())
+        }
     }
     #[doc = "Internal Trigger 0 (ITR0)"]
     #[inline]
     pub fn itr0(self) -> &'a mut W {
-        self.variant(TSW::ITR0)
+        self.variant(::tim1::smcr::TSW::ITR0)
     }
     #[doc = "Internal Trigger 1 (ITR1)"]
     #[inline]
     pub fn itr1(self) -> &'a mut W {
-        self.variant(TSW::ITR1)
+        self.variant(::tim1::smcr::TSW::ITR1)
     }
     #[doc = "Internal Trigger 2 (ITR2)"]
     #[inline]
     pub fn itr2(self) -> &'a mut W {
-        self.variant(TSW::ITR2)
+        self.variant(::tim1::smcr::TSW::ITR2)
     }
     #[doc = "Internal Trigger 3 (ITR3)"]
     #[inline]
     pub fn itr3(self) -> &'a mut W {
-        self.variant(TSW::ITR3)
+        self.variant(::tim1::smcr::TSW::ITR3)
     }
     #[doc = "TI1 Edge Detector"]
     #[inline]
     pub fn ti1f_ed(self) -> &'a mut W {
-        self.variant(TSW::TI1F_ED)
+        self.variant(::tim1::smcr::TSW::TI1F_ED)
     }
     #[doc = "Filtered Timer Input 1"]
     #[inline]
     pub fn ti1fp1(self) -> &'a mut W {
-        self.variant(TSW::TI1FP1)
+        self.variant(::tim1::smcr::TSW::TI1FP1)
     }
     #[doc = "Filtered Timer Input 2"]
     #[inline]
     pub fn ti2fp2(self) -> &'a mut W {
-        self.variant(TSW::TI2FP2)
+        self.variant(::tim1::smcr::TSW::TI2FP2)
+    }
+    #[doc = "External Trigger input"]
+    #[inline]
+    pub fn etrf(self) -> &'a mut W {
+        self.variant(::tim1::smcr::TSW::ETRF)
     }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+    pub fn bits(self, value: u8) -> &'a mut W {
         const MASK: u8 = 7;
         const OFFSET: u8 = 4;
         self.w.bits &= !((MASK as u32) << OFFSET);
@@ -329,32 +155,7 @@ impl<'a> _TSW<'a> {
     }
 }
 #[doc = "Values that can be written to the field `SMS`"]
-pub enum SMSW {
-    #[doc = "Counter disabled"]
-    DISABLED,
-    #[doc = "Rising edge of the selected trigger input (TRGI) reinitializes the counter"]
-    RESET,
-    #[doc = " The counter clock is enabled when the trigger input (TRGI) is high"]
-    GATED,
-    #[doc = "The counter starts at a rising edge of the trigger TRGI "]
-    TRIGGER,
-    #[doc = " Rising edges of the selected trigger (TRGI) clock the counter"]
-    EXTERNAL,
-}
-impl SMSW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            SMSW::DISABLED => 0,
-            SMSW::RESET => 4,
-            SMSW::GATED => 5,
-            SMSW::TRIGGER => 6,
-            SMSW::EXTERNAL => 7,
-        }
-    }
-}
+pub type SMSW = ::tim1::smcr::SMSW;
 #[doc = r" Proxy"]
 pub struct _SMSW<'a> {
     w: &'a mut W,
@@ -363,36 +164,53 @@ impl<'a> _SMSW<'a> {
     #[doc = r" Writes `variant` to the field"]
     #[inline]
     pub fn variant(self, variant: SMSW) -> &'a mut W {
-        unsafe { self.bits(variant._bits()) }
+        {
+            self.bits(variant._bits())
+        }
     }
     #[doc = "Counter disabled"]
     #[inline]
     pub fn disabled(self) -> &'a mut W {
-        self.variant(SMSW::DISABLED)
+        self.variant(::tim1::smcr::SMSW::DISABLED)
+    }
+    #[doc = "Encoder mode, count up/down on TI2FP1"]
+    #[inline]
+    pub fn encoder_ti2(self) -> &'a mut W {
+        self.variant(::tim1::smcr::SMSW::ENCODERTI2)
+    }
+    #[doc = "Encoder mode, count up/down on TI1FP2"]
+    #[inline]
+    pub fn encoder_ti1(self) -> &'a mut W {
+        self.variant(::tim1::smcr::SMSW::ENCODERTI1)
+    }
+    #[doc = "Encoder mode, count up/down on both TI1FP1 and TI2FP2"]
+    #[inline]
+    pub fn encoder_ti1ti2(self) -> &'a mut W {
+        self.variant(::tim1::smcr::SMSW::ENCODERTI1TI2)
     }
     #[doc = "Rising edge of the selected trigger input (TRGI) reinitializes the counter"]
     #[inline]
     pub fn reset(self) -> &'a mut W {
-        self.variant(SMSW::RESET)
+        self.variant(::tim1::smcr::SMSW::RESET)
     }
     #[doc = "The counter clock is enabled when the trigger input (TRGI) is high"]
     #[inline]
     pub fn gated(self) -> &'a mut W {
-        self.variant(SMSW::GATED)
+        self.variant(::tim1::smcr::SMSW::GATED)
     }
     #[doc = "The counter starts at a rising edge of the trigger TRGI"]
     #[inline]
     pub fn trigger(self) -> &'a mut W {
-        self.variant(SMSW::TRIGGER)
+        self.variant(::tim1::smcr::SMSW::TRIGGER)
     }
     #[doc = "Rising edges of the selected trigger (TRGI) clock the counter"]
     #[inline]
     pub fn external(self) -> &'a mut W {
-        self.variant(SMSW::EXTERNAL)
+        self.variant(::tim1::smcr::SMSW::EXTERNAL)
     }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+    pub fn bits(self, value: u8) -> &'a mut W {
         const MASK: u8 = 7;
         const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);

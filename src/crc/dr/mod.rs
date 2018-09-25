@@ -74,7 +74,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:31 - Data Register"]
+    #[doc = "Bits 0:31 - Data register bits"]
     #[inline]
     pub fn dr(&self) -> DRR {
         let bits = {
@@ -97,7 +97,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:31 - Data Register"]
+    #[doc = "Bits 0:31 - Data register bits"]
     #[inline]
     pub fn dr(&mut self) -> _DRW {
         _DRW { w: self }

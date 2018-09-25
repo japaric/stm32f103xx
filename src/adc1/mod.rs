@@ -7,7 +7,7 @@ pub struct RegisterBlock {
     pub cr1: CR1,
     #[doc = "0x08 - control register 2"]
     pub cr2: CR2,
-    #[doc = "0x0c - sample time register 1"]
+    #[doc = "0x0c - ADC sample time register 1"]
     pub smpr1: SMPR1,
     #[doc = "0x10 - sample time register 2"]
     pub smpr2: SMPR2,
@@ -25,19 +25,19 @@ pub struct RegisterBlock {
     pub ltr: LTR,
     #[doc = "0x2c - regular sequence register 1"]
     pub sqr1: SQR1,
-    #[doc = "0x30 - regular sequence register 2"]
+    #[doc = "0x30 - ADC regular sequence register 2"]
     pub sqr2: SQR2,
     #[doc = "0x34 - regular sequence register 3"]
     pub sqr3: SQR3,
     #[doc = "0x38 - injected sequence register"]
     pub jsqr: JSQR,
-    #[doc = "0x3c - injected data register x"]
+    #[doc = "0x3c - ADC injected data register x"]
     pub jdr1: JDR,
-    #[doc = "0x40 - injected data register x"]
+    #[doc = "0x40 - ADC injected data register x"]
     pub jdr2: JDR,
-    #[doc = "0x44 - injected data register x"]
+    #[doc = "0x44 - ADC injected data register x"]
     pub jdr3: JDR,
-    #[doc = "0x48 - injected data register x"]
+    #[doc = "0x48 - ADC injected data register x"]
     pub jdr4: JDR,
     #[doc = "0x4c - regular data register"]
     pub dr: DR,
@@ -60,11 +60,11 @@ pub struct CR2 {
 }
 #[doc = "control register 2"]
 pub mod cr2;
-#[doc = "sample time register 1"]
+#[doc = "ADC sample time register 1"]
 pub struct SMPR1 {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "sample time register 1"]
+#[doc = "ADC sample time register 1"]
 pub mod smpr1;
 #[doc = "sample time register 2"]
 pub struct SMPR2 {
@@ -96,11 +96,11 @@ pub struct SQR1 {
 }
 #[doc = "regular sequence register 1"]
 pub mod sqr1;
-#[doc = "regular sequence register 2"]
+#[doc = "ADC regular sequence register 2"]
 pub struct SQR2 {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "regular sequence register 2"]
+#[doc = "ADC regular sequence register 2"]
 pub mod sqr2;
 #[doc = "regular sequence register 3"]
 pub struct SQR3 {
@@ -114,11 +114,11 @@ pub struct JSQR {
 }
 #[doc = "injected sequence register"]
 pub mod jsqr;
-#[doc = "injected data register x"]
+#[doc = "ADC injected data register x"]
 pub struct JDR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "injected data register x"]
+#[doc = "ADC injected data register x"]
 pub mod jdr;
 #[doc = "regular data register"]
 pub struct DR {

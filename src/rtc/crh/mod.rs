@@ -43,10 +43,10 @@ impl super::CRH {
     }
 }
 #[doc = r" Value of the field"]
-pub struct SECIER {
+pub struct OWIER {
     bits: bool,
 }
-impl SECIER {
+impl OWIER {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -85,10 +85,10 @@ impl ALRIER {
     }
 }
 #[doc = r" Value of the field"]
-pub struct OWIER {
+pub struct SECIER {
     bits: bool,
 }
-impl OWIER {
+impl SECIER {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,10 +106,10 @@ impl OWIER {
     }
 }
 #[doc = r" Proxy"]
-pub struct _SECIEW<'a> {
+pub struct _OWIEW<'a> {
     w: &'a mut W,
 }
-impl<'a> _SECIEW<'a> {
+impl<'a> _OWIEW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -122,7 +122,7 @@ impl<'a> _SECIEW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 0;
+        const OFFSET: u8 = 2;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -152,10 +152,10 @@ impl<'a> _ALRIEW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _OWIEW<'a> {
+pub struct _SECIEW<'a> {
     w: &'a mut W,
 }
-impl<'a> _OWIEW<'a> {
+impl<'a> _SECIEW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -168,7 +168,7 @@ impl<'a> _OWIEW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 2;
+        const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -180,15 +180,15 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 0 - Second interrupt Enable"]
+    #[doc = "Bit 2 - Overflow interrupt Enable"]
     #[inline]
-    pub fn secie(&self) -> SECIER {
+    pub fn owie(&self) -> OWIER {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 0;
+            const OFFSET: u8 = 2;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        SECIER { bits }
+        OWIER { bits }
     }
     #[doc = "Bit 1 - Alarm interrupt Enable"]
     #[inline]
@@ -200,15 +200,15 @@ impl R {
         };
         ALRIER { bits }
     }
-    #[doc = "Bit 2 - Overflow interrupt Enable"]
+    #[doc = "Bit 0 - Second interrupt Enable"]
     #[inline]
-    pub fn owie(&self) -> OWIER {
+    pub fn secie(&self) -> SECIER {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 2;
+            const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        OWIER { bits }
+        SECIER { bits }
     }
 }
 impl W {
@@ -223,19 +223,19 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 0 - Second interrupt Enable"]
+    #[doc = "Bit 2 - Overflow interrupt Enable"]
     #[inline]
-    pub fn secie(&mut self) -> _SECIEW {
-        _SECIEW { w: self }
+    pub fn owie(&mut self) -> _OWIEW {
+        _OWIEW { w: self }
     }
     #[doc = "Bit 1 - Alarm interrupt Enable"]
     #[inline]
     pub fn alrie(&mut self) -> _ALRIEW {
         _ALRIEW { w: self }
     }
-    #[doc = "Bit 2 - Overflow interrupt Enable"]
+    #[doc = "Bit 0 - Second interrupt Enable"]
     #[inline]
-    pub fn owie(&mut self) -> _OWIEW {
-        _OWIEW { w: self }
+    pub fn secie(&mut self) -> _SECIEW {
+        _SECIEW { w: self }
     }
 }

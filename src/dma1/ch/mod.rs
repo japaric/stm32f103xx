@@ -1,24 +1,24 @@
-#[doc = "DMA channel x configuration register (DMA_CCR)"]
+#[doc = "DMA channel X configuration register"]
 pub struct CCR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "DMA channel x configuration register (DMA_CCR)"]
+#[doc = "DMA channel X configuration register"]
 pub mod ccr;
-#[doc = "DMA channel x number of data register"]
+#[doc = "DMA channel X number of data register"]
 pub struct CNDTR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "DMA channel x number of data register"]
+#[doc = "DMA channel X number of data register"]
 pub mod cndtr;
-#[doc = "DMA channel x peripheral address register"]
+#[doc = "DMA channel X peripheral address register"]
 pub struct CPAR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "DMA channel x peripheral address register"]
+#[doc = "DMA channel X peripheral address register"]
 pub mod cpar;
-#[doc = "DMA channel x memory address register"]
+#[doc = "DMA channel X memory address register"]
 pub struct CMAR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "DMA channel x memory address register"]
+#[doc = "DMA channel X memory address register"]
 pub mod cmar;

@@ -12,32 +12,10 @@ impl super::FNR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct FNR {
-    bits: u16,
-}
-impl FNR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct LSOFR {
-    bits: u8,
-}
-impl LSOFR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct LCKR {
+pub struct RXDPR {
     bits: bool,
 }
-impl LCKR {
+impl RXDPR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -76,10 +54,10 @@ impl RXDMR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct RXDPR {
+pub struct LCKR {
     bits: bool,
 }
-impl RXDPR {
+impl LCKR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -96,41 +74,43 @@ impl RXDPR {
         self.bit()
     }
 }
+#[doc = r" Value of the field"]
+pub struct LSOFR {
+    bits: u8,
+}
+impl LSOFR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct FNR {
+    bits: u16,
+}
+impl FNR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u16 {
+        self.bits
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:10 - Frame number"]
+    #[doc = "Bit 15 - Receive data + line status"]
     #[inline]
-    pub fn fn_(&self) -> FNR {
-        let bits = {
-            const MASK: u16 = 2047;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u16
-        };
-        FNR { bits }
-    }
-    #[doc = "Bits 11:12 - Lost SOF"]
-    #[inline]
-    pub fn lsof(&self) -> LSOFR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 11;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        LSOFR { bits }
-    }
-    #[doc = "Bit 13 - Locked"]
-    #[inline]
-    pub fn lck(&self) -> LCKR {
+    pub fn rxdp(&self) -> RXDPR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 13;
+            const OFFSET: u8 = 15;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        LCKR { bits }
+        RXDPR { bits }
     }
     #[doc = "Bit 14 - Receive data - line status"]
     #[inline]
@@ -142,14 +122,34 @@ impl R {
         };
         RXDMR { bits }
     }
-    #[doc = "Bit 15 - Receive data + line status"]
+    #[doc = "Bit 13 - Locked"]
     #[inline]
-    pub fn rxdp(&self) -> RXDPR {
+    pub fn lck(&self) -> LCKR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 15;
+            const OFFSET: u8 = 13;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        RXDPR { bits }
+        LCKR { bits }
+    }
+    #[doc = "Bits 11:12 - Lost SOF"]
+    #[inline]
+    pub fn lsof(&self) -> LSOFR {
+        let bits = {
+            const MASK: u8 = 3;
+            const OFFSET: u8 = 11;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        LSOFR { bits }
+    }
+    #[doc = "Bits 0:10 - Frame number"]
+    #[inline]
+    pub fn fn_(&self) -> FNR {
+        let bits = {
+            const MASK: u16 = 2047;
+            const OFFSET: u8 = 0;
+            ((self.bits >> OFFSET) & MASK as u32) as u16
+        };
+        FNR { bits }
     }
 }

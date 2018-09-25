@@ -43,73 +43,10 @@ impl super::CR3 {
     }
 }
 #[doc = r" Value of the field"]
-pub struct EIER {
+pub struct DMATR {
     bits: bool,
 }
-impl EIER {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct IRENR {
-    bits: bool,
-}
-impl IRENR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct IRLPR {
-    bits: bool,
-}
-impl IRLPR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct HDSELR {
-    bits: bool,
-}
-impl HDSELR {
+impl DMATR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -148,10 +85,73 @@ impl DMARR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct DMATR {
+pub struct HDSELR {
     bits: bool,
 }
-impl DMATR {
+impl HDSELR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+}
+#[doc = r" Value of the field"]
+pub struct IRLPR {
+    bits: bool,
+}
+impl IRLPR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+}
+#[doc = r" Value of the field"]
+pub struct IRENR {
+    bits: bool,
+}
+impl IRENR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+}
+#[doc = r" Value of the field"]
+pub struct EIER {
+    bits: bool,
+}
+impl EIER {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -169,10 +169,10 @@ impl DMATR {
     }
 }
 #[doc = r" Proxy"]
-pub struct _EIEW<'a> {
+pub struct _DMATW<'a> {
     w: &'a mut W,
 }
-impl<'a> _EIEW<'a> {
+impl<'a> _DMATW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -185,76 +185,7 @@ impl<'a> _EIEW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _IRENW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _IRENW<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 1;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _IRLPW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _IRLPW<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _HDSELW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _HDSELW<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 3;
+        const OFFSET: u8 = 7;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -284,10 +215,10 @@ impl<'a> _DMARW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _DMATW<'a> {
+pub struct _HDSELW<'a> {
     w: &'a mut W,
 }
-impl<'a> _DMATW<'a> {
+impl<'a> _HDSELW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -300,7 +231,76 @@ impl<'a> _DMATW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 7;
+        const OFFSET: u8 = 3;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _IRLPW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _IRLPW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 2;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _IRENW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _IRENW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 1;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EIEW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EIEW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -312,45 +312,15 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 0 - Error interrupt enable"]
+    #[doc = "Bit 7 - DMA enable transmitter"]
     #[inline]
-    pub fn eie(&self) -> EIER {
+    pub fn dmat(&self) -> DMATR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 0;
+            const OFFSET: u8 = 7;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        EIER { bits }
-    }
-    #[doc = "Bit 1 - IrDA mode enable"]
-    #[inline]
-    pub fn iren(&self) -> IRENR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        IRENR { bits }
-    }
-    #[doc = "Bit 2 - IrDA low-power"]
-    #[inline]
-    pub fn irlp(&self) -> IRLPR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        IRLPR { bits }
-    }
-    #[doc = "Bit 3 - Half-duplex selection"]
-    #[inline]
-    pub fn hdsel(&self) -> HDSELR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        HDSELR { bits }
+        DMATR { bits }
     }
     #[doc = "Bit 6 - DMA enable receiver"]
     #[inline]
@@ -362,15 +332,45 @@ impl R {
         };
         DMARR { bits }
     }
-    #[doc = "Bit 7 - DMA enable transmitter"]
+    #[doc = "Bit 3 - Half-duplex selection"]
     #[inline]
-    pub fn dmat(&self) -> DMATR {
+    pub fn hdsel(&self) -> HDSELR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 7;
+            const OFFSET: u8 = 3;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        DMATR { bits }
+        HDSELR { bits }
+    }
+    #[doc = "Bit 2 - IrDA low-power"]
+    #[inline]
+    pub fn irlp(&self) -> IRLPR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 2;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        IRLPR { bits }
+    }
+    #[doc = "Bit 1 - IrDA mode enable"]
+    #[inline]
+    pub fn iren(&self) -> IRENR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 1;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        IRENR { bits }
+    }
+    #[doc = "Bit 0 - Error interrupt enable"]
+    #[inline]
+    pub fn eie(&self) -> EIER {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 0;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EIER { bits }
     }
 }
 impl W {
@@ -385,34 +385,34 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 0 - Error interrupt enable"]
+    #[doc = "Bit 7 - DMA enable transmitter"]
     #[inline]
-    pub fn eie(&mut self) -> _EIEW {
-        _EIEW { w: self }
-    }
-    #[doc = "Bit 1 - IrDA mode enable"]
-    #[inline]
-    pub fn iren(&mut self) -> _IRENW {
-        _IRENW { w: self }
-    }
-    #[doc = "Bit 2 - IrDA low-power"]
-    #[inline]
-    pub fn irlp(&mut self) -> _IRLPW {
-        _IRLPW { w: self }
-    }
-    #[doc = "Bit 3 - Half-duplex selection"]
-    #[inline]
-    pub fn hdsel(&mut self) -> _HDSELW {
-        _HDSELW { w: self }
+    pub fn dmat(&mut self) -> _DMATW {
+        _DMATW { w: self }
     }
     #[doc = "Bit 6 - DMA enable receiver"]
     #[inline]
     pub fn dmar(&mut self) -> _DMARW {
         _DMARW { w: self }
     }
-    #[doc = "Bit 7 - DMA enable transmitter"]
+    #[doc = "Bit 3 - Half-duplex selection"]
     #[inline]
-    pub fn dmat(&mut self) -> _DMATW {
-        _DMATW { w: self }
+    pub fn hdsel(&mut self) -> _HDSELW {
+        _HDSELW { w: self }
+    }
+    #[doc = "Bit 2 - IrDA low-power"]
+    #[inline]
+    pub fn irlp(&mut self) -> _IRLPW {
+        _IRLPW { w: self }
+    }
+    #[doc = "Bit 1 - IrDA mode enable"]
+    #[inline]
+    pub fn iren(&mut self) -> _IRENW {
+        _IRENW { w: self }
+    }
+    #[doc = "Bit 0 - Error interrupt enable"]
+    #[inline]
+    pub fn eie(&mut self) -> _EIEW {
+        _EIEW { w: self }
     }
 }

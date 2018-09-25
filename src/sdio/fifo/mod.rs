@@ -74,7 +74,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:31 - FIFOData"]
+    #[doc = "Bits 0:31 - Receive and transmit FIFO data"]
     #[inline]
     pub fn fifodata(&self) -> FIFODATAR {
         let bits = {
@@ -97,7 +97,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:31 - FIFOData"]
+    #[doc = "Bits 0:31 - Receive and transmit FIFO data"]
     #[inline]
     pub fn fifodata(&mut self) -> _FIFODATAW {
         _FIFODATAW { w: self }

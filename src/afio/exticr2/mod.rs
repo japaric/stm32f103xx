@@ -43,21 +43,10 @@ impl super::EXTICR2 {
     }
 }
 #[doc = r" Value of the field"]
-pub struct EXTI4R {
+pub struct EXTI7R {
     bits: u8,
 }
-impl EXTI4R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI5R {
-    bits: u8,
-}
-impl EXTI5R {
+impl EXTI7R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u8 {
@@ -76,10 +65,21 @@ impl EXTI6R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct EXTI7R {
+pub struct EXTI5R {
     bits: u8,
 }
-impl EXTI7R {
+impl EXTI5R {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct EXTI4R {
+    bits: u8,
+}
+impl EXTI4R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u8 {
@@ -87,30 +87,15 @@ impl EXTI7R {
     }
 }
 #[doc = r" Proxy"]
-pub struct _EXTI4W<'a> {
+pub struct _EXTI7W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI4W<'a> {
+impl<'a> _EXTI7W<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
         const MASK: u8 = 15;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _EXTI5W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _EXTI5W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 4;
+        const OFFSET: u8 = 12;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -132,15 +117,30 @@ impl<'a> _EXTI6W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _EXTI7W<'a> {
+pub struct _EXTI5W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI7W<'a> {
+impl<'a> _EXTI5W<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
         const MASK: u8 = 15;
-        const OFFSET: u8 = 12;
+        const OFFSET: u8 = 4;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EXTI4W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EXTI4W<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 15;
+        const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -152,25 +152,15 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:3 - EXTI4 configuration"]
+    #[doc = "Bits 12:15 - EXTI7 configuration"]
     #[inline]
-    pub fn exti4(&self) -> EXTI4R {
+    pub fn exti7(&self) -> EXTI7R {
         let bits = {
             const MASK: u8 = 15;
-            const OFFSET: u8 = 0;
+            const OFFSET: u8 = 12;
             ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        EXTI4R { bits }
-    }
-    #[doc = "Bits 4:7 - EXTI5 configuration"]
-    #[inline]
-    pub fn exti5(&self) -> EXTI5R {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        EXTI5R { bits }
+        EXTI7R { bits }
     }
     #[doc = "Bits 8:11 - EXTI6 configuration"]
     #[inline]
@@ -182,15 +172,25 @@ impl R {
         };
         EXTI6R { bits }
     }
-    #[doc = "Bits 12:15 - EXTI7 configuration"]
+    #[doc = "Bits 4:7 - EXTI5 configuration"]
     #[inline]
-    pub fn exti7(&self) -> EXTI7R {
+    pub fn exti5(&self) -> EXTI5R {
         let bits = {
             const MASK: u8 = 15;
-            const OFFSET: u8 = 12;
+            const OFFSET: u8 = 4;
             ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        EXTI7R { bits }
+        EXTI5R { bits }
+    }
+    #[doc = "Bits 0:3 - EXTI4 configuration"]
+    #[inline]
+    pub fn exti4(&self) -> EXTI4R {
+        let bits = {
+            const MASK: u8 = 15;
+            const OFFSET: u8 = 0;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        EXTI4R { bits }
     }
 }
 impl W {
@@ -205,24 +205,24 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:3 - EXTI4 configuration"]
+    #[doc = "Bits 12:15 - EXTI7 configuration"]
     #[inline]
-    pub fn exti4(&mut self) -> _EXTI4W {
-        _EXTI4W { w: self }
-    }
-    #[doc = "Bits 4:7 - EXTI5 configuration"]
-    #[inline]
-    pub fn exti5(&mut self) -> _EXTI5W {
-        _EXTI5W { w: self }
+    pub fn exti7(&mut self) -> _EXTI7W {
+        _EXTI7W { w: self }
     }
     #[doc = "Bits 8:11 - EXTI6 configuration"]
     #[inline]
     pub fn exti6(&mut self) -> _EXTI6W {
         _EXTI6W { w: self }
     }
-    #[doc = "Bits 12:15 - EXTI7 configuration"]
+    #[doc = "Bits 4:7 - EXTI5 configuration"]
     #[inline]
-    pub fn exti7(&mut self) -> _EXTI7W {
-        _EXTI7W { w: self }
+    pub fn exti5(&mut self) -> _EXTI5W {
+        _EXTI5W { w: self }
+    }
+    #[doc = "Bits 0:3 - EXTI4 configuration"]
+    #[inline]
+    pub fn exti4(&mut self) -> _EXTI4W {
+        _EXTI4W { w: self }
     }
 }

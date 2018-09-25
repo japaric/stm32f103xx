@@ -664,7 +664,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 13 - Capture/Compare 3 output Polarity"]
+    #[doc = "Bit 13 - Capture/Compare 3 complementary output Polarity"]
     #[inline]
     pub fn cc4p(&self) -> CC4PR {
         let bits = {
@@ -684,7 +684,7 @@ impl R {
         };
         CC4ER { bits }
     }
-    #[doc = "Bit 11 - Capture/Compare 3 output Polarity"]
+    #[doc = "Bit 11 - Capture/Compare 3 complementary output Polarity"]
     #[inline]
     pub fn cc3np(&self) -> CC3NPR {
         let bits = {
@@ -724,7 +724,7 @@ impl R {
         };
         CC3ER { bits }
     }
-    #[doc = "Bit 7 - Capture/Compare 2 output Polarity"]
+    #[doc = "Bit 7 - Capture/Compare 2 complementary output Polarity"]
     #[inline]
     pub fn cc2np(&self) -> CC2NPR {
         let bits = {
@@ -764,7 +764,7 @@ impl R {
         };
         CC2ER { bits }
     }
-    #[doc = "Bit 3 - Capture/Compare 1 output Polarity"]
+    #[doc = "Bit 3 - Capture/Compare 1 complementary output Polarity"]
     #[inline]
     pub fn cc1np(&self) -> CC1NPR {
         let bits = {
@@ -817,7 +817,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 13 - Capture/Compare 3 output Polarity"]
+    #[doc = "Bit 13 - Capture/Compare 3 complementary output Polarity"]
     #[inline]
     pub fn cc4p(&mut self) -> _CC4PW {
         _CC4PW { w: self }
@@ -827,7 +827,7 @@ impl W {
     pub fn cc4e(&mut self) -> _CC4EW {
         _CC4EW { w: self }
     }
-    #[doc = "Bit 11 - Capture/Compare 3 output Polarity"]
+    #[doc = "Bit 11 - Capture/Compare 3 complementary output Polarity"]
     #[inline]
     pub fn cc3np(&mut self) -> _CC3NPW {
         _CC3NPW { w: self }
@@ -847,7 +847,7 @@ impl W {
     pub fn cc3e(&mut self) -> _CC3EW {
         _CC3EW { w: self }
     }
-    #[doc = "Bit 7 - Capture/Compare 2 output Polarity"]
+    #[doc = "Bit 7 - Capture/Compare 2 complementary output Polarity"]
     #[inline]
     pub fn cc2np(&mut self) -> _CC2NPW {
         _CC2NPW { w: self }
@@ -867,7 +867,7 @@ impl W {
     pub fn cc2e(&mut self) -> _CC2EW {
         _CC2EW { w: self }
     }
-    #[doc = "Bit 3 - Capture/Compare 1 output Polarity"]
+    #[doc = "Bit 3 - Capture/Compare 1 complementary output Polarity"]
     #[inline]
     pub fn cc1np(&mut self) -> _CC1NPW {
         _CC1NPW { w: self }

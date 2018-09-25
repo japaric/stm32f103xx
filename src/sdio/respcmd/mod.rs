@@ -28,7 +28,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:5 - RESPCMD"]
+    #[doc = "Bits 0:5 - Response command index"]
     #[inline]
     pub fn respcmd(&self) -> RESPCMDR {
         let bits = {

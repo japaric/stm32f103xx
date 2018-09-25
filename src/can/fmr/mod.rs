@@ -92,7 +92,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 0 - FINIT"]
+    #[doc = "Bit 0 - Filter initialization mode"]
     #[inline]
     pub fn finit(&self) -> FINITR {
         let bits = {
@@ -115,7 +115,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 0 - FINIT"]
+    #[doc = "Bit 0 - Filter initialization mode"]
     #[inline]
     pub fn finit(&mut self) -> _FINITW {
         _FINITW { w: self }

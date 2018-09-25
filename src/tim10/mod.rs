@@ -12,7 +12,7 @@ pub struct RegisterBlock {
     pub sr: SR,
     #[doc = "0x14 - event generation register"]
     pub egr: EGR,
-    #[doc = "0x18 - capture/compare mode register (output mode)"]
+    #[doc = "0x18 - capture/compare mode register 1 (output mode)"]
     pub ccmr1_output: CCMR1_OUTPUT,
     _reserved1: [u8; 4usize],
     #[doc = "0x20 - capture/compare enable register"]
@@ -24,7 +24,7 @@ pub struct RegisterBlock {
     #[doc = "0x2c - auto-reload register"]
     pub arr: ARR,
     _reserved2: [u8; 4usize],
-    #[doc = "0x34 - capture/compare register x"]
+    #[doc = "0x34 - capture/compare register X"]
     pub ccr1: CCR,
 }
 #[doc = "control register 1"]
@@ -57,17 +57,17 @@ pub struct EGR {
 }
 #[doc = "event generation register"]
 pub mod egr;
-#[doc = "capture/compare mode register (output mode)"]
+#[doc = "capture/compare mode register 1 (output mode)"]
 pub struct CCMR1_OUTPUT {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "capture/compare mode register (output mode)"]
+#[doc = "capture/compare mode register 1 (output mode)"]
 pub mod ccmr1_output;
-#[doc = "capture/compare mode register (input mode)"]
+#[doc = "capture/compare mode register 1 (input mode)"]
 pub struct CCMR1_INPUT {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "capture/compare mode register (input mode)"]
+#[doc = "capture/compare mode register 1 (input mode)"]
 pub mod ccmr1_input;
 #[doc = "capture/compare enable register"]
 pub struct CCER {
@@ -93,9 +93,9 @@ pub struct ARR {
 }
 #[doc = "auto-reload register"]
 pub mod arr;
-#[doc = "capture/compare register x"]
+#[doc = "capture/compare register X"]
 pub struct CCR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "capture/compare register x"]
+#[doc = "capture/compare register X"]
 pub mod ccr;

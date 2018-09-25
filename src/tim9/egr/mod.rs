@@ -128,7 +128,7 @@ impl W {
     pub fn cc2g(&mut self) -> _CC2GW {
         _CC2GW { w: self }
     }
-    #[doc = "Bit 1 - Capture/compare 1 generation"]
+    #[doc = "Bit 1 - Capture/Compare 1 generation"]
     #[inline]
     pub fn cc1g(&mut self) -> _CC1GW {
         _CC1GW { w: self }

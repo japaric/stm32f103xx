@@ -43,10 +43,10 @@ impl super::BDCR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct LSEONR {
+pub struct BDRSTR {
     bits: bool,
 }
-impl LSEONR {
+impl BDRSTR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -63,48 +63,8 @@ impl LSEONR {
         self.bit()
     }
 }
-#[doc = r" Value of the field"]
-pub struct LSERDYR {
-    bits: bool,
-}
-impl LSERDYR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct LSEBYPR {
-    bits: bool,
-}
-impl LSEBYPR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
+#[doc = "Possible values of the field `RTCEN`"]
+pub type RTCENR = ::rcc::ahbenr::DMA1ENR;
 #[doc = "Possible values of the field `RTCSEL`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RTCSELR {
@@ -161,13 +121,53 @@ impl RTCSELR {
         *self == RTCSELR::HSE
     }
 }
-#[doc = "Possible values of the field `RTCEN`"]
-pub type RTCENR = ::rcc::ahbenr::DMA1ENR;
 #[doc = r" Value of the field"]
-pub struct BDRSTR {
+pub struct LSEBYPR {
     bits: bool,
 }
-impl BDRSTR {
+impl LSEBYPR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+}
+#[doc = r" Value of the field"]
+pub struct LSERDYR {
+    bits: bool,
+}
+impl LSERDYR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+}
+#[doc = r" Value of the field"]
+pub struct LSEONR {
+    bits: bool,
+}
+impl LSEONR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -185,10 +185,10 @@ impl BDRSTR {
     }
 }
 #[doc = r" Proxy"]
-pub struct _LSEONW<'a> {
+pub struct _BDRSTW<'a> {
     w: &'a mut W,
 }
-impl<'a> _LSEONW<'a> {
+impl<'a> _BDRSTW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -201,17 +201,36 @@ impl<'a> _LSEONW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 0;
+        const OFFSET: u8 = 16;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
+#[doc = "Values that can be written to the field `RTCEN`"]
+pub type RTCENW = ::rcc::ahbenr::DMA1ENW;
 #[doc = r" Proxy"]
-pub struct _LSEBYPW<'a> {
+pub struct _RTCENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _LSEBYPW<'a> {
+impl<'a> _RTCENW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: RTCENW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Disabled."]
+    #[inline]
+    pub fn disabled(self) -> &'a mut W {
+        self.variant(::rcc::ahbenr::DMA1ENW::DISABLED)
+    }
+    #[doc = "Enabled."]
+    #[inline]
+    pub fn enabled(self) -> &'a mut W {
+        self.variant(::rcc::ahbenr::DMA1ENW::ENABLED)
+    }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -224,7 +243,7 @@ impl<'a> _LSEBYPW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 2;
+        const OFFSET: u8 = 15;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -296,30 +315,11 @@ impl<'a> _RTCSELW<'a> {
         self.w
     }
 }
-#[doc = "Values that can be written to the field `RTCEN`"]
-pub type RTCENW = ::rcc::ahbenr::DMA1ENW;
 #[doc = r" Proxy"]
-pub struct _RTCENW<'a> {
+pub struct _LSEBYPW<'a> {
     w: &'a mut W,
 }
-impl<'a> _RTCENW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: RTCENW) -> &'a mut W {
-        {
-            self.bit(variant._bits())
-        }
-    }
-    #[doc = "Disabled."]
-    #[inline]
-    pub fn disabled(self) -> &'a mut W {
-        self.variant(::rcc::ahbenr::DMA1ENW::DISABLED)
-    }
-    #[doc = "Enabled."]
-    #[inline]
-    pub fn enabled(self) -> &'a mut W {
-        self.variant(::rcc::ahbenr::DMA1ENW::ENABLED)
-    }
+impl<'a> _LSEBYPW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -332,17 +332,17 @@ impl<'a> _RTCENW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 15;
+        const OFFSET: u8 = 2;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _BDRSTW<'a> {
+pub struct _LSEONW<'a> {
     w: &'a mut W,
 }
-impl<'a> _BDRSTW<'a> {
+impl<'a> _LSEONW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -355,7 +355,7 @@ impl<'a> _BDRSTW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 16;
+        const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -367,25 +367,33 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 0 - External Low Speed oscillator enable"]
+    #[doc = "Bit 16 - Backup domain software reset"]
     #[inline]
-    pub fn lseon(&self) -> LSEONR {
+    pub fn bdrst(&self) -> BDRSTR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 0;
+            const OFFSET: u8 = 16;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        LSEONR { bits }
+        BDRSTR { bits }
     }
-    #[doc = "Bit 1 - External Low Speed oscillator ready"]
+    #[doc = "Bit 15 - RTC clock enable"]
     #[inline]
-    pub fn lserdy(&self) -> LSERDYR {
-        let bits = {
+    pub fn rtcen(&self) -> RTCENR {
+        RTCENR::_from({
             const MASK: bool = true;
-            const OFFSET: u8 = 1;
+            const OFFSET: u8 = 15;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        LSERDYR { bits }
+        })
+    }
+    #[doc = "Bits 8:9 - RTC clock source selection"]
+    #[inline]
+    pub fn rtcsel(&self) -> RTCSELR {
+        RTCSELR::_from({
+            const MASK: u8 = 3;
+            const OFFSET: u8 = 8;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        })
     }
     #[doc = "Bit 2 - External Low Speed oscillator bypass"]
     #[inline]
@@ -397,33 +405,25 @@ impl R {
         };
         LSEBYPR { bits }
     }
-    #[doc = "Bits 8:9 - RTC clock source selection"]
+    #[doc = "Bit 1 - External Low Speed oscillator ready"]
     #[inline]
-    pub fn rtcsel(&self) -> RTCSELR {
-        RTCSELR::_from({
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
-    }
-    #[doc = "Bit 15 - RTC clock enable"]
-    #[inline]
-    pub fn rtcen(&self) -> RTCENR {
-        RTCENR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 15;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
-    }
-    #[doc = "Bit 16 - Backup domain software reset"]
-    #[inline]
-    pub fn bdrst(&self) -> BDRSTR {
+    pub fn lserdy(&self) -> LSERDYR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 16;
+            const OFFSET: u8 = 1;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        BDRSTR { bits }
+        LSERDYR { bits }
+    }
+    #[doc = "Bit 0 - External Low Speed oscillator enable"]
+    #[inline]
+    pub fn lseon(&self) -> LSEONR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 0;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        LSEONR { bits }
     }
 }
 impl W {
@@ -438,29 +438,29 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 0 - External Low Speed oscillator enable"]
+    #[doc = "Bit 16 - Backup domain software reset"]
     #[inline]
-    pub fn lseon(&mut self) -> _LSEONW {
-        _LSEONW { w: self }
-    }
-    #[doc = "Bit 2 - External Low Speed oscillator bypass"]
-    #[inline]
-    pub fn lsebyp(&mut self) -> _LSEBYPW {
-        _LSEBYPW { w: self }
-    }
-    #[doc = "Bits 8:9 - RTC clock source selection"]
-    #[inline]
-    pub fn rtcsel(&mut self) -> _RTCSELW {
-        _RTCSELW { w: self }
+    pub fn bdrst(&mut self) -> _BDRSTW {
+        _BDRSTW { w: self }
     }
     #[doc = "Bit 15 - RTC clock enable"]
     #[inline]
     pub fn rtcen(&mut self) -> _RTCENW {
         _RTCENW { w: self }
     }
-    #[doc = "Bit 16 - Backup domain software reset"]
+    #[doc = "Bits 8:9 - RTC clock source selection"]
     #[inline]
-    pub fn bdrst(&mut self) -> _BDRSTW {
-        _BDRSTW { w: self }
+    pub fn rtcsel(&mut self) -> _RTCSELW {
+        _RTCSELW { w: self }
+    }
+    #[doc = "Bit 2 - External Low Speed oscillator bypass"]
+    #[inline]
+    pub fn lsebyp(&mut self) -> _LSEBYPW {
+        _LSEBYPW { w: self }
+    }
+    #[doc = "Bit 0 - External Low Speed oscillator enable"]
+    #[inline]
+    pub fn lseon(&mut self) -> _LSEONW {
+        _LSEONW { w: self }
     }
 }

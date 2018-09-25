@@ -43,28 +43,6 @@ impl super::CFR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct WR {
-    bits: u8,
-}
-impl WR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct WDGTBR {
-    bits: u8,
-}
-impl WDGTBR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
 pub struct EWIR {
     bits: bool,
 }
@@ -85,34 +63,26 @@ impl EWIR {
         self.bit()
     }
 }
-#[doc = r" Proxy"]
-pub struct _WW<'a> {
-    w: &'a mut W,
+#[doc = r" Value of the field"]
+pub struct WDGTBR {
+    bits: u8,
 }
-impl<'a> _WW<'a> {
-    #[doc = r" Writes raw bits to the field"]
+impl WDGTBR {
+    #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 127;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
+    pub fn bits(&self) -> u8 {
+        self.bits
     }
 }
-#[doc = r" Proxy"]
-pub struct _WDGTBW<'a> {
-    w: &'a mut W,
+#[doc = r" Value of the field"]
+pub struct WR {
+    bits: u8,
 }
-impl<'a> _WDGTBW<'a> {
-    #[doc = r" Writes raw bits to the field"]
+impl WR {
+    #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 7;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
+    pub fn bits(&self) -> u8 {
+        self.bits
     }
 }
 #[doc = r" Proxy"]
@@ -138,11 +108,61 @@ impl<'a> _EWIW<'a> {
         self.w
     }
 }
+#[doc = r" Proxy"]
+pub struct _WDGTBW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _WDGTBW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 3;
+        const OFFSET: u8 = 7;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _WW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _WW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 127;
+        const OFFSET: u8 = 0;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
     pub fn bits(&self) -> u32 {
         self.bits
+    }
+    #[doc = "Bit 9 - Early wakeup interrupt"]
+    #[inline]
+    pub fn ewi(&self) -> EWIR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 9;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        EWIR { bits }
+    }
+    #[doc = "Bits 7:8 - Timer base"]
+    #[inline]
+    pub fn wdgtb(&self) -> WDGTBR {
+        let bits = {
+            const MASK: u8 = 3;
+            const OFFSET: u8 = 7;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        WDGTBR { bits }
     }
     #[doc = "Bits 0:6 - 7-bit window value"]
     #[inline]
@@ -153,26 +173,6 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) as u8
         };
         WR { bits }
-    }
-    #[doc = "Bits 7:8 - Timer Base"]
-    #[inline]
-    pub fn wdgtb(&self) -> WDGTBR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 7;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        WDGTBR { bits }
-    }
-    #[doc = "Bit 9 - Early Wakeup Interrupt"]
-    #[inline]
-    pub fn ewi(&self) -> EWIR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EWIR { bits }
     }
 }
 impl W {
@@ -187,19 +187,19 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:6 - 7-bit window value"]
+    #[doc = "Bit 9 - Early wakeup interrupt"]
     #[inline]
-    pub fn w(&mut self) -> _WW {
-        _WW { w: self }
+    pub fn ewi(&mut self) -> _EWIW {
+        _EWIW { w: self }
     }
-    #[doc = "Bits 7:8 - Timer Base"]
+    #[doc = "Bits 7:8 - Timer base"]
     #[inline]
     pub fn wdgtb(&mut self) -> _WDGTBW {
         _WDGTBW { w: self }
     }
-    #[doc = "Bit 9 - Early Wakeup Interrupt"]
+    #[doc = "Bits 0:6 - 7-bit window value"]
     #[inline]
-    pub fn ewi(&mut self) -> _EWIW {
-        _EWIW { w: self }
+    pub fn w(&mut self) -> _WW {
+        _WW { w: self }
     }
 }

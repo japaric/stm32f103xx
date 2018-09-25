@@ -60,7 +60,7 @@ pub struct _PSCW<'a> {
 impl<'a> _PSCW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bits(self, value: u16) -> &'a mut W {
+    pub unsafe fn bits(self, value: u16) -> &'a mut W {
         const MASK: u16 = 65535;
         const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);

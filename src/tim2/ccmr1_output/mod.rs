@@ -496,7 +496,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 15 - Output compare 2 clear enable"]
+    #[doc = "Bit 15 - Output Compare 2 clear enable"]
     #[inline]
     pub fn oc2ce(&self) -> OC2CER {
         let bits = {
@@ -506,7 +506,7 @@ impl R {
         };
         OC2CER { bits }
     }
-    #[doc = "Bits 12:14 - Output compare 2 mode"]
+    #[doc = "Bits 12:14 - Output Compare 2 mode"]
     #[inline]
     pub fn oc2m(&self) -> OC2MR {
         OC2MR::_from({
@@ -515,7 +515,7 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) as u8
         })
     }
-    #[doc = "Bit 11 - Output compare 2 preload enable"]
+    #[doc = "Bit 11 - Output Compare 2 preload enable"]
     #[inline]
     pub fn oc2pe(&self) -> OC2PER {
         let bits = {
@@ -525,7 +525,7 @@ impl R {
         };
         OC2PER { bits }
     }
-    #[doc = "Bit 10 - Output compare 2 fast enable"]
+    #[doc = "Bit 10 - Output Compare 2 fast enable"]
     #[inline]
     pub fn oc2fe(&self) -> OC2FER {
         let bits = {
@@ -545,7 +545,7 @@ impl R {
         };
         CC2SR { bits }
     }
-    #[doc = "Bit 7 - Output compare 1 clear enable"]
+    #[doc = "Bit 7 - Output Compare 1 clear enable"]
     #[inline]
     pub fn oc1ce(&self) -> OC1CER {
         let bits = {
@@ -555,7 +555,7 @@ impl R {
         };
         OC1CER { bits }
     }
-    #[doc = "Bits 4:6 - Output compare 1 mode"]
+    #[doc = "Bits 4:6 - Output Compare 1 mode"]
     #[inline]
     pub fn oc1m(&self) -> OC1MR {
         OC1MR::_from({
@@ -564,7 +564,7 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) as u8
         })
     }
-    #[doc = "Bit 3 - Output compare 1 preload enable"]
+    #[doc = "Bit 3 - Output Compare 1 preload enable"]
     #[inline]
     pub fn oc1pe(&self) -> OC1PER {
         let bits = {
@@ -574,7 +574,7 @@ impl R {
         };
         OC1PER { bits }
     }
-    #[doc = "Bit 2 - Output compare 1 fast enable"]
+    #[doc = "Bit 2 - Output Compare 1 fast enable"]
     #[inline]
     pub fn oc1fe(&self) -> OC1FER {
         let bits = {
@@ -607,22 +607,22 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 15 - Output compare 2 clear enable"]
+    #[doc = "Bit 15 - Output Compare 2 clear enable"]
     #[inline]
     pub fn oc2ce(&mut self) -> _OC2CEW {
         _OC2CEW { w: self }
     }
-    #[doc = "Bits 12:14 - Output compare 2 mode"]
+    #[doc = "Bits 12:14 - Output Compare 2 mode"]
     #[inline]
     pub fn oc2m(&mut self) -> _OC2MW {
         _OC2MW { w: self }
     }
-    #[doc = "Bit 11 - Output compare 2 preload enable"]
+    #[doc = "Bit 11 - Output Compare 2 preload enable"]
     #[inline]
     pub fn oc2pe(&mut self) -> _OC2PEW {
         _OC2PEW { w: self }
     }
-    #[doc = "Bit 10 - Output compare 2 fast enable"]
+    #[doc = "Bit 10 - Output Compare 2 fast enable"]
     #[inline]
     pub fn oc2fe(&mut self) -> _OC2FEW {
         _OC2FEW { w: self }
@@ -632,22 +632,22 @@ impl W {
     pub fn cc2s(&mut self) -> _CC2SW {
         _CC2SW { w: self }
     }
-    #[doc = "Bit 7 - Output compare 1 clear enable"]
+    #[doc = "Bit 7 - Output Compare 1 clear enable"]
     #[inline]
     pub fn oc1ce(&mut self) -> _OC1CEW {
         _OC1CEW { w: self }
     }
-    #[doc = "Bits 4:6 - Output compare 1 mode"]
+    #[doc = "Bits 4:6 - Output Compare 1 mode"]
     #[inline]
     pub fn oc1m(&mut self) -> _OC1MW {
         _OC1MW { w: self }
     }
-    #[doc = "Bit 3 - Output compare 1 preload enable"]
+    #[doc = "Bit 3 - Output Compare 1 preload enable"]
     #[inline]
     pub fn oc1pe(&mut self) -> _OC1PEW {
         _OC1PEW { w: self }
     }
-    #[doc = "Bit 2 - Output compare 1 fast enable"]
+    #[doc = "Bit 2 - Output Compare 1 fast enable"]
     #[inline]
     pub fn oc1fe(&mut self) -> _OC1FEW {
         _OC1FEW { w: self }

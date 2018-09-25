@@ -43,31 +43,10 @@ impl super::CSR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct WUFR {
+pub struct EWUPR {
     bits: bool,
 }
-impl WUFR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SBFR {
-    bits: bool,
-}
-impl SBFR {
+impl EWUPR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,10 +85,31 @@ impl PVDOR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct EWUPR {
+pub struct SBFR {
     bits: bool,
 }
-impl EWUPR {
+impl SBFR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+}
+#[doc = r" Value of the field"]
+pub struct WUFR {
+    bits: bool,
+}
+impl WUFR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -155,25 +155,15 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 0 - Wake-Up Flag"]
+    #[doc = "Bit 8 - Enable WKUP pin"]
     #[inline]
-    pub fn wuf(&self) -> WUFR {
+    pub fn ewup(&self) -> EWUPR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 0;
+            const OFFSET: u8 = 8;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        WUFR { bits }
-    }
-    #[doc = "Bit 1 - STANDBY Flag"]
-    #[inline]
-    pub fn sbf(&self) -> SBFR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SBFR { bits }
+        EWUPR { bits }
     }
     #[doc = "Bit 2 - PVD Output"]
     #[inline]
@@ -185,15 +175,25 @@ impl R {
         };
         PVDOR { bits }
     }
-    #[doc = "Bit 8 - Enable WKUP pin"]
+    #[doc = "Bit 1 - STANDBY Flag"]
     #[inline]
-    pub fn ewup(&self) -> EWUPR {
+    pub fn sbf(&self) -> SBFR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 8;
+            const OFFSET: u8 = 1;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        EWUPR { bits }
+        SBFR { bits }
+    }
+    #[doc = "Bit 0 - Wake-Up Flag"]
+    #[inline]
+    pub fn wuf(&self) -> WUFR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 0;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        WUFR { bits }
     }
 }
 impl W {

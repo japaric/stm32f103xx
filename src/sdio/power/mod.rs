@@ -74,7 +74,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:1 - PWRCTRL"]
+    #[doc = "Bits 0:1 - Power supply control bits"]
     #[inline]
     pub fn pwrctrl(&self) -> PWRCTRLR {
         let bits = {
@@ -97,7 +97,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:1 - PWRCTRL"]
+    #[doc = "Bits 0:1 - Power supply control bits"]
     #[inline]
     pub fn pwrctrl(&mut self) -> _PWRCTRLW {
         _PWRCTRLW { w: self }

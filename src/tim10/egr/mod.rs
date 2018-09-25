@@ -72,7 +72,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 1 - Capture/compare 1 generation"]
+    #[doc = "Bit 1 - Capture/Compare 1 generation"]
     #[inline]
     pub fn cc1g(&mut self) -> _CC1GW {
         _CC1GW { w: self }

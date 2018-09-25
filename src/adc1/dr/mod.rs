@@ -12,10 +12,10 @@ impl super::DR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct DATAR {
+pub struct ADC2DATAR {
     bits: u16,
 }
-impl DATAR {
+impl ADC2DATAR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u16 {
@@ -23,10 +23,10 @@ impl DATAR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct ADC2DATAR {
+pub struct DATAR {
     bits: u16,
 }
-impl ADC2DATAR {
+impl DATAR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u16 {
@@ -39,16 +39,6 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:15 - Regular data"]
-    #[inline]
-    pub fn data(&self) -> DATAR {
-        let bits = {
-            const MASK: u16 = 65535;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u16
-        };
-        DATAR { bits }
-    }
     #[doc = "Bits 16:31 - ADC2 data"]
     #[inline]
     pub fn adc2data(&self) -> ADC2DATAR {
@@ -58,5 +48,15 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) as u16
         };
         ADC2DATAR { bits }
+    }
+    #[doc = "Bits 0:15 - Regular data"]
+    #[inline]
+    pub fn data(&self) -> DATAR {
+        let bits = {
+            const MASK: u16 = 65535;
+            const OFFSET: u8 = 0;
+            ((self.bits >> OFFSET) & MASK as u32) as u16
+        };
+        DATAR { bits }
     }
 }

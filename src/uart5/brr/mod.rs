@@ -43,21 +43,10 @@ impl super::BRR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct DIV_FRACTIONR {
-    bits: u8,
-}
-impl DIV_FRACTIONR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct DIV_MANTISSAR {
+pub struct BRRR {
     bits: u16,
 }
-impl DIV_MANTISSAR {
+impl BRRR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u16 {
@@ -65,30 +54,15 @@ impl DIV_MANTISSAR {
     }
 }
 #[doc = r" Proxy"]
-pub struct _DIV_FRACTIONW<'a> {
+pub struct _BRRW<'a> {
     w: &'a mut W,
 }
-impl<'a> _DIV_FRACTIONW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _DIV_MANTISSAW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _DIV_MANTISSAW<'a> {
+impl<'a> _BRRW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        const MASK: u16 = 4095;
-        const OFFSET: u8 = 4;
+        const MASK: u16 = 65535;
+        const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -100,25 +74,15 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:3 - DIV_Fraction"]
+    #[doc = "Bits 0:15 - USARTDIV"]
     #[inline]
-    pub fn div_fraction(&self) -> DIV_FRACTIONR {
+    pub fn brr(&self) -> BRRR {
         let bits = {
-            const MASK: u8 = 15;
+            const MASK: u16 = 65535;
             const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        DIV_FRACTIONR { bits }
-    }
-    #[doc = "Bits 4:15 - DIV_Mantissa"]
-    #[inline]
-    pub fn div_mantissa(&self) -> DIV_MANTISSAR {
-        let bits = {
-            const MASK: u16 = 4095;
-            const OFFSET: u8 = 4;
             ((self.bits >> OFFSET) & MASK as u32) as u16
         };
-        DIV_MANTISSAR { bits }
+        BRRR { bits }
     }
 }
 impl W {
@@ -133,14 +97,9 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:3 - DIV_Fraction"]
+    #[doc = "Bits 0:15 - USARTDIV"]
     #[inline]
-    pub fn div_fraction(&mut self) -> _DIV_FRACTIONW {
-        _DIV_FRACTIONW { w: self }
-    }
-    #[doc = "Bits 4:15 - DIV_Mantissa"]
-    #[inline]
-    pub fn div_mantissa(&mut self) -> _DIV_MANTISSAW {
-        _DIV_MANTISSAW { w: self }
+    pub fn brr(&mut self) -> _BRRW {
+        _BRRW { w: self }
     }
 }

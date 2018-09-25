@@ -43,10 +43,10 @@ impl super::CSR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct TPIER {
+pub struct TIFR {
     bits: bool,
 }
-impl TPIER {
+impl TIFR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -85,10 +85,10 @@ impl TEFR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct TIFR {
+pub struct TPIER {
     bits: bool,
 }
-impl TIFR {
+impl TPIER {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,10 +106,10 @@ impl TIFR {
     }
 }
 #[doc = r" Proxy"]
-pub struct _CTEW<'a> {
+pub struct _TPIEW<'a> {
     w: &'a mut W,
 }
-impl<'a> _CTEW<'a> {
+impl<'a> _TPIEW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -122,7 +122,7 @@ impl<'a> _CTEW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 0;
+        const OFFSET: u8 = 2;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -152,10 +152,10 @@ impl<'a> _CTIW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _TPIEW<'a> {
+pub struct _CTEW<'a> {
     w: &'a mut W,
 }
-impl<'a> _TPIEW<'a> {
+impl<'a> _CTEW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -168,7 +168,7 @@ impl<'a> _TPIEW<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 2;
+        const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -180,15 +180,15 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 2 - Tamper Pin interrupt enable"]
+    #[doc = "Bit 9 - Tamper Interrupt Flag"]
     #[inline]
-    pub fn tpie(&self) -> TPIER {
+    pub fn tif(&self) -> TIFR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 2;
+            const OFFSET: u8 = 9;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        TPIER { bits }
+        TIFR { bits }
     }
     #[doc = "Bit 8 - Tamper Event Flag"]
     #[inline]
@@ -200,15 +200,15 @@ impl R {
         };
         TEFR { bits }
     }
-    #[doc = "Bit 9 - Tamper Interrupt Flag"]
+    #[doc = "Bit 2 - Tamper Pin interrupt enable"]
     #[inline]
-    pub fn tif(&self) -> TIFR {
+    pub fn tpie(&self) -> TPIER {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 9;
+            const OFFSET: u8 = 2;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        TIFR { bits }
+        TPIER { bits }
     }
 }
 impl W {
@@ -223,19 +223,19 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 0 - Clear Tamper event"]
+    #[doc = "Bit 2 - Tamper Pin interrupt enable"]
     #[inline]
-    pub fn cte(&mut self) -> _CTEW {
-        _CTEW { w: self }
+    pub fn tpie(&mut self) -> _TPIEW {
+        _TPIEW { w: self }
     }
     #[doc = "Bit 1 - Clear Tamper Interrupt"]
     #[inline]
     pub fn cti(&mut self) -> _CTIW {
         _CTIW { w: self }
     }
-    #[doc = "Bit 2 - Tamper Pin interrupt enable"]
+    #[doc = "Bit 0 - Clear Tamper event"]
     #[inline]
-    pub fn tpie(&mut self) -> _TPIEW {
-        _TPIEW { w: self }
+    pub fn cte(&mut self) -> _CTEW {
+        _CTEW { w: self }
     }
 }

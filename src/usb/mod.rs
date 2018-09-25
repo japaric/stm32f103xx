@@ -1,7 +1,7 @@
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - endpoint register array"]
+    #[doc = "0x00 - endpoint X register array"]
     pub epr: [EPR; 8],
     _reserved0: [u8; 32usize],
     #[doc = "0x40 - control register"]
@@ -15,11 +15,11 @@ pub struct RegisterBlock {
     #[doc = "0x50 - Buffer table address"]
     pub btable: BTABLE,
 }
-#[doc = "endpoint register array"]
+#[doc = "endpoint X register array"]
 pub struct EPR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "endpoint register array"]
+#[doc = "endpoint X register array"]
 pub mod epr;
 #[doc = "control register"]
 pub struct CNTR {

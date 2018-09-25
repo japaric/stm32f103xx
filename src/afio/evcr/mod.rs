@@ -43,28 +43,6 @@ impl super::EVCR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PINR {
-    bits: u8,
-}
-impl PINR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PORTR {
-    bits: u8,
-}
-impl PORTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
 pub struct EVOER {
     bits: bool,
 }
@@ -85,34 +63,26 @@ impl EVOER {
         self.bit()
     }
 }
-#[doc = r" Proxy"]
-pub struct _PINW<'a> {
-    w: &'a mut W,
+#[doc = r" Value of the field"]
+pub struct PORTR {
+    bits: u8,
 }
-impl<'a> _PINW<'a> {
-    #[doc = r" Writes raw bits to the field"]
+impl PORTR {
+    #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
+    pub fn bits(&self) -> u8 {
+        self.bits
     }
 }
-#[doc = r" Proxy"]
-pub struct _PORTW<'a> {
-    w: &'a mut W,
+#[doc = r" Value of the field"]
+pub struct PINR {
+    bits: u8,
 }
-impl<'a> _PORTW<'a> {
-    #[doc = r" Writes raw bits to the field"]
+impl PINR {
+    #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
+    pub fn bits(&self) -> u8 {
+        self.bits
     }
 }
 #[doc = r" Proxy"]
@@ -138,21 +108,51 @@ impl<'a> _EVOEW<'a> {
         self.w
     }
 }
+#[doc = r" Proxy"]
+pub struct _PORTW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PORTW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 7;
+        const OFFSET: u8 = 4;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PINW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PINW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 15;
+        const OFFSET: u8 = 0;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:3 - Pin selection"]
+    #[doc = "Bit 7 - Event Output Enable"]
     #[inline]
-    pub fn pin(&self) -> PINR {
+    pub fn evoe(&self) -> EVOER {
         let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
+            const MASK: bool = true;
+            const OFFSET: u8 = 7;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PINR { bits }
+        EVOER { bits }
     }
     #[doc = "Bits 4:6 - Port selection"]
     #[inline]
@@ -164,15 +164,15 @@ impl R {
         };
         PORTR { bits }
     }
-    #[doc = "Bit 7 - Event Output Enable"]
+    #[doc = "Bits 0:3 - Pin selection"]
     #[inline]
-    pub fn evoe(&self) -> EVOER {
+    pub fn pin(&self) -> PINR {
         let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 7;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
+            const MASK: u8 = 15;
+            const OFFSET: u8 = 0;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        EVOER { bits }
+        PINR { bits }
     }
 }
 impl W {
@@ -187,19 +187,19 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:3 - Pin selection"]
+    #[doc = "Bit 7 - Event Output Enable"]
     #[inline]
-    pub fn pin(&mut self) -> _PINW {
-        _PINW { w: self }
+    pub fn evoe(&mut self) -> _EVOEW {
+        _EVOEW { w: self }
     }
     #[doc = "Bits 4:6 - Port selection"]
     #[inline]
     pub fn port(&mut self) -> _PORTW {
         _PORTW { w: self }
     }
-    #[doc = "Bit 7 - Event Output Enable"]
+    #[doc = "Bits 0:3 - Pin selection"]
     #[inline]
-    pub fn evoe(&mut self) -> _EVOEW {
-        _EVOEW { w: self }
+    pub fn pin(&mut self) -> _PINW {
+        _PINW { w: self }
     }
 }

@@ -3,7 +3,7 @@
 pub struct RegisterBlock {
     #[doc = "0x00 - Data register"]
     pub dr: DR,
-    #[doc = "0x04 - Independent Data register"]
+    #[doc = "0x04 - Independent data register"]
     pub idr: IDR,
     #[doc = "0x08 - Control register"]
     pub cr: CR,
@@ -14,11 +14,11 @@ pub struct DR {
 }
 #[doc = "Data register"]
 pub mod dr;
-#[doc = "Independent Data register"]
+#[doc = "Independent data register"]
 pub struct IDR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "Independent Data register"]
+#[doc = "Independent data register"]
 pub mod idr;
 #[doc = "Control register"]
 pub struct CR {

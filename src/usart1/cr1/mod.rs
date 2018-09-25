@@ -64,10 +64,10 @@ impl UER {
     }
 }
 #[doc = r" Value of the field"]
-pub struct MR {
+pub struct M0R {
     bits: bool,
 }
-impl MR {
+impl M0R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -360,10 +360,10 @@ impl<'a> _UEW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _MW<'a> {
+pub struct _M0W<'a> {
     w: &'a mut W,
 }
-impl<'a> _MW<'a> {
+impl<'a> _M0W<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -676,15 +676,15 @@ impl R {
     }
     #[doc = "Bit 12 - Word length"]
     #[inline]
-    pub fn m(&self) -> MR {
+    pub fn m0(&self) -> M0R {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 12;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        MR { bits }
+        M0R { bits }
     }
-    #[doc = "Bit 11 - Wakeup method"]
+    #[doc = "Bit 11 - Receiver wakeup method"]
     #[inline]
     pub fn wake(&self) -> WAKER {
         let bits = {
@@ -824,10 +824,10 @@ impl W {
     }
     #[doc = "Bit 12 - Word length"]
     #[inline]
-    pub fn m(&mut self) -> _MW {
-        _MW { w: self }
+    pub fn m0(&mut self) -> _M0W {
+        _M0W { w: self }
     }
-    #[doc = "Bit 11 - Wakeup method"]
+    #[doc = "Bit 11 - Receiver wakeup method"]
     #[inline]
     pub fn wake(&mut self) -> _WAKEW {
         _WAKEW { w: self }

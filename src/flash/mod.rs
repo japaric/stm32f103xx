@@ -7,9 +7,9 @@ pub struct RegisterBlock {
     pub keyr: KEYR,
     #[doc = "0x08 - Flash option key register"]
     pub optkeyr: OPTKEYR,
-    #[doc = "0x0c - Status register"]
+    #[doc = "0x0c - Flash status register"]
     pub sr: SR,
-    #[doc = "0x10 - Control register"]
+    #[doc = "0x10 - Flash control register"]
     pub cr: CR,
     #[doc = "0x14 - Flash address register"]
     pub ar: AR,
@@ -37,17 +37,17 @@ pub struct OPTKEYR {
 }
 #[doc = "Flash option key register"]
 pub mod optkeyr;
-#[doc = "Status register"]
+#[doc = "Flash status register"]
 pub struct SR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "Status register"]
+#[doc = "Flash status register"]
 pub mod sr;
-#[doc = "Control register"]
+#[doc = "Flash control register"]
 pub struct CR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "Control register"]
+#[doc = "Flash control register"]
 pub mod cr;
 #[doc = "Flash address register"]
 pub struct AR {

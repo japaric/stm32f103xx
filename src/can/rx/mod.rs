@@ -1,24 +1,24 @@
-#[doc = "RIxR"]
+#[doc = "receive FIFO mailbox identifier register"]
 pub struct RIR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "RIxR"]
+#[doc = "receive FIFO mailbox identifier register"]
 pub mod rir;
-#[doc = "RDTxR"]
+#[doc = "mailbox data high register"]
 pub struct RDTR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "RDTxR"]
+#[doc = "mailbox data high register"]
 pub mod rdtr;
-#[doc = "RDLxR"]
+#[doc = "mailbox data low register"]
 pub struct RDLR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "RDLxR"]
+#[doc = "mailbox data low register"]
 pub mod rdlr;
-#[doc = "RDHxR"]
+#[doc = "mailbox data high register"]
 pub struct RDHR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "RDHxR"]
+#[doc = "mailbox data high register"]
 pub mod rdhr;

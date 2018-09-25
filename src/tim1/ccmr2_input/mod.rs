@@ -254,7 +254,7 @@ impl R {
         };
         IC3PSCR { bits }
     }
-    #[doc = "Bits 0:1 - Capture/compare 3 selection"]
+    #[doc = "Bits 0:1 - Capture/Compare 3 selection"]
     #[inline]
     pub fn cc3s(&self) -> CC3SR {
         let bits = {
@@ -302,7 +302,7 @@ impl W {
     pub fn ic3psc(&mut self) -> _IC3PSCW {
         _IC3PSCW { w: self }
     }
-    #[doc = "Bits 0:1 - Capture/compare 3 selection"]
+    #[doc = "Bits 0:1 - Capture/Compare 3 selection"]
     #[inline]
     pub fn cc3s(&mut self) -> _CC3SW {
         _CC3SW { w: self }
