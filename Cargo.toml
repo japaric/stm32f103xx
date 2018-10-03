@@ -15,9 +15,7 @@ vcell = "0.1.0"
 
 [dependencies.cortex-m-rt]
 optional = true
-#version = "0.6.4"
-git = "https://github.com/rust-embedded/cortex-m-rt"
-branch = "interrupt"
+git = "https://github.com/burrbull/cortex-m-rt"
 
 [features]
 rt = ["cortex-m-rt/device"]
