@@ -53,15 +53,15 @@ impl MCOR {
         self.bits
     }
 }
-#[doc = "Possible values of the field `OTGFSPRE`"]
+#[doc = "Possible values of the field `USBPRE`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum OTGFSPRER {
+pub enum USBPRER {
     #[doc = "PLL clock is divided by 1.5"]
     DIV3,
     #[doc = "PLL clock is not divided"]
     DIV2,
 }
-impl OTGFSPRER {
+impl USBPRER {
     #[doc = r" Returns `true` if the bit is clear (0)"]
     #[inline]
     pub fn bit_is_clear(&self) -> bool {
@@ -76,28 +76,28 @@ impl OTGFSPRER {
     #[inline]
     pub fn bit(&self) -> bool {
         match *self {
-            OTGFSPRER::DIV3 => false,
-            OTGFSPRER::DIV2 => true,
+            USBPRER::DIV3 => false,
+            USBPRER::DIV2 => true,
         }
     }
     #[allow(missing_docs)]
     #[doc(hidden)]
     #[inline]
-    pub fn _from(value: bool) -> OTGFSPRER {
+    pub fn _from(value: bool) -> USBPRER {
         match value {
-            false => OTGFSPRER::DIV3,
-            true => OTGFSPRER::DIV2,
+            false => USBPRER::DIV3,
+            true => USBPRER::DIV2,
         }
     }
     #[doc = "Checks if the value of the field is `DIV3`"]
     #[inline]
     pub fn is_div3(&self) -> bool {
-        *self == OTGFSPRER::DIV3
+        *self == USBPRER::DIV3
     }
     #[doc = "Checks if the value of the field is `DIV2`"]
     #[inline]
     pub fn is_div2(&self) -> bool {
-        *self == OTGFSPRER::DIV2
+        *self == USBPRER::DIV2
     }
 }
 #[doc = "Possible values of the field `PLLMUL`"]
@@ -691,32 +691,32 @@ impl<'a> _MCOW<'a> {
         self.w
     }
 }
-#[doc = "Values that can be written to the field `OTGFSPRE`"]
-pub enum OTGFSPREW {
+#[doc = "Values that can be written to the field `USBPRE`"]
+pub enum USBPREW {
     #[doc = "PLL clock is divided by 1.5"]
     DIV3,
     #[doc = "PLL clock is not divided"]
     DIV2,
 }
-impl OTGFSPREW {
+impl USBPREW {
     #[allow(missing_docs)]
     #[doc(hidden)]
     #[inline]
     pub fn _bits(&self) -> bool {
         match *self {
-            OTGFSPREW::DIV3 => false,
-            OTGFSPREW::DIV2 => true,
+            USBPREW::DIV3 => false,
+            USBPREW::DIV2 => true,
         }
     }
 }
 #[doc = r" Proxy"]
-pub struct _OTGFSPREW<'a> {
+pub struct _USBPREW<'a> {
     w: &'a mut W,
 }
-impl<'a> _OTGFSPREW<'a> {
+impl<'a> _USBPREW<'a> {
     #[doc = r" Writes `variant` to the field"]
     #[inline]
-    pub fn variant(self, variant: OTGFSPREW) -> &'a mut W {
+    pub fn variant(self, variant: USBPREW) -> &'a mut W {
         {
             self.bit(variant._bits())
         }
@@ -724,12 +724,12 @@ impl<'a> _OTGFSPREW<'a> {
     #[doc = "PLL clock is divided by 1.5"]
     #[inline]
     pub fn div3(self) -> &'a mut W {
-        self.variant(OTGFSPREW::DIV3)
+        self.variant(USBPREW::DIV3)
     }
     #[doc = "PLL clock is not divided"]
     #[inline]
     pub fn div2(self) -> &'a mut W {
-        self.variant(OTGFSPREW::DIV2)
+        self.variant(USBPREW::DIV2)
     }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
@@ -1341,8 +1341,8 @@ impl R {
     }
     #[doc = "Bit 22 - USB OTG FS prescaler"]
     #[inline]
-    pub fn otgfspre(&self) -> OTGFSPRER {
-        OTGFSPRER::_from({
+    pub fn usbpre(&self) -> USBPRER {
+        USBPRER::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 22;
             ((self.bits >> OFFSET) & MASK as u32) != 0
@@ -1449,8 +1449,8 @@ impl W {
     }
     #[doc = "Bit 22 - USB OTG FS prescaler"]
     #[inline]
-    pub fn otgfspre(&mut self) -> _OTGFSPREW {
-        _OTGFSPREW { w: self }
+    pub fn usbpre(&mut self) -> _USBPREW {
+        _USBPREW { w: self }
     }
     #[doc = "Bits 18:21 - PLL Multiplication Factor"]
     #[inline]

@@ -232,7 +232,7 @@ pub enum Interrupt {
     CAN1_RX1,
     #[doc = "22 - CAN1 SCE interrupt"]
     CAN1_SCE,
-    #[doc = "23 - EXTI Line[9:5] interrupts"]
+    #[doc = "23 - EXTI Line 9-5 interrupts"]
     EXTI9_5,
     #[doc = "24 - TIM1 Break interrupt and TIM9 global interrupt"]
     TIM1_BRK_TIM9,
@@ -266,7 +266,7 @@ pub enum Interrupt {
     USART2,
     #[doc = "39 - USART3 global interrupt"]
     USART3,
-    #[doc = "40 - EXTI Line[15:10] interrupts"]
+    #[doc = "40 - EXTI Line 15-10 interrupts"]
     EXTI15_10,
     #[doc = "41 - RTC Alarms through EXTI line interrupt"]
     RTCALARM,
