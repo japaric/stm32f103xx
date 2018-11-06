@@ -1,4 +1,4 @@
-#![doc = "Peripheral access API for STM32F103XX microcontrollers (generated using svd2rust v0.13.0)\n\nYou can find an overview of the API [here].\n\n[here]: https://docs.rs/svd2rust/0.13.0/svd2rust/#peripheral-api"]
+#![doc = "Peripheral access API for STM32F103XX microcontrollers (generated using svd2rust v0.13.1)\n\nYou can find an overview of the API [here].\n\n[here]: https://docs.rs/svd2rust/0.13.1/svd2rust/#peripheral-api"]
 #![deny(missing_docs)]
 #![deny(warnings)]
 #![allow(non_camel_case_types)]
@@ -209,7 +209,7 @@ pub static __INTERRUPTS: [Vector; 60] = [
 #[cfg(feature = "rt")]
 #[macro_export]
 macro_rules! interrupt {
-    ($Name:ident, $handler:path,state: $State:ty = $initial_state:expr) => {
+    ( $ Name : ident , $ handler : path , state : $ State : ty = $ initial_state : expr ) => {
         #[allow(unsafe_code)]
         #[deny(private_no_mangle_fns)]
         #[no_mangle]
@@ -220,7 +220,7 @@ macro_rules! interrupt {
             f(&mut STATE)
         }
     };
-    ($Name:ident, $handler:path) => {
+    ( $ Name : ident , $ handler : path ) => {
         #[allow(unsafe_code)]
         #[deny(private_no_mangle_fns)]
         #[no_mangle]
@@ -279,7 +279,7 @@ pub enum Interrupt {
     CAN1_RX1,
     #[doc = "22 - CAN1 SCE interrupt"]
     CAN1_SCE,
-    #[doc = "23 - EXTI Line[9:5] interrupts"]
+    #[doc = "23 - EXTI Line\\[9:5\\] interrupts"]
     EXTI9_5,
     #[doc = "24 - TIM1 Break interrupt and TIM9 global interrupt"]
     TIM1_BRK_TIM9,
@@ -313,7 +313,7 @@ pub enum Interrupt {
     USART2,
     #[doc = "39 - USART3 global interrupt"]
     USART3,
-    #[doc = "40 - EXTI Line[15:10] interrupts"]
+    #[doc = "40 - EXTI Line\\[15:10\\] interrupts"]
     EXTI15_10,
     #[doc = "41 - RTC Alarms through EXTI line interrupt"]
     RTCALARM,
@@ -424,7 +424,7 @@ unsafe impl ::bare_metal::Nr for Interrupt {
 #[doc(hidden)]
 pub mod interrupt;
 pub use cortex_m::peripheral::Peripherals as CorePeripherals;
-pub use cortex_m::peripheral::{CBP, CPUID, DCB, DWT, FPB, FPU, ITM, MPU, NVIC, SCB, SYST, TPIU};
+pub use cortex_m::peripheral::{CBP, CPUID, DCB, DWT, FPB, ITM, MPU, NVIC, SCB, SYST, TPIU};
 #[doc = "Flexible static memory controller"]
 pub struct FSMC {
     _marker: PhantomData<*const ()>,
@@ -1369,6 +1369,7 @@ impl Deref for USB {
 }
 #[doc = "Universal serial bus full-speed device interface"]
 pub mod usb;
+#[allow(renamed_and_removed_lints)]
 #[allow(private_no_mangle_statics)]
 #[no_mangle]
 static mut DEVICE_PERIPHERALS: bool = false;
