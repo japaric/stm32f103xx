@@ -374,8 +374,6 @@ unsafe impl ::bare_metal::Nr for Interrupt {
         }
     }
 }
-#[doc(hidden)]
-pub mod interrupt;
 pub use cortex_m::peripheral::Peripherals as CorePeripherals;
 pub use cortex_m::peripheral::{CBP, CPUID, DCB, DWT, FPB, ITM, MPU, NVIC, SCB, SYST, TPIU};
 #[cfg(feature = "rt")]
