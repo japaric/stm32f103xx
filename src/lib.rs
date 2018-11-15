@@ -374,11 +374,11 @@ unsafe impl ::bare_metal::Nr for Interrupt {
         }
     }
 }
+pub use self::Interrupt as interrupt;
 pub use cortex_m::peripheral::Peripherals as CorePeripherals;
 pub use cortex_m::peripheral::{CBP, CPUID, DCB, DWT, FPB, ITM, MPU, NVIC, SCB, SYST, TPIU};
 #[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
-pub use Interrupt as interrupt;
 #[doc = "Flexible static memory controller"]
 pub struct FSMC {
     _marker: PhantomData<*const ()>,
