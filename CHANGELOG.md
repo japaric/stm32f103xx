@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [v0.11.0] - 2018-12-??
+
+### Changed
+
+- [breaking-change] re-generated using svd2rust v0.14.0. The `interrupt` macro
+  has become an attribute.
+
 ## [v0.10.0] - 2018-05-12
 
 - [breaking-change] re-generated using svd2rust v0.13.0. This crate now compiles on stable.
@@ -151,7 +158,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Initial release
 
-[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.10.0...HEAD
+[Unreleased]: https://github.com/japaric/stm32f103xx/compare/v0.11.0...HEAD
+[v0.11.0]: https://github.com/japaric/stm32f103xx/compare/v0.10.0...v0.11.0
 [v0.10.0]: https://github.com/japaric/stm32f103xx/compare/v0.9.1...v0.10.0
 [v0.9.1]: https://github.com/japaric/stm32f103xx/compare/v0.9.0...v0.9.1
 [v0.9.0]: https://github.com/japaric/stm32f103xx/compare/v0.8.0...v0.9.0
