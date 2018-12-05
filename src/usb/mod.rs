@@ -1,22 +1,8 @@
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - endpoint 0 register"]
-    pub ep0r: EP0R,
-    #[doc = "0x04 - endpoint 1 register"]
-    pub ep1r: EP1R,
-    #[doc = "0x08 - endpoint 2 register"]
-    pub ep2r: EP2R,
-    #[doc = "0x0c - endpoint 3 register"]
-    pub ep3r: EP3R,
-    #[doc = "0x10 - endpoint 4 register"]
-    pub ep4r: EP4R,
-    #[doc = "0x14 - endpoint 5 register"]
-    pub ep5r: EP5R,
-    #[doc = "0x18 - endpoint 6 register"]
-    pub ep6r: EP6R,
-    #[doc = "0x1c - endpoint 7 register"]
-    pub ep7r: EP7R,
+    #[doc = "0x00 - endpoint register array"]
+    pub epr: [EPR; 8],
     _reserved0: [u8; 32usize],
     #[doc = "0x40 - control register"]
     pub cntr: CNTR,
@@ -29,54 +15,12 @@ pub struct RegisterBlock {
     #[doc = "0x50 - Buffer table address"]
     pub btable: BTABLE,
 }
-#[doc = "endpoint 0 register"]
-pub struct EP0R {
+#[doc = "endpoint register array"]
+pub struct EPR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "endpoint 0 register"]
-pub mod ep0r;
-#[doc = "endpoint 1 register"]
-pub struct EP1R {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "endpoint 1 register"]
-pub mod ep1r;
-#[doc = "endpoint 2 register"]
-pub struct EP2R {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "endpoint 2 register"]
-pub mod ep2r;
-#[doc = "endpoint 3 register"]
-pub struct EP3R {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "endpoint 3 register"]
-pub mod ep3r;
-#[doc = "endpoint 4 register"]
-pub struct EP4R {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "endpoint 4 register"]
-pub mod ep4r;
-#[doc = "endpoint 5 register"]
-pub struct EP5R {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "endpoint 5 register"]
-pub mod ep5r;
-#[doc = "endpoint 6 register"]
-pub struct EP6R {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "endpoint 6 register"]
-pub mod ep6r;
-#[doc = "endpoint 7 register"]
-pub struct EP7R {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "endpoint 7 register"]
-pub mod ep7r;
+#[doc = "endpoint register array"]
+pub mod epr;
 #[doc = "control register"]
 pub struct CNTR {
     register: ::vcell::VolatileCell<u32>,
