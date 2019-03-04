@@ -1,11 +1,10 @@
 # `stm32f103xx`
 
-> Peripheral access API for STM32F103XX microcontrollers
+This crate has been **DEPRECATED** in favor of the [`stm32f1xx`][] [crate].
+This crate will receive no further updates or bug fixes.
 
-You may also be interested in the [`stm32f103xx-hal` crate](https://github.com/japaric/stm32f103xx-hal),
-which re-exports this crate and adds [`embedded-hal` support](https://crates.io/crates/embedded-hal).
-
-# [Documentation](https://docs.rs/stm32f103xx)
+[`stm32f1xx`]: https://github.com/stm32-rs/stm32-rs
+[crate]: https://crates.io/crates/stm32f1
 
 # License
 
